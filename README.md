@@ -7,6 +7,7 @@ If you happen to have a copy of an exam for this particular course that is not y
 
 ## Final exams
 
+- [2014](https://github.com/pl3onasm/Imperative-programming/tree/main/Finals/2014)
 - [2015](https://github.com/pl3onasm/Imperative-programming/tree/main/Finals/2015)
 - [2015 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/Finals/2015resit)
 - [2016](https://github.com/pl3onasm/Imperative-programming/tree/main/Finals/2016)
