@@ -1,6 +1,38 @@
-1. b
-2. e
-3. c
-4. d
-5. a
-6. c
+Answers
+
+1. b  O(√N)
+2. e  O(N²)
+3. c  O(N)
+4. d  O(N log N)
+5. a  O(√N)
+6. c  O(N)
+
+
+Reasoning 
+
+1.  In each iteration i is incremented by one, and s takes the total sum of the
+    sum so far and the current value of i. This means that, overall, s is taking
+    the sum of all the values that are assigned to i, and so s = i(i+1)/2. 
+    This means that the number of iterations is in O(√N).
+
+2.  The number of iterations is determined by the number of times that i is
+    incremented. In each iteration, i is incremented by 2, and the loop terminates
+    when i is equal to j = N². So there are (N/2)² iterations and this means that 
+    the time complexity is in O(N²).
+
+3.  The inner loop is independent of the outer loop, and only adds a constant
+    number of steps to the overall time complexity. The outer loop is linear in N.
+    So the overall time complexity is in O(N).
+
+4.  The outer loop is linear in N: it iterates N times. In each iteration, j is set 
+    to the current value of i, and then j is divided by 2 until j is less than 1.
+    This means that the number of iterations of the inner loop is in O(logN).
+    So the overall time complexity is in O(N log N).
+
+5.  In each iteration of the for loop, i is multiplied by 3. The loop terminates
+    when i is equal to N². So we can ignore the constant factor of 3 and conclude
+    that the number of iterations is in O(logN).
+
+6.  In each iteration i is decremented by 2. The loop terminates when i equals N/2.
+    Ignoring the constant factors, we may conclude that the number of iterations 
+    is in O(N).

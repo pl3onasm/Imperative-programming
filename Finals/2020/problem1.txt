@@ -1,6 +1,103 @@
+Answers
+
 1. a
 2. b
 3. a
 4. a
-5. c
+5. b
 6. c
+
+
+Reasoning
+
+1.    { x == A }
+          (prepare x = 3*x + 18)
+      { 3*x == 3*A }
+          (add equal terms to both sides)
+      { 3*x + 18 == 3*A + 18 }
+    x = 3*x + 18;
+      { x == 3*A + 18 }
+
+
+2.    { 4*x + 2*y + 2*z == 2*A }
+          (prepare x = 2*x - y)
+      { 2*(2*x) + 2*y + 2*z == 2*A }
+          (split and regroup)
+      { 2*(x/2 -y) + 4*y + 2*z == 2*A }
+    x = x/2;
+      { 2*x + 4*y + 2*z == 2*A }
+          (prepare x = x + 2*y + z; divide both sides by 2)
+      { x + y + z == A }
+    x = x + 2*y + z;
+      { x == A }
+
+
+3.    { 3 <= x + y*y < 12 }
+          (prepare y = x + y*y + 2; 
+           add an equal positive term to all sides of the inequality)
+      { 3 + 2 <= x + y*y + 2 < 12 + 2 }
+          (simplify)
+      { 5 <= x + y*y + 2 < 14 }
+    y = x + y*y + 2;
+      { 5 <= y < 14 }
+
+
+4.    { x == A, y == B }
+          (prepare x = 2*x - y)
+      { 2*x == 2*A, y == B }
+          (subtract equal term from both sides)
+      { 2*x - y == 2*A - B, y == B }
+    x = 2*x - y;
+      { x == 2*A - B, y == B }
+          (prepare y = y + x)
+      { x == 2*A - B, y + x == B + 2*A - B }
+          (simplify)
+      { x == 2*A - B, y + x == 2*A }
+    y = y + x; 
+      { x == 2*A - B, y == 2*A }
+          (prepare x = x - y)
+      { x - y == 2*A - B - 2*A, y == 2*A }
+          (simplify)
+      { x - y == -B, y == 2*A }
+    x = x - y;
+      { x == -B, y == 2*A }   
+      
+
+5.    { 4*x + 2*y + 2*z < 12 }
+          (prepare y = y + z; regroup terms)
+      { 4*x + 2*(y + z) < 12 }
+    y = y + z; 
+      { 4*x + 2*y < 12 }    
+          (prepare x = 2*x + y; regroup terms)
+      { 2*(2*x + y) < 12 } 
+    x = 2*x + y;
+      { 2*x < 12 } 
+          (simplify)
+      { x < 6 } 
+
+
+6.    { x == A, y == B }
+          (prepare x = 2*x + 2*y)
+      { 2*x == 2*A, y == B }
+          (add equal terms to both sides)
+      { 2*x + 2*y == 2*A + 2*B, y == B }
+    x = 2*x + 2*y;
+      { x == 2*A + 2*B, y == B }
+          (prepare y = x - 2*y; 
+           multiply both sides by the same factor)
+      { x == 2*A + 2*B, -2*y == -2*B }
+          (add same term to both sides)
+      { x == 2*A + 2*B, x - 2*y == 2*A + 2*B - 2*B }
+          (simplify)
+      { x == 2*A + 2*B, x - 2*y == 2*A }
+    y = x - 2*y;
+      { x == 2*A + 2*B, y == 2*A }
+          (prepare x = (x-y)/2;
+           subtract equal term from both sides)
+      { x - y == 2*A + 2*B - 2*A, y == 2*A }
+          (simplify)
+      { x - y == 2*B, y == 2*A }
+          (divide both sides by same factor)
+      { (x - y)/2 == B, y == 2*A }
+    x = (x - y)/2;
+      { x == B, y == 2*A }
