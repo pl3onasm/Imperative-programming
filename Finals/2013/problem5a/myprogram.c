@@ -1,16 +1,17 @@
 /* file: myprogram.c
    author: your name
-   description: IP Final 2014, problem 5a, Recursive algorithms,
-   recursive addition
+   description: IP Final 2013, problem 5a, 
+   Recursive algorithms, recursive multiplication
 */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-int add(a, b){
+int mul(a, b) {
   // your code here
   // you may only use recursion, no loops
-  // and you may only use plus one and minus one
+  // and you may only use addition and subtraction
+  // using multiplicaton and division is not allowed
 
 
   // to test your code, run the test script in the terminal: 
@@ -20,9 +21,8 @@ int add(a, b){
 }
 
 int main(int argc, char *argv[]) {
-  // do not change main
   int a, b;
   scanf("%d %d", &a, &b);
-  printf("%d\n", add(a, b));  
+  printf("%d\n", mul(a, b));  
   return 0;
 }

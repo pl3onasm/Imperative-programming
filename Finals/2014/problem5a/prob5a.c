@@ -1,7 +1,7 @@
 /* file: prob4b.c
    author: David De Potter
    description: IP Final 2014, problem 5a, Recursive algorithms,
-   addition
+   recursive addition
 */
 
 #include <stdio.h>

@@ -25,13 +25,13 @@ int partition(int *arr, int len) {
   return idx;
 }
 
-int kthSmallest(int *arr, int len, int k) {
+int kthSmallest(int k, int len, int *arr) {
   if (len == 1) 
     return arr[0];
   int p = partition(arr, len);
   if (p == k) return arr[p];
-  if (p < k) return kthSmallest(arr+p+1, len-p-1, k-p-1);
-  return kthSmallest(arr, p, k);
+  if (p < k) return kthSmallest(k-p-1, len-p-1, arr+p+1);
+  return kthSmallest(k, p, arr);
 }
 
 int main(int argc, char *argv[]) {
@@ -39,6 +39,6 @@ int main(int argc, char *argv[]) {
   scanf("%d", &k);
   while (scanf("%d", &n) == 1) 
     arr[len++] = n;
-  printf("%d\n", kthSmallest(arr, len, k));
+  printf("%d\n", kthSmallest(k, len, arr));
   return 0;
 }
