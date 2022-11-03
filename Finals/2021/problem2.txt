@@ -15,8 +15,8 @@ Reasoning
     e.g. N=25, the loop will run √N times.
 
 2.  After the first loop, which is linear, s equals the sum of all integers
-    from 1 to N, so s = N(N+1)/2. The second loop runs s - s/2 = N(N+1)/4 times,
-    which is quadratic in N.
+    from 1 to N, so s = N(N+1)/2. The second loop runs s - s/2 = N(N+1)/4 
+    times, which is quadratic in N.
 
 3.  The loop keeps dividing n by d until n = 1. In the worst case, n will be
     a prime number, so the loop will run N times.
