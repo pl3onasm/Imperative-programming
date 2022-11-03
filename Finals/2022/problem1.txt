@@ -1,0 +1,105 @@
+Answers
+
+1. c
+2. a 
+3. b
+4. a 
+5. b 
+6. c 
+
+
+Reasoning
+
+1.    { x == A + 2 }
+          (prepare x = 3*(x-2) + 1;
+           multiply both sides by 3)
+      { 3*x == 3*A + 6 }
+          (move constant term to the LHS)
+      { 3*x - 6 == 3*A }
+          (regroup and add 1 to both sides)
+      { 3*(x - 2) + 1 == 3*A + 1 }
+    x = 3*(x - 2) + 1; 
+      { x == 3*A + 1 }
+
+
+2.    { 3*x + 8*y == A }
+          (prepare x = x + y; split term 8*y)
+      { 3*x + 3*y + 5*y == A }
+          (regroup)
+      { 3*(x + y) + 5*y == A }
+    x = x + y;
+      { 3*x + 5*y == A }
+
+
+3.    { x + y == A, x + z == B }
+          (prepare x = x + y;
+           substitute x by A - y in second equality)
+      { x + y == A, A - y + z == B }
+    x = x + y;
+      { x == A, A - y + z == B }
+          (prepare y = y - z;
+           move A to the RHS, then multiply both sides by -1)
+      { x == A, y - z == A - B }
+    y = y - z;  
+      { x == A, y == A - B }
+
+
+4.    { x == A, y == B }
+          (prepare x = x - y;
+           subtract equal terms from both sides)
+      { x - y == A - B, y == B }
+    x = x - y;
+      { x == A - B, y == B }
+          (prepare y = y - x;
+           subtract equal terms from both sides)
+      { x == A - B, y - x == B - (A - B) }
+          (simplify)
+      { x == A - B, y - x == 2*B - A }
+    y = y - x;
+      { x == A - B, y == 2*B - A }
+
+
+5.    { x == B, y == A }
+          (prepare x = x - y; 
+           subtract equal terms from both sides)
+      { x - y == B - A, y == A }
+    x = x - y;
+      { x == B - A, y == A }
+          (prepare y = x + y;
+           add equal terms to both sides)
+      { x == B - A, x + y == B - A + A }
+          (simplify)
+      { x == B - A, x + y == B }
+    y = x + y; 
+      { x == B - A, y == B }
+        (prepare x = y - x;
+         multiply both sides by -1)
+      { -x == A - B, y == B }
+        (add equal terms to both sides)
+      { y - x == B + A - B, y == B }
+        (simplify)
+      { y - x == A, y == B }
+    x = y - x; 
+      { x == A, y == B }
+
+
+6.    { x == A, y == B }
+          (prepare y = x - y;
+           multiply both sides by -1)
+      { x == A, -y == -B }
+          (add equal terms to both sides)
+      { x == A, x - y == A - B }
+    y = x - y; 
+      { x == A, y == A - B }
+          (prepare x = x + y;
+           add equal term to both sides)
+      { x + y == A + A - B, y == A - B }
+          (simplify)
+      { x + y == 2*A - B, y == A - B }
+    x = x + y; 
+      { x == 2*A - B, y == A - B }
+          (prepare y = x + y)
+      { x == 2*A - B, x + y == 2*A - B + A - B }
+          (simplify)
+      { x == 2*A - B, x + y == 3*A - 2*B }
+
