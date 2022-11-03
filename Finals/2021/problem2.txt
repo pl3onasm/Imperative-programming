@@ -1,6 +1,33 @@
-1. b
-2. e
-3. c
-4. d
-5. a
-6. c
+Answers
+
+1. b  O(√N)
+2. e  O(N²)
+3. c  O(N)
+4. d  O(N log N)
+5. a  O(log N)
+6. c  O(N)
+
+
+Reasoning
+
+1.  The loop looks for the smallest divisor of N up until N's square root.
+    Thus, in the worst case, i.e. if N has no other divisors than its root,
+    e.g. N=25, the loop will run √N times.
+
+2.  After the first loop, which is linear, s equals the sum of all integers
+    from 1 to N, so s = N(N+1)/2. The second loop runs s - s/2 = N(N+1)/4 times,
+    which is quadratic in N.
+
+3.  The loop keeps dividing n by d until n = 1. In the worst case, n will be
+    a prime number, so the loop will run N times.
+
+4.  The outer loop is linear in N. For each value of i, the inner loop runs
+    log i times, so the total number of iterations is N log N.
+
+5.  The only thing that determines the running time of the while loop, is the
+    fact that in each loop iteration, n is divided by 2. Thus, the loop will
+    run log N times.
+
+6.  The running time of the while loop is determined by the increment of i by
+    j, which itself starts at 0 and is incremented by 1 each iteration. Thus,
+    the loop will run N times.

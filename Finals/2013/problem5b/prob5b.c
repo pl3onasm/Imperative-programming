@@ -16,7 +16,7 @@ int numSubsequences(int n, int m, int s[], int t[]){
     return numSubsequences(n-1, m-1, s, t) + numSubsequences(n-1, m, s, t); 
   }
   return numSubsequences(n-1, m, s, t);
-    // elements from s and t don't match
+    // elements from s and t don't match, so we skip current element of s
 }
 
 int main(int argc, char *argv[]) {
