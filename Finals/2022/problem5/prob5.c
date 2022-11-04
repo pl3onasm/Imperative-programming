@@ -29,11 +29,11 @@ void readIntArray(int size, int *arr){
     scanf("%d", &arr[i]);
 }
 
-int checkSum(int idx, int taken, int rem, int k, int n, int *arr){
+int checkSum(int taken, int rem, int k, int n, int *arr){
   if (taken == k) return rem == 0;
-  if (idx == n) return 0;
-  return checkSum(idx+1, taken, rem, k, n, arr) 
-         || checkSum(idx+1, taken+1, rem-arr[idx], k, n, arr);
+  if (n == 0) return 0;
+  return checkSum(taken, rem, k, n-1, arr) 
+         || checkSum(taken+1, rem-arr[n-1], k, n-1, arr);
 }
 
 int main(int argc, char **argv){
@@ -41,7 +41,7 @@ int main(int argc, char **argv){
   scanf("%d %d %d", &target, &k, &n);
   int *arr = createArray(n);
   readIntArray(n, arr);
-  printf(checkSum(0, 0, target, k, n, arr) ? "YES\n" : "NO\n");
+  printf(checkSum(0, target, k, n, arr) ? "YES\n" : "NO\n");
   free(arr);
   return 0; 
 }
