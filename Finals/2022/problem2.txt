@@ -1,0 +1,32 @@
+Answers
+
+1. b  O(√N)
+2. e  O(N²)
+3. c  O(N)
+4. d  O(N log N)
+5. a  O(log N)
+6. c  O(N)
+
+
+Reasoning
+
+1.  By the time the loop terminates, the value of d is a multiple of n*(n+1)/2, which is
+    dominated by n². At termination, we thus have that d = n² = N. Hence, the time complexity
+    is in O(√N).
+
+2.  The outer loop is linear: it runs N times. The inner loop goes in the opposite direction,
+    and runs N/2 times when i = 0. Since the loops are nested, the time complexity is in O(N²).
+
+3.  In each iteration, the value of i is incremented by 1 or 2. The loop terminates when i
+    reaches N. Hence, the time complexity is in O(N).
+
+4.  The outer loop is linear: it runs N times. The inner loop runs log N time when i = N. 
+    Since the loops are nested, the time complexity is in O(N log N).
+
+5.  We may interpret l as left and r as right, and m as the arithmetic mean of the two. 
+    Going through a sequence of N elements, either l or r is subsequently set to m, thus 
+    dividing the size of elements to consider by a factor of 2. Hence, the time complexity 
+    is in O(log N).
+
+6.  The number of iterations only depends on the value of n, which increments by 1 in each 
+    iteration. The loop terminates when n reaches N. Hence, the time complexity is in O(N).
