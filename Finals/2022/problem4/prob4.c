@@ -75,7 +75,7 @@ void readIntArray(int size, int *arr){
     scanf("%d", &arr[i]);
 }
 
-void printIntervals(int n, int *arr){
+void printSet(int n, int *arr){
   int i = 0;
   while (i < n) {
     printf("%d", arr[i++]); 
@@ -103,7 +103,7 @@ int main(int argc, char **argv){
   int *arr = createArray(n);
   readIntArray(n, arr);
   mergeSort (n, arr);
-  printIntervals(n, arr);
+  printSet(n, arr);
   free(arr);
   return 0; 
 }
