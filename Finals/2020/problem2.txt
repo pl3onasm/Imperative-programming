@@ -1,3 +1,4 @@
+
 Answers
 
 1. b  O(√N)
@@ -36,3 +37,5 @@ Reasoning
 6.  In each iteration i is decremented by 2. The loop terminates when i equals N/2.
     Ignoring the constant factors, we may conclude that the number of iterations 
     is in O(N).
+
+

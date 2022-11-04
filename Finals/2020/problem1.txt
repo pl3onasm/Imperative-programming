@@ -1,3 +1,4 @@
+
 Answers
 
 1. a
@@ -101,3 +102,5 @@ Reasoning
       { (x - y)/2 == B, y == 2*A }
     x = (x - y)/2;
       { x == B, y == 2*A }
+
+

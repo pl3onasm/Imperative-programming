@@ -1,3 +1,4 @@
+
 Answers
 
 1. c
@@ -122,3 +123,5 @@ Reasoning
       { x - 1 + y + 1 == A, 2*x - 2 + y + 1 == B }  
           (simplify)
       { x + y == A, 2*x + y - 1 == B }  
+
+

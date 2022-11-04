@@ -1,3 +1,4 @@
+
 Answers
 
 1. b
@@ -107,4 +108,5 @@ Reasoning
       { x == 2*A + 2*B, z - y == 3*B - A, z = 2*B }
     y = z - y; 
       { x == 2*A + 2*B, y == 3*B - A }
+
 

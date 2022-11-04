@@ -1,3 +1,4 @@
+
 Answers
 
 1. d  O(N log N)
@@ -41,3 +42,5 @@ Reasoning
 6.  The first while loop will terminate when i equals √N. The second loop is nested: the 
     outer loop will run √N times and the inner loop will also run √N times for each 
     iteration of the outer loop. The overall time complexity is therefore in O(N).
+
+

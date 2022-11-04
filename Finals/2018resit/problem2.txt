@@ -1,3 +1,4 @@
+
 Answers
 
 1. a  O(log N)
@@ -35,7 +36,5 @@ Reasoning
 6.  Just like in the previous question, the outer loop will run log N times, since s will be
     equal to 2^log N at termination. The inner loop will run N times. Since the loops are nested, 
     the time complexity is in O(N log N).
-
-
 
 
