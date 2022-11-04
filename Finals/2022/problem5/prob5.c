@@ -29,16 +29,6 @@ void readIntArray(int size, int *arr){
     scanf("%d", &arr[i]);
 }
 
-void printArray (int *arr, int n) {
-  // prints an array of size n
-  printf("[");
-  for (int i = 0; i < n; i++) {
-    printf("%d", arr[i]);
-    if (i < n-1) printf(", ");
-  }
-  printf("]\n");
-}
-
 int checkSum(int idx, int taken, int rem, int k, int n, int *arr){
   if (taken == k) return rem == 0;
   if (idx == n) return 0;
