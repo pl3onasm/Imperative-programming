@@ -12,7 +12,7 @@ Answers
 Reasoning
 
 1.  The while loop terminates when i equals 1. In each iteration this index is divided by 2. 
-  	Therefore, the time complexity is in O(log N).
+    Therefore, the time complexity is in O(log N).
 
 2.  In each iteration the index i is incremented by 10. So the loop will run N/10 times. 
     Asymptotically, the growth rate is dominated by N. Hence, the time complexity is in O(N).
