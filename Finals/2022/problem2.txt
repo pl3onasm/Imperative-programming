@@ -23,10 +23,12 @@ Reasoning
 4.  The outer loop is linear: it runs N times. The inner loop runs log N time when i = N. 
     Since the loops are nested, the time complexity is in O(N log N).
 
-5.  We may interpret l as left and r as right, and m as the arithmetic mean of the two. 
-    Going through a sequence of N elements, either l or r is subsequently set to m, thus 
-    dividing the number of elements to consider by a factor of 2. Hence, the time complexity 
-    is in O(log N).
+5.  We can interpret l and r as denoting indexes indicating the left and right side of a
+    sequence of N elements. The variable m keeps taking the arithmetic mean of these two 
+    indexes. Going through the sequence of N elements, either l or r is subsequently set to 
+    m, thus dividing the number of elements to consider by a factor of 2 in each iteration
+    until there are no more elements left to consider. Hence, just like a binary search 
+    algorithm, the time complexity is in O(log N).
 
 6.  The number of iterations only depends on the value of n, which increments by 1 in each 
     iteration. The loop terminates when n reaches N. Hence, the time complexity is in O(N).
