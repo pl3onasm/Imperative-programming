@@ -1,6 +1,32 @@
-1. a
-2. c
-3. b
-4. e
-5. c
-6. d
+Answers
+
+1. a  O(log N)
+2. c  O(N)
+3. b  O(√N)
+4. e  O(N²)
+5. a  O(log N)
+6. d  O(N log N)
+
+
+Reasoning
+
+1.  The while loop terminates when i equals 1. In each iteration this index is divided by 2. 
+  	Therefore, the time complexity is in O(log N).
+
+2.  In each iteration the index i is incremented by 10. So the loop will run N/10 times. 
+    Asymptotically, the growth rate is dominated by N. Hence, the time complexity is in O(N).
+
+3.  In each iteration, i is incremented by 1, while s is incremented by i. This means that at 
+    termination, s is equal to 1 + 2 + 3 + ... which is the sum of the first n natural numbers,
+    which is equal to n(n+1)/2, a value that is asymptotically dominated by n². Thus, the time
+    complexity is in O(√N).
+
+4.  The time complexity is independent of s. The outer while loop will run N times, as k starts
+    at N and is decremented by 1 in each iteration. For each value of k, the inner for loop will 
+    run k times, as i starts at k and is decremented by 1 in each iteration. Since the loops are
+    nested, the time complexity is thus in O(N²). 
+
+5.  
+
+
+
