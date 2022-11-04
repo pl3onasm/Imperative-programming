@@ -25,7 +25,7 @@ Reasoning
 
 5.  We may interpret l as left and r as right, and m as the arithmetic mean of the two. 
     Going through a sequence of N elements, either l or r is subsequently set to m, thus 
-    dividing the size of elements to consider by a factor of 2. Hence, the time complexity 
+    dividing the number of elements to consider by a factor of 2. Hence, the time complexity 
     is in O(log N).
 
 6.  The number of iterations only depends on the value of n, which increments by 1 in each 
