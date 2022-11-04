@@ -37,7 +37,7 @@ int checkSum(int idx, int taken, int rem, int k, int n, int *arr){
 }
 
 int main(int argc, char **argv){
-  int target, k, n, solved = 0;
+  int target, k, n;
   scanf("%d %d %d", &target, &k, &n);
   int *arr = createArray(n);
   readIntArray(n, arr);
