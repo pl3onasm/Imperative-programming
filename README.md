@@ -20,6 +20,7 @@ If you happen to have a copy of an exam for this particular course that is not y
 - [2019 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/Finals/2019resit)
 - [2020](https://github.com/pl3onasm/Imperative-programming/tree/main/Finals/2020)
 - [2021](https://github.com/pl3onasm/Imperative-programming/tree/main/Finals/2021)
+- [2022](https://github.com/pl3onasm/Imperative-programming/tree/main/Finals/2022)
 
 ## Midterm exams
 
