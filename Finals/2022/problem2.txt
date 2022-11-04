@@ -32,3 +32,5 @@ Reasoning
 
 6.  The number of iterations only depends on the value of n, which increments by 1 in each 
     iteration. The loop terminates when n reaches N. Hence, the time complexity is in O(N).
+
+
