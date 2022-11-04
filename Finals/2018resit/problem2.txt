@@ -26,7 +26,16 @@ Reasoning
     run k times, as i starts at k and is decremented by 1 in each iteration. Since the loops are
     nested, the time complexity is thus in O(N²). 
 
-5.  
+5.  The variable s starts at 1 and is multiplied by 2 in each iteration. Thus, the outer loop
+    will run log N times, since s will be equal to 2^log N at termination. The inner loop will
+    also run log N times, since in the last iteration i will be set to 2^log N and the inner 
+    loop will run until i is equal to 0. Since the loops are nested, the time complexity is in
+    O(log² N).
+
+6.  Just like in the previous question, the outer loop will run log N times, since s will be
+    equal to 2^log N at termination. The inner loop will run N times. Since the loops are nested, 
+    the time complexity is in O(N log N).
+
 
 
 
