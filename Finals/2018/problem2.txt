@@ -1,6 +1,40 @@
-1. e
-2. a
-3. c
-4. b
-5. d
-6. c
+
+Answers
+
+1. e  O(N²)
+2. a  O(log N)
+3. c  O(N)
+4. b  O(√N)
+5. d  O(N log N)
+6. c  O(N)
+
+
+Reasoning
+
+1.  The two loops are independent, so the overall complexity is determined by the loop with 
+    the largest number of iterations, and that is the second loop.
+    The first loop has N iterations. While i goes by each integer from N to 1, the variable j
+    is taking the running sum. Thus, at termination of the loop, j = N(N+1)/2.
+    The second loop has j - 5 iterations, which means it is in O(N²) and dominates the overall
+    complexity.
+
+2.  In each iteration, i is multiplied by 2, so that at termination 2ⁱ = N, i.e. i = log N. 
+    Thus, time complexity is in O(log N).
+
+3.  The variable s doesn't affect the complexity. Ignoring constant factors, the complexity
+    is in O(N).
+
+4.  After the first loop terminates, s = i² ≅ N, so that i ≅ √N. The second loop has i 
+    iterations. As the loops aren't nested, the overall complexity is thus in O(√N).
+
+5.  The outer for loop has log N iterations, as i is divided by 2 after each iteration. 
+    The inner for loop has N iterations, as j starts at 0 and is incremented by 1 after 
+    each iteration. Thus, the overall complexity is in O(N log N).
+
+6.  We have two independent loops. The first loop has N iterations, after terminating we
+    have j = N(N+1)/2. The second loop terminates when i² = j, i.e. i² = N(N+1)/2,
+    which means that the second loop is in O(N). Thus, the overall complexity is in O(N). 
+
+
+
+
