@@ -35,8 +35,9 @@ Reasoning
 
 6.  The outer for loop has an index i which after each iteration is incremented by k, which itself
     is incremented by 1 in each execution of the loop body. This means that i is first incremented
-    by 1, then by 2, 3, 4, ... so that by the end i = i * (i + 1) / 2, the total sum of the first i
-    integers. This value is dominated by the square term, so that the time complexity is in O(√N).
+    by 1, then by 2, 3, 4, ... so that at termination i = i * (i + 1) / 2, the total sum of the 
+    first i integers. This value is dominated by the square term, so that the loop's time complexity 
+    is in O(√N).
     The inner for loop has an index j which after each iteration is incremented by 1, and it ends
     when j² = N, so that its running time is in O(√N). The two loops are nested, meaning that the 
     overalltime complexity is in O(N).
