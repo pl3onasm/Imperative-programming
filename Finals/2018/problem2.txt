@@ -36,5 +36,3 @@ Reasoning
     which means that the second loop is in O(N). Thus, the overall complexity is in O(N). 
 
 
-
-
