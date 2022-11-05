@@ -1,6 +1,44 @@
-1. b
-2. a
-3. e
-4. a
-5. d
-6. c
+
+Answers
+
+1. b  O(√N)
+2. a  O(log N)
+3. e  O(N²)
+4. a  O(log N)
+5. d  O(N log N)
+6. c  O(N)
+
+
+Reasoning
+
+1.  After each iteration, the index i is incremented by s, which itself is incremented by 1 in each 
+    execution of the loop body. This means that i is first incremented by 1, then by 2, 3, 4, ... 
+    so that by the end i = i * (i + 1) / 2, the total sum of the first i integers. This means that
+    the time complexity is in O(√N).
+
+2.  The running time is independent of s. After each iteration, the index i is multiplied by 2, so
+    that the loop terminates when 2ⁱ = N². Taking the log on both sides, we get i*log(2) = 2*log(N),
+    i.e. i = 2*log(N). This means that the time complexity is in O(log N).
+
+3.  The outer loop runs N times, while the inner loop runs N/3 times. The loops are nested so that
+    the total running time is N²/3. This means that the time complexity is in O(N²).
+
+4.  The variable s is alternatingly incremented by 1 or multiplied by 2, as i is incremented by 1
+    each time and switches between being even and odd. Asymptotically speaking, the running time
+    is dominated by the number of times s is multiplied by 2, which is log(N). This means that
+    the time complexity is in O(log N).
+
+5.  Division by 2 asymptotically dominates the running time of the outer loop, even if the loop index 
+    starts at N², since the growth rate of an exponential function like f(n) = 2ⁿ is much higher than
+    that of a quadratic function g(n) = n². The outer loop is thus in O(log N). As the inner loop 
+    clearly runs N times, the overall time complexity is in O(N log N).
+
+6.  The outer for loop has an index i which after each iteration is incremented by k, which itself
+    is incremented by 1 in each execution of the loop body. This means that i is first incremented
+    by 1, then by 2, 3, 4, ... so that by the end i = i * (i + 1) / 2, the total sum of the first i
+    integers. This value is dominated by the square term, so that the time complexity is in O(√N).
+    The inner for loop has an index j which after each iteration is incremented by 1, and it ends
+    when j² = N, so that its running time is in O(√N). The two loops are nested, meaning that the 
+    overalltime complexity is in O(N).
+
+
