@@ -40,6 +40,6 @@ Reasoning
     is in O(√N).
     The inner for loop has an index j which after each iteration is incremented by 1, and it ends
     when j² = N, so that its running time is in O(√N). The two loops are nested, meaning that the 
-    overalltime complexity is in O(N).
+    overall time complexity is in O(N).
 
 
