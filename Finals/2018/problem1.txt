@@ -1,6 +1,100 @@
+
+Answers
+
 1. c
 2. b
 3. c
 4. b
 5. a
 6. b
+
+
+Reasoning
+
+1.    { 10 < 2*x + 6*y < 20 }
+          (prepare x = x + 3*y + 5)
+          (divide inequality by equal factor 2)
+      { 5 < x + 3*y < 10 }
+          (add equal term to all sides)
+      { 10 < x + 3*y + 5 < 15 }
+    x = x + 3*y + 5;
+      { 5 < x < 10 }
+          
+
+2.    { x == A + B, y = A - B }
+          (prepare y = (x - y)/2)
+      { x == A + B, -y = B - A }
+          (add equal term to both sides)
+      { x == A + B, x - y = A + B + B - A }
+          (simplify)
+      { x == A + B, x - y = 2*B }
+          (divide both sides by 2)
+      { x == A + B, (x - y)/2 = B }
+    y = (x - y)/2; 
+      { x == A + B, y = B }
+          (prepare x = x - y)
+      { x - y == A + B - B, y = B }
+          (simplify)
+      { x - y == A, y = B }
+    x = x - y;  
+      { x == A, y = B }
+
+
+3.    { x == A, y == B }
+          (prepare x = x + y)
+      { x + y == A + B, y == B }
+    x = x + y;
+      { x == A + B, y == B }
+          (prepare x = x + y)
+      { x + y == A + 2*B, y == B }
+    x = x + y;
+      { x == A + 2*B, y == B }
+          (move 2*B to the LHS)
+      { x - 2*B == A }
+
+
+4.    { x == A, y == B }
+          (prepare y = 2*(x + y))
+      { x == A, x + y == A + B }
+          (multiply both sides by 2)
+      { x == A, 2*(x + y) == 2*A + 2*B }
+    y = 2*(x + y);
+      { x == A, y == 2*A + 2*B }
+          (prepare x = 2*(x + y))
+      { x + y == 3*A + 2*B , y == 2*A + 2*B }
+          (multiply both sides by 2)
+      { 2*(x + y) == 6*A + 4*B , y == 2*A + 2*B }
+    x = 2*(x + y);
+      { x == 6*A + 4*B , y == 2*A + 2*B }
+    
+
+5.    { x == A, y == B }
+    z = x; 
+      { x == A, y == B, z == A }
+    x = y; 
+      { x == B, y == B, z == A }
+    y = z; 
+      { x == B, y == A, z == A }
+
+
+6.    { y == A, x == z == B }
+          (prepare z = x - y)
+      { x - y == B - A, y == A, x == B }
+    z = x - y; 
+      { z == B - A, y == A, x == B }
+          (prepare x = x + y + z)
+      { z == B - A, y == A, x + y + z = B + A + B - A }
+          (simplify)
+      { z == B - A, y == A, x + y + z = 2*B }
+    x = x + y + z; 
+      { z == B - A, y == A, x = 2*B }
+          (prepare y = z - y)
+      { z == B - A, -y == -A, x = 2*B }
+          (add equal term to both sides)
+      { z == B - A, z - y == B - A - A, x = 2*B }
+          (simplify)
+      { z == B - A, z - y == B - 2*A, x = 2*B }
+    y = z - y;  
+      { z == B - A, y == B - 2*A, x = 2*B }
+
+
