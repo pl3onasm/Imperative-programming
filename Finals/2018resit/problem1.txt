@@ -90,9 +90,11 @@ Reasoning
 
 
 6.    { x == A + B, y == A - B }
-    z = x - y; 
-      { x == A + B, y == A - B, z = A + B - (A - B) }
+          (prepare z = x - y)
+      { x == A + B, y == A - B, x - y = A + B - (A - B) }
           (simplify)
+      { x == A + B, y == A - B, x - y = 2*B }
+    z = x - y;
       { x == A + B, y == A - B, z = 2*B }
           (prepare x = x + y + z)
       { x + y + z == A + B + A - B + 2*B, y == A - B, z = 2*B }

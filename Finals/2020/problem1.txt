@@ -34,8 +34,8 @@ Reasoning
 
 
 3.    { 3 <= x + y*y < 12 }
-          (prepare y = x + y*y + 2; 
-           add an equal positive term to all sides of the inequality)
+          (prepare y = x + y*y + 2) 
+          (add an equal positive term to all sides of the inequality)
       { 3 + 2 <= x + y*y + 2 < 12 + 2 }
           (simplify)
       { 5 <= x + y*y + 2 < 14 }
@@ -84,8 +84,8 @@ Reasoning
       { 2*x + 2*y == 2*A + 2*B, y == B }
     x = 2*x + 2*y;
       { x == 2*A + 2*B, y == B }
-          (prepare y = x - 2*y; 
-           multiply both sides by the same factor)
+          (prepare y = x - 2*y) 
+          (multiply both sides by the same factor)
       { x == 2*A + 2*B, -2*y == -2*B }
           (add same term to both sides)
       { x == 2*A + 2*B, x - 2*y == 2*A + 2*B - 2*B }
@@ -93,8 +93,8 @@ Reasoning
       { x == 2*A + 2*B, x - 2*y == 2*A }
     y = x - 2*y;
       { x == 2*A + 2*B, y == 2*A }
-          (prepare x = (x-y)/2;
-           subtract equal term from both sides)
+          (prepare x = (x-y)/2)
+          (subtract equal term from both sides)
       { x - y == 2*A + 2*B - 2*A, y == 2*A }
           (simplify)
       { x - y == 2*B, y == 2*A }

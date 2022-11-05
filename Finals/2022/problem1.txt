@@ -33,26 +33,26 @@ Reasoning
 
 
 3.    { x + y == A, x + z == B }
-          (prepare x = x + y;
-           substitute x by A - y in second equality)
+          (prepare x = x + y)
+          (substitute x by A - y in second equality)
       { x + y == A, A - y + z == B }
     x = x + y;
       { x == A, A - y + z == B }
-          (prepare y = y - z;
-           move A to the RHS, then multiply both sides by -1)
+          (prepare y = y - z)
+          (move A to the RHS, then multiply both sides by -1)
       { x == A, y - z == A - B }
     y = y - z;  
       { x == A, y == A - B }
 
 
 4.    { x == A, y == B }
-          (prepare x = x - y;
-           subtract equal terms from both sides)
+          (prepare x = x - y)
+          (subtract equal terms from both sides)
       { x - y == A - B, y == B }
     x = x - y;
       { x == A - B, y == B }
-          (prepare y = y - x;
-           subtract equal terms from both sides)
+          (prepare y = y - x)
+          (subtract equal terms from both sides)
       { x == A - B, y - x == B - (A - B) }
           (simplify)
       { x == A - B, y - x == 2*B - A }
@@ -61,13 +61,13 @@ Reasoning
 
 
 5.    { x == B, y == A }
-          (prepare x = x - y; 
-           subtract equal terms from both sides)
+          (prepare x = x - y) 
+          (subtract equal terms from both sides)
       { x - y == B - A, y == A }
     x = x - y;
       { x == B - A, y == A }
-          (prepare y = x + y;
-           add equal terms to both sides)
+          (prepare y = x + y)
+          (add equal terms to both sides)
       { x == B - A, x + y == B - A + A }
           (simplify)
       { x == B - A, x + y == B }
@@ -85,15 +85,15 @@ Reasoning
 
 
 6.    { x == A, y == B }
-          (prepare y = x - y;
-           multiply both sides by -1)
+          (prepare y = x - y)
+          (multiply both sides by -1)
       { x == A, -y == -B }
           (add equal terms to both sides)
       { x == A, x - y == A - B }
     y = x - y; 
       { x == A, y == A - B }
-          (prepare x = x + y;
-           add equal term to both sides)
+          (prepare x = x + y)
+          (add equal term to both sides)
       { x + y == A + A - B, y == A - B }
           (simplify)
       { x + y == 2*A - B, y == A - B }

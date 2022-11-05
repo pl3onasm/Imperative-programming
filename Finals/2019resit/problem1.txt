@@ -46,8 +46,8 @@ Reasoning
 
 
 3.    { x == A + B, y == A - B }
-          (prepare y = 2*y - x;
-           multiply both sides by an equal factor)
+          (prepare y = 2*y - x)
+          (multiply both sides by an equal factor)
       { x == A + B, 2*y == 2*A - 2*B }
           (subtract an equal term from both sides)
       { x == A + B, 2*y - x == 2*A - 2*B - (A + B) }
@@ -55,8 +55,8 @@ Reasoning
       { x == A + B, 2*y - x == A - 3*B }
     y = 2*y - x; 
       { x == A + B, y == A - 3*B }
-          (prepare x = y + 3*x;
-           multiply both sides by an equal factor)
+          (prepare x = y + 3*x)
+          (multiply both sides by an equal factor)
       { 3*x == 3*A + 3*B, y == A - 3*B }
           (add an equal term to both sides)
       { 3*x + y == 3*A + 3*B + A - 3*B, y == A - 3*B }
@@ -71,15 +71,15 @@ Reasoning
 
 
 4.    { x == A, y == B }
-          (prepare x = 2*x + y;
-           multiply both sides by 2)
+          (prepare x = 2*x + y)
+          (multiply both sides by 2)
       { 2*x == 2*A, y == B }
           (add an equal term to both sides)
       { 2*x + y == 2*A + B, y == B }
     x = 2*x + y; 
       { x == 2*A + B, y == B }
-          (prepare y = 2*x + y;
-           add an equal term to both sides)
+          (prepare y = 2*x + y)
+          (add an equal term to both sides)
       { x == 2*A + B, 2*x + y == 2*(2*A + B) + B }
           (simplify)
       { x == 2*A + B, 2*x + y == 4*A + 3*B }
@@ -94,8 +94,8 @@ Reasoning
       { 2*x + 2*y == 2*A + 2*B, y == B }
     x = 2*x + 2*y; 
       { x == 2*A + 2*B, y == B }
-          (prepare y = x - 2*y; 
-           multiply both sides by -2)
+          (prepare y = x - 2*y) 
+          (multiply both sides by -2)
       { x == 2*A + 2*B, -2*y == -2*B }
           (add equal term to both sides)
       { x == 2*A + 2*B, x - 2*y == 2*A + 2*B - 2*B }
@@ -103,8 +103,8 @@ Reasoning
       { x == 2*A + 2*B, x - 2*y == 2*A }
     y = x - 2*y; 
       { x == 2*A + 2*B, y == 2*A }
-          (prepare x = x - y; 
-           subtract equal term from both sides)
+          (prepare x = x - y) 
+          (subtract equal term from both sides)
       { x - y == 2*A + 2*B - 2*A, y == 2*A }
           (simplify)
       { x - y == 2*B, y == 2*A }
