@@ -12,8 +12,8 @@ Answers
 Reasoning
 
 1.    { x == A + 2 }
-          (prepare x = 3*(x-2) + 1;
-           multiply both sides by 3)
+          (prepare x = 3*(x-2) + 1)
+          (multiply both sides by 3)
       { 3*x == 3*A + 6 }
           (move constant term to the LHS)
       { 3*x - 6 == 3*A }

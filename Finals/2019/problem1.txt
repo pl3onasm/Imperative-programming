@@ -27,8 +27,8 @@ Reasoning
 
 
 2.    { x == A + B, y == A - B }
-          (prepare x = (x - y)/2; 
-           subtract equal term from both sides)
+          (prepare x = (x - y)/2)
+          (subtract equal term from both sides)
       { x - y == A + B - (A - B), y == A - B }
           (simplify and divide both sides by 2)
       { (x - y)/2 == B, y == A - B }
@@ -84,8 +84,8 @@ Reasoning
       { x + 2*y == A + 2*B, y == B }
     x = x + 2*y;
       { x == A + 2*B, y == B }
-          (prepare y = x - y; 
-           multiply both sides by -1)
+          (prepare y = x - y)
+          (multiply both sides by -1)
       { x == A + 2*B, -y == -B }
           (add equal term to both sides)
       { x == A + 2*B, x - y == A + 2*B - B }
