@@ -1,6 +1,68 @@
+
+Answers
+
 1. c
 2. b
 3. a
 4. a
 5. b
 6. c
+
+
+Reasoning
+
+1.    { 6 < x + 2*y < 11 }
+          (prepare x = x + 2*y - 1)
+      { 5 < x + 2*y - 1 < 10 }
+    x = x + 2*y - 1; 
+      { 5 < x < 10 }
+
+
+2.    { 2*x + 3*y == X, 2*y == Y }
+          (prepare z = 2*x + 5*y)
+          (add both equalities)
+      { 2*x + 5*y == X + Y }
+    z = 2*x + 5*y;  
+      { z = X + Y }
+
+
+3.    { x == X + Y, y == 2*X - 7 }
+          (prepare y = (2*x-y-7)/2)
+      { x == X + Y, -y - 7 == -2*X }
+          (add 2 times equality 1 to 2)
+      { x == X + Y, 2*x - y - 7 == 2*Y }
+          (divide both sides by 2)
+      { x == X + Y, (2*x - y - 7)/2 == Y }
+    y = (2*x-y-7)/2);
+      { x == X + Y, y == Y }
+
+
+4.    { x == X, y == Y }
+          (prepare y = x + y)
+      { x == X, x + y == X + Y }
+    y = x + y;
+      { x == X, y == X + Y }
+          (prepare x = x*(y - x))
+      { x*(y - x) == X*Y, y == X + Y }
+    x = x*(y - x);
+      { x == X*Y, y == X + Y }
+
+
+5.    { x == X, y == Y }
+    x = y; 
+      { x == Y, y == Y }
+    y = x; 
+      { x == Y, y == Y }
+
+
+6.    { x == X, y == Y }
+          (prepare x = x + y)
+      { x + y == X + Y, y == Y }
+    x = x + y; 
+      { x == X + Y, y == Y }
+          (prepare y = x - y)
+      { x == X + Y, x - y == X }
+    y = x - y;  
+      { x == X + Y, y == X }
+
+
