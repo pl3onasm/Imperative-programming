@@ -22,8 +22,8 @@ Reasoning
     overall time complexity is in O(N²), since the two loops are  
     nested.
 
-3.  At the end of each iteration of the loop, i is exactly equal 
-    to the square of j. Compare this to question 1 (problem 3) 
+3.  At the end of each loop iteration, i is exactly equal to
+    the square of j. Compare this to question 1 (problem 3) 
     of the exam from 2014, and notice how the order of the two 
     operations within the loop differs and changes the value by 
     wich i is incremented. Here we need to add 1 to 2*j to get 
