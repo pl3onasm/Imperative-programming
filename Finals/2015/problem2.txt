@@ -22,9 +22,9 @@ Reasoning
 3.  This fragment is similar to the binary search algorithm. If j 
     indicates the right end of the current search interval, and i 
     the left end, then the variable k is set to the midpoint of 
-    the interval, (i+j)/2, and either i or j is set to k, thus 
-    halving the size of the search interval. The loop terminates 
-    when i = j, so the loop runs in O(log N) time.
+    the interval, (i+j)/2, and either i or j is then set to k, 
+    thus halving the size of the search interval. The loop 
+    terminates when i = j, and so the loop runs in O(log N) time.
 
 4.  By the time the first loop terminates, the variable j will
     have the value N*(N+1)/2. The second loop then runs j times.
