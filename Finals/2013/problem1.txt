@@ -1,6 +1,93 @@
+
+Answers
+
 1. b
 2. c
 3. b
 4. c
 5. b
 6. a
+
+
+Reasoning
+
+1.    { x == X }
+          (prepare x = 42*x + 21)
+      { 42*x == 42*X }
+          (add 21 to both sides)
+      { 42*x + 21 == 42*X + 21 }
+    x = 42*x + 21; 
+      { x == 42*X + 21 }
+
+
+2.    { x == 42*X + 21 }
+          (prepare x = (x - 21)/42)
+      { x - 21 == 42*X }
+          (divide both sides by 42)
+      { (x - 21)/42 == X }
+    x = (x - 21)/42;
+      { x == X }
+
+
+3.    { x == y*y }
+          (prepare y = y + 1)
+      { x == (y + 1)*(y + 1) - 2*y - 1 }
+          (subtract and add 1)
+      { x == (y + 1)*(y + 1) - 2*(y + 1) + 1 }
+    y = y + 1; 
+      { x == y*y - 2*y + 1 }
+          (prepare x = x + 2*y - 1)
+      { x + 2*y - 1 == y*y }
+    x = x + 2*y - 1;
+      { x == y*y }
+
+
+4.    { y + z > 4 }
+          (prepare x = z + 1)
+      { z + 1 > 5 - y }
+    x = z + 1; 
+      { x > 5 - y }
+          (prepare y = x + y)
+      { x + y > 5 }
+    y = x + y;  
+      { y > 5 }
+
+
+5.    { x == X, y == Y }
+          (prepare x = x + y)
+      { x + y == X + Y, y == Y }
+    x = x + y; 
+      { x == X + Y, y == Y }
+          (prepare y = 2*x - y)
+      { x == X + Y, 2*x - y == 2*(X + Y) - Y }
+          (simplify)
+      { x == X + Y, 2*x - y == 2*X + Y }
+    y = 2*x - y;  
+      { x == X + Y, y == 2*X + Y }
+          (prepare x = y - 2*x)
+      { -2*x == -2*X - 2*Y, y == 2*X + Y }
+          (add equal term to both sides)
+      { y - 2*x == - Y, y == 2*X + Y }
+    x = y - 2*x;
+      { x == - Y, y == 2*X + Y }
+          (prepare y = x + y)
+      { x == - Y, x + y == 2*X }
+    y = x + y;  
+      { x == - Y, y == 2*X }
+
+
+6.    { x == X, y == X + Y, z == X + Y + Z }
+          (prepare z = z - y)
+      { x == X, y == X + Y, z - y == Z }
+    z = z - y; 
+      { x == X, y == X + Y, z == Z }
+          (prepare y = y - x)
+      { x == X, y - x == Y, z == Z }
+    y = y - x; 
+      { x == X, y == Y, z == Z }
+          (prepare x = x - z)
+      { x - z == X - Z, y == Y, z == Z }
+    x = x - z;
+      { x == X - Z, y == Y, z == Z }
+
+
