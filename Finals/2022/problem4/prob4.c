@@ -81,18 +81,13 @@ void printSet(int n, int *arr){
     printf("%d", arr[i++]); 
     int interval = 0;
     while (i < n && (arr[i] == arr[i-1] + 1 || arr[i] == arr[i-1])) {
-      if (!interval && arr[i] != arr[i-1]) {
-        printf("..");
-        interval = 1;
-      }
+      if (arr[i] != arr[i-1]) interval = 1;
       ++i;
     }
     if (interval) { // we encountered an interval and need to close it
-      printf("%d", arr[i-1]);
+      printf("..%d", arr[i-1]);
     }
-    if (i < n) {  // we have more elements to print
-      printf(",");
-    }
+    if (i < n) printf(",");
   }
   printf("\n"); 
 }
