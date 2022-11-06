@@ -1,6 +1,37 @@
-1. e
-2. b
-3. a 
-4. e
-5. c
-6. d
+
+Answers
+
+1. e  O(N²)
+2. b  O(√N)
+3. a  O(log N)
+4. e  O(N²)
+5. c  O(N)
+6. d  O(N log N)
+
+
+Reasoning
+
+1.  The outer for loop runs N times. For each value of i, the 
+    inner for loop runs as much times, which is at most N-1 times.  
+    The loops are nested, so the overall complexity is in O(N²).
+
+2.  The while loop terminates when s = i² >= N. The number of
+    iterations is therefore at most ⌈√N⌉ and the complexity is thus
+    in O(√N).
+
+3.  At loop termination, p = 2^N. The program fragment uses binary 
+    exponentiation to compute p. The time complexity is thus
+    in O(log N).
+
+4.  The first for loop runs N times and computes s, which at 
+    termination is equal to N(N+1)/2. The second for loop then 
+    runs s/2 times, and so the overall complexity is in O(N²).
+
+5.  The for loop runs 4*N/2 = 2*N times, and so the complexity is
+    in O(N).
+
+6.  The outer for loop runs N times, whereas the inner for loop 
+    runs log N times. The loops are nested, so the overall 
+    complexity is in O(N log N).
+
+
