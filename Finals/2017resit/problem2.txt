@@ -17,9 +17,9 @@ Reasoning
     are nested, the overall time complexity is in O(N log N).
 
 2.  This is similar to the previous problem, except that now 
-    the outer loop now runs N times, whereas the inner loop 
-    runs at most log(N) times. Since the loops are nested, 
-    the overall time complexity is again in O(N log N).
+    the outer loop runs N times, whereas the inner loop runs
+    at most log(N) times. Since the loops are nested, the 
+    overall time complexity is again in O(N log N).
 
 3.  The outer loop runs N times. The inner loop runs at 
     most N/2 times for each iteration of the outer loop. 
