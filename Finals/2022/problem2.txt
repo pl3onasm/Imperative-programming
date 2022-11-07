@@ -32,8 +32,8 @@ Reasoning
     runs at most log N times. Since the loops are nested, 
     the time complexity is in O(N log N).
 
-5.  We can interpret l and r as denoting indexes indicating 
-    the left end and right end of a sequence of N elements. 
+5.  We can interpret l and r as indexes indicating the left
+    and right end of a sequence of N elements. 
     The variable m keeps taking the arithmetic mean of these 
     two indexes. Going through the sequence of N elements, 
     either l or r is subsequently set to m, thus halving the 
@@ -42,8 +42,8 @@ Reasoning
     like a binary search algorithm, the time complexity is 
     in O(log N).
 
-6.  The number of iterations only depends on the value of n, 
-    which increments by 1 in each iteration. The loop terminates 
-    when n reaches N. Hence, the time complexity is in O(N).
+6.  The outer loop runs in O(√N), and the inner loop as well.
+    The two loops are nested, so the overall time complexity 
+    is in O(N).
 
 

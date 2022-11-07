@@ -11,23 +11,38 @@ Answers
 
 Reasoning
 
-1.  The loop looks for the smallest divisor of N up until N's square root.
-    Thus, in the worst case, i.e. if N has no other divisors than its root,
-    e.g. N=25, the loop will run √N times.
+1.  The loop looks for the smallest divisor of N up until 
+    N's square root. Thus, in the worst case, i.e. if N is 
+    a prime or has no other divisors than its root, e.g. 
+    N=25, the loop will run √N times.
 
-2.  After the first loop, which is linear, s equals the sum of all integers
-    from 1 to N, so s = N(N+1)/2. The second loop runs s - s/2 = N(N+1)/4 
-    times, which is quadratic in N.
+2.  After the first loop (which is linear) terminates, 
+    s equals the sum of the first N-1 integers, so 
+    s = (N-1)*N/2. The second loop then runs 
+    s/2 = (N-1)*N/4 times, which is quadratic in N. 
+    Since the two loop aren't nested, the overall time 
+    complexity is determined by the loop taking the most
+    time, which is the second one. Hence, the time 
+    complexity is in O(N²).
 
-3.  The loop keeps dividing n by d until n = 1. In the worst case, n will be
-    a prime number, so the loop will run N times.
+3.  The loop keeps dividing n by its divisors until n = 1. 
+    In the worst case, n will be a prime number, and then 
+    the loop will run N times: the loop will then terminate 
+    after the prime is divided by itself. This means that 
+    the time complexity is in O(N).
 
-4.  The outer loop is linear in N. For each value of i, the inner loop runs
-    log i times, so the total number of iterations is N log N.
+4.  The outer loop is linear in N. For each value of i, 
+    the inner loop runs log(i) times, which is at most 
+    log(N-2) times. Since the loops are nested, the overall 
+    time complexity is in O(N log N).
 
-5.  The only thing that determines the running time of the while loop, is the
-    fact that in each loop iteration, n is divided by 2. Thus, the loop will
-    run log N times.
+5.  The only thing that determines the running time of the 
+    while loop, is the fact that at the end of each loop 
+    iteration, n is divided by 2. Thus, the complexity is 
+    in O(log N).
+    Note that the program fragment uses binary exponentiation
+    to compute 42^N. This is the value held by p after the
+    loop terminates.
 
 6.  The running time of the while loop is determined by the increment of i by
     j, which itself starts at 0 and is incremented by 1 each iteration. Thus,
