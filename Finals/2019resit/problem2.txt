@@ -39,16 +39,17 @@ Reasoning
     The overall time complexity is in O(log N).
 
 5.  By the time the first while loop terminates, i will have 
-    become the power of two greater than or equal to N². While
-    the first loop takes 2*log(N) iterations, the second one 
-    will run in O(N²). Since the two loops aren't nested, the 
-    overall complexity is in O(N²).
+    become the power of two greater than or equal to N². Thus,
+    while the first loop takes 2*log(N) iterations, the second 
+    one will run in O(N²). Since the two loops aren't nested, 
+    the overall complexity is in O(N²).
 
 6.  The first while loop will terminate when i ⩰ √N, and runs
     in O(log N).
     The second part of the program fragment has a nested loop: 
     the outer loop will run in O(√N) and the inner loop will 
-    do too. The overall time complexity is determined by the
-    nested loop and is therefore in O(N).
+    do too. The overall time complexity is determined by the 
+    loop taking the most time, which is the nested loop in this
+    case, and it is therefore in O(N).
 
 
