@@ -42,8 +42,8 @@ Reasoning
     like a binary search algorithm, the time complexity is 
     in O(log N).
 
-6.  The outer loop runs in O(√N), and the inner loop as well.
-    The two loops are nested, so the overall time complexity 
-    is in O(N).
+6.  The number of iterations only depends on the value of n, 
+    which increments by 1 in each iteration. The loop terminates 
+    when n reaches N. Hence, the time complexity is in O(N).
 
 

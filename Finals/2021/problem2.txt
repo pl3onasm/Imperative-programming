@@ -44,8 +44,8 @@ Reasoning
     to compute 42^N. This is the value held by p after the
     loop terminates.
 
-6.  The running time of the while loop is determined by the increment of i by
-    j, which itself starts at 0 and is incremented by 1 each iteration. Thus,
-    the loop will run N times.
+6.  The outer loop runs in O(√N), and the inner loop as well.
+    The two loops are nested, so the overall time complexity
+    is in O(N).
 
 
