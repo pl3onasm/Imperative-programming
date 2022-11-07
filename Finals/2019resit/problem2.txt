@@ -13,7 +13,7 @@ Reasoning
 
 1.  The outer loop is linear: it runs N times. The inner loop 
     has an index j, which is multiplied by a variable k that
-    takes values ranging from 2 upto 6. So, in the worst case 
+    takes values in the range [2,6]. So, in the worst case 
     the inner loop will run log(N) times (and log₆(N) in the 
     best case). The two loops are nested, so the overall time 
     complexity is in O(N log N).
@@ -21,22 +21,23 @@ Reasoning
 2.  The number of iterations is determined by i and j, which 
     are incremented by 1 and 2 respectively each time. The 
     variable s has no effect on the running time. The loop 
-    terminates when i*(2*i)/2 = i² equals N. The overall time 
-    complexity is therefore in O(√N).
+    terminates when i*j/2 = i*(2*i)/2 = i² ⩰ N. 
+    The overall time complexity is therefore in O(√N).
 
-3.  The while loop will terminate when s equals N². Since s 
+3.  The while loop will terminate when s ≥ N². Since s 
     continually takes the sum of itself and the current value 
     of i, it actually computes the sum of the first i integers.
-    So, s = i*(i + 1)/2, and the loop terminates when s = N².
+    So, s = i*(i + 1)/2, and the loop terminates when s ⩰ N².
     The overall time complexity is therefore in O(N).
 
-4.  The while loop will terminate when s equals N. The variable 
+4.  The while loop will terminate when s ≥ N. The variable 
     s continually takes the sum of itself and the value of i. 
-    Notice that i += i + i%2, is the same as i = 2*i + i%2, thus
-    i will be multiplied by 2 each time, but the added term
+    Notice that i += i + i%2, is the same as i = 2*i + i%2, 
+    thus i will be doubled each time, but the added term
     (which will always have the value 1) ensures i remains odd. 
-    At termination, s = (2*i + 1)*(2*i+2)/2 = (2*i + 1)² = N.
-    The overall time complexity is in O(log N).
+    At termination, s = (2*i + 1)*(2*i+2)/2 = (2*i + 1)² ⩰ N,
+    where i is the number of iterations. The overall time 
+    complexity is thus in O(log N).
 
 5.  By the time the first while loop terminates, i will have 
     become the power of two greater than or equal to N². Thus,
@@ -48,8 +49,9 @@ Reasoning
     in O(log N).
     The second part of the program fragment has a nested loop: 
     the outer loop will run in O(√N) and the inner loop will 
-    do too. The overall time complexity is determined by the 
-    loop taking the most time, which is the nested loop in this
-    case, and it is therefore in O(N).
+    do too. The nested loop thus runs in O(N). The overall 
+    time complexity is determined by the loop taking the most 
+    time, which is the nested loop in this case, and is 
+    therefore in O(N).
 
 

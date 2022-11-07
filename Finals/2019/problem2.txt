@@ -24,9 +24,10 @@ Reasoning
     i*log(2) = 2*log(N), i.e. i = 2*log(N). Hence, the time 
     complexity is in O(log N).
 
-3.  The outer loop runs N times, while the inner loop runs N/3 times. 
-    The loops are nested so that the total running time is N²/3. 
-    This means that the fragment's time complexity is in O(N²).
+3.  The outer loop runs N times, whereas the inner loop runs 
+    N/3 times. The loops are nested so that the total running 
+    time is N²/3. This means that the fragment's time 
+    complexity is in O(N²).
 
 4.  The variable s is alternatingly incremented by 1 or multiplied 
     by 2, as i is incremented by 1 each time and switches between 
@@ -45,7 +46,7 @@ Reasoning
     i = i*(i + 1)/2, the total sum of the first i integers, and
     i ⩰ √N.
     The inner for loop has an index j which after each iteration 
-    is incremented by 1, and it ends when j² >= N, so that its 
+    is incremented by 1, and it ends when j² ≥ N, so that its 
     running time is in O(√N) as well. The two loops are nested, 
     meaning that the overall time complexity is in O(N).
 
