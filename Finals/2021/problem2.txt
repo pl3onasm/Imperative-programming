@@ -20,7 +20,7 @@ Reasoning
     s equals the sum of the first N-1 integers, so 
     s = (N-1)*N/2. The second loop then runs 
     s/2 = (N-1)*N/4 times, which is quadratic in N. 
-    Since the two loop aren't nested, the overall time 
+    Since the two loops aren't nested, the overall time 
     complexity is determined by the loop taking the most
     time, which is the second one. Hence, the time 
     complexity is in O(N²).
