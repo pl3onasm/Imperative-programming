@@ -11,36 +11,44 @@ Answers
 
 Reasoning
 
-1.  The outer loop is linear: i is incremented by 1 each time and the loop terminates
-    when i equals N. The inner loop has an index j, which is multiplied by a variable
-    that grows by a factor 2 and a constant that doesn't exceed the value 4: the growth 
-    is clearly dominated by the multiplication, so that the constant can be ignored. 
-    The loop will terminate when j equals N. This means that the inner loop runs log N 
-    times. The two loops are nested, so the overall complexity is in O(N log N).
+1.  The outer loop is linear: it runs N times. The inner loop 
+    has an index j, which is multiplied by a variable k that
+    takes values ranging from 2 upto 6. So, in the worst case 
+    the inner loop will run log(N) times (and log₆(N) in the 
+    best case). The two loops are nested, so the overall time 
+    complexity is in O(N log N).
 
-2.  The number of iterations is determined by i and j, which are incremented by 1 and
-    2 respectively each time. The variable s has no effect on the running time. The loop 
-    will terminate when i*j/2 equals N. Ignoring constant factors, the overall time 
+2.  The number of iterations is determined by i and j, which 
+    are incremented by 1 and 2 respectively each time. The 
+    variable s has no effect on the running time. The loop 
+    terminates when i*(2*i)/2 = i² equals N. The overall time 
     complexity is therefore in O(√N).
 
-3.  The while loop will terminate when s equals N². Since s continually takes the sum of
-    itself and the value of i, which is incremented by 1 each time, by the time the loop
-    terminates, s will be equal to i * (i + 1) / 2. The growth of this value is dominated 
-    by the square i². The overall time complexity is therefore in O(N).
+3.  The while loop will terminate when s equals N². Since s 
+    continually takes the sum of itself and the current value 
+    of i, it actually computes the sum of the first i integers.
+    So, s = i*(i + 1)/2, and the loop terminates when s = N².
+    The overall time complexity is therefore in O(N).
 
-4.  The while loop will terminate when s equals N. The variable s continually takes the
-    sum of itself and the value of i, which is incremented by itself and a constant that
-    doesn't exceed the value 1. This means that the growth of i is dominated by a 
-    multiplication by 2. So, s will equal 2 * i * (i + 1) / 2 by the time the loop
-    terminates. The growth of this value is dominated by the square i². The overall time
-    complexity is therefore in O(log N).
+4.  The while loop will terminate when s equals N. The variable 
+    s continually takes the sum of itself and the value of i. 
+    Notice that i += i + i%2, is the same as i = 2*i + i%2, thus
+    i will be multiplied by 2 each time, but the added term
+    (which will always have the value 1) ensures i remains odd. 
+    At termination, s = (2*i + 1)*(2*i+2)/2 = (2*i + 1)² = N.
+    The overall time complexity is in O(log N).
 
-5.  By the time the first while loop terminates, i will equal N². The second while loop 
-    will therefore also run N² times. The overall time complexity is thus a multiple of
-    N² and is therefore in O(N²).
+5.  By the time the first while loop terminates, i will have 
+    become the power of two greater than or equal to N². While
+    the first loop takes 2*log(N) iterations, the second one 
+    will run in O(N²). Since the two loops aren't nested, the 
+    overall complexity is in O(N²).
 
-6.  The first while loop will terminate when i equals √N. The second loop is nested: the 
-    outer loop will run √N times and the inner loop will also run √N times for each 
-    iteration of the outer loop. The overall time complexity is therefore in O(N).
+6.  The first while loop will terminate when i ⩰ √N, and runs
+    in O(log N).
+    The second part of the program fragment has a nested loop: 
+    the outer loop will run in O(√N) and the inner loop will 
+    do too. The overall time complexity is determined by the
+    nested loop and is therefore in O(N).
 
 
