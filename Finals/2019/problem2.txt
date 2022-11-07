@@ -15,13 +15,13 @@ Reasoning
     itself is incremented by 1 in each execution of the loop body. 
     This means that i is first incremented by 1, then by 2, 3,... 
     so that by the end i = i*(i + 1)/2, the total sum of the first 
-    i integers. Thus, at termination i*(i + 1)/2 = N, and the time 
+    i integers. Thus, at termination i*(i + 1)/2 ⩰ N, and the time 
     complexity is in O(√N).
 
 2.  The running time is independent of s. After each iteration, 
     the index i is multiplied by 2, so that the loop terminates 
-    when 2ⁱ = N². Taking the log on both sides, we get 
-    i*log(2) = 2*log(N), i.e. i = 2*log(N). Hence, the time 
+    when 2ⁱ ⩰ N². Taking the log on both sides, we get 
+    i*log(2) ⩰ 2*log(N), i.e. i ⩰ 2*log(N). Hence, the time 
     complexity is in O(log N).
 
 3.  The outer loop runs N times, whereas the inner loop runs 
