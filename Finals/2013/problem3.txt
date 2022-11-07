@@ -12,10 +12,9 @@ Answers
 Reasoning
 
 1.  At termination, the loop has approximately run 
-    log(N - log N) = log(N) / log(log N) times, since j is 
-    halved until it meets the number of iterations that is kept 
-    by i. The loop body is in O(1), so the overall time 
-    complexity is in O(log N).
+    log(N - log N) times, since j is halved until it meets 
+    the number of iterations that is kept by i. The loop body 
+    is in O(1), so the overall time complexity is in O(log N).
 
 2.  The outer for loop runs N times. The inner for loop runs at 
     most N times (when i = 0). The loop body is in O(1), so the
