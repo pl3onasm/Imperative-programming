@@ -16,14 +16,14 @@ Reasoning
     running time. Therefore, the time complexity is in O(log N).
 
 2.  After each iteration the index i is incremented by 10. The
-    loop terminates when i >= N. So the loop will run N/10 times. 
+    loop terminates when i ≥ N. So the loop will run N/10 times. 
     Hence, the time complexity is in O(N).
 
 3.  In each iteration, i is incremented by 1, while s is 
     incremented by i. This means that at termination, s is 
     equal to 1 + 2 + 3 + ..., the sum of the first i integers, 
-    i.e., s = i*(i + 1)/2 >= N. 
-    Thus, the time complexity is in O(√N).
+    i.e., s = i*(i + 1)/2 ⩰ N, where i indicates the number
+    of iterations. Thus, the time complexity is in O(√N).
 
 4.  The time complexity is independent of s. The outer while 
     loop runs N times. For each value of k, the inner for 
@@ -34,9 +34,9 @@ Reasoning
     iteration. So, the outer loop will run log(N) times. 
     In the last iteration of the outer loop, i will be set 
     to 2^log(N), the current value of s. Since the loops are 
-    nested, the total number of iterations will be a multiple 
-    of log(N), and so the overall time complexity will be 
-    in O(log N).
+    nested, the total number of iterations will therefore be 
+    a multiple of log(N), and so the overall time complexity 
+    iterations in O(log N).
 
 6.  Just like in the previous question, the outer loop will 
     run log(N) times, since s will be equal to 2^log(N) at 
