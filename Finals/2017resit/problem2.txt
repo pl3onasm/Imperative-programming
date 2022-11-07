@@ -11,32 +11,43 @@ Answers
 
 Reasoning
 
-1.  After each iteration of the outer for loop, i is divided by 2, so the number of iterations 
-    equals log N. The inner for loop runs i times for each iteration of the outer loop, so it 
-    runs at most N times. Since the loops are nested, the overall time complexity is in 
-    O(N log N).
+1.  After each iteration of the outer for loop, i is halved, 
+    so the number of iterations equals log(N). The inner loop 
+    runs i times, so it runs at most N times. Since the loops 
+    are nested, the overall time complexity is in O(N log N).
 
-2.  This is similar to the previous problem, except that now the inner loop and outer loop have
-    switched places. The outer loop now runs N times, whereas the inner loop runs at most log N 
-    times. Since the loops are nested, the overall time complexity is again in O(N log N).
+2.  This is similar to the previous problem, except that now 
+    the outer loop now runs N times, whereas the inner loop 
+    runs at most log(N) times. Since the loops are nested, 
+    the overall time complexity is again in O(N log N).
 
-3.  The outer loop runs N times. The inner loop runs at most N/2 times for each iteration of the 
-    outer loop. Since the loops are nested, the overall time complexity is in O(N²).
+3.  The outer loop runs N times. The inner loop runs at 
+    most N/2 times for each iteration of the outer loop. 
+    Since the loops are nested, the overall time 
+    complexity is in O(N²).
 
-4.  The loop will terminate when i < N/i, i.e. when i² < N. Since i is incremented by 1 each time 
-    the loop runs, and s does not affect the running time, the loop will run at most √N times.
-    Therefore, the time complexity is in O(√N).
-    To be fair, the program fragment will actually result in undefined behavior as the initial 
-    value of the condition is undefined, since i is initialized to zero.
+4.  The loop will terminate when i ⩰ N/i, i.e. i² ⩰ N. 
+    Since i is incremented by 1 after each iteration, 
+    and s doesn't affect the running time, the loop will 
+    run at most √N times. Therefore, the time complexity 
+    is in O(√N).
+    To be fair, the program fragment will actually result 
+    in undefined behavior as the initial value of the loop
+    condition is undefined, since i is initialized to zero.
 
-5.  The variable i is initialized to N and is either decremented by 1 or divided by d in each 
-    loop iteration. The value for d may vary from 1 to 5. Only in the case that i is divisible
-    by d, it will be decremented by 1, otherwise i will be integer divised by d. As the division
-    clearly dominates the running time, the time complexity is O(log N)
+5.  The variable i is initialized to N and is either 
+    decremented by 1 or divided by d in each iteration. 
+    The value for d may vary from 1 to 5. Only in the case 
+    that i is divisible by d, will it be decremented by 1, 
+    otherwise i will be integer divised by d. As the division
+    clearly dominates the running time, the time complexity 
+    is in O(log N)
 
-6.  The outer for loop runs log N times. For each iteration of the outer loop, the inner while
-    loop runs at most log N times, as the maximum value i takes is log N. Since the loops are 
-    nested, the overall time complexity is in O(log² N). As we don't have that option, we choose
-    the nearest option, which is O(log N).
+6.  The outer for loop runs log(N) times. For each iteration 
+    of the outer loop, the inner while loop lets j catch up
+    with the current value of i: the value of j just picks 
+    up where it previously left off. Overall, the number of
+    iterations will therefore be a multiple of log(N).
+    The fragment's complexity is thus in O(log N).
 
 
