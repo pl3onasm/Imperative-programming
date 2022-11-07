@@ -32,12 +32,11 @@ Reasoning
     total complexity is thus in O(N²).
 
 5.  The outer for loop runs N times. In each iteration, 
-    the value of d has a value in the range [2,6], a 
-    value which is then used as a factor to multiply 
-    the value of j in the inner loop. The running time 
-    of the inner loop thus has a sharpest upper bound 
-    of log(N). Since the loops are nested, the total 
-    complexity is in O(N log N).
+    d has a value in the range [2,6], a value which is
+    used as a factor to multiply the value of j in the 
+    inner loop. The running time of the inner loop thus 
+    has a sharpest upper bound of log(N). Since the 
+    loops are nested, the complexity is in O(N log N).
 
 6.  The loop will terminate when s = i*(i+1)/2 ⩰ N², 
     so that its complexity is in O(N).
