@@ -21,9 +21,9 @@ int *makeIntArray(int n) {
 }
 
 void readInput(int *f, int n) {
-  int idx, v;
-  while (scanf("father(%d)=%d\n", &idx, &v)) 
-    f[idx] = v;
+  int x, y;
+  while (scanf("father(%d)=%d\n", &x, &y)) 
+    f[x] = y;
 }
 
 void initializeArray(int *f, int n) {
@@ -32,11 +32,10 @@ void initializeArray(int *f, int n) {
 
 int isAncestor(int *f, int n, int anc, int desc) {
   while (1) {
+    if (desc < 0 || desc >= n) return 0;
     if (f[desc] == anc) return 1;
-    if (f[desc] == -1) return 0;
     desc = f[desc];
   }
-  return 0;
 }
 
 int main(int argc, char *argv[]) {
