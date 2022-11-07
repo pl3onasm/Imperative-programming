@@ -37,7 +37,7 @@ Reasoning
 3.    { x == A*A*A, y == A*A, z == A }
           (prepare x = x + 3*y + 3*z + 1)
       { x + 3*y + 3*z + 1 == A*A*A + 3*A*A + 3*A + 1, y == A*A, z == A }
-          (rewrite using fact (u + v)³ = u³ + 3u²v + 3uv² + v³)
+          (rewrite using (u + v)³ = u³ + 3u²v + 3uv² + v³)
       { x + 3*y + 3*z + 1 == (A + 1)*(A + 1)*(A + 1), y == A*A, z == A }
     x = x + 3*y + 3*z + 1;
       { x == (A + 1)*(A + 1)*(A + 1) }
