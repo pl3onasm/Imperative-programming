@@ -11,31 +11,35 @@ Answers
 
 Reasoning
 
-1.  The outer loop runs N/3 times, which is in O(N). The inner loop  
-    runs log(3*N) = log(3) + log(N) times, which is in O(log N).
-    Since the loops are nested, the total time complexity is thus 
-    in O(N log N).
+1.  The outer loop runs N/3 times, which is in O(N). 
+    The inner loop runs log(3*N) = log(3) + log(N) times, 
+    which is in O(log N). Since the loops are nested, the 
+    total time complexity is thus in O(N log N).
 
-2.  The running time is independent of s. The for loop will terminate 
-    when i has become i^log₃(N²), which means that the loop will run 
-    log₃(N²) = 2*log₃(N) times, which is in O(log N).
+2.  The running time is independent of s. The for loop 
+    terminates after log₃(N²) = 2*log₃(N) iterations. 
+    Hence, the fragment's time complexity is in O(log N).
 
-3.  The first while loop runs until s = i*(i+1)/2 = N, so that the
-    complexity is in O(√N). At the end of the first loop, i ≅ √N, so
-    that the second loop has the same complexity. The two loops are
-    independent, which means that the total complexity is in O(√N).
+3.  The first while loop runs until s = i*(i+1)/2 ⩰ N, 
+    so that the complexity is in O(√N). At the end of 
+    the first loop, i ⩰ √N, so that the second loop also
+    runs in O(√N). The two loops aren't nested, meaning
+    that the total complexity is in O(√N).
 
-4.  The outer loop runs N times, which is in O(N). The inner loop 
-    runs (5/2)*N times, which is in O(N) as well. Since the loops 
-    are nested, the total complexity is thus in O(N²).
+4.  The outer loop runs N times, which is in O(N). 
+    The inner loop runs at most (5/2)*(N-1) times, which 
+    is in O(N) as well. Since the loops are nested, the 
+    total complexity is thus in O(N²).
 
-5.  The outer for loop runs N times. In each iteration, the value
-    of d varies from 2 to 6, a value which is then used as a factor
-    to multiply the value of j in the inner loop. The running time
-    of the inner loop has thus a sharpest upper bound of log(N). 
-    Since the loops are nested, the total complexity is in O(N log N).
+5.  The outer for loop runs N times. In each iteration, 
+    the value of d has a value in the range [2,6], a 
+    value which is then used as a factor to multiply 
+    the value of j in the inner loop. The running time 
+    of the inner loop thus has a sharpest upper bound 
+    of log(N). Since the loops are nested, the total 
+    complexity is in O(N log N).
 
-6.  The loop will terminate when s = i*(i+1)/2 = N², so that its
-    complexity is in O(N).
+6.  The loop will terminate when s = i*(i+1)/2 ⩰ N², 
+    so that its complexity is in O(N).
 
 
