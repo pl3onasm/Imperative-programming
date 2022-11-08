@@ -4,7 +4,7 @@ Answers
 1. b
 2. this seems to be a mistake in the exam,
    as none of the options work;
-   it works if we change the last assigment 
+   it works if we change the last assignment 
    of option c into x = 2*x - y
 3. b
 4. a
