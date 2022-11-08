@@ -26,9 +26,9 @@ void partitionGenerator(int i, char *a, int size, int *min, int *count) {
   }
   for (int j = i; j <= size; j++) {
     if (isPalindrome(a, i, j)) {
-      *count += 1;
+      ++*count;
       partitionGenerator(j+1, a, size, min, count);
-      *count -= 1;	// backtrack
+      --*count;	// backtrack
     }
   }
 }

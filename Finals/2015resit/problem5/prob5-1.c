@@ -18,7 +18,7 @@ void generateExpressions(int length, int n, int a[],
       if (ops[i]) eval += a[i+1];
       else eval -= a[i+1];
     }
-    if (eval == n) ++(*count);
+    if (eval == n) ++*count;
     return; 
   }
   // recursive case: set next operator

@@ -23,8 +23,8 @@ int maximum(int a, int b, int c){
 }
 
 void naiveSplit(int *arr, int size, int *min){
-  // naive way to compute the separate sums, in which
-  // the same sums are computed over and over again
+  /* naive way to compute the separate sums, in which
+     the same sums are computed over and over again */
   int a=0, b, c; 
   for (int i=0; i<size-2; ++i){
     a += arr[i]; b=0; 
@@ -40,8 +40,8 @@ void naiveSplit(int *arr, int size, int *min){
 }
 
 void split(int *arr, int size, int *min){
-  // precomputes sums over the subarrays in order
-  // to avoid continually recomputing partial sums
+  /* precomputes sums over the subarrays in order
+     to avoid continually recomputing partial sums */ 
   int a, b, c;
   for (int i=1; i<size; ++i) arr[i] += arr[i-1];
   int total = arr[size-1];

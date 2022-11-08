@@ -8,7 +8,7 @@
 
 void generateSequences(int a[], int n, int index, int evens, int odds, int *count){
   if (index == n){  // base case
-    if (evens && evens == odds) (*count)++;
+    if (evens && evens == odds) ++*count;
     return; 
   }
   // take the current element a[index] into the sequence

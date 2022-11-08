@@ -25,7 +25,7 @@ void computeFibSeries (int n, int idx, int *len) {
 void checkFibSums (int target, int sum, int idx, int *count) {
   /* Base case */
   if (idx < 0) {
-    if (target == sum) (*count)++;
+    if (target == sum) ++*count;
     return;
   }
   /* Recursive case */

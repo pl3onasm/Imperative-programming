@@ -17,7 +17,7 @@ void generateExpressions(char ops[], int n, int index, int *count){
       }
     }
     for (int i = 0; i < 9; ++i) eval += digits[i];
-    if (eval == n) (*count)++;
+    if (eval == n) ++*count;
     return;
   }
   ops[index] = '+';
