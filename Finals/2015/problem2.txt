@@ -11,31 +11,34 @@ Answers
 
 Reasoning
 
-1.  At termination of the while loop, s is equal to the sum of the 
-    first i integers, which is i(i+1)/2, a value that is dominated 
-    by the square term. Thus, the while loop runs in O(√N) time.
+1.  At loop termination, s equals the sum of the first 
+    i integers, so s = i(i+1)/2 ⪆ N. Thus, the while 
+    loop runs in O(√N) time.
 
-2.  The outer for loop runs N times, and the inner for loop runs  
-    at most N times (when i = 0). The two loops are nested, so the 
-    overall time complexity is in O(N²).
+2.  The outer loop runs N times, and the inner loop runs  
+    at most N times (when i = 0). The two loops are nested, 
+    so the overall time complexity is in O(N²).
 
-3.  This fragment is similar to the binary search algorithm. If j 
-    indicates the right end of the current search interval, and i 
-    the left end, then the variable k is set to the midpoint of 
-    the interval, (i+j)/2, and either i or j is then set to k, 
-    thus halving the size of the search interval. The loop 
-    terminates when i = j, and so the loop runs in O(log N) time.
+3.  This fragment is similar to the binary search algorithm. 
+    If i and j indicate the right and left end of the 
+    current search interval, then the variable k is set to 
+    the midpoint, k = (i+j)/2, after which either i or j 
+    is set to k, thus halving the size of the search 
+    interval. The loop terminates when i = j, and so its 
+    complexity is in O(log N).
 
-4.  By the time the first loop terminates, the variable j will
-    have the value N*(N+1)/2. The second loop then runs j times.
-    The two loops aren't nested, so the overall time complexity
-    is determined by the second loop, which runs in O(N²) time.
+4.  By the time the first loop terminates, the variable j
+    equals (N-1)*N/2 (sum of the first N-1 integers). The
+    second loop then runs j times. The two loops aren't 
+    nested, so the overall time complexity is determined 
+    by the second loop, which runs in O(N²) time.
 
-5.  The for loop will run N/2 times. This means that the loop
-    runs in O(N) time.
+5.  The for loop will run N/2 times. So the time 
+    complexity is in O(N).
 
-6.  The outer for loop runs N times, whereas the inner for loop
-    runs at most log(N²) = 2*log(N) times. The two loops are 
-    nested, so the overall time complexity is in O(N log N) time. 
+6.  The outer loop runs N times, whereas the inner loop
+    runs at most log(N²) = 2*log(N) times. The two loops 
+    are nested, so the overall time complexity is in 
+    O(N log N). 
 
 

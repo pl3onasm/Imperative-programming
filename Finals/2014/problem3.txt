@@ -11,36 +11,42 @@ Answers
 
 Reasoning
 
-1.  The index j keeps track of the number of iterations. The
-    sum of the first j integers is given by j*(j+1)/2. This 
-    program fragment makes use of that formula, but manipulates 
-    i, the variable that is taking the running sum, in such a 
-    way that i is always exactly equal to j² by the end of each 
-    iteration. So when the loop terminates, i is equal to j²,
-    and so the overall time complexity is in O(√N).
-    Note: compare this to question 3 (problem 3) of the exam 
-    from 2013, and notice the subtle difference.
+1.  The index j keeps track of the number of iterations. 
+    The sum of the first j integers is given by j*(j+1)/2. 
+    This program fragment makes use of that formula, but 
+    manipulates i, the variable that is taking the running 
+    sum, in such a way that i is always exactly equal to j² 
+    at the end of each iteration. So at loop termination, 
+    i is equal to j², and the overall time complexity is 
+    therefore in O(√N).
+    Note: compare this to question 3 (problem 3) of the 
+    exam from 2013, and notice the subtle difference.
 
-2.  The variable i is initialized to N and is halved in each 
-    iteration when it's even, and incremented by 1 when it's 
-    odd. So the number of iterations is the number of times 
-    we can halve N before it becomes 1, plus a constant number 
-    of increments. Hence, the time complexity is in O(log N).
+2.  The variable i is initialized to N and is then halved 
+    in each iteration. If N is odd, then i is incremented
+    by 1 to make it even. So the number of iterations is 
+    just the number of times we can halve N before it 
+    becomes 1, plus one increment if needed. Hence, the 
+    time complexity is in O(log N).
 
-3.  Both i and j run through their consecutive values and meet
-    each other half way. So the time complexity is in O(N).
+3.  Both i and j run through their consecutive values 
+    and meet each other half way. So the time complexity 
+    is in O(N).
 
-4.  The first loop runs N times, and so does the second one.
-    They aren't nested, so the time complexity is in O(N).
+4.  The first loop runs N times, and the second one N-1
+    times. They aren't nested, so the time complexity 
+    is in O(N).
 
-5.  In contrast to the previous program fragment, the two loops
-    are nested. The inner loop runs N times for each iteration
-    of the outer loop, so the time complexity is in O(N²).
+5.  In contrast to the previous program fragment, the 
+    two loops are nested. The inner loop runs N-1 times 
+    for each iteration of the outer loop, so the time 
+    complexity is in O(N²).
 
-6.  The first for loop computes N factorial in linear time. 
-    The second loop then halves N! in each iteration, so that
-    the number of iterations is the number of times we can 
-    halve N! before it becomes 1, this is log(N!) < log(N^N) 
-    = N log N. Hence, the time complexity is in O(N log N).  
+6.  The first loop computes N factorial in linear time. 
+    The second loop then halves N! in each iteration, 
+    so that the number of iterations is the number of 
+    times we can halve N! before it becomes 1, this is 
+    log(N!) < log(N^N) = N*log(N). 
+    Hence, the time complexity is in O(N log N).  
 
 
