@@ -25,10 +25,11 @@ Reasoning
     The overall time complexity is therefore in O(√N).
 
 3.  The while loop will terminate when s ≥ N². Since s 
-    continually takes the sum of itself and the current value 
-    of i, it actually computes the sum of the first i integers.
-    So, s = i*(i + 1)/2, and the loop terminates when s ⩰ N².
-    The overall time complexity is therefore in O(N).
+    continually takes the sum of itself and the current  
+    value of i, it actually computes the sum of the first  
+    i-1 integers. So, s = (i-1)*i/2, which is quadratic  
+    in i, and the loop terminates when s ⩰ N². The overall  
+    time complexity is therefore in O(N).
 
 4.  The while loop will terminate when s ≥ N. The variable 
     s continually takes the sum of itself and the value of i. 
