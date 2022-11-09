@@ -1,4 +1,4 @@
-/* file: prob5-2.c
+/* file: prob5-3.c
 * author: David De Potter
 * version: 3.0
 * Yet another, even more concise version
