@@ -1,6 +1,6 @@
 /* file: prob5-1.c
    author: David De Potter
-   version: 5.2, more compact version of 5.1
+   version: 5.2, more concise version of 5.1
    description: IP Final 2016, problem 5, balanced subsequences
 */
 

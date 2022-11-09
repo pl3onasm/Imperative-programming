@@ -7,17 +7,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int generateSequences(int a[], int idx, int evens, int odds){
-  if (idx < 0){  // base case
-    return evens && evens == odds;
-  }
-  // put the current element a[idx] into the sequence or skip it
-  return generateSequences(a, idx-1, evens+(!(a[idx]%2)), odds+a[idx]%2)
-       + generateSequences(a, idx-1, evens, odds);
+int countSequences(int a[], int idx, int evens, int odds){
+  // base case: check if balanced
+  if (idx < 0) return evens && evens == odds;
+  // recursive case: put a[idx] into the sequence or skip it
+  return countSequences(a, idx-1, evens+(!(a[idx]%2)), odds+a[idx]%2)
+       + countSequences(a, idx-1, evens, odds);
 }
 
 int numberOfBalancedSubsets(int length, int a[]) {
-  return generateSequences(a, length-1, 0, 0); 
+  return countSequences(a, length-1, 0, 0); 
 }
 
 int main(int argc, char *argv[]) {

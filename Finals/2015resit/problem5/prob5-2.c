@@ -9,18 +9,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int evaluateExps(int length, int n, int a[], int index, int sum) {
+int countExps(int length, int n, int a[], int idx, int sum) {
   // base case: check computed sum
-  if (index == length-1){   
-    return sum == n;
-  }
+  if (idx == length-1) return sum == n;
   // recursive case: add / subract next term
-  return evaluateExps(length, n, a, index+1, sum+a[index+1]) +
-  evaluateExps(length, n, a, index+1, sum-a[index+1]);
+  return countExps(length, n, a, idx+1, sum+a[idx+1])
+       + countExps(length, n, a, idx+1, sum-a[idx+1]);
 }
 
 int plusmin(int length, int a[], int n) {
-  return evaluateExps(length, n, a, 0, a[0]);
+  return countExps(length, n, a, 0, a[0]);
 }
 
 int main() {
