@@ -17,17 +17,17 @@ Reasoning
     manipulates i, the variable that is taking the running 
     sum, in such a way that i is always exactly equal to j² 
     at the end of each iteration. So at loop termination, 
-    i is equal to j², and the overall time complexity is 
-    therefore in O(√N).
+    i is equal to j², where j denotes the number of 
+    iterations. Thus, the overall complexity is in O(√N).
     Note: compare this to question 3 (problem 3) of the 
     exam from 2013, and notice the subtle difference.
 
-2.  The variable i is initialized to N and is then halved 
+2.  The variable i is initialized to N and then halved 
     in each iteration. If N is odd, then i is incremented
     by 1 to make it even. So the number of iterations is 
     just the number of times we can halve N before it 
-    becomes 1, plus one increment if needed. Hence, the 
-    time complexity is in O(log N).
+    becomes 1, plus one increment if it's odd. 
+    Hence, the time complexity is in O(log N).
 
 3.  Both i and j run through their consecutive values 
     and meet each other half way. So the time complexity 
