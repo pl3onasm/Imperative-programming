@@ -1,7 +1,7 @@
 /* file: prob5-2.c
 * author: David De Potter
-* version: 2.0
-* (using an int function and local int variable to count)
+* version: 3.0
+* Yet another, even more concise version
 * description: IP final exam 2019, problem 5,
 * increasing Fibonacci sums
 */
@@ -23,13 +23,11 @@ void computeFibSeries (int n, int idx, int *len) {
 }
 
 int checkFibSums (int target, int sum, int idx) {
-  int count;
   /* Base case */
   if (idx < 0) return target == sum;
   /* Recursive case */
-  count = checkFibSums (target, sum + fib[idx], idx-1);
-  count += checkFibSums (target, sum, idx-1);
-  return count;
+  return checkFibSums (target, sum + fib[idx], idx-1)
+       + checkFibSums (target, sum, idx-1);
 }
 
 int main (int argc, char *argv[]) {

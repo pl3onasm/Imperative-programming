@@ -12,8 +12,7 @@
 int evaluateExps(int length, int n, int a[], int index, int sum) {
   // base case: check computed sum
   if (index == length-1){   
-    if (sum == n) return 1;
-    return 0;
+    return sum == n;
   }
   // recursive case: add / subract next term
   return evaluateExps(length, n, a, index+1, sum+a[index+1]) +
