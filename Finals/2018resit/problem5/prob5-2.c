@@ -1,6 +1,6 @@
-/* file: prob5.c
+/* file: prob5-2.c
    author: David De Potter
-   version: 5.1, using an int function
+   version: 5.2, using an int function
    description: IP Final 2018 Resit, problem 5,
    minimal palindromic partition
 */ 
