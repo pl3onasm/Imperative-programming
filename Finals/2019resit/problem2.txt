@@ -32,19 +32,18 @@ Reasoning
     time complexity is therefore in O(N).
 
 4.  The while loop will terminate when s ≥ N. The variable 
-    s continually takes the sum of itself and the value of i. 
+    s continually takes the sum of i and itself. 
     Notice that i += i + i%2, is the same as i = 2*i + i%2, 
-    thus i will be doubled each time, but the added term
-    (which will always have the value 1) ensures i remains odd. 
-    At termination, s = (2*i + 1)*(2*i+2)/2 = (2*i + 1)² ⩰ N,
-    where i is the number of iterations. The overall time 
-    complexity is thus in O(log N).
+    so i will be doubled each time, but the added term (which 
+    will always have the value 1) ensures i remains odd. 
+    The overall time complexity is thus in O(log N).
 
 5.  By the time the first while loop terminates, i will have 
     become the power of two greater than or equal to N². Thus,
-    while the first loop takes 2*log(N) iterations, the second 
-    one will run in O(N²). Since the two loops aren't nested, 
-    the overall complexity is in O(N²).
+    while the first loop takes log(N²) = 2*log(N) iterations
+    (as i is doubled each time), the second one will run 
+    in O(N²). Since the two loops aren't nested, the overall 
+    complexity is in O(N²).
 
 6.  The first while loop will terminate when i ⩰ √N, and runs
     in O(log N).
