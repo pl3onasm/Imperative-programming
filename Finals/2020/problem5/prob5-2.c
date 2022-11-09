@@ -1,4 +1,4 @@
-/* file: prob5-1.c
+/* file: prob5-2.c
    author: David De Potter
    version: 5.2, using an int function
    description: IP Final 2020, problem 5, choice maximization
