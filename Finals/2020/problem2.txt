@@ -14,7 +14,7 @@ Reasoning
 1.  In each iteration i is incremented by one, and s takes the
     total sum of the sum so far and the current value of i. 
     Overall, s is thus taking the sum of the first i integers, 
-    and so s = i(i+1)/2. Hence, the time complexity is in O(√N).
+    and so s = i*(i+1)/2. Hence, the time complexity is in O(√N).
 
 2.  The number of iterations is determined by the number of times 
     i is incremented. In each iteration, i is incremented by 2, 
@@ -28,7 +28,7 @@ Reasoning
 4.  The outer loop is linear in N: it iterates N times. In each 
     iteration, j is set to the current value of i, and then j is 
     halved until j is less than 1. The inner loop thus runs in 
-    O(logN). The two loops are nested, so the overall time 
+    O(log N). The two loops are nested, so the overall time 
     complexity is in O(N log N).
 
 5.  In each iteration of the for loop, i is multiplied by 3. 

@@ -26,8 +26,8 @@ Reasoning
     Hence, the time complexity is in O(log N).
 
 3.  The variable s doesn't affect the fragment's complexity. 
-    At the loop's termination, it will have run 7*N/3 - 42
-    times. So, the fragment's time complexity is in O(N).
+    At termination, the loop will have run 7*N/3 - 42 times.
+    So, the fragment's time complexity is in O(N).
 
 4.  After the first loop terminates, s = i² ⩰ N, so that 
     i ⩰ √N. So the first loop's complexity is in O(√N). 

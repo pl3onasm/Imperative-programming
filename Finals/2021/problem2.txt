@@ -37,9 +37,8 @@ Reasoning
     time complexity is in O(N log N).
 
 5.  The only thing that determines the running time of the 
-    while loop, is the fact that at the end of each loop 
-    iteration, n is divided by 2. Thus, the complexity is 
-    in O(log N).
+    loop, is the fact that at the end of each iteration, 
+    n is halved. Thus, the time complexity is in O(log N).
     Note that the program fragment uses binary exponentiation
     to compute 42^N. This is the value held by p after the
     loop terminates.
