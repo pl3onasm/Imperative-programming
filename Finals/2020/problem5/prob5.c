@@ -26,10 +26,10 @@ void maximize(int *vec, int idx, int len, int sum, int *max){
     if (sum > *max) *max = sum;
     return;
   }
-  if (len < 2){   // we can still add
-    maximize(vec, idx-1, len+1, sum + vec[idx], max);
-  }
-  maximize(vec, idx-1, 0, sum, max);  //skip
+  // we can still add
+  if (len < 2) maximize(vec, idx-1, len+1, sum + vec[idx], max);
+  //skip
+  maximize(vec, idx-1, 0, sum, max);  
 }
 
 int main(int argc, char **argv){
