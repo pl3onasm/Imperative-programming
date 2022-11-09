@@ -10,7 +10,7 @@
 int computeSubsetSum(int arr[], int index, int sum){
   if (index < 0) return sum;
   return computeSubsetSum(arr, index-1, sum) 
-    + computeSubsetSum(arr, index-1, sum+arr[index]);
+       + computeSubsetSum(arr, index-1, sum+arr[index]);
 }
 
 int main(int argc, char **argv){
