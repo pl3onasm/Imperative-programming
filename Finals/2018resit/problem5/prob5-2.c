@@ -15,12 +15,12 @@ int isPalindrome(char *s, int start, int end) {
   return isPalindrome(s, start+1, end-1);
 }
 
-int countPartitions(int start, int end, char *a) {
+int countParts(int start, int end, char *a) {
   int x, y = 10000;
   if (start > end) return 0;
   for (int j = start; j <= end; j++) {
     if (isPalindrome(a, start, j)) {
-      x = countPartitions(j+1, end, a);
+      x = countParts(j+1, end, a);
       y = x < y ? x : y;
     }
   }
@@ -28,7 +28,7 @@ int countPartitions(int start, int end, char *a) {
 }
 
 int minimalPalPartition(int start, int end, char *a) {
-  return countPartitions (start, end, a); 
+  return countParts (start, end, a); 
 }
 
 int main(int argc, char *argv[]) {
