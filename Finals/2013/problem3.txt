@@ -23,18 +23,19 @@ Reasoning
     two loops are nested.
 
 3.  At the end of each iteration, i is exactly equal to
-    the square of j. Compare this to question 1 (problem 3) 
-    of the exam from 2014, and notice how the order of the 
-    two operations within the loop differs and changes the 
-    value by which i is incremented. Here we need to add 1 
-    to 2*j to get the same result, because j only gets 
+    the square of j. The overall time complexity is thus 
+    in O(√N). 
+    Compare this to question 1 (problem 3) of the exam 
+    from 2014, and notice how the order of the two 
+    operations within the loop differs and changes the 
+    value by which i is incremented. Here we need to add 
+    1 to 2*j to get the same result, because j only gets 
     incremented at the end. 
-    The overall time complexity is thus in O(√N).
 
 4.  The variable i is doubled in each iteration. The fact
-    that j is decremented each time, makes it even run a 
-    bit faster. Hence, the overall time complexity is 
-    in O(log N).
+    that j is decremented each time, makes the loop even 
+    run a bit faster. Hence, the overall time complexity 
+    is in O(log N).
 
 5.  The outer for loop runs log₃(N) times. The inner loop
     runs at most N-1 times (when i = N-1). The loop body 
