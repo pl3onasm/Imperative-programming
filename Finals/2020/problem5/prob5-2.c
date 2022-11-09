@@ -36,8 +36,7 @@ int main(int argc, char **argv){
   int n; 
   scanf("%d: ", &n);
   int *vec = readIntVector(n); 
-  int max = maximize(vec, n-1, 0); 
-  printf("%d\n", max);
+  printf("%d\n", maximize(vec, n-1, 0));
   free(vec);
   return 0; 
 }
