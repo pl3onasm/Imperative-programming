@@ -47,7 +47,7 @@ Reasoning
     of the outer loop, the inner while loop lets j catch up
     with the current value of i: the value of j just picks 
     up where it previously left off. Overall, the number of
-    iterations will therefore be a multiple of log(N).
+    iterations will therefore be some multiple of log(N).
     The fragment's complexity is thus in O(log N).
 
 

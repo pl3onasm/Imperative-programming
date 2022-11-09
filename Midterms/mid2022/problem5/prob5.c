@@ -2,9 +2,9 @@
    author: David De Potter
    description: IP mid2022, problem 5, Curzon numbers
    We use modular exponentiation and rewrite the condition as
-       (2^n + 1) mod (2*n + 1) = 0
-   <=> (2^n mod (2*n + 1) + 1 mod (2*n + 1)) mod (2*n + 1) = 0
-   <=> (2^n mod (2*n + 1) + 1) mod (2*n + 1) = 0
+       (2ⁿ + 1) mod (2*n + 1) = 0
+    ⇔ (2ⁿ mod (2*n + 1) + 1 mod (2*n + 1)) mod (2*n + 1) = 0
+    ⇔ (2ⁿ mod (2*n + 1) + 1) mod (2*n + 1) = 0
 */
 
 #include <stdio.h>
