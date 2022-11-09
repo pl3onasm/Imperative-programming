@@ -1,5 +1,6 @@
 /* file: prob4.c
    author: David De Potter
+   version: 4.1
    description: IP Final 2021, problem 4, maximum sum
 */
 
