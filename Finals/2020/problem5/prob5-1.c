@@ -1,5 +1,6 @@
-/* file: prob5.c
+/* file: prob5-1.c
    author: David De Potter
+   version: 5.1, using a void function
    description: IP Final 2020, problem 5, choice maximization
 */
 
