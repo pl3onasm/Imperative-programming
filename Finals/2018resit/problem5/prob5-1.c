@@ -16,23 +16,23 @@ int isPalindrome(char *s, int start, int end) {
   return isPalindrome(s, start+1, end-1);
 }
 
-void partitionGenerator(int idx, char *a, int size, int *min, int *count) {
-  if (idx > size) {
+void partitionGenerator(int left, int right, char *a, int *min, int *count) {
+  if (left > right) {
     *min = *min < *count ? *min : *count;
     return;
   }
-  for (int j = idx; j <= size; j++) {
-    if (isPalindrome(a, idx, j)) {
+  for (int j = left; j <= right; j++) {
+    if (isPalindrome(a, left, j)) {
       ++*count;
-      partitionGenerator(j+1, a, size, min, count);
+      partitionGenerator(j+1, right, a, min, count);
       --*count;	  // backtrack
     }
   }
 }
 
-int minimalPalPartition(int i, int size, char *a) {
+int minimalPalPartition(int left, int right, char *a) {
   int min = INT_MAX, count = 0;
-  partitionGenerator (i, a, size, &min, &count);
+  partitionGenerator (left, right, a, &min, &count);
   return min;
 }
 
