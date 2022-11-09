@@ -23,7 +23,7 @@ Reasoning
 
 2.  In each iteration, i is doubled, so that at the loop's 
     termination, we have 2ⁱ ⩰ N², i.e. i ⩰ 2*log(N). 
-    Thus, the time complexity is in O(log N).
+    Hence, the time complexity is in O(log N).
 
 3.  The variable s doesn't affect the fragment's complexity. 
     At the loop's termination, it will have run 7*N/3 - 42
