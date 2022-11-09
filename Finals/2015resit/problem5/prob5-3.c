@@ -1,6 +1,7 @@
 /* file: prob5-2.c
    author: David De Potter
-   version: 5.3, same as 5.2 but without separate index
+   version: 5.3, same as 5.2 but going in reverse through
+   the array, so we can combine the index and length parameters
    description: IP Final 2015 resit, problem 5, recursion
 */
 
