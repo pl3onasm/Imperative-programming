@@ -23,7 +23,7 @@ int *readIntVector(int size) {
 
 void maximize(int *vec, int idx, int len, int sum, int *max){
   if (idx < 0){
-    if (sum > *max) *max = sum;
+    *max = sum > *max ? sum : *max;
     return;
   }
   // we can still add
