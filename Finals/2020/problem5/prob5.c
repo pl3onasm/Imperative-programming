@@ -21,22 +21,22 @@ int *readIntVector(int size) {
   return vec;
 }
 
-void maximize(int *vec, int size, int index, int len, int sum, int *max){
-  if (index >= size){
+void maximize(int *vec, int idx, int len, int sum, int *max){
+  if (idx < 0){
     if (sum > *max) *max = sum;
     return;
   }
   if (len < 2){   // we can still add
-    maximize(vec, size, index + 1, len + 1, sum + vec[index], max);
+    maximize(vec, idx-1, len + 1, sum + vec[idx], max);
   }
-  maximize(vec, size, index + 1, 0, sum, max);  //skip
+  maximize(vec, idx-1, 0, sum, max);  //skip
 }
 
 int main(int argc, char **argv){
   int n, max = 0; 
   scanf("%d: ", &n);
   int *vec = readIntVector(n); 
-  maximize(vec, n, 0, 0, 0, &max); 
+  maximize(vec, n-1, 0, 0, &max); 
   printf("%d\n", max);
   free(vec);
   return 0; 
