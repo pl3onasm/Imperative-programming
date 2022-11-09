@@ -16,7 +16,7 @@ int isPalindrome(char *s, int start, int end) {
 }
 
 int countPartitions(int idx, char *a, int size) {
-  int x = 10000, y = 10000;
+  int x, y = 10000;
   if (idx > size) return 0;
   for (int j = idx; j <= size; j++) {
     if (isPalindrome(a, idx, j)) {
