@@ -26,14 +26,13 @@ Reasoning
 
 3.  The outer loop runs N times, whereas the inner loop runs 
     N/3 times. The loops are nested so that the total running 
-    time is N²/3. This means that the fragment's time 
-    complexity is in O(N²).
+    time is N*N/3 = N²/3. So, the complexity is in O(N²).
 
-4.  The variable s is alternatingly incremented by 1 or multiplied 
-    by 2, as i is incremented by 1 each time and switches between 
-    being even and odd. Asymptotically speaking, the running time
-    is dominated by the number of times s is multiplied by 2. 
-    This means that the time complexity is in O(log N).
+4.  The variable s is alternatingly incremented by 1 or doubled, 
+    since i is incremented by 1 each time, which makes it switch 
+    between being even and odd. Asymptotically speaking, the 
+    running time is dominated by the number of times s is 
+    doubled. This means that the time complexity is in O(log N).
 
 5.  The outer loop takes log(N²) = 2*log(N) iterations. As the 
     inner loop clearly runs N times, and the loops are nested, 
