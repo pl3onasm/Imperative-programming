@@ -1,7 +1,8 @@
 /* file: prob3.c
    author: David De Potter
    description: IP Final 2018 Resit, problem 3, ordered pairs
-   version: 2.0, fast version
+   version: 3.2, fast version
+
    We want to find the number of inversions in the array. 
    In this version we sort the array with mergesort, and count the
    number of inversions while merging. This approach gives a solution 

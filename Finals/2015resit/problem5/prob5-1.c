@@ -1,6 +1,6 @@
-/* file: prob5.c
+/* file: prob5-1.c
    author: David De Potter
-   version: 1.0, this version works with a void function, 
+   version: 5.1, this version works with a void function, 
    so that the evaluations have to be done separately 
    when the base case is reached
    description: IP Final 2015 resit, problem 5, recursion

@@ -25,10 +25,10 @@ void naive_kEvenCheck (int *a, int n, int k){
 
 void kEvenCheck (int *a, int n, int k){
   /* more efficient way to test if the subsequent sums of k
-     elements are even, by using the fact the next sum to check
-     is the previous sum minus the first element and plus the
-     next element; this way you don't have to recompute the sum 
-     of all the elements in between over and over again */
+     elements are even, by using the fact that the next sum to 
+     check is the previous sum minus the first element and plus 
+     the next element; this way you don't have to recompute the 
+     sum of all the elements in between over and over again */
   int sum = 0;
   for (int i = 0; i < k; i++) sum += a[i];
   for (int i = 0; i < n-k+1; i++) {

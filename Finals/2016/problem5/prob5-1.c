@@ -1,26 +1,27 @@
-/* file: prob5.c
+/* file: prob5-1.c
    author: David De Potter
+   version: 5.1, using a void function and an int pointer to count
    description: IP Final 2016, problem 5, balanced subsequences
 */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-void generateSequences(int a[], int n, int index, int evens, int odds, int *count){
-  if (index == n){  // base case
+void generateSequences(int a[], int idx, int evens, int odds, int *count){
+  if (idx < 0){  // base case
     if (evens && evens == odds) ++*count;
     return; 
   }
-  // take the current element a[index] into the sequence
-  if (a[index] % 2) generateSequences(a, n, index+1, evens, odds+1, count);
-  else generateSequences(a, n, index+1, evens+1, odds, count);
+  // put the current element a[idx] into the sequence
+  if (a[idx] % 2) generateSequences(a, idx-1, evens, odds+1, count);
+  else generateSequences(a, idx-1, evens+1, odds, count);
   // skip the current element
-  generateSequences(a, n, index+1, evens, odds, count);
+  generateSequences(a, idx-1, evens, odds, count);
 }
 
 int numberOfBalancedSubsets(int length, int a[]) {
   int count = 0;
-  generateSequences(a, length, 0, 0, 0, &count); 
+  generateSequences(a, length-1, 0, 0, &count); 
   return count; 
 }
 

@@ -1,5 +1,6 @@
-/* file: prob3.c
+/* file: prob3-1.c
    author: David De Potter
+   version: 3.1, using merge sort
    description: IP Final 2018, problem 3, sum of pairs
 */
 

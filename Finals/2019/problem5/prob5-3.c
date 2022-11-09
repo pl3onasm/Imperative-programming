@@ -1,7 +1,6 @@
 /* file: prob5-3.c
 * author: David De Potter
-* version: 3.0
-* Yet another, even more concise version
+* version: 5.3, yet another variation
 * description: IP final exam 2019, problem 5,
 * increasing Fibonacci sums
 */

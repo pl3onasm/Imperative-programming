@@ -1,6 +1,6 @@
-/* file: prob5.c
+/* file: prob5-1.c
 * author: David De Potter
-* version: 1.0
+* version: 5.1
 * (using a void function and an int pointer to count)
 * description: IP final exam 2019, problem 5,
 * increasing Fibonacci sums

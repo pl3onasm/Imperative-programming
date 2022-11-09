@@ -1,7 +1,7 @@
 /* file: prob3-2.c
    author: David De Potter
+   version: 3.2, using a histogram
    description: IP Final 2018, problem 3, sum of pairs
-   this version works with a histogram
 */
 
 #include <stdio.h>
