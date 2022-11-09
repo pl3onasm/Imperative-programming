@@ -11,7 +11,7 @@ int countSequences(int a[], int idx, int evens, int odds){
   // base case: check if balanced
   if (idx < 0) return evens && evens == odds;
   // recursive case: put a[idx] into the sequence or skip it
-  return countSequences(a, idx-1, evens+(!(a[idx]%2)), odds+a[idx]%2)
+  return countSequences(a, idx-1, evens + !(a[idx]%2), odds + a[idx]%2)
        + countSequences(a, idx-1, evens, odds);
 }
 

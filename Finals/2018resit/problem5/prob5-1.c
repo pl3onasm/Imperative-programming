@@ -1,5 +1,6 @@
 /* file: prob5.c
    author: David De Potter
+   version: 5.1, using a void function
    description: IP Final 2018 Resit, problem 5,
    minimal palindromic partition
 */ 
@@ -15,20 +16,16 @@ int isPalindrome(char *s, int start, int end) {
   return isPalindrome(s, start+1, end-1);
 }
 
-int minimum (int a, int b) {
-  return (a < b) ? a : b;
-}
-
-void partitionGenerator(int i, char *a, int size, int *min, int *count) {
-  if (i > size) {
-    *min = minimum(*min, *count);
+void partitionGenerator(int idx, char *a, int size, int *min, int *count) {
+  if (idx > size) {
+    *min = *min < *count ? *min : *count;
     return;
   }
-  for (int j = i; j <= size; j++) {
-    if (isPalindrome(a, i, j)) {
+  for (int j = idx; j <= size; j++) {
+    if (isPalindrome(a, idx, j)) {
       ++*count;
       partitionGenerator(j+1, a, size, min, count);
-      --*count;	// backtrack
+      --*count;	  // backtrack
     }
   }
 }

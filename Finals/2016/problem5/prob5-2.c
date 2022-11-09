@@ -13,7 +13,7 @@ void generateSequences(int a[], int idx, int evens, int odds, int *count){
     return; 
   }
   // put the current element a[idx] into the sequence
-  generateSequences(a, idx-1, evens+(!(a[idx]%2)), odds+a[idx]%2, count);
+  generateSequences(a, idx-1, evens + !(a[idx]%2), odds + a[idx]%2, count);
   // skip the current element
   generateSequences(a, idx-1, evens, odds, count);
 }
