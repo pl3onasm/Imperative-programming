@@ -1,13 +1,12 @@
 /* file: prob5-1.c
    author: David De Potter
-   version: 5.1, using a void function, string library, and
+   version: 5.1, using a void function, and
       an int pointer to keep track of the the maximum
    description: IP Final 2021, problem 5, longest palindromic sequence
 */
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 void *safeCalloc (int n, int size) {
   /* allocates n elements of size size, initializing them to 0, and
@@ -25,22 +24,23 @@ char *createString(int size){
   return string;
 }
 
-int isPalindrome(char *s, int index) {
-  if (index >= strlen(s) / 2) return 1;
-  if (s[index] != s[strlen(s) - index - 1]) return 0;
-  return isPalindrome(s, index + 1);
+int isPalindrome (int start, int end, char *s) {
+  /* checks whether a given string s is a palindrome
+     between the given start and end indexes */
+  if (start >= end) return 1;
+  if (s[start] != s[end]) return 0;
+  return isPalindrome(start+1, end-1, s);
 }
 
-void checkSequences (char *s, char *seq, int idx, int subidx, int *max) {
-  if (idx > strlen(s)) return;
-  if (isPalindrome(seq, 0) && subidx > *max) *max = subidx;
-  if (subidx < strlen (s)) {
-    seq[subidx] = s[idx];     // take char at index idx from s
-    seq[subidx + 1] = '\0';
-    checkSequences(s, seq, idx+1, subidx+1, max);
+void checkSequences (char *s, char *seq, int n, int idx, int subLen, int *max) {
+  if (idx > n) return;
+  if (isPalindrome(0, subLen-1, seq) && subLen > *max) *max = subLen;
+  if (subLen < n) {
+    seq[subLen] = s[idx];    // take char at index idx from s
+    checkSequences(s, seq, n, idx+1, subLen+1, max);
   }
-  seq[subidx] = '\0';         // skip current char from s
-  checkSequences(s, seq, idx+1, subidx, max);
+  // skip current char from s
+  checkSequences(s, seq, n, idx+1, subLen, max);
 }
 
 int main(int argc, char **argv){
@@ -49,7 +49,7 @@ int main(int argc, char **argv){
   char *s = createString(n+1);
   char *seq = createString(n+1);
   scanf("%s", s);
-  checkSequences(s, seq, 0, 0, &max);
+  checkSequences(s, seq, n, 0, 0, &max);
   printf("%d\n", max);
   free(s); free(seq);
   return 0; 
