@@ -35,11 +35,11 @@ void checkSequences (char *s, char *seq, int idx, int subidx, int *max) {
   if (idx > strlen(s)) return;
   if (isPalindrome(seq, 0) && subidx > *max) *max = subidx;
   if (subidx < strlen (s)) {
-    seq[subidx] = s[idx];    // take char at index idx from s
+    seq[subidx] = s[idx];     // take char at index idx from s
     seq[subidx + 1] = '\0';
     checkSequences(s, seq, idx+1, subidx+1, max);
   }
-  seq[subidx] = '\0';       // don't take current char from s
+  seq[subidx] = '\0';         // skip current char from s
   checkSequences(s, seq, idx+1, subidx, max);
 }
 
