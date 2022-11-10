@@ -30,7 +30,7 @@ int isPalindrome (int start, int end, char *s) {
 }
 
 int getMaxPal (char *s, char *seq, int n, int idx, int subLen) {
-  int x = 0, y = 0;
+  int x = 0;
   if (idx >= n) {
     if (isPalindrome(0, subLen-1, seq)) return subLen;
     return 0;
@@ -40,7 +40,7 @@ int getMaxPal (char *s, char *seq, int n, int idx, int subLen) {
     x = getMaxPal(s, seq, n, idx+1, subLen+1);
   }
   // skip current char from s
-  y += getMaxPal(s, seq, n, idx+1, subLen);
+  int y = getMaxPal(s, seq, n, idx+1, subLen);
 
   return x > y ? x : y;
 }
