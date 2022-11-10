@@ -1,6 +1,6 @@
 /* file: prob5-1.c
    author: David De Potter
-   version: 5.1, using a void function
+   version: 5.1, using a void function, partitionGenerator
    description: IP Final 2018 Resit, problem 5,
    minimal palindromic partition
 */ 

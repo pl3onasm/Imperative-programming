@@ -1,7 +1,7 @@
 /* file: prob5-1.c
    author: David De Potter
-   version: 5.1, using a void function, and
-      an int pointer to keep track of the the maximum
+   version: 5.1, using a void function, checkSequences,
+      and an int pointer to keep track of the maximum
    description: IP Final 2021, problem 5, longest palindromic sequence
 */
 
@@ -35,7 +35,7 @@ void checkSequences (char *s, char *seq, int n, int idx, int subLen, int *max) {
     if (isPalindrome(0, subLen-1, seq) && subLen > *max) *max = subLen;
     return;
   }
-  if (subLen <= idx) {    // take char at index idx from s
+  if (subLen < n) {    // take char at index idx from s
     seq[subLen] = s[idx];    
     checkSequences(s, seq, n, idx+1, subLen+1, max);
   }

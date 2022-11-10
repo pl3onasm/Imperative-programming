@@ -1,6 +1,6 @@
 /* file: prob5-2.c
    author: David De Potter
-   version: 5.2, using an int function
+   version: 5.2, using an int function, getMaxPal
    description: IP Final 2021, problem 5, longest palindromic sequence
 */
 
@@ -35,12 +35,13 @@ int getMaxPal (char *s, char *seq, int n, int idx, int subLen) {
     if (isPalindrome(0, subLen-1, seq)) return subLen;
     return 0;
   }
-  if (subLen <= idx) {    // take char at index idx from s
+  if (subLen < n) {    // take char at index idx from s
     seq[subLen] = s[idx];    
     x = getMaxPal(s, seq, n, idx+1, subLen+1);
   }
   // skip current char from s
   y += getMaxPal(s, seq, n, idx+1, subLen);
+
   return x > y ? x : y;
 }
 
