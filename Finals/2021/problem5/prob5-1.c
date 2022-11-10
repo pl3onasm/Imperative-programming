@@ -25,18 +25,18 @@ char *createString(int size){
 }
 
 int isPalindrome (int start, int end, char *s) {
-  /* checks whether a given string s is a palindrome
-     between the given start and end indexes */
   if (start >= end) return 1;
   if (s[start] != s[end]) return 0;
   return isPalindrome(start+1, end-1, s);
 }
 
 void checkSequences (char *s, char *seq, int n, int idx, int subLen, int *max) {
-  if (idx > n) return;
-  if (isPalindrome(0, subLen-1, seq) && subLen > *max) *max = subLen;
-  if (subLen < n) {
-    seq[subLen] = s[idx];    // take char at index idx from s
+  if (idx >= n) {
+    if (isPalindrome(0, subLen-1, seq) && subLen > *max) *max = subLen;
+    return;
+  }
+  if (subLen <= idx) {    // take char at index idx from s
+    seq[subLen] = s[idx];    
     checkSequences(s, seq, n, idx+1, subLen+1, max);
   }
   // skip current char from s
@@ -47,7 +47,7 @@ int main(int argc, char **argv){
   int n, max=0; 
   scanf("%d", &n);
   char *s = createString(n+1);
-  char *seq = createString(n+1);
+  char *seq = createString(n);
   scanf("%s", s);
   checkSequences(s, seq, n, 0, 0, &max);
   printf("%d\n", max);
