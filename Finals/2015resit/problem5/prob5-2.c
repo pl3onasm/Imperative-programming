@@ -13,8 +13,8 @@ int countExps(int length, int n, int a[], int idx, int sum) {
   // base case: check computed sum
   if (idx == length-1) return sum == n;
   // recursive case: add / subract next term
-  return countExps(length, n, a, idx+1, sum+a[idx+1])
-       + countExps(length, n, a, idx+1, sum-a[idx+1]);
+  return countExps(length, n, a, idx+1, sum + a[idx+1])
+       + countExps(length, n, a, idx+1, sum - a[idx+1]);
 }
 
 int plusmin(int length, int a[], int n) {

@@ -12,8 +12,8 @@ int countExps(int idx, int goal, int a[], int sum) {
   // base case: check computed sum
   if (idx == 0) return sum + a[0] == goal;
   // recursive case: add / subract next term
-  return countExps(idx-1, goal, a, sum+a[idx]) 
-       + countExps(idx-1, goal, a, sum-a[idx]);
+  return countExps(idx-1, goal, a, sum + a[idx]) 
+       + countExps(idx-1, goal, a, sum - a[idx]);
 }
 
 int plusmin(int length, int a[], int goal) {

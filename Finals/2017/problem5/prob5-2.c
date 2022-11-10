@@ -1,29 +1,27 @@
-/* file: prob5.c
+/* file: prob5-2.c
    author: David De Potter
+   version: 5.2, this version works with an int function to
+      compute the truth value of whether the puzzle is solvable 
    description: IP Final 2017, problem 5, puzzle
 */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-void trySteps(int len, int series[], int index, int *solved){
-  if (index == len-1){ 
-    *solved=1; return; 
-  }
-  if (index < 0 || index >= len || series[index] < 0) return;
+int trySteps(int len, int series[], int index){
+  if (index < 0 || index >= len || series[index] < 0) return 0;
+  if (index == len-1) return 1; 
   int step = series[index];
   series [index] = -1;    // mark as seen
-  // try step to the right
-  trySteps(len, series, index+step, solved);
-  // try step to the left
-  trySteps(len, series, index-step, solved);
+  // try step to the right or to the left
+  int solvable = trySteps(len, series, index+step)
+              || trySteps(len, series, index-step);
   series [index] = step;  // backtrack by restoring the value
+  return solvable; 
 } 
 
 int isSolvable(int len, int series[]) {
-  int solved=0;
-  trySteps(len, series, 0, &solved);
-  return solved;
+  return trySteps(len, series, 0);
 }
 
 int main(int argc, char *argv[]) {
