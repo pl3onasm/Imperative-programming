@@ -190,7 +190,15 @@ int isPalindrome (int start, int end, char *s) {
   if (start >= end) return 1;
   if (s[start] != s[end]) return 0;
   return isPalindrome(start+1, end-1, s);
-} 
+}
+
+int isPalindrome2(char *s, int start) {
+  /* checks whether a given string s is a palindrome;
+     this version only takes one index: where to start */
+  if (start >= strlen(s) / 2) return 1;
+  if (s[start] != s[strlen(s) - start - 1]) return 0;
+  return isPalindrome2(s, start + 1);
+}
 
 //:::::::::::::::::::::: MEMORY ALLOCATION :::::::::::::::::::::://
 
