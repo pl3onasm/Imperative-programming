@@ -33,7 +33,7 @@ int checkSum(int taken, int rem, int k, int n, int *arr){
   if (taken == k) return rem == 0;
   if (n == 0) return 0;
   return checkSum(taken, rem, k, n-1, arr) 
-         || checkSum(taken+1, rem-arr[n-1], k, n-1, arr);
+      || checkSum(taken+1, rem - arr[n-1], k, n-1, arr);
 }
 
 int main(int argc, char **argv){

@@ -1,7 +1,9 @@
-/* file: prob5.c
+/* file: prob5-1.c
    author: David De Potter
+   version: 5.1, using a void function, generating expressions
+      and evaluating them at the end
    description: IP Final 2017 Resit, problem 5, 
-   sums and products
+      sums and products
 */
 
 #include <stdio.h>

@@ -1,7 +1,7 @@
 /* file: prob5-1.c
    author: David De Potter
    version: 5.1, this version works with a void function,
-     and an int pointer solved to get the result
+     and an int pointer solvable to get the result
    description: IP Final 2017, problem 5, puzzle
 */
 
@@ -9,16 +9,16 @@
 #include <stdlib.h>
 
 void trySteps(int len, int series[], int index, int *solvable){
+  if (index < 0 || index >= len || series[index] < 0) return;
   if (index == len-1){ 
     *solvable = 1; return; 
   }
-  if (index < 0 || index >= len || series[index] < 0) return;
   int step = series[index];
   series [index] = -1;    // mark as seen
   // try step to the right
-  trySteps(len, series, index+step, solvable);
+  trySteps(len, series, index + step, solvable);
   // try step to the left
-  trySteps(len, series, index-step, solvable);
+  trySteps(len, series, index - step, solvable);
   series [index] = step;  // backtrack by restoring the value
 } 
 

@@ -14,8 +14,8 @@ int trySteps(int len, int series[], int index){
   int step = series[index];
   series [index] = -1;    // mark as seen
   // try step to the right or to the left
-  int solvable = trySteps(len, series, index+step)
-              || trySteps(len, series, index-step);
+  int solvable = trySteps(len, series, index + step)
+              || trySteps(len, series, index - step);
   series [index] = step;  // backtrack by restoring the value
   return solvable; 
 } 
