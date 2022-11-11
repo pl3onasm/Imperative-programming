@@ -19,7 +19,7 @@ void generateBitStrings(int length, int bitStrings[], int index,
     return;
   }
   // recursive case: set next bit
-  bitStrings[index] = 0;
+  bitStrings[index] = 0;   // we want dictionary order so we set 0 first
   generateBitStrings(length, bitStrings, index+1, count0+1, count1);
   if (count0 > count1){
     bitStrings[index] = 1;
