@@ -11,12 +11,12 @@
 
 int countExps(int target, int digit, int prev, int current, int product){
   if (digit >= 9) return current + 9*product == target; 
-  if (prev) { // previous operator was *
+  if (prev) {   // previous operator was *
     return countExps (target, digit+1, 0, current + product * digit, 1) 
-           + countExps (target, digit+1, 1, current, product * digit);    
-  } else {    // previous operator was +
+         + countExps (target, digit+1, 1, current, product * digit);    
+  } else {      // previous operator was +
     return countExps (target, digit+1, 0, current + digit, 1) 
-           + countExps (target, digit+1, 1, current, digit);    
+         + countExps (target, digit+1, 1, current, digit);    
   }
 }
 
