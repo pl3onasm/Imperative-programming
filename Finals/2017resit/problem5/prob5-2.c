@@ -9,19 +9,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int countExps(int target, int digit, int prev, int current, int product){
-  if (digit >= 9) return current + 9 * product == target; 
-  if (prev) {   // previous operator was *
-    return countExps (target, digit+1, 0, current + product * digit, 1) 
-         + countExps (target, digit+1, 1, current, product * digit);    
-  } else {      // previous operator was +
-    return countExps (target, digit+1, 0, current + digit, 1) 
-         + countExps (target, digit+1, 1, current, digit);    
+int countExps(int target, int digit, char prev, int subtotal, int product){
+  if (digit >= 9) return subtotal + 9 * product == target; 
+  if (prev == '*') {  // previous operator was *
+    return countExps (target, digit+1, '+', subtotal + product * digit, 1) 
+         + countExps (target, digit+1, '*', subtotal, product * digit);    
+  } else {            // previous operator was +
+    return countExps (target, digit+1, '+', subtotal + digit, 1) 
+         + countExps (target, digit+1, '*', subtotal, digit);    
   }
 }
 
 int prodSum(int n){
-  return countExps(n, 1, 0, 0, 1);
+  return countExps(n, 1, '+', 0, 1);
 }
 
 int main(int argc, char *argv[]) {

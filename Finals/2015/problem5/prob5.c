@@ -16,7 +16,7 @@ void generateBitStrings(int length, int bitStrings[], int index,
         printf("%d", bitStrings[i]);
       printf("\n");
     }
-    return;
+    return; 
   }
   // recursive case: set next bit
   bitStrings[index] = 0;   // we want dictionary order so we set 0 first
