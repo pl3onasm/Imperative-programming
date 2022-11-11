@@ -1,7 +1,10 @@
-/* file: prob4.c
+/* file: prob4-1.c
 * author: David De Potter
+* version: 4.1, slower version, using linear 
+*   search to find the index of item value 
+*   in the sorted array, this is in O(n)
 * description: IP final exam 2019, problem 4, 
-* removing too many occurrences
+*   removing too many occurrences
 */
 
 #include <stdio.h>
@@ -76,13 +79,13 @@ void processInput (int *series, int* sorted, int n) {
 void printArray (int *series, int *sorted, int len, int k ) {
   int first = 1, s;
   for (int i=0; i<len; i++) {
-    for (s=0; s<len; ++s) 
+    for (s=0; s<len; ++s)         // linear search: O(len)
       if (sorted[s] == series[i]) break;
     int count=0;
-    while (sorted[s] == series[i]) {
+    while (s < len && sorted[s] == series[i]) {
       s++; count++;
     }
-    if (count<k) {
+    if (count < k) {
       if (first) {printf("%d", series[i]); first=0;}
       else printf(",%d", series[i]);
     }
