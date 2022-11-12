@@ -8,7 +8,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <limits.h>
 
 void *safeMalloc (int n) {
   void *ptr = malloc(n);
@@ -42,7 +41,7 @@ int binSearch (int *arr, int n, int right, int left) {
 }
 
 int main(int argc, char **argv){
-  int n, min = INT_MAX;
+  int n;
   scanf("%d", &n);
   int *arr = safeMalloc(n*sizeof(int));
   for (int i=0; i < n; i++) {
