@@ -352,6 +352,30 @@ char *readLine(int *size) {
   return str;
 }
 
+//:::::::::::::::::::::::::: SEARCHING ::::::::::::::::::::::::://
+
+int linSearch (int *arr, int len, int key) {
+  /* linear search: searches for key in arr and 
+     returns its index if found, otherwise returns -1 */
+  int i;
+  for (i=0; i < len; ++i) 
+    if (arr[i] == key) return i;
+  return -1;
+}
+
+int binSearch (int *sorted, int len, int key) {
+  /* binary search: searches for key in sorted(!) array 
+     and returns its index if found, otherwise returns -1 */
+  int left = 0, right = len, mid;
+  while (left < right) {
+    mid = left + (right - left)/2;
+    if (sorted[mid] == key) return mid;
+    else if (sorted[mid] < key) left = mid + 1;
+    else right = mid;
+  }
+  return -1;
+}
+
 //:::::::::::::::::::::::::: SORTING ::::::::::::::::::::::::::://
 
 int *copySubArray(int left, int right, int arr[]) {
@@ -415,6 +439,46 @@ void bubbleSort(int *arr, int len) {
     }
     if (change == 0) break;
   }
+}
+
+void insertionSort(int *arr, int len) {
+  /* sorts an array of integers in O(n²) */
+  int i, j, key;
+  for (i=1; i < len; ++i) {
+    key = arr[i];
+    j = i-1;
+    while (j >= 0 && arr[j] > key) {
+      arr[j+1] = arr[j];
+      j--;
+    }
+    arr[j+1] = key;
+  }
+}
+
+void selectionSort(int *arr, int len) {
+  /* sorts an array of integers in O(n²) */
+  int i, j, min;
+  for (i = 0; i < len-1; ++i) {
+    min = i;
+    for (j = i+1; j < len; ++j) 
+      if (arr[j] < arr[min]) min = j;
+    swap(arr, i, min);
+  }
+}
+
+void quickSort(int *arr, int len) {
+  /* sorts an array of integers in O(n log n) time */
+  int i, j, pivot;
+  if (len <= 1) return;
+  pivot = arr[len/2];
+  for (i=0, j=len-1; ; ++i, --j) {
+    while (arr[i] < pivot) ++i;
+    while (arr[j] > pivot) --j;
+    if (i >= j) break;
+    swap(arr, i, j);
+  }
+  quickSort(arr, i);
+  quickSort(arr+i, len-i);
 }
 
 //::::::::::::::::::::::::::: STRINGS :::::::::::::::::::::::::://
