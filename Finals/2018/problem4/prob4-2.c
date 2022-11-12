@@ -20,12 +20,12 @@ void *safeMalloc (int n) {
 }
 
 int solutionExists (int *arr, int totalSum, int n, int mid){
-  /* checks if a solution can be found below mid, i.e. if there 
-     exists a 3-way split such that maxsum < mid */
+  /* checks if a solution can be found below mid, i.e. if  
+     there exists a 3-way split such that maxsum < mid */
   int i = 0;
   while (arr[i++] < mid);
   while (arr[i++] < 2*mid);
-  return (totalSum - arr[i-1] < mid);
+  return totalSum - arr[i-1] < mid;
 }
 
 
@@ -47,7 +47,7 @@ int main(int argc, char **argv){
   int *arr = safeMalloc(n*sizeof(int));
   for (int i=0; i < n; i++) {
     scanf("%d", &arr[i]);
-    arr[i] += arr[i-1];
+    arr[i] += arr[i-1];   // precomputes partial sums
   }
   int totalSum = arr[n-1];
   printf("%d\n", binSearch(arr, n, 0, totalSum)); 
