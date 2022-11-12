@@ -429,22 +429,22 @@ void mergeSort(int length, int arr[]) {
 void bubbleSort(int *arr, int len) {
   /* sorts an array of integers in O(n²) */
   int i, j, change;
-  for (i=0; i < len; ++i) {
-    change=0;
-    for (j=0; j+1 < len - i; ++j) {
+  for (i = 0; i < len; ++i) {
+    change = 0;
+    for (j = 0; j+1 < len - i; ++j) {
       if (arr[j] > arr[j+1]) {
         swap(arr, j, j+1);
         change = 1;
       }
     }
-    if (change == 0) break;
+    if (! change) break;
   }
 }
 
 void insertionSort(int *arr, int len) {
   /* sorts an array of integers in O(n²) */
   int i, j, key;
-  for (i=1; i < len; ++i) {
+  for (i = 1; i < len; ++i) {
     key = arr[i];
     j = i-1;
     while (j >= 0 && arr[j] > key) {
@@ -471,7 +471,7 @@ void quickSort(int *arr, int len) {
   int i, j, pivot;
   if (len <= 1) return;
   pivot = arr[len/2];
-  for (i=0, j=len-1; ; ++i, --j) {
+  for (i = 0, j = len-1; ; ++i, --j) {
     while (arr[i] < pivot) ++i;
     while (arr[j] > pivot) --j;
     if (i >= j) break;
