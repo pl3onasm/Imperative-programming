@@ -1,6 +1,7 @@
 /* file: prob3-1.c
    author: David De Potter
-   version: 3.1, using merge sort
+   version: 3.1, using merge sort, which causes this
+      version to be in O(n log n)
    description: IP Final 2018, problem 3, sum of pairs
 */
 
@@ -84,22 +85,22 @@ int *readIntVector(int *size) {
 }
 
 void getPairs(int *vec, int size, int n){
-  int left = 0, right = size - 1, flag = 1;
+  int left = 0, right = size - 1, noPair = 1;
   while (left < right) {
     if (vec[left] + vec[right] == n) {
-      if (vec[left] == vec[left-1]){
+      if (vec[left+1] == vec[left]){
         left++; continue;   // skip duplicates
       }
       if (vec[right] == vec[right+1]) {
         right--; continue;  // skip duplicates
       }
-      flag = 0; 
+      noPair = 0; 
       printf("%d+%d\n", vec[left], vec[right]);
       left++; right--;
     } else if (vec[left] + vec[right] < n) left++;
     else right--;
   }
-  if (flag) printf("NONE\n");
+  if (noPair) printf("NONE\n");
 }
 
 int main(int argc, char **argv){

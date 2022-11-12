@@ -1,4 +1,4 @@
-/* file: prob4-1.c
+/* file: prob4-2.c
    author: David De Potter
    version: 4.2, in this version we optimize
       the second split from 4.1, which was in O(n²),
