@@ -91,7 +91,7 @@ void getPairs(int *vec, int size, int n){
       if (vec[left+1] == vec[left]){
         left++; continue;   // skip duplicates
       }
-      if (vec[right] == vec[right+1]) {
+      if (vec[right-1] == vec[right]) {
         right--; continue;  // skip duplicates
       }
       noPair = 0; 
