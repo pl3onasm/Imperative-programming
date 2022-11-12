@@ -1,8 +1,11 @@
 /* file: prob4-1.c
 * author: David De Potter
-* version: 4.1, slower version, using linear 
-*   search to find the index of item value 
-*   in the sorted array, this is in O(n)
+* version: 4.1, in this version we use a linear 
+*   search to find the index of the item value 
+*   in the sorted array, this type of search 
+*   is in O(n). The overall complexity is in 
+*   O(n log n) because it is dominated by the 
+*   sorting algorithm
 * description: IP final exam 2019, problem 4, 
 *   removing too many occurrences
 */

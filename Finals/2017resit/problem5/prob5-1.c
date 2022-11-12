@@ -11,7 +11,7 @@
 
 void generateExpressions(char ops[], int n, int index, int *count){
   if (index > 7) {      // all 8 operators have been set
-    int eval=0, digits[9] = {1,2,3,4,5,6,7,8,9}; 
+    int eval=0, digits[] = {1,2,3,4,5,6,7,8,9}; 
     for (int i = 0; i < 8; ++i){  // evaluate products first
       if (ops[i] == '*') {
         digits[i+1] = digits[i]*digits[i+1];

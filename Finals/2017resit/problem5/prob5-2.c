@@ -1,7 +1,7 @@
 /* file: prob5-2.c
    author: David De Potter
-   version: 5.2, using an int function, countExps, 
-      to compute result during recursive calls themselves
+   version: 5.2, using an int function, countExps, to  
+      compute partial results during recursive calls themselves
    description: IP Final 2017 Resit, problem 5, 
       sums and products
 */

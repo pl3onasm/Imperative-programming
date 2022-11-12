@@ -38,7 +38,7 @@ Reasoning
 5.  The variable i is initialized to N and is either 
     decremented by 1 or divided by d in each iteration. 
     The value for d may vary from 1 to 5. Only in the case 
-    that i is divisible by d, will it be decremented by 1, 
+    where i is divisible by d, will it be decremented by 1, 
     otherwise i will be integer divised by d. As the division
     clearly dominates the running time, the time complexity 
     is in O(log N)

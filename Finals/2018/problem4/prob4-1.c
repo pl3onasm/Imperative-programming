@@ -19,15 +19,14 @@ void *safeMalloc (int n) {
 }
 
 int maximum(int a, int b, int c){
-  a = (a > b ? a : b);
-  a = (a > c ? a : c);
-  return a;
+  a = a > b ? a : b;
+  return a > c ? a : c;
 }
 
 void naiveSplit(int *arr, int size, int *min){
   /* naive way to compute the separate sums, in which
      the same sums are computed over and over again */
-  int a= 0, b, c; 
+  int a = 0, b, c; 
   for (int i = 0; i < size-2; ++i){
     a += arr[i]; b = 0; 
     for (int j = i+1; j < size-1; ++j){
@@ -46,11 +45,11 @@ void split(int *arr, int size, int *min){
      to avoid continually recomputing partial sums */ 
   int a, b, c;
   for (int i = 1; i < size; ++i) arr[i] += arr[i-1];
-  int total = arr[size-1];
+  int totalSum = arr[size-1];
   for (int i = 0; i < size-2; ++i){ 
     for (int j = i+1; j < size-1; ++j){
       a = arr[i]; b = arr[j] - arr[i]; 
-      c = total - arr[j];
+      c = totalSum - arr[j];
       int max = maximum(a, b, c);
       if (max < *min) *min = max;
     }
@@ -58,7 +57,7 @@ void split(int *arr, int size, int *min){
 }
 
 int main(int argc, char **argv){
-  int n, min=INT_MAX;
+  int n, min = INT_MAX;
   scanf("%d", &n);
   int *arr = safeMalloc(n*sizeof(int));
   for (int i=0; i < n; i++) {

@@ -15,8 +15,9 @@ Reasoning
     is determined by the loop with the most iterations, and 
     that is the second loop. 
     The first loop iterates N times. While i goes by each 
-    integer from N to 1, the variable j is taking the running 
-    sum. Thus, at termination of the first loop, j = N(N+1)/2.
+    integer from N down to 1, the variable j is taking the 
+    running sum. Thus, at termination of the first loop, 
+    j = N(N+1)/2.
     The second loop then iterates j-5 times. So, this loop's 
     complexity is in O(N²) and determines the fragment's  
     overall complexity.

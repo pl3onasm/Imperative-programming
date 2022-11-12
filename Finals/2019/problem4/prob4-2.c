@@ -1,8 +1,10 @@
 /* file: prob4-2.c
 * author: David De Potter
-* version: 4.2, faster version, using binary search 
-*   to find the first index in the sorted array 
-*   where item value occurs, this is in O(log n)
+* version: 4.2, small optimization, using binary 
+*   search to find the first index in the sorted array 
+*   where the item value occurs, this type of search is 
+*   in O(log n). However, the overall complexity is
+*   still in O(n log n) because we still have to sort
 * description: IP final exam 2019, problem 4, 
 *   removing too many occurrences
 */
