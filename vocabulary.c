@@ -483,18 +483,16 @@ void quickSort(int *arr, int len) {
 
 void countingSort(int length, int arr[]) {
   /* sorts an array of integers in O(n) time */
-  int min, max, range;
-  int i, j, idx, *count;
+  int min, max, range, i, j, idx = 0;
   min = max = arr[0];
   for (i = 1; i < length; i++) {
     min = (arr[i] < min ? arr[i] : min);
     max = (arr[i] > max ? arr[i] : max);
   }
   range = max - min + 1;
-  count = safeCalloc(range, sizeof(int));
+  int *count = safeCalloc(range, sizeof(int));
   for (i = 0; i < length; i++) 
     count[arr[i] - min]++;
-  idx = 0;
   for (i = 0; i < range; i++) 
     for (j = 0; j < count[i]; j++)
       arr[idx++] = min + i; 
