@@ -21,8 +21,8 @@ void *safeMalloc (int n) {
 int solutionExists (int *arr, int n, int mid){
   /* checks if a solution can be found below mid, i.e. if  
      there exists a 3-way split such that maxsum < mid */
-  int i = 0, sum = 0, split = 1; 
-  for (int i = 0; i < n && split <= 3; ++i){
+  int sum = 0, split = 0; 
+  for (int i = 0; i < n && split <= 2; ++i){
     if (arr[i] > mid) return 0;
     sum += arr[i];
     if (sum > mid){
@@ -30,7 +30,7 @@ int solutionExists (int *arr, int n, int mid){
       split++;
     }
   }                   // solution exists if didn't have  
-  return split <= 3;  // to split more than 3 times                      
+  return split <= 2;  // to split more than 2 times                      
 }
 
 int binSearch (int *arr, int n, int left, int right) {
