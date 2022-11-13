@@ -1,8 +1,8 @@
 /* file: prob4-2.c
    author: David De Potter
    version: 4.2, in this version we optimize
-      the second split from 4.1, which was in O(n²),
-      to be in O(n log n) using binary search
+      from the previous version to a solution
+      in O(n log n) using binary search
    description: IP Final 2018, problem 4, split3
 */
 
