@@ -1,7 +1,8 @@
 /* file: prob4-2.c
    author: David De Potter
    version: 4.2, in this version we optimize
-      the program to be in O(n log n) using binary search
+      the second split from 4.1, which was in O(n²),
+      to be in O(n log n) using binary search
    description: IP Final 2018, problem 4, split3
 */
 
@@ -21,16 +22,15 @@ int solutionExists (int *arr, int n, int mid){
   /* checks if a solution can be found below mid, i.e. if  
      there exists a 3-way split such that maxsum < mid */
   int i = 0, sum = 0, split = 1; 
-  while (i < n && split <= 3){
+  for (int i = 0; i < n && split <= 3; ++i){
     if (arr[i] > mid) return 0;
     sum += arr[i];
     if (sum > mid){
       sum = arr[i];
       split++;
     }
-    i++;
-  }
-  return split == 3;
+  }                   // solution exists if didn't have  
+  return split <= 3;  // to split more than 3 times                      
 }
 
 int binSearch (int *arr, int n, int left, int right) {
@@ -39,12 +39,12 @@ int binSearch (int *arr, int n, int left, int right) {
      Returns the lower bound of the solution space */
   if (left > right) return left;
   int mid = left + (right - left) / 2;
-  if (solutionExists(arr, n, mid)) {
+  if (solutionExists(arr, n, mid))
     return binSearch(arr, n, left, mid-1);
-  }
   return binSearch(arr, n, mid+1, right);
 }
     
+
 int main(int argc, char **argv){
   int n, totalSum = 0;
   scanf("%d", &n);
