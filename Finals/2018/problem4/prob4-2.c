@@ -29,8 +29,8 @@ int solutionExists (int *arr, int n, int mid){
       sum = arr[i];
       split++;
     }
-  }                   // solution exists if didn't have  
-  return split <= 2;  // to split more than 2 times                      
+  }                   // solution exists if we didn't   
+  return split <= 2;  // have to split more than 2 times                      
 }
 
 int binSearch (int *arr, int n, int left, int right) {
