@@ -37,13 +37,13 @@ int binSearch (int *arr, int n, int left, int right) {
   /* Searches through the solution space, consisting  
      of a (virtual) ordered array of increasing maxsums. 
      Returns the lower bound of the solution space */
-  if (left > right) return left;
-  int mid = left + (right - left) / 2;
-  if (solutionExists(arr, n, mid))
-    return binSearch(arr, n, left, mid-1);
-  return binSearch(arr, n, mid+1, right);
+  while (left < right){
+    int mid = left + (right - left) / 2;
+    if (solutionExists(arr, n, mid)) right = mid;
+    else left = mid + 1;
+  }
+  return left;
 }
-    
 
 int main(int argc, char **argv){
   int n, totalSum = 0;
