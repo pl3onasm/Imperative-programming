@@ -28,7 +28,7 @@ Reasoning
     x = x/2;
       { 2*x + 4*y + 2*z == 2*A }
           (prepare x = x + 2*y + z; divide both sides by 2)
-      { x + y + z == A }
+      { x + 2*y + z == A }
     x = x + 2*y + z;
       { x == A }
 

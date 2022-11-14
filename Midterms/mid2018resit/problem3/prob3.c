@@ -8,7 +8,7 @@
 
 int toBinary (int n, int bin[50]) {
   /* computes the binary representation of n and 
-     return its length */
+     returns its length */
   int i = 0;
   while (n > 0) {
     bin[i++] = n % 2; 
@@ -19,7 +19,7 @@ int toBinary (int n, int bin[50]) {
 
 int checkIfTakuzu (int len, int bin[50]) {
   /* checks the binary representation stored in the
-     array binary to see if it meets the Takuzu criteria */
+     array bin to see if it meets the Takuzu criteria */
   int count0 = 0, count1 = 0, countAdj1 = 0, countAdj0 = 0;
 
   for (int i=0; i < len; ++i) {

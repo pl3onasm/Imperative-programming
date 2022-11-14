@@ -30,14 +30,14 @@ int *copySubArray(int left, int right, int arr[]) {
 }
 
 int mergeSort(int length, int arr[]) {
-  int l, r, mid, idx, *left, *right, count = 0;
+  int l, r, mid, idx, *left, *right;
   if (length <= 1) {
     return 0;
   }
   mid = length/2;
   left = copySubArray(0, mid, arr);
   right = copySubArray(mid, length, arr);
-  count += mergeSort(mid, left);
+  int count = mergeSort(mid, left);
   count += mergeSort(length - mid, right);
   idx = 0;
   l = 0;

@@ -33,8 +33,8 @@ int main (int argc, char *argv[]) {
   /* if any of the min or max coordinates of the triangle exceed the
   * boundaries set by the rectangle's min and max coordinates, the
   * triangle does not lie inside the rectangle */
-  if ((min(min(x0, x1), x2) < minx) || ((min(min(y0, y1), y2) < miny)) ||
-      (max(max(x0, x1), x2) > maxx) || (max(max(y0, y1), y2) > maxy)) {
+  if (min(min(x0, x1), x2) < minx || min(min(y0, y1), y2) < miny ||
+      max(max(x0, x1), x2) > maxx || max(max(y0, y1), y2) > maxy) {
     printf("NO\n");
   } else printf("YES\n");
   return 0;
