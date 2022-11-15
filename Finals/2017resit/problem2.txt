@@ -6,7 +6,7 @@ Answers
 3. e  O(N²)
 4. b  O(√N)
 5. a  O(log N)
-6. a  O(N log N)
+6. d  O(N log N)
 
 
 Reasoning

@@ -5,7 +5,7 @@ Answers
 2. e  O(N²)
 3. c  O(N)
 4. d  O(N log N)
-5. a  O(√N)
+5. a  O(log N)
 6. c  O(N)
 
 
