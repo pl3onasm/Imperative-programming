@@ -31,9 +31,11 @@ Reasoning
     O(log N). The two loops are nested, so the overall time 
     complexity is in O(N log N).
 
-5.  In each iteration of the for loop, i is multiplied by 3. 
-    At termination, the loop will have run log₃(N²) = 2*log₃(N) 
-    times. The overall time complexity is thus in O(log N).
+5.  At termination, 3 has been multiplied i times by itself, so 
+    that we get:
+        3ⁱ = N² ⇔ i*log₃(3) = log₃(N²) ⇔ i = 2*log₃(N)  
+    Thus, the loop has run 2*log₃(N) times, and the overall time 
+    complexity is in O(log N).
 
 6.  The loop index i is initialized to N and then decremented by
     two after each iteration. At termination, the loop will have

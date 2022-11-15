@@ -6,7 +6,7 @@ Answers
 3. e  O(N²)
 4. b  O(√N)
 5. a  O(log N)
-6. a  O(log N)
+6. a  O(N log N)
 
 
 Reasoning
@@ -37,17 +37,19 @@ Reasoning
 
 5.  The variable i is initialized to N and is either 
     decremented by 1 or divided by d in each iteration. 
-    The value for d may vary from 1 to 5. Only in the case 
-    where i is divisible by d, will it be decremented by 1, 
+    The value for d lies in [1,5]. Only in the case where 
+    i is evenly divisible by d, will it be decremented by 1, 
     otherwise i will be integer divised by d. As the division
     clearly dominates the running time, the time complexity 
     is in O(log N)
 
 6.  The outer for loop runs log(N) times. For each iteration 
-    of the outer loop, the inner while loop lets j catch up
+    of the outer loop, the inner while loop makes j catch up
     with the current value of i: the value of j just picks 
-    up where it previously left off. Overall, the number of
-    iterations will therefore be some multiple of log(N).
-    The fragment's complexity is thus in O(log N).
+    up where it left off in the previous iteration. The 
+    highest value j will reach is j ≥ N/2, after which i 
+    will be doubled for a last time and the outer loop 
+    terminates. Thus, the inner loop is in O(n), and the 
+    overall time complexity is in O(N log N).
 
 
