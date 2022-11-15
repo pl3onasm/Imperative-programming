@@ -44,12 +44,13 @@ Reasoning
     is in O(log N)
 
 6.  The outer for loop runs log(N) times. For each iteration 
-    of the outer loop, the inner while loop makes j catch up
+    of the outer loop, the inner loop makes j catch up
     with the current value of i: the value of j just picks 
     up where it left off in the previous iteration. The 
     highest value j will reach is j ≥ N/2, after which i 
     will be doubled for a last time and the outer loop 
-    terminates. Thus, the inner loop is in O(n), and the 
-    overall time complexity is in O(N log N).
+    terminates. Thus, the inner loop will run at most N/4
+    times and is in O(n), and the overall time complexity 
+    is in O(N log N).
 
 
