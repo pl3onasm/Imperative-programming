@@ -48,9 +48,10 @@ Reasoning
     with the current value of i: the value of j just picks 
     up where it left off in the previous iteration. The 
     highest value j will reach is N > j ≥ N/2, after which 
-    i will be doubled for a last time and the outer loop 
-    terminates. Thus, the inner loop will run between N/4
-    and N/2 times and is in O(n), and the overall time 
-    complexity is in O(N log N).
+    i will be doubled for the last time and the outer loop 
+    terminates. So, in the outer loop's last iteration, the 
+    inner loop will run between N/4 and N/2 times. Thus, the
+    inner loop is in O(n), and the overall time complexity 
+    is in O(N log N).
 
 
