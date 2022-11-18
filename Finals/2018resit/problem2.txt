@@ -5,7 +5,7 @@ Answers
 2. c  O(N)
 3. b  O(√N)
 4. e  O(N²)
-5. a  O(log N)
+5. d  O(N log N)
 6. d  O(N log N)
 
 
@@ -33,16 +33,15 @@ Reasoning
 5.  The variable s starts at 1 and is doubled in each 
     iteration. So, the outer loop will run log(N) times. 
     In the last iteration of the outer loop, i will be  
-    set to its largest value: 2^log(N), the current 
+    set to its largest value: 2^log(N) = N, the current 
     value of s and the maximum number of times the inner
-    loop runs. Since the loops are nested, the total 
-    number of iterations will be some multiple of log(N), 
-    and so the overall complexity is in O(log N).
+    loop runs. Since the loops are nested, the overall 
+    complexity is in O(N log N).
 
 6.  Just like in the previous question, the outer loop  
     runs log(N) times, since s will be equal to 2^log(N) 
-    at termination. The inner loop runs N-3 times at
-    most. Since the loops are nested, the time  
-    complexity is in O(N log N).
+    = N at termination. The inner loop runs N-3 times at
+    most, when s = 2. Since the loops are nested, the   
+    time complexity is in O(N log N).
 
 
