@@ -224,7 +224,7 @@ void *safeCalloc (int n, int size) {
   return ptr;
 }
 
-int *createArray (int size) {
+int *createIntArray (int size) {
   // creates an array of size integers
   int *arr = safeMalloc(size * sizeof(int));
   return arr;
@@ -240,7 +240,7 @@ int **createMatrix (int rows, int cols) {
   // creates a matrix of size rows x cols
   int **matrix = safeMalloc(rows * sizeof(int *));
   for (int i = 0; i < rows; i++)
-    matrix[i] = createArray(cols);
+    matrix[i] = createIntArray(cols);
   return matrix;
 }
 
