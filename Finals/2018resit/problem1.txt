@@ -9,7 +9,7 @@ Answers
 3. b
 4. a
 5. a
-6. c (note that Y should by y in the first line)
+6. c (note that Y should be y in the first line)
 
 
 Reasoning
