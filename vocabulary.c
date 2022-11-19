@@ -91,8 +91,8 @@ int isPerfSquare (int n) {
 }
 
 int toBinary (int n, int *bin) {
-  /* converts n to binary and stores the result in bin
-     returns length of binary representation */
+  /* converts n to binary and stores the result in bin;
+     returns the length of the binary representation */
   int len = 0;
   while (n > 0) {
     bin[len++] = n % 2; 
@@ -127,7 +127,7 @@ int LCM (int a, int b) {
   return a / GCD(a, b) * b;
 }
 
-int haveNoCommonDivs (int a, int b) {
+int areCoprime (int a, int b) {
   /* checks if a and b have no common divisors,
      i.e. if they're coprime */
   return GCD(a, b) == 1;
@@ -483,7 +483,7 @@ void quickSort(int *arr, int len) {
 }
 
 void countingSort(int length, int arr[]) {
-  /* sorts an array of integers in O(n) time */
+  /* sorts an array of non-negative integers in O(n) time */
   int min, max, range, i, j, idx = 0;
   min = max = arr[0];
   for (i = 1; i < length; i++) {
