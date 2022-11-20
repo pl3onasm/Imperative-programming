@@ -21,7 +21,6 @@ int main(int argc, char *argv[]) {
   
   while (scanf("%s %d %d", command, &x, &y) != 1) 
     swap(input,x,y);
-  if (!strcmp(input,abc)) printf("YES\n");
-  else printf("NO\n");
+  printf(!strcmp(input,abc) ? "YES\n" : "NO\n");
   return 0;
 }

@@ -19,12 +19,11 @@ int main(int argc, char *argv[]) {
       int b = x / a;  //the other divisor, so that a*b = x
       int square = a * a + b * b;
       int c = a;      //start with value a, as c > a
-      do
-        c++;
+      do c++;
       while (c*c < square);
       if (square == c*c)
         printf("%d %d %d\n", a, b, c);
-      }
     }
+  }
   return 0;
 }

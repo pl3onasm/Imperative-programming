@@ -18,9 +18,6 @@ int main(int argc, char *argv[]) {
     else evenSum += digit;
     pos++;
   }
-
-  if ((oddSum - evenSum) % 11 == 0) printf("YES\n");
-  else printf("NO\n");
-
+  printf ((oddSum - evenSum) % 11 ? "NO\n" : "YES\n");
   return 0;
 }

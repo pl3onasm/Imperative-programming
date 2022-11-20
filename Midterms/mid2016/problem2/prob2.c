@@ -24,8 +24,6 @@ int main(int argc, char *argv[]) {
   for (int i=0; i <= 25; i++)
     sum += letterFreq[i];
 
-  if (sum == 26) printf("PANGRAM\n");
-  else printf("NO PANGRAM\n");
-
+  printf(sum == 26 ? "PANGRAM\n" : "NO PANGRAM\n");
   return 0;
 }

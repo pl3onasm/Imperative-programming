@@ -38,8 +38,6 @@ int main(int argc, char *argv[]) {
     n %= unit;
     if (unit > 1) unit /= 10;
   }
-  if (m == sum) printf("YES\n");
-  else printf("NO\n");
-
+  printf(m == sum ? "YES\n" : "NO\n");
   return 0;
 }

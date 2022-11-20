@@ -18,14 +18,14 @@ int isPrime (int x) {
 int getPrevPrime (int p) {
   //gets the prime neighbour < p
   if (p == 2) return p;
-  if (p%2 == 0) --p;
+  if (p % 2 == 0) --p;
   while (!isPrime(p)) p-=2; 
   return p;
 }
 
 int getNextPrime (int p) {
   //gets the next prime neighbour 
-  if (p%2 == 0) ++p;
+  if (p % 2 == 0) ++p;
   while (!isPrime(p)) p+=2; 
   return p;
 }

@@ -20,11 +20,11 @@ int modExp (int a, int b, int n) {
 int main(int argc, char *argv[]) {
   int n, count=0;
   scanf ("%d", &n);
-  for (int a=1; a<=n-2;++a) 
-    for (int b=a+1; b<=n-1; ++b){ 
-      int c = n-a-b; 
+  for (int a = 1; a <= n-2; ++a) 
+    for (int b = a+1; b <= n-1; ++b){ 
+      int c = n - a - b; 
       if (c > b && ((modExp(a,n,n) 
-          + modExp(b,n,n)) %n == modExp(c,n,n) %n)) 
+          + modExp(b,n,n)) % n == modExp(c,n,n) % n)) 
         count++;
     }
   printf("%d\n", count);

@@ -7,22 +7,20 @@
 #include <stdlib.h>
 
 int main(int argc, char *argv[]) {
-  int numbers[100] = {0}, n, lastNumber=0;
+  int numbers[100] = {0}, n, last = 0;
   scanf("%d ", &n);
-  while (n != 0) {
+  while (n) {
     numbers[n]++;
+    last++;
     scanf("%d ", &n);
-    lastNumber++;
   }
   int count = 0;
-  for (int i=99; i > 0; --i) {
-    if (numbers[i] != 0) {
-      for (int j=0; j < numbers[i]; ++j) {
-        count++;
-        if (count < lastNumber) printf("%d,", i);
-        else printf("%d\n", i);
-      }
+  for (int i = 99; i > 0; --i) {
+    for (int j = 0; j < numbers[i]; ++j) {
+      printf("%d", i);
+      if (++count < last) printf(",");
     }
   }
+  printf("\n");
   return 0;
 }

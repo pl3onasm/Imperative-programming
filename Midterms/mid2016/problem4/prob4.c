@@ -19,7 +19,8 @@ int sumDigits (int n) {
   //returns the sum of n's digits
   int sum = 0; 
   while (n > 0) {
-    sum += n%10; n /= 10;
+    sum += n%10; 
+    n /= 10;
   }
   return sum;
 }
@@ -43,9 +44,7 @@ int main(int argc, char *argv[]) {
   scanf("%d", &x);
   if (isPrime(x)) printf("NO\n");
     //smith number has to be a composite
-  else {
-    if (sumDigits(x) == sumFactorDigits(x)) printf("YES\n");
-    else printf("NO\n");
-  }
+  else 
+    printf(sumDigits(x) == sumFactorDigits(x) ? "YES\n" : "NO\n");
   return 0;
 }

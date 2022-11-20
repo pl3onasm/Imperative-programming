@@ -20,7 +20,7 @@ int isBalancedNumber (int n, int len) {
    * otherwise returns 0 */
   int digit, evenDigitSum = 0, oddDigitSum = 0;
   while (len != 0) {
-    digit = n%10;
+    digit = n % 10;
     if (digit % 2 == 0) evenDigitSum += digit;
     else oddDigitSum += digit;
     n /= 10;
@@ -32,8 +32,7 @@ int isBalancedNumber (int n, int len) {
 int main(int argc, char *argv[]) {
   int n;
   scanf("%d", &n);
-  int len = countDigits (n);
-  if (isBalancedNumber (n, len)) printf("YES\n");
-  else printf("NO\n");
+  int len = countDigits(n);
+  printf(isBalancedNumber(n, len) ? "YES\n" : "NO\n");
   return 0;
 }

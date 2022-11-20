@@ -11,11 +11,10 @@ int main(int argc, char *argv[]) {
   scanf("%d %d", &x, &y);  
   printf("%d*%d=", x, y);
 
-  if ((x != 0) && (y != 0)) {
-    while (y != 0) {
-      if (y % 2 != 0) {
-        if (sum == 0) printf("%d", x);
-        else printf("+%d", x);
+  if (x && y) {
+    while (y) {
+      if (y % 2) {
+        printf(sum ? "+%d" : "%d", x);
         sum += x;
       }
       x *= 2;

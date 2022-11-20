@@ -38,9 +38,6 @@ int inCheck(char grid[8][8], int x, int y) {
 int main(int argc, char *argv[]) {
   int x, y; char grid[8][8];
   readInput(grid, &x, &y);
-
-  if (inCheck(grid, x, y)) printf("YES\n");
-  else printf("NO\n"); 
-
+  printf(inCheck(grid, x, y) ?  "YES\n" : "NO\n");
   return 0;
 }

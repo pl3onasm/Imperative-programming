@@ -44,7 +44,6 @@ int main(int argc, char *argv[]) {
       }
     }
   }
-  if (max == 0) printf("NONE\n");
-  else printf("%d %d\n", n, max);
+  printf (max == 0 ? "NONE\n" : "%d %d\n", n, max);
   return 0;
 }

@@ -19,7 +19,6 @@ int main(int argc, char *argv[]) {
       occurrence = 1;
     }
   }
-  if (sum - occurrence * max < max) printf("YES\n");
-  else printf("NO\n");
+  printf(sum - occurrence * max < max ? "YES\n" : "NO\n");
   return 0;
 }
