@@ -483,7 +483,7 @@ void quickSort(int *arr, int len) {
 }
 
 void countingSort(int length, int arr[]) {
-  /* sorts an array of non-negative integers in O(n) time */
+  /* sorts an array of integers in O(n) time */
   int min, max, range, i, j, idx = 0;
   min = max = arr[0];
   for (i = 1; i < length; i++) {
