@@ -5,22 +5,25 @@ These are all old exams for the course Imperative Programming (CS) at the Univer
 Should you have a copy of an exam for this course that is not yet in this repository, please send it to <pl3onasm@gmail.com> and I will include it. Any feedback is welcome.  
 
 ## Final exams
-
-| **[2012](https://github.com/pl3onasm/Imperative-programming/tree/main/Finals/2012)** 	| **[2013](https://github.com/pl3onasm/Imperative-programming/tree/main/Finals/2013)** 	| **[2014](https://github.com/pl3onasm/Imperative-programming/tree/main/Finals/2014)** 	|
-|:---:	|:---:	|:---:	|
-| **[2015](https://github.com/pl3onasm/Imperative-programming/tree/main/Finals/2015)** 	| **[2015 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/Finals/2015resit)** 	| **[2016](https://github.com/pl3onasm/Imperative-programming/tree/main/Finals/2016)** 	|
-| **[2017](https://github.com/pl3onasm/Imperative-programming/tree/main/Finals/2017)** 	| **[2017 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/Finals/2017resit)** 	| **[2018](https://github.com/pl3onasm/Imperative-programming/tree/main/Finals/2018)** 	|
-| **[2018 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/Finals/2018resit)** 	| **[2019](https://github.com/pl3onasm/Imperative-programming/tree/main/Finals/2019)** 	| **[2019 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/Finals/2019resit)** 	|
-| **[2020](https://github.com/pl3onasm/Imperative-programming/tree/main/Finals/2020)** 	| **[2021](https://github.com/pl3onasm/Imperative-programming/tree/main/Finals/2021)** 	| **[2022](https://github.com/pl3onasm/Imperative-programming/tree/main/Finals/2022)** 	|
+|<span>|||
+|:---:|:---:|:---:|
+| **[2012](https://github.com/pl3onasm/Imperative-programming/tree/main/Finals/2012)**| **[2013](https://github.com/pl3onasm/Imperative-programming/tree/main/Finals/2013)**| **[2014](https://github.com/pl3onasm/Imperative-programming/tree/main/Finals/2014)**|
+| **[2015](https://github.com/pl3onasm/Imperative-programming/tree/main/Finals/2015)**| **[2015 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/Finals/2015resit)**| **[2016](https://github.com/pl3onasm/Imperative-programming/tree/main/Finals/2016)**|
+| **[2017](https://github.com/pl3onasm/Imperative-programming/tree/main/Finals/2017)**| **[2017 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/Finals/2017resit)**| **[2018](https://github.com/pl3onasm/Imperative-programming/tree/main/Finals/2018)**|
+| **[2018 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/Finals/2018resit)**| **[2019](https://github.com/pl3onasm/Imperative-programming/tree/main/Finals/2019)**| **[2019 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/Finals/2019resit)**|
+| **[2020](https://github.com/pl3onasm/Imperative-programming/tree/main/Finals/2020)**| **[2021](https://github.com/pl3onasm/Imperative-programming/tree/main/Finals/2021)**| **[2022](https://github.com/pl3onasm/Imperative-programming/tree/main/Finals/2022)**|
+|<span>|||
 
 ## Midterm exams
 
-| **[2013](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2013)** 	| **[2015](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2015)** 	| **[2016](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2016)** 	|
-|:---:	|:---:	|:---:	|
-| **[2016 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2016resit)** 	| **[2017](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2017)** 	| **[2017 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2017resit)** 	|
-| **[2018](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2018)** 	| **[2018 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2018resit)** 	| **[2019](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2019)** 	|
-| **[2019 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2019resit)** 	| **[2020](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2020)** 	| **[2020 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2020resit)** 	|
-| **[2021](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2021)** 	| **[2021 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2021resit)** 	| **[2022](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2022)** 	|
+|<span>|||
+|:---:|:---:|:---:|
+| **[2013](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2013)**| **[2015](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2015)**| **[2016](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2016)**|
+| **[2016 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2016resit)**| **[2017](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2017)**| **[2017 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2017resit)**|
+| **[2018](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2018)**| **[2018 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2018resit)**| **[2019](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2019)**|
+| **[2019 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2019resit)**| **[2020](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2020)**| **[2020 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2020resit)**|
+| **[2021](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2021)**| **[2021 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2021resit)**| **[2022](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2022)**|
+|<span>|||
 
 ## Compilation
 
