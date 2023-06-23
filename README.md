@@ -50,7 +50,7 @@ Opening a terminal from the working directory containing your program, the solut
 First, make the script executable:
 
 ```linux
-../../../chmod +x ctest.sh
+chmod +x ../../../ctest.sh
 ```
 
 Then run the script by using the following command:
