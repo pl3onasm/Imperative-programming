@@ -64,7 +64,7 @@ for INFILE in "${INFILES[@]}"; do
     continue
   else
     OUTPUT=$(./a.out < "$INFILE")
-    DIF="$(diff "$OUTFILE" <(echo "$OUTPUT"))"
+    DIF="$(diff -Z "$OUTFILE" <(echo "$OUTPUT"))"
     EXPECTED=$(cat "$OUTFILE")
     if [ -n "$DIF" ]; then
       if [ -t 1 ]; then echo -e "${RED}Test failed.${ENDCOLOR}"
