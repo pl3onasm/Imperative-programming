@@ -18,19 +18,19 @@ void *safeMalloc (int n) {
   return ptr;
 }
 
-int solutionExists (int *arr, int n, int mid){
+int isSolvable (int *arr, int n, int mid){
   /* checks if a solution can be found below mid, i.e. if  
      there exists a 3-way split such that maxsum < mid */
   int sum = 0, split = 0; 
-  for (int i = 0; i < n && split <= 2; ++i){
-    if (arr[i] > mid) return 0;
+  for (int i = 0; i < n; ++i){
+    if (arr[i] > mid) return 0;   // element too large
     sum += arr[i];
     if (sum > mid){
       sum = arr[i];
-      split++;
+      if (++split > 2) return 0;  // more than 2 splits
     }
-  }                   // solution exists if we didn't   
-  return split <= 2;  // have to split more than 2 times                      
+  }                   
+  return 1;                       // solution found          
 }
 
 int binSearch (int *arr, int n, int left, int right) {
@@ -39,7 +39,7 @@ int binSearch (int *arr, int n, int left, int right) {
      Returns the lower bound of the solution space */
   while (left < right){
     int mid = left + (right - left) / 2;
-    if (solutionExists(arr, n, mid)) right = mid;
+    if (isSolvable(arr, n, mid)) right = mid;
     else left = mid + 1;
   }
   return left;

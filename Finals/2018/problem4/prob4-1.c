@@ -9,6 +9,8 @@
 #include <stdlib.h>
 #include <limits.h>
 
+#define MAX(a,b) ((a) > (b) ? (a) : (b))
+
 void *safeMalloc (int n) {
   void *ptr = malloc(n);
   if (ptr == NULL) {
@@ -16,11 +18,6 @@ void *safeMalloc (int n) {
     exit(EXIT_FAILURE);
   }
   return ptr;
-}
-
-int maximum(int a, int b, int c){
-  a = a > b ? a : b;
-  return a > c ? a : c;
 }
 
 void naiveSplit(int *arr, int size, int *min){
@@ -34,7 +31,7 @@ void naiveSplit(int *arr, int size, int *min){
       for (int k = j+1; k < size; ++k){
         c += arr[k];
       }
-      int max = maximum(a, b, c);
+      int max = MAX(a, MAX(b, c));
       if (max < *min) *min = max;
     }
   }
@@ -50,7 +47,7 @@ void split(int *arr, int size, int *min){
     for (int j = i+1; j < size-1; ++j){
       a = arr[i]; b = arr[j] - arr[i]; 
       c = totalSum - arr[j];
-      int max = maximum(a, b, c);
+      int max = MAX(a, MAX(b, c));
       if (max < *min) *min = max;
     }
   }
