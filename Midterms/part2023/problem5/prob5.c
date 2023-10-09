@@ -1,6 +1,7 @@
 /* file: prob5.c
    author: David De Potter
    description: PF 1/3rd term 2023, problem 5, sliding puzzle
+   A slightly different solution can be found under mid2016resit/problem5/prob5.c
 */
 
 #include <stdio.h>

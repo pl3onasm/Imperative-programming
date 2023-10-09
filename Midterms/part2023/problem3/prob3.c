@@ -33,9 +33,8 @@ int LCM (int a, int b) {
 int moduliLCM(int moduli[], int size) {
   // returns the LCM of all moduli
   int lcm = moduli[0];
-  for (int i = 1; i < size; i++) {
+  for (int i = 1; i < size; i++) 
     lcm = LCM(lcm, moduli[i]);
-  }
   return lcm;
 }
 

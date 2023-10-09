@@ -51,11 +51,8 @@ int checkPuzzle(int n, int puzzle[][8]) {
   int count=0;
   for (int row = 0; row < n; ++row) 
     for (int col = 0; col < n; ++col) 
-      if (puzzle[row][col] != 0) {
-        count++;
-        if (puzzle[row][col] != count) 
-          return 0;
-      }
+      if (puzzle[row][col] && puzzle[row][col] != ++count) 
+        return 0;
   return 1;
 }
 

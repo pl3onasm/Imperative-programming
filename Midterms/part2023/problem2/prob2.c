@@ -21,12 +21,12 @@ int main(int argc, char *argv[]) {
 
   scanf("%d", &n);
 
-  if (n == 0) {       // 0 is not a prime number
+  if (n == 0) {       // special case for input 0
     printf("NO\n");
     return 0;
   }
 
-  while (n > 0) {     // check if all right-truncable numbers are prime
+  while (n) {         // check if all right-truncable numbers are prime
     if (isPrime(n)) 
       n /= 10;        // remove last digit
     else {
