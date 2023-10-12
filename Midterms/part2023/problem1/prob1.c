@@ -8,7 +8,7 @@
 
 int main(int argc, char *argv[]) {
   int butts, cigarettes = 0, total = 0;
-  scanf("%d", &butts);
+  (void)! scanf("%d", &butts);
   
   while (butts >= 4) { 
     cigarettes = butts / 4;         // 4 butts make 1 cigarette

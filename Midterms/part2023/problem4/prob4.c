@@ -44,10 +44,10 @@ int main(int argc, char *argv[]) {
   char dna[100000];
   int nA, nC, nT, nG;
   
-  scanf("%d %d %d %d", &nA, &nC, &nT, &nG);   
+  (void)! scanf("%d %d %d %d", &nA, &nC, &nT, &nG);   
   int subLen = nA + nC + nT + nG;   // subsequence length
   
-  scanf("%s", dna);
+  (void)! scanf("%s", dna);
   findSubseqs(dna, nA, nC, nT, nG, subLen);
 
   return 0;

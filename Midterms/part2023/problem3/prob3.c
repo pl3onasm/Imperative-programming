@@ -12,7 +12,7 @@ int readModuli(int moduli[]) {
   // reads the moduli and returns the number of moduli read
   int d = 0, count = 0; 
   for (int i = 0; i < 10; i++) {
-    scanf("%d", &d);
+    (void)! scanf("%d", &d);
     if (!d) break;
     moduli[count++] = d;
   }

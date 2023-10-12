@@ -19,7 +19,7 @@ int isPrime (int x) {
 int main(int argc, char *argv[]) {
   int n;
 
-  scanf("%d", &n);
+  (void)! scanf("%d", &n);
 
   if (n == 0) {       // special case for input 0
     printf("NO\n");

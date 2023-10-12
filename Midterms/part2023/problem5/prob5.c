@@ -10,7 +10,7 @@
 void readPuzzle(int n, int eCell[], int puzzle[][8]) {
   for (int i=0; i<n; ++i) 
     for (int j=0; j<n; ++j) {
-      scanf("%d", &puzzle[i][j]);
+      (void)! scanf("%d", &puzzle[i][j]);
       if (puzzle[i][j] == 0)        
         eCell[0] = i, eCell[1] = j;  // found position of empty cell
     }
@@ -52,9 +52,9 @@ int checkPuzzle(int n, int puzzle[][8]) {
 
 int main(int argc, char *argv[]) {
   int n, tile, puzzle[8][8];
-  int eCell[2];      // position of empty cell
-  char dir[6];       // direction to slide tile in
-  scanf("%d", &n);   // read size of puzzle
+  int eCell[2];             // position of empty cell
+  char dir[6];              // direction to slide tile in
+  (void)! scanf("%d", &n);  // read size of puzzle
   readPuzzle(n, eCell, puzzle);
   while (scanf("%s %d", dir, &tile) && dir[0] != 'E') {
     if (! slide(dir[0], n, tile, eCell, puzzle)){
