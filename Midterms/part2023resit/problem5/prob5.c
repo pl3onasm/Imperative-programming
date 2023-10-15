@@ -7,7 +7,7 @@
 #include <stdlib.h>
 
 int main(int argc, char *argv[]) {
-  int a, b, ints[10000]={0}, maxFreq = 0, max=0;
+  int a, b, ints[10000]={0};
 
   // read the intervals and update counts
   while (scanf("%d %d", &a, &b) == 2 && (a || b)){
@@ -16,6 +16,7 @@ int main(int argc, char *argv[]) {
   }
 
   // calculate the cumulative sum
+  int max = 0, maxFreq = ints[0];
   for (int i = 1; i < 10000; i++) {
     ints[i] += ints[i-1];
     if (ints[i] > maxFreq) {
