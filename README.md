@@ -17,13 +17,15 @@ Found this repository useful? Be sure to send in your exam paper to help out fel
 
 ## Partial exams
 
-|||||
-|:---:|:---:|:---:|:---:|
-| **[2013](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2013)**| **[2015](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2015)**| **[2016](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2016)**| **[2016 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2016resit)**|
-| **[2017](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2017)**| **[2017 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2017resit)**| **[2018](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2018)** | **[2018 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2018resit)**|
-|**[2019](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2019)**| **[2019 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2019resit)**| **[2020](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2020)**| **[2020 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2020resit)**|
-| **[2021](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2021)**| **[2021 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2021resit)**| **[2022](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2022)**| **[2023](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/part2023)**|
-|||||
+||||
+|:---:|:---:|:---:|
+| **[2013](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2013)**| **[2015](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2015)**| **[2016](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2016)**|
+| **[2016 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2016resit)**| **[2017](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2017)**| **[2017 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2017resit)**|
+| **[2018](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2018)** | **[2018 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2018resit)**|**[2019](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2019)**|
+|**[2019 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2019resit)**| **[2020](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2020)**| **[2020 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2020resit)**|
+| **[2021](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2021)**| **[2021 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2021resit)**|**[2022](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/mid2022)**| 
+|**[2023](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/part2023)**| **[2023 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/Midterms/part2023)**|
+||||
 
 ## Compilation
 
