@@ -6,6 +6,6 @@ This folder contains some extra problems. If you are looking for more practice, 
 
 |||
 |:---:|:---|
-| Prob 1 | [Sum of multiples](prob1/README.md) |
-| Prob 2 | [Adding large numbers](prob2/README.md) |
+| Problem 1 | [Sum of multiples](prob1/README.md) |
+| Problem 2 | [Adding large numbers](prob2/README.md) |
 |||
