@@ -1,17 +1,25 @@
 # Pandigital divisibility
 
-A number is said to be pandigital in base 10 if it contains each of the digits from 0 to 9 (the leading digit must be nonzero). For example, 1406357289 is such a number. It has the additional property that each of its consecutive subnumbers of length 3, starting from the second digit, is divisible by the corresponding next prime below 20:
+In this problem, we say that a number is *pandigital* if it contains all the digits from $0$ to $9$ exactly once. For example, $1023456789$ is a pandigital number, but $102345678$ and $1023457890$ are not.
 
-$\quad d_2d_3d_4=406$ is divisible by 2  
-$\quad d_3d_4d_5=063$ is divisible by 3  
-$\quad d_4d_5d_6=635$ is divisible by 5  
-$\quad d_5d_6d_7=357$ is divisible by 7  
-$\quad d_6d_7d_8=572$ is divisible by 11  
-$\quad d_7d_8d_9=728$ is divisible by 13  
-$\quad d_8d_9d_{10}=289$ is divisible by 17  
+The input consists of a positive integer $d \leq 10^7$. The output of your pogram should be all the pandigital numbers that are divisible by $d$. The pandigital numbers should be printed *in ascending order*, each on a new line. Numbers with a leading $0$ should be omitted. You are not allowed to use a sorting algorithm.
 
-where $d_n$ is the $n$-th digit of the number.
+## Example
 
-You are asked to find all the pandigital numbers in base 10 with this property.  
+Input:
 
-The output of your program should be the list of all these numbers, one per line, in ascending order. Note that you are not allowed to use a sorting function.
+```text
+7777170
+```
+
+Output:
+
+```text
+1749863250 
+1827634950  
+2916438750  
+3281965740  
+4728519360  
+5918426370  
+8749316250
+```
