@@ -8,13 +8,6 @@
 
 typedef unsigned long long llu;
 
-void printArray (int *digits) {
-  // prints the digits array
-  for (int i = 0; i < 10; ++i) 
-    printf("%d", digits[i]);
-  printf("\n");
-}
-
 llu toLlu(int *digits) {
   // converts the digits array to an unsigned long long
   llu result = 0;
@@ -25,12 +18,13 @@ llu toLlu(int *digits) {
   return result;
 }
 
-void permute(int *digits, int *taken, int start, int end, int d) {
+void permute(int *digits, int *taken, int start, int end, int div) {
   /* computes all permutations of the digits array and prints, in
      ascending order, those that satisfy the divisibility condition */ 
   if (start == end) {
-    if (toLlu(digits) % d == 0)
-      printArray(digits);
+    llu candidate = toLlu(digits);
+    if (candidate % div == 0)
+      printf("%llu\n", candidate);
     return;
   }
   // recursive case
@@ -39,7 +33,7 @@ void permute(int *digits, int *taken, int start, int end, int d) {
         && !(start == 0 && i == 0)) { // first digit cannot be 0
       ++taken[i];
       digits[start] = i;  
-      permute(digits, taken, start + 1, end, d);
+      permute(digits, taken, start + 1, end, div);
       --taken[i];                     // backtrack
     }
   }
@@ -49,10 +43,10 @@ int main() {
   int digits[] = {0, 1, 2, 3, 4, 5, 6, 7, 8 ,9};
   int taken[10] = {0};
 
-  int d; 
-  scanf("%d", &d);
+  int div; 
+  (void)! scanf("%d", &div);
 
-  permute(digits, taken, 0, 10, d);
+  permute(digits, taken, 0, 10, div);
   
   return 0;
 }
