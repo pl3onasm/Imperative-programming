@@ -7,7 +7,7 @@
 #include <stdlib.h>
 
 int isDivisible(int *digits) {
-  /* tests if the consecutive substrings of length 3
+  /* tests if the consecutive subnumbers of length 3
      are divisible by the consecutive primes below 20 */
   int primes[] = {2, 3, 5, 7, 11, 13, 17};
   for (int i = 1; i < 8; ++i) {
