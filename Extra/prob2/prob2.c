@@ -1,4 +1,4 @@
-/* file: prob1.c
+/* file: prob2.c
    author: David De Potter
    description: extra, prob2, adding large numbers
 */
@@ -52,7 +52,7 @@ void print(char *s, int len) {
 void add(char *a, int lenA, char *b, int lenB) {
   // adds two large numbers
   int len = lenA > lenB ? lenA : lenB;
-  char *sum = safeMalloc((len + 1) * sizeof(char));
+  char *sum = safeMalloc(len * sizeof(char));
   int carry = 0;
   for (int i = 0; i < len; ++i) {
     int digitA = i < lenA ? a[lenA - i - 1] - '0' : 0;

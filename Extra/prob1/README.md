@@ -16,4 +16,4 @@ For $a = 3$, $b = 2$ and $n = 30$, the output should equal $285$, since the sum 
 The input consists of three positive integers $a$, $b$ and $n$ separated by a space.
 The output should be a single positive integer representing the sum of all the multiples of $a$ and $b$ below $n$.
 
-Note that the numbers can become very large. You should use a data type that can handle numbers as large as $10^{20}$.
+Note that the numbers can become very large. You should use a data type that can handle numbers as large as $10^{19}$.
