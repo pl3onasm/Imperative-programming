@@ -1,6 +1,6 @@
 # Maximum path
 
-Given is a triangle of numbers. A path through the triangle is a sequence of adjacent numbers, one from each row, starting from the top. For example, $1 \to 5 \to 0 \to 4 \to 1 \to 0$ is a path in the following triangle of numbers:  
+Given is a triangle of numbers. A path through the triangle is a sequence of adjacent numbers, one from each row, starting from the top. For example, $1 \to 3 \to 3 \to 4 \to 1 \to 0$ is a path in the following triangle of numbers:  
 
 $$
 \begin{gather*}
