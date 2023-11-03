@@ -3,7 +3,7 @@
 Given is a triangle of numbers. A path through the triangle is a sequence of adjacent numbers, one from each row, starting from the top. For example, $1 \to 5 \to 0 \to 4 \to 1 \to 0$ is a path in the following triangle of numbers:  
 
 $$
-\textcolor{orange}{1}\\
+\textcolor{orange}{1}\newline
 \textcolor{orange}{3} \quad \textcolor{olive}{5}\\
 \textcolor{olive}{6} \quad \textcolor{orange}{3} \quad \textcolor{olive}{2}\\
 \textcolor{olive}{3} \quad \textcolor{olive}{1} \quad \textcolor{orange}{4} \quad \textcolor{olive}{9}\\
