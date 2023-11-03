@@ -4,12 +4,12 @@ Given is a triangle of numbers. A path through the triangle is a sequence of adj
 
 $$
 \begin{gather*}
-\textcolor{orange}{1}\\  
-\textcolor{orange}{3} \quad \textcolor{olive}{5}\\
-\textcolor{olive}{6} \quad \textcolor{orange}{3} \quad \textcolor{olive}{2}\\
-\textcolor{olive}{3} \quad \textcolor{olive}{1} \quad \textcolor{orange}{4} \quad \textcolor{olive}{9}\\
-\textcolor{olive}{9} \quad \textcolor{olive}{8} \quad \textcolor{orange}{1} \quad \textcolor{olive}{5} \quad \textcolor{olive}{7}\\
-\textcolor{olive}{4} \quad \textcolor{olive}{6} \quad \textcolor{orange}{0} \quad \textcolor{olive}{2} \quad \textcolor{olive}{8} \quad \textcolor{olive}{2}\\
+\textcolor{orange}{\textbf{1}}\\  
+\textcolor{orange}{\textbf{3}} \quad \textcolor{olive}{5}\\
+\textcolor{olive}{6} \quad \textcolor{orange}{\textbf{3}} \quad \textcolor{olive}{2}\\
+\textcolor{olive}{3} \quad \textcolor{olive}{1} \quad \textcolor{orange}{\textbf{4}} \quad \textcolor{olive}{9}\\
+\textcolor{olive}{9} \quad \textcolor{olive}{8} \quad \textcolor{orange}{\textbf{1}} \quad \textcolor{olive}{5} \quad \textcolor{olive}{7}\\
+\textcolor{olive}{4} \quad \textcolor{olive}{6} \quad \textcolor{orange}{\textbf{0}} \quad \textcolor{olive}{2} \quad \textcolor{olive}{8} \quad \textcolor{olive}{2}\\
 \end{gather*}
 $$
 
@@ -17,12 +17,12 @@ Your task is to find the maximum path cost, where the path cost is defined as th
 
 $$
 \begin{gather*}
-\textcolor{orange}{1}\\
-\textcolor{olive}{3} \quad \textcolor{orange}{5}\\
-\textcolor{olive}{6} \quad \textcolor{olive}{3} \quad \textcolor{orange}{2}\\
-\textcolor{olive}{3} \quad \textcolor{olive}{1} \quad \textcolor{olive}{4} \quad \textcolor{orange}{9}\\
-\textcolor{olive}{9} \quad \textcolor{olive}{8} \quad \textcolor{olive}{1} \quad \textcolor{olive}{5} \quad \textcolor{orange}{7}\\
-\textcolor{olive}{4} \quad \textcolor{olive}{6} \quad \textcolor{olive}{0} \quad \textcolor{olive}{2} \quad \textcolor{orange}{8} \quad \textcolor{olive}{2}\\
+\textcolor{orange}{\textbf{1}}\\
+\textcolor{olive}{3} \quad \textcolor{orange}{\textbf{5}}\\
+\textcolor{olive}{6} \quad \textcolor{olive}{3} \quad \textcolor{orange}{\textbf{2}}\\
+\textcolor{olive}{3} \quad \textcolor{olive}{1} \quad \textcolor{olive}{4} \quad \textcolor{orange}{\textbf{9}}\\
+\textcolor{olive}{9} \quad \textcolor{olive}{8} \quad \textcolor{olive}{1} \quad \textcolor{olive}{5} \quad \textcolor{orange}{\textbf{7}}\\
+\textcolor{olive}{4} \quad \textcolor{olive}{6} \quad \textcolor{olive}{0} \quad \textcolor{olive}{2} \quad \textcolor{orange}{\textbf{8}} \quad \textcolor{olive}{2}\\
 \end{gather*}
 $$
 
