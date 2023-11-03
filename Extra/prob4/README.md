@@ -33,6 +33,7 @@ Write a program that reads a triangle of numbers and outputs the maximum path co
 Input:
 
 ```text
+6
 1
 3 5
 6 3 2
