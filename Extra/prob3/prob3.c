@@ -40,7 +40,7 @@ void permute(int *digits, int *taken, int start, int end, int div) {
 }
 
 int main() {
-  int digits[10] = {0};
+  int digits[10];
   int taken[10] = {0};
 
   int div; 

@@ -27,7 +27,7 @@ void *safeRealloc (void *p, int n) {
 }
 
 char *readString(int *len) {
-  // reads a string from stdin
+  // reads a string of characters and determines its length
   int capacity = 50, size = 0;
   char ch;
   char *s = safeMalloc(capacity * sizeof(char));
@@ -42,29 +42,22 @@ char *readString(int *len) {
   return s;
 }
 
-void print(char *s, int len) {
-  // prints a string of length len
-  for (int i = 0; i < len; ++i) 
-    printf("%c", s[i]);
-  printf("\n");
-}
-
 void add(char *a, int lenA, char *b, int lenB) {
-  // adds two large numbers
-  int len = lenA > lenB ? lenA : lenB;
-  char *sum = safeMalloc(len * sizeof(char));
+  // adds two strings of digits
+  int sumLen = lenA > lenB ? lenA : lenB;                   
+  if (lenA == lenB && a[0] + b[0] - 2 * '0' > 9) ++sumLen;  // one extra if carry
+  char *sum = safeMalloc((sumLen + 1) * sizeof(char));      // one extra for '\0'
+  sum[sumLen] = '\0';
   int carry = 0;
-  for (int i = 0; i < len; ++i) {
+  for (int i = 0; i < sumLen; ++i) {
     int digitA = i < lenA ? a[lenA - i - 1] - '0' : 0;
     int digitB = i < lenB ? b[lenB - i - 1] - '0' : 0;
     int digitSum = digitA + digitB + carry;
-    sum[len - i - 1] = digitSum % 10 + '0';
+    sum[sumLen - i - 1] = digitSum % 10 + '0';
     carry = digitSum / 10;
   }
-  
-  if (carry) printf("%d", carry);
-  
-  print(sum, len);
+  if (carry) sum[0] = carry + '0';
+  printf("%s\n", sum);
   free(sum);
 }
   
