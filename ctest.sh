@@ -1,5 +1,7 @@
 #!/bin/bash
 # Author: David De Potter
+# Developed and tested on Ubuntu 22.04 LTS, with GNU bash, version 5.1.16
+
 # This script will try to compile your program and test its correctness
 # by running it on all the test cases for the current problem.
 # It will also perform a test for memory leaks.
@@ -93,23 +95,32 @@ for INFILE in "${INFILES[@]}"; do
     if [ -n "$DIF" ]; then
       if [ -t 1 ]; then echo -e $(red "Test failed.")
       else echo -e "Test failed."; fi
-      I=0; J=0
-      echo "$DIF" | while [[ $I -lt 6 ]] && read -r line; do
+      EXP=0; GOT=0
+      echo "$DIF" | (while [[ $EXP -lt 6 ]] && read -r line; do
         if [[ $line == "<"* ]]; then
           if [ -t 1 ]; then echo -e "  $(green "$line")"
           else echo -e "  $line"; fi
-          J=$((J+1))
+          EXP=$((EXP + 1))
         elif [[ $line == ">"* ]]; then  
           if [ -t 1 ]; then echo -e "  $(red "$line")"
           else echo -e "  $line"; fi
-          I=$((I+1))
+          GOT=$((GOT + 1))
         elif [[ $line == *"c"* ]]; then 
           OUT=$(echo "$line" | cut -d "c" -f 1)
           OUT=$(echo "$OUT" | sed 's/,/-/g')
           echo -e "\n  line "$OUT""
         fi
       done
-      echo
+      while [[ $GOT -ne $EXP ]]; do
+        # get the next > lines until EXP == GOT
+        read -r line
+        if [[ $line == ">"* ]]; then  
+          if [ -t 1 ]; then echo -e "  $(red "$line")"
+          else echo -e "  $line"; fi
+          GOT=$((GOT + 1))
+        fi
+      done
+      echo)
     else
       if [ -t 1 ]; then 
         echo -e $(green "PASSED!")

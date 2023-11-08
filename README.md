@@ -41,7 +41,7 @@ gcc -O2 -std=c99 -pedantic -Wall -o a.out myprogram.c -lm
 
 ## Testing
 
-You can test your own code with the [test script](https://github.com/pl3onasm/Imperative-programming/blob/main/ctest.sh). It will try to compile your code and run it on all the test cases. It will also compare your output with the expected output, and check for memory leaks by running a Valgrind test.
+You can test your own code with the [test script](https://github.com/pl3onasm/Imperative-programming/blob/main/ctest.sh). It will try to compile your code and run it on all the test cases. It will also compare your output with the expected output, and check for memory leaks by running a Valgrind test. If a test fails, the script will display the line number where there was a mismatch between the expected and the actual output, and the corresponding lines, so you can easily find the error. In order to avoid too much clutter, the script will only display the first 6 lines where mismatches were found.
 
 In order to use it, you basically have two options:  
 
@@ -81,13 +81,7 @@ Now you can run the script from the directory containing your program and the fo
 ctest.sh myprogram.c
 ```  
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
-  
-Note that if you want to use ```less```, you should add the -R flag:
-
-```linux
-ctest.sh myprogram.c | less -R
-```
+&nbsp;&nbsp;&nbsp;
 
 You may also choose to redirect the output to a file, in which case the color codes will be removed automatically to render a plain text file:
 
@@ -95,12 +89,17 @@ You may also choose to redirect the output to a file, in which case the color co
 ctest.sh myprogram.c > results.txt
 ```
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
-An output example of the test script:  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+## Notes
+
+All commands were given with Ubuntu in mind. If you are using a different Linux distribution, you may need to change the commands accordingly.
+
+The script was tested on Ubuntu 22.04 LTS, using GCC 13.1.0, Valgrind 3.18.1, and GNU bash 5.1.16(1)-release.
+
+## Output example of the script
 
 <p align="center" width="60%">
 <img src="example.jpg"
      alt="Example output"
-     style="float: left; padding-top:200px" />  
-</p> 
+     style="float: left; padding-top:25px" />  
+</p>
+
