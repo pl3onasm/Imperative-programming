@@ -100,7 +100,7 @@ An output example of the test script:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
 
 <p align="center" width="60%">
-<img src="example1.jpg"
+<img src="example.jpg"
      alt="Example output"
      style="float: left; padding-top:200px" />  
 </p> 
