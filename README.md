@@ -95,9 +95,11 @@ All commands were given with Ubuntu in mind. If you are using a different Linux 
 
 The script was tested on Ubuntu 22.04 LTS, using GCC 13.1.0, Valgrind 3.18.1, and GNU bash 5.1.16(1)-release.
 
+&nbsp;&nbsp;&nbsp;
+
 ## Output example of the script
 
-<p align="center" width="60%">
+<p align="center" width="50%">
 <img src="example.jpg"
      alt="Example output"
      style="float: left; padding-top:25px" />  
