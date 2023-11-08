@@ -64,14 +64,14 @@ void mergeSort(int length, int arr[]) {
 int *readInput(int size){
   int *arr = safeMalloc(size*sizeof(int));
   for (int i=0; i < size; i++) {
-    scanf("%d ", arr + i);
+    (void)! scanf("%d ", arr + i);
   }
   return arr;
 }
 
 int main(int argc, char *argv[]) {
   int n; 
-  scanf("%d", &n);
+  (void)! scanf("%d", &n);
   int *arr1 = readInput(n);
   int *arr2 = readInput(n);
   mergeSort(n, arr1);

@@ -16,7 +16,7 @@ int reach (int a, int n){
 
 int main(int argc, char *argv[]) {
   int a, n;
-  scanf("%d %d", &a, &n);  
+  (void)! scanf("%d %d", &a, &n);  
   printf("%d\n", reach(a, n));
   return 0;
 }

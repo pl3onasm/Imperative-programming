@@ -105,7 +105,7 @@ void getPairs(int *vec, int size, int n){
 
 int main(int argc, char **argv){
   int size=10, target; 
-  scanf("%d\n", &target);
+  (void)! scanf("%d\n", &target);
   int *vec = readIntVector(&size); 
   mergeSort(size, vec);
   getPairs(vec, size, target); 

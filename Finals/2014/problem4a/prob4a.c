@@ -24,7 +24,7 @@ int isFactorialSum(int n) {
 
 int main(int argc, char *argv[]) {
   int a; 
-  scanf("%d", &a);
+  (void)! scanf("%d", &a);
   printf(isFactorialSum(a) ? "YES\n" : "NO\n");
   return 0;
 }

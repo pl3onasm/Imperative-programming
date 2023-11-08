@@ -23,9 +23,9 @@ int plusmin(int length, int a[], int n) {
 
 int main() {
   int len, n, i, a[100];
-  scanf ("%d %d", &len, &n);
+  (void)! scanf ("%d %d", &len, &n);
   for (i=0; i < len; i++) {
-    scanf("%d", &a[i]);
+    (void)! scanf("%d", &a[i]);
   }
   printf("%d\n", plusmin(len, a, n));
   return 0;

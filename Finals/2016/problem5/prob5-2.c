@@ -26,9 +26,9 @@ int numberOfBalancedSubsets(int length, int a[]) {
 
 int main(int argc, char *argv[]) {
   int n, i, seq[20];
-  scanf ("%d\n", &n);
+  (void)! scanf ("%d\n", &n);
   for (i=0; i < n; i++) {
-    scanf("%d", &seq[i]);
+    (void)! scanf("%d", &seq[i]);
   }
   printf("%d\n", numberOfBalancedSubsets(n, seq));
   return 0;

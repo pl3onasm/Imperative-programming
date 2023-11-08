@@ -23,7 +23,7 @@ void simplifySqrt (int n){
 
 int main(int argc, char *argv[]) {
   int n; 
-  scanf ("%d", &n);
+  (void)! scanf ("%d", &n);
   simplifySqrt (n);
   return 0;
 }

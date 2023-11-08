@@ -12,8 +12,7 @@
 #include <stdlib.h>
 
 void *safeCalloc (int n, int size) {
-  /* allocates n elements of size size, initializing them to 0, and
-     checks whether the allocation was successful */
+  /* allocates memory and checks if it was successful */
   void *ptr = calloc(n, size);
   if (ptr == NULL) {
     printf("Error: calloc(%d, %d) failed. Out of memory?\n", n, size);
@@ -40,7 +39,7 @@ int reach (int a, int n){
 
 int main(int argc, char *argv[]) {
   int a, n;
-  scanf("%d %d", &a, &n);  
+  (void)! scanf("%d %d", &a, &n);  
   printf("%d\n", reach(a, n));
   return 0;
 }

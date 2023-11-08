@@ -8,9 +8,9 @@
 
 int main(int argc, char *argv[]) {
   int n, a[100];
-  scanf("%d", &n);
+  (void)! scanf("%d", &n);
   for (int i = 0; i < n; i++) 
-    scanf("%d", a + i);
+    (void)! scanf("%d", a + i);
   for (int i = 0; i < n; i++) {
     int j = i, count=0; 
     while (a[j] != -1) {

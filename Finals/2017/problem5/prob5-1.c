@@ -31,7 +31,7 @@ int isSolvable(int len, int series[]) {
 int main(int argc, char *argv[]) {
   int len=0, series[20];
   do {
-    scanf("%d", &series[len]);
+    (void)! scanf("%d", &series[len]);
     len++;
   } while (series[len-1] != 0);
   printf("%d\n", isSolvable(len, series));

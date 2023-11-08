@@ -21,9 +21,9 @@ int numSubsequences(int n, int m, int s[], int t[]){
 
 int main(int argc, char *argv[]) {
   int n, m, s[200]={0}, t[200]={0}; 
-  scanf("%d %d", &n, &m);
-  for (int i = 0; i < n; ++i) scanf("%d", &s[i]);
-  for (int i = 0; i < m; ++i) scanf("%d", &t[i]);
+  (void)! scanf("%d %d", &n, &m);
+  for (int i = 0; i < n; ++i) (void)! scanf("%d", &s[i]);
+  for (int i = 0; i < m; ++i) (void)! scanf("%d", &t[i]);
   printf("%d\n", numSubsequences(n, m, s, t));
   return 0;
 }

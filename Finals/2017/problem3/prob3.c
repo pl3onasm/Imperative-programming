@@ -14,9 +14,9 @@
 
 int main(int argc, char *argv[]) {
   int nums[35001], n, arraySum=0;
-  scanf("%d", &n);
+  (void)! scanf("%d", &n);
   for (int i = 0; i < n; ++i) 
-    scanf("%d", &nums[i]);
+    (void)! scanf("%d", &nums[i]);
   for (int i = 0; i < n; ++i) 
     arraySum += nums[i];
   int total = n*(n+1) / 2;  // sum of first n natural numbers

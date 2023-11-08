@@ -18,7 +18,7 @@ int isMatch(char *pattern, char *string) {
 
 int main(int argc, char *argv[]) {
   char pattern[30], string[30];
-  scanf("%s %s", pattern, string);
+  (void)! scanf("%s %s", pattern, string);
   if (! isMatch(pattern, string)) printf("NO ");
   printf("MATCH\n");
   return 0;

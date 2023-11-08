@@ -64,7 +64,7 @@ void mergeSort(int length, int arr[]) {
 int *readIntVector(int size) {
   int i, *vec = safeMalloc(size*sizeof(int));
   for (i=0; i < size; i++) {
-    scanf("%d,", &vec[i]);
+    (void)! scanf("%d,", &vec[i]);
   }
   return vec;
 }
@@ -82,9 +82,10 @@ void countPairs(int *vec, int size, int k){
 
 int main(int argc, char **argv){
   int n, k; 
-  scanf("%d %d: ", &n, &k);
+  (void)! scanf("%d %d: ", &n, &k);
   int *vec = readIntVector(n); 
   mergeSort(n, vec);
   countPairs(vec, n, k); 
+  free(vec);
   return 0; 
 }

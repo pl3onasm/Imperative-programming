@@ -33,7 +33,7 @@ int minimalPalPartition(int start, int end, char *a) {
 
 int main(int argc, char *argv[]) {
   char a[21];
-  scanf("%s", a);
+  (void)! scanf("%s", a);
   printf("%d\n", minimalPalPartition(0, strlen(a)-1, a));
   return 0;
 }

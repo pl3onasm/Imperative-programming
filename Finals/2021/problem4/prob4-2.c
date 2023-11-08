@@ -17,9 +17,9 @@ int getMaxSum(int arr[], int idx, int sum, int len) {
 
 int main(int argc, char **argv){
   int arr[35], n; 
-  scanf("%d", &n);
+  (void)! scanf("%d", &n);
   for(int i = 0; i < n; i++)
-    scanf("%d ", &arr[i]);
+    (void)! scanf("%d ", &arr[i]);
   printf("%d\n", getMaxSum(arr, n-1, 0, 0));
   return 0; 
 }

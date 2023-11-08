@@ -29,7 +29,7 @@ void *safeMalloc (int n) {
 int *readIntVector (int size) {
   int *vect = safeMalloc(size * sizeof(int));
   for (int i = 0; i < size; i++)
-    scanf("%d", vect + i);
+    (void)! scanf("%d", vect + i);
   return vect;
 }
 
@@ -60,7 +60,7 @@ int bubbleCount(int *arr, int len) {
 
 int main(int argc, char **argv){
   int size; 
-  scanf("%d\n", &size);
+  (void)! scanf("%d\n", &size);
   int *vect = readIntVector(size); 
   printf("%d\n", bubbleCount(vect, size));
   free(vect); 

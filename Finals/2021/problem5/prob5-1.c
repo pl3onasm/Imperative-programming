@@ -9,8 +9,7 @@
 #include <stdlib.h>
 
 void *safeCalloc (int n, int size) {
-  /* allocates n elements of size size, initializing them to 0, and
-     checks whether the allocation was successful */
+  /* allocates memory and checks if it was successful */
   void *ptr = calloc(n, size);
   if (ptr == NULL) {
     printf("Error: calloc(%d, %d) failed. Out of memory?\n", n, size);
@@ -45,10 +44,10 @@ void checkSequences (char *s, char *seq, int n, int idx, int subLen, int *max) {
 
 int main(int argc, char **argv){
   int n, max=0; 
-  scanf("%d", &n);
+  (void)! scanf("%d", &n);
   char *s = createString(n+1);
   char *seq = createString(n);
-  scanf("%s", s);
+  (void)! scanf("%s", s);
   checkSequences(s, seq, n, 0, 0, &max);
   printf("%d\n", max);
   free(s); free(seq);

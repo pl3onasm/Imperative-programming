@@ -10,9 +10,9 @@
 
 int main(int argc, char *argv[]) {
   int n, jobs[100];
-  scanf("%d", &n);
+  (void)! scanf("%d", &n);
   for (int i = 0; i < n; ++i) {
-    scanf("%d\n", &jobs[i]);
+    (void)! scanf("%d\n", &jobs[i]);
   }
   for (int i = 0; i < n; ++i) {
     int min = INT_MAX, minIndex = 0;

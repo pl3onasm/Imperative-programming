@@ -36,7 +36,7 @@ void checkFibSums (int target, int sum, int idx, int *count) {
 int main (int argc, char *argv[]) {
   int n, len=0, count=0;
 
-  scanf("%d", &n);
+  (void)! scanf("%d", &n);
 
   fib[0] = 1;
   fib[1] = 2;

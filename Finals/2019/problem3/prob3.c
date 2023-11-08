@@ -8,7 +8,7 @@
 #include <stdlib.h>
 
 int putDisc(int n, int from, int to, int i, int rods[3][10]){
-  int disc, j, k, flag=0; 
+  int disc=0, j, k, flag=0; 
   for (j = 0; j < n; j++)
     if (rods[from][j]){
       disc = rods[from][j];
@@ -32,11 +32,11 @@ int putDisc(int n, int from, int to, int i, int rods[3][10]){
 
 int main(int argc, char **argv){
   int n, m, rods[3][10]={0}, from, to;
-  scanf("%d %d ", &n, &m);
+  (void)! scanf("%d %d ", &n, &m);
   for (int i = 0; i < n; i++)
     rods[0][i] = i+1;
   for (int i = 0; i < m; i++) {
-    scanf("%d->%d ", &from, &to);
+    (void)! scanf("%d->%d ", &from, &to);
     int illegal = putDisc(n, from, to, i, rods);
     if (illegal) return 0; 
   } 

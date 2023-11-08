@@ -16,7 +16,7 @@ int computeSubsetSum(int arr[], int index, int sum){
 int main(int argc, char **argv){
   int arr[20], n;
   for (int i=0; i<20; ++i) arr[i]=i+1;
-  scanf("%d ", &n);
+  (void)! scanf("%d ", &n);
   printf("%d\n", computeSubsetSum(arr, n-1, 0));
   return 0; 
 }

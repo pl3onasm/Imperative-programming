@@ -35,7 +35,7 @@ void printEmirps(int a, int b) {
 
 int main(int argc, char *argv[]) {
   int a, b; 
-  scanf("%d %d", &a, &b);
+  (void)! scanf("%d %d", &a, &b);
   printEmirps(a,b); 
   return 0; 
 }

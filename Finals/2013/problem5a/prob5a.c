@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int mul(a, b) {
+int mul(int a, int b) {
   if (b == 0) return 0;
   if (b > 0) return a + mul(a, b-1);
   return mul(a, b+1) - a;
@@ -15,7 +15,7 @@ int mul(a, b) {
 
 int main(int argc, char *argv[]) {
   int a, b;
-  scanf("%d %d", &a, &b);
+  (void)! scanf("%d %d", &a, &b);
   printf("%d\n", mul(a, b));  
   return 0;
 }

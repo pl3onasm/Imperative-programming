@@ -32,10 +32,10 @@ int isLatinSquare(int arr[][200], int N){
 
 int main(int argc, char *argv[]) {
   int n, square[200][200];
-  scanf("%d", &n); 
+  (void)! scanf("%d", &n); 
   for (int i = 0; i < n; i++)
     for (int j = 0; j < n; j++)
-      scanf("%d", &square[i][j]);
+      (void)! scanf("%d", &square[i][j]);
   printf(isLatinSquare(square, n) ? "YES\n" : "NO\n");
   return 0;
 }

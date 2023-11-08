@@ -18,9 +18,9 @@ int LCM(int a, int b) {
 
 int main(int argc, char *argv[]) {
   int n, op[100], cycles[100], count[100] = {0};
-  scanf("%d", &n);
+  (void)! scanf("%d", &n);
   for (int i = 0; i < n; i++) {
-    scanf("%d", op + i);
+    (void)! scanf("%d", op + i);
     cycles[i] = op[i];
   }
   for (int i = 0; i < n; i++) {

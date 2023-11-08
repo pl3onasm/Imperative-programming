@@ -64,7 +64,7 @@ void mergeSort(int length, int arr[]) {
 int *readIntVector(int size) {
   int i, *vec = safeMalloc(size*sizeof(int));
   for (i=0; i < size; i++) {
-    scanf("%d", &vec[i]);
+    (void)! scanf("%d", &vec[i]);
   }
   return vec;
 }
@@ -88,9 +88,9 @@ void computeDeletions(int n, int *arr1, int m, int *arr2){
 
 int main(int argc, char **argv){
   int n, m; 
-  scanf("%d: ", &n);
+  (void)! scanf("%d: ", &n);
   int *arr1 = readIntVector(n); 
-  scanf("%d: ", &m);
+  (void)! scanf("%d: ", &m);
   int *arr2 = readIntVector(m);
   computeDeletions(n, arr1, m, arr2);
   free(arr1); free(arr2);

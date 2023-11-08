@@ -17,9 +17,10 @@ void printCypher(char cypher[][20], int m, int n){
 
 int main(int argc, char *argv[]) {
   int m=0, n=1, c=0, k=0; char sent[400], ch;
-  char cypher[20][20]; // sentence length <= 400 chars
+  char cypher[20][20];  // sentence length <= 400 chars
   while (scanf("%c", &ch) && ch != '.') sent[k++] = ch; 
-  while (m*m <= k) ++m; --m; // m = floor(sqrt(k))
+  while (m*m <= k) ++m; 
+  --m;                  // m = floor(sqrt(k))
   while (m*n < k) ++n; 
   for (int i=0; i<m; i++) {
     for (int j=0; j<n; j++) {

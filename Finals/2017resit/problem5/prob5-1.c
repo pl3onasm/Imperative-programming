@@ -36,7 +36,7 @@ int prodSum(int n){
 
 int main(int argc, char *argv[]) {
   int n;
-  scanf("%d", &n);
+  (void)! scanf("%d", &n);
   printf("%d\n", prodSum(n)); 
   return 0;
 }

@@ -13,7 +13,7 @@ void printOutput (int arr[]) {
 }
 
 int main(int argc, char **argv){
-  int arr[25] = {0}, count = 1;
+  int arr[26] = {0}, count = 1;
   char ch = getchar(), next;  
   while (ch != EOF && ch != '\n'){
     if ((next = getchar()) == ch) ++count;

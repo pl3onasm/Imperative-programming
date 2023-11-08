@@ -17,7 +17,7 @@ int bitrev(int n) {
 
 int main() {
   int n;
-  scanf ("%d", &n); /* you may assume that n >= 0 */
+  (void)! scanf ("%d", &n); /* you may assume that n >= 0 */
   printf("bitrev(%d)=%d\n", n, bitrev(n));
   return 0;
 }

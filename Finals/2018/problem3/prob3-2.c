@@ -10,7 +10,7 @@
 
 int main(int argc, char **argv){
   int target, hist[1001] = {0}, n, solution = 0;
-  scanf("%d\n", &target);
+  (void)! scanf("%d\n", &target);
   while (scanf("%d", &n) && n != 0) hist[n] = 1;
   for (int i = 1; i <= target/2; ++i){
     int j = target - i;

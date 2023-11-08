@@ -72,7 +72,7 @@ int *createArray (int size) {
 void readIntArray(int size, int *arr){
   // reads an array of size integers from stdin
   for (int i=0; i < size; i++) 
-    scanf("%d", &arr[i]);
+    (void)! scanf("%d", &arr[i]);
 }
 
 void printSet(int n, int *arr){
@@ -94,7 +94,7 @@ void printSet(int n, int *arr){
 
 int main(int argc, char **argv){
   int n; 
-  scanf("%d", &n);
+  (void)! scanf("%d", &n);
   int *arr = createArray(n);
   readIntArray(n, arr);
   mergeSort (n, arr);

@@ -18,7 +18,7 @@ void *safeMalloc (int n) {
 
 int *readIntVector(int size) {
   int i, *vec = safeMalloc(size*sizeof(int));
-  for (i=0; i < size; i++) scanf("%d", &vec[i]);
+  for (i=0; i < size; i++) (void)! scanf("%d", &vec[i]);
   return vec;
 }
 
@@ -34,7 +34,7 @@ int maximize(int *vec, int idx, int len){
 
 int main(int argc, char **argv){
   int n; 
-  scanf("%d: ", &n);
+  (void)! scanf("%d: ", &n);
   int *vec = readIntVector(n); 
   printf("%d\n", maximize(vec, n-1, 0));
   free(vec);

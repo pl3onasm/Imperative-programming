@@ -44,11 +44,12 @@ void kEvenCheck (int *a, int n, int k){
 
 int main(int argc, char *argv[]) {
   int n, k; 
-  scanf("%d %d\n", &n, &k);
-  int *a = malloc(n * sizeof(int));
+  (void)! scanf("%d %d\n", &n, &k);
+  int *a = malloc((n+1) * sizeof(int));
   for (int i = 0; i < n; i++) {
-    scanf("%d ", a + i);
+    (void)! scanf("%d ", a + i);
   }
   kEvenCheck(a, n, k);
+  free(a);
   return 0;
 }

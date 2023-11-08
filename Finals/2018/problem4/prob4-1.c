@@ -55,10 +55,10 @@ void split(int *arr, int size, int *min){
 
 int main(int argc, char **argv){
   int n, min = INT_MAX;
-  scanf("%d", &n);
+  (void)! scanf("%d", &n);
   int *arr = safeMalloc(n*sizeof(int));
   for (int i=0; i < n; i++) {
-    scanf("%d", &arr[i]);
+    (void)! scanf("%d", &arr[i]);
   }
   split(arr, n, &min);
   printf("%d\n", min); 

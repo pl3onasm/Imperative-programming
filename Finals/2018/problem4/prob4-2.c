@@ -47,10 +47,10 @@ int binSearch (int *arr, int n, int left, int right) {
 
 int main(int argc, char **argv){
   int n, totalSum = 0;
-  scanf("%d", &n);
+  (void)! scanf("%d", &n);
   int *arr = safeMalloc(n*sizeof(int));
   for (int i=0; i < n; i++) {
-    scanf("%d", &arr[i]);
+    (void)! scanf("%d", &arr[i]);
     totalSum += arr[i];
   }
   printf("%d\n", binSearch(arr, n, 0, totalSum)); 

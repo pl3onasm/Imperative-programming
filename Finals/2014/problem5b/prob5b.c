@@ -36,7 +36,7 @@ int kthSmallest(int k, int len, int *arr) {
 
 int main(int argc, char *argv[]) {
   int n, k, arr[100], len=0;
-  scanf("%d", &k);
+  (void)! scanf("%d", &k);
   while (scanf("%d", &n) == 1) 
     arr[len++] = n;
   printf("%d\n", kthSmallest(k, len, arr));

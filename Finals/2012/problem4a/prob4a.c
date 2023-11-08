@@ -22,9 +22,9 @@ int isPermutation(int length, int a[], int b []) {
 
 int main(int argc, char *argv[]) {
    int a[1000], b[1000], n;
-   scanf("%d", &n);
-   for (int i = 0; i < n; ++i) scanf("%d", &a[i]);
-   for (int i = 0; i < n; ++i) scanf("%d", &b[i]);
+   (void)! scanf("%d", &n);
+   for (int i = 0; i < n; ++i) (void)! scanf("%d", &a[i]);
+   for (int i = 0; i < n; ++i) (void)! scanf("%d", &b[i]);
    printf(isPermutation(n, a, b) ? "YES\n": "NO\n");
    return 0;
 }

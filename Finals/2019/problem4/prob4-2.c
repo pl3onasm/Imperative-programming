@@ -73,7 +73,7 @@ void mergeSort(int length, int arr[]) {
 
 void processInput (int *series, int* sorted, int n) {
   for (int i=0; i<n; ++i) {
-    scanf("%d,", &series[i]);
+    (void)! scanf("%d,", &series[i]);
     sorted[i] = series[i];
   }
 }
@@ -109,7 +109,7 @@ void printArray (int *series, int *sorted, int len, int k ) {
 int main(int argc, char *argv[]) {
   int *series, *sorted, n, k;
 
-  scanf("%d %d:", &n, &k);
+  (void)! scanf("%d %d:", &n, &k);
   createArray (&series, n);
   createArray (&sorted, n);
   processInput (series, sorted, n);

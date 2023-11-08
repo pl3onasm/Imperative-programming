@@ -36,7 +36,7 @@ void showBitStrings(int n) {
 
 int main() {
   int n;
-  scanf ("%d", &n); /* note: it is guaranteed that 0<n<=10 */
+  (void)! scanf ("%d", &n); /* note: it is guaranteed that 0<n<=10 */
   showBitStrings(n);
   return 0;
 }
