@@ -6,13 +6,30 @@
 # The argument is the name of the program to test.
 # Example: $ ../../../ctest.sh myprogram.c 
 
+# Define some colors for output
 RED="\e[31m"
 GREEN="\e[32m"
-BLUE="\e[34m"
-CYANBACK="\e[46m"
+BCYAN="\e[96m"
 MAGENTA="\e[35m"
-BOLDBLUE="\e[1;34m"
+BBLUE="\e[1;34m"
 ENDCOLOR="\e[0m"
+
+function bcyan {
+  printf "${BCYAN}$@${ENDCOLOR}"
+}
+function bblue {
+  printf "${BBLUE}$@${ENDCOLOR}"
+}
+function red {
+  printf "${RED}$@${ENDCOLOR}"
+}
+function green {
+  printf "${GREEN}$@${ENDCOLOR}"
+}
+function magenta {
+  printf "${MAGENTA}$@${ENDCOLOR}"
+}
+
 PASSED=0
 
 if [ $# -eq 0 ]; then
@@ -49,14 +66,22 @@ if [ $LEN -eq 0 ]; then
   exit 1
 fi
 
-if [ -t 1 ]; then echo -e "${CYANBACK}  ==:: TEST RESULTS ::==  ${ENDCOLOR}"
-else echo "==:: TEST RESULTS ::=="; fi
+if [ -t 1 ]; then
+  echo -e $(bcyan "┌──────────────────────────┐") 
+  echo -e "$(bcyan "│")       $(bblue "TEST RESULTS")       $(bcyan "│")"
+  echo -e $(bcyan "└──────────────────────────┘")
+else
+  echo -e "┌──────────────────────────┐" 
+  echo -e "│       TEST RESULTS       │"
+  echo -e "└──────────────────────────┘" 
+fi
 echo
 
 # Compare the output of the program with the expected output
 for INFILE in "${INFILES[@]}"; do
-  if [ -t 1 ]; then echo -e "${BOLDBLUE}Test ${INFILE:8} ${ENDCOLOR}"
-  echo -e "${BOLDBLUE}---------- ${ENDCOLOR}"
+  if [ -t 1 ]; then 
+    echo -e $(bblue "Test ${INFILE:8}")
+    echo -e $(bblue "----------")
   else echo -e "Test ${INFILE:8}\n---------- "; fi
   OUTFILE="${INFILE%.*}.out"
   if [ ! -f "$OUTFILE" ]; then
@@ -65,15 +90,30 @@ for INFILE in "${INFILES[@]}"; do
   else
     OUTPUT=$(./a.out < "$INFILE")
     DIF="$(diff -Z "$OUTFILE" <(echo "$OUTPUT"))"
-    EXPECTED=$(cat "$OUTFILE")
     if [ -n "$DIF" ]; then
-      if [ -t 1 ]; then echo -e "${RED}Test failed.${ENDCOLOR}"
-      echo -e "Expected:\n    ${GREEN}${EXPECTED//$'\n'/$'\n'    }${ENDCOLOR}"
-      echo -e "\nActual:\n    ${RED}${OUTPUT//$'\n'/$'\n'    }${ENDCOLOR}\n"
-      else echo -e "Test failed.\nExpected:\n    ${EXPECTED//$'\n'/$'\n'    }"
-      echo -e "\nActual:\n    ${OUTPUT//$'\n'/$'\n'    }\n"; fi
+      if [ -t 1 ]; then echo -e $(red "Test failed.")
+      else echo -e "Test failed."; fi
+      I=0; J=0
+      echo "$DIF" | while [[ $I -lt 6 ]] && read -r line; do
+        if [[ $line == "<"* ]]; then
+          if [ -t 1 ]; then echo -e "  $(green "$line")"
+          else echo -e "  $line"; fi
+          J=$((J+1))
+        elif [[ $line == ">"* ]]; then  
+          if [ -t 1 ]; then echo -e "  $(red "$line")"
+          else echo -e "  $line"; fi
+          I=$((I+1))
+        elif [[ $line == *"c"* ]]; then 
+          OUT=$(echo "$line" | cut -d "c" -f 1)
+          OUT=$(echo "$OUT" | sed 's/,/-/g')
+          echo -e "\n  line "$OUT""
+        fi
+      done
+      echo
     else
-      if [ -t 1 ]; then echo -e "${GREEN}PASSED!${ENDCOLOR}\n"
+      if [ -t 1 ]; then 
+        echo -e $(green "PASSED!")
+        echo
       else echo -e "PASSED!\n"; fi
       PASSED=$((PASSED + 1))
     fi
@@ -81,8 +121,9 @@ for INFILE in "${INFILES[@]}"; do
 done
 
 # Check for memory issues with valgrind
-if [ -t 1 ]; then echo -e "${BOLDBLUE}Valgrind test ${ENDCOLOR}"
-  echo -e "${BOLDBLUE}------------- ${ENDCOLOR}"
+if [ -t 1 ]; then 
+  echo -e $(bblue "Valgrind test")
+  echo -e $(bblue "------------- ")
 else echo -e "Valgrind test\n------------- "; fi
 
 if ! [ -x "$(command -v valgrind)" ]; then
@@ -92,13 +133,13 @@ else
   CHECK1=$(echo "$TEST" | grep -c "in use at exit: 0 bytes in 0 blocks")
   CHECK2=$(echo "$TEST" | grep -c "0 errors from 0 contexts")
   if [[ $CHECK1 -ne 0 && $CHECK2 -ne 0 ]]; then
-    if [ -t 1 ]; then echo -e "${GREEN}PASSED!${ENDCOLOR}"
+    if [ -t 1 ]; then echo -e $(green "PASSED!")
     else echo -e "PASSED!"; fi
     PASSED=$((PASSED + 1))
   else
-    if [ -t 1 ]; then echo -e "${RED}Test failed."
-      if [ $CHECK1 -eq 0 ]; then echo -e "Not all memory freed."; fi
-      if [ $CHECK2 -eq 0 ]; then echo -e "Memory errors detected.${ENDCOLOR}"; fi
+    if [ -t 1 ]; then echo -e $(red "Test failed.")
+      if [ $CHECK1 -eq 0 ]; then echo -e $(red "Not all memory freed."); fi
+      if [ $CHECK2 -eq 0 ]; then echo -e $(red "Memory errors detected."); fi
     else echo -e "Test failed."
       if [ $CHECK1 -eq 0 ]; then echo -e "Not all memory freed."; fi
       if [ $CHECK2 -eq 0 ]; then echo -e "Memory errors detected."; fi
@@ -111,15 +152,15 @@ LEN=$((LEN + 1))  # Add 1 for valgrind test
 
 # Print final result
 if [ $PASSED -eq $LEN ]; then
-  if [ -t 1 ]; then echo -e "${GREEN}You have passed all tests! \(ᵔᵕᵔ)/${ENDCOLOR}"
+  if [ -t 1 ]; then echo -e $(green "You have passed all tests! \(ᵔᵕᵔ)/")
   else echo "All tests passed!"; fi
 elif [ $PASSED -eq $(($LEN-1)) ]; then 
-  if [ -t 1 ]; then echo -e "${MAGENTA}You have passed $PASSED out of $LEN tests."
-  echo -e "Almost there...! (◎_◎)${ENDCOLOR}"
+  if [ -t 1 ]; then echo -e $(magenta "You have passed $PASSED out of $LEN tests.")
+  echo -e $(magenta "Almost there...! (◎_◎)")
   else echo -e "Passed $PASSED out of $LEN tests."; fi
 else    
-  if [ -t 1 ]; then echo -e "${MAGENTA}You have passed $PASSED out of $LEN tests. 
-  (._.)${ENDCOLOR}"
+  if [ -t 1 ]; then echo -e $(magenta "You have passed $PASSED out of $LEN tests. 
+  (._.)")
   else echo "Passed $PASSED out of $LEN tests."; fi
 fi
 echo
