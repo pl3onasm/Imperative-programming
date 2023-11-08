@@ -33,15 +33,7 @@ int countDigits (int n) {
   return count;
 }
 
-void swap (int *arr, int i, int j ) {
-  /* swaps the content of cells with indexes
-     i and j in the given array */
-  int h = arr[i];
-  arr[i] = arr[j];
-  arr[j] = h;
-}
-
-void swap2 (int *a, int *b) {
+void swap (int *a, int *b) {
   // swaps the values of pointers a and b
   int tmp = *a;
   *a = *b;
@@ -433,7 +425,7 @@ void bubbleSort(int *arr, int len) {
     change = 0;
     for (j = 0; j+1 < len - i; ++j) {
       if (arr[j] > arr[j+1]) {
-        swap(arr, j, j+1);
+        swap(&arr[j], &arr[j+1]);
         change = 1;
       }
     }
@@ -462,7 +454,7 @@ void selectionSort(int *arr, int len) {
     min = i;
     for (j = i+1; j < len; ++j) 
       if (arr[j] < arr[min]) min = j;
-    swap(arr, i, min);
+    swap(&arr[i], &arr[min]);
   }
 }
 
@@ -476,7 +468,7 @@ void quickSort(int *arr, int len) {
     while (arr[i] < pivot) ++i;
     while (arr[j] > pivot) --j;
     if (i >= j) break;
-    swap(arr, i, j);
+    swap(&arr[i], &arr[j]);
   }
   quickSort(arr, i);
   quickSort(arr+i, len-i);
