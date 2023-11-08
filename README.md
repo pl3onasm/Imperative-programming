@@ -41,9 +41,9 @@ gcc -O2 -std=c99 -pedantic -Wall -o a.out myprogram.c -lm
 
 ## Testing
 
-You can test your own code with the [test script](https://github.com/pl3onasm/Imperative-programming/blob/main/ctest.sh). It will try to compile your code and run it on all the test cases. It will also compare your output with the expected output, and check for memory leaks by running a Valgrind test. If a test fails, the script will display the line number where there was a mismatch between the expected and the actual output, and the corresponding lines, so you can easily find the error. In order to avoid too much clutter, the script will only display the first 6 lines where mismatches were found.
+You can test your own code with the [test script](https://github.com/pl3onasm/Imperative-programming/blob/main/ctest.sh). It will try to compile your code and run it on all the test cases. It will also compare your output with the expected output, and check for memory leaks by running a Valgrind test. If a test fails, the script will display the line numbers where a mismatch between the expected and the actual output was found, followed by the corresponding lines themselves, so you can easily spot the error. Lines in green and preceded by `<` are the expected output, while lines in red and preceded by `>` are the actual (incorrect) output. In order to avoid too much clutter, the script will only display the first 6 lines where mismatches were found.
 
-In order to use it, you basically have two options:  
+If you want to use the script, you basically have two options:  
 
 ### 1. Execution from script's location in the root of the repository  
 
@@ -102,6 +102,5 @@ The script was tested on Ubuntu 22.04 LTS, using GCC 13.1.0, Valgrind 3.18.1, an
 <p align="center" width="50%">
 <img src="example.jpg"
      alt="Example output"
-     style="float: left; padding-top:25px" />  
+     style="float: left; padding-top:25px; padding-left:10px; padding-right:10px;" />  
 </p>
-
