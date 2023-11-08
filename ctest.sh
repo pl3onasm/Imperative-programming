@@ -90,12 +90,18 @@ for INFILE in "${INFILES[@]}"; do
     echo -e "Test file $OUTFILE not found!\n"
     continue
   else
-    OUTPUT=$(./a.out < "$INFILE")
-    DIF="$(diff -Z "$OUTFILE" <(echo "$OUTPUT"))"
+    # run the program with the input file
+    OUTPUT=$(./a.out < "$INFILE")  
+    # compare the output with the expected output
+    DIF="$(diff -Z "$OUTFILE" <(echo "$OUTPUT"))" 
     if [ -n "$DIF" ]; then
+      # test failed
       if [ -t 1 ]; then echo -e $(red "Test failed.")
       else echo -e "Test failed."; fi
-      EXP=0; GOT=0
+      
+      EXP=0; GOT=0  # number of expected and got lines
+
+      # print the first 6 mismatches
       echo "$DIF" | (while [[ $EXP -lt 6 ]] && read -r line; do
         if [[ $line == "<"* ]]; then
           if [ -t 1 ]; then echo -e "  $(green "$line")"
@@ -112,7 +118,7 @@ for INFILE in "${INFILES[@]}"; do
         fi
       done
       while [[ $GOT -ne $EXP ]]; do
-        # get the next > lines until EXP == GOT
+        # get next > lines until they match the number of < lines
         read -r line
         if [[ $line == ">"* ]]; then  
           if [ -t 1 ]; then echo -e "  $(red "$line")"
@@ -120,8 +126,14 @@ for INFILE in "${INFILES[@]}"; do
           GOT=$((GOT + 1))
         fi
       done
+      # indicate if there are more mismatches than shown
+      LINES=$(echo "$DIF" | grep -c "<")
+      if [[ $LINES -gt EXP ]]; then
+        echo -e "\n  ... ($((LINES - EXP)) more)"
+      fi
       echo)
     else
+      # test passed
       if [ -t 1 ]; then 
         echo -e $(green "PASSED!")
         echo
