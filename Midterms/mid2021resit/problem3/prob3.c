@@ -26,7 +26,7 @@ int reverse(int n) {
 
 int main(int argc, char *argv[]) {
   int a, b, count=0; 
-  scanf("%d %d", &a, &b);
+  (void)! scanf("%d %d", &a, &b);
   for (int i = a; i <= b; i++) {
     if (isPrime(i)) {
       int rev = reverse(i);

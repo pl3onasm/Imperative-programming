@@ -43,7 +43,7 @@ int noCommonDivisors (int x, int y) {
 
 int main(int argc, char *argv[]) {
   int n, a, b, c, x, y, count=0;
-  scanf("%d", &n);
+  (void)! scanf("%d", &n);
 
   for (x=1; x < n/3; ++x) {
     for (y=x+1; y < n-x; ++y) {

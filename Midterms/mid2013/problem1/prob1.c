@@ -20,7 +20,7 @@ int main(int argc, char *argv[]) {
   char* weekdays[7] = {"Tuesday","Wednesday","Thursday",
                        "Friday","Saturday","Sunday","Monday"};
 
-  scanf("%d", &year);
+  (void)! scanf("%d", &year);
   /* A year has 365 days if not a leap year. 365-1 = 364
    * is divisible by 7 (number of days in a week), which
    * means we can count a day for each year and an extra

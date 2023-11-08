@@ -41,11 +41,11 @@ int isAncestor(int *f, int n, int anc, int desc) {
 int main(int argc, char *argv[]) {
   int n, *f, anc, desc;
   
-  scanf("%d\n", &n); 
+  (void)! scanf("%d\n", &n); 
   f = makeIntArray(n);
   initializeArray(f,n);
   readInput(f,n);
-  scanf("ancestor(%d,%d)\n", &anc, &desc);
+  (void)! scanf("ancestor(%d,%d)\n", &anc, &desc);
   if (isAncestor(f, n, anc, desc)) printf("YES\n"); 
   else printf("NO\n");
   free(f);

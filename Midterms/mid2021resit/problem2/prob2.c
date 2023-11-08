@@ -36,7 +36,7 @@ int nested(int n) {
 
 int main(int argc, char *argv[]) {
   int n; 
-  scanf("%d", &n);
+  (void)! scanf("%d", &n);
   if (isPalindrome(n)) {
     if (containsZero(n) || !nested(n)) printf("PALINDROME\n");
     else printf("NESTED\n");

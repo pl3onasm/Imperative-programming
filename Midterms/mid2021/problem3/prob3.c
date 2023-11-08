@@ -33,9 +33,10 @@ int getNextPrime (int p) {
 int main(int argc, char *argv[]) {
   int a, b, count=0;
   
-  scanf("%d %d", &a, &b);
+  (void)! scanf("%d %d", &a, &b);
   int smallest = getPrevPrime(a-1);
   int middle = getNextPrime(a);
+  
   while (1) {
     int largest = getNextPrime(middle+1);
     if (middle*middle > smallest*largest) count++;

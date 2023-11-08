@@ -37,8 +37,8 @@ int hasTwoPrimeDivs (int n) {
 }
 
 int main(int argc, char *argv[]) {
-  int n, a, b, count=0;
-  scanf("%d %d", &a, &b);
+  int n, a, b, count = 0;
+  (void)! scanf("%d %d", &a, &b);
   for (n = a; n <= b; ++n) 
     if (isPalindrome(n) && hasTwoPrimeDivs(n))
       count++;

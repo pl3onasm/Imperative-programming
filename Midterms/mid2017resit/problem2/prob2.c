@@ -15,10 +15,10 @@ int isLeapYear(int year) {
 }
 
 int main(int argc, char *argv[]) {
-  int y=2017, n, count=0, currTotal, leapYears=0;
+  int y=2017, n, count=0, currTotal, leapDays=0;
 
   //reads in the given number
-  scanf("%d", &n);
+  (void)! scanf("%d", &n);
 
   /* A year has 365 days if not a leap year. 365-1 = 364
    * is divisible by 7 (number of days in a week), which
@@ -26,8 +26,8 @@ int main(int argc, char *argv[]) {
    * day for a leap year as we skip through the years */
   while (count != n) {
     y++;
-    if (isLeapYear(y)) leapYears++;
-    currTotal = y - 2017 + leapYears;
+    if (isLeapYear(y)) leapDays++;
+    currTotal = y - 2017 + leapDays;
     if (currTotal % 7 == 0) count++;
     //if divisible by 7 we know Oct 13 is a Friday again
   }

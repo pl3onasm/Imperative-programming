@@ -23,9 +23,7 @@ int main() {
 
   // find 1st digit from the right that breaks the 
   // descending order from right to left
-  while (i >= 0 && arr[i] <= arr[i + 1]) {
-    i--;
-  }
+  while (i >= 0 && arr[i] <= arr[i + 1]) i--;
 
   if (i < 0) {  // number is the smallest possible
     printf("-1\n");
@@ -34,16 +32,14 @@ int main() {
 
   // find the next smaller digit from the right
   int j = len - 1;
-  while (arr[j] >= arr[i]) {
-    j--;
-  }
+  while (arr[j] >= arr[i]) j--;
 
   swap(&arr[i], &arr[j]);
 
   // sort the rest of the string in descending order
   j = len - 1;
   i++;
-  while (i < j)
+  while (i < j) 
     swap(&arr[i++], &arr[j--]);
 
   // print if there are no leading zeros

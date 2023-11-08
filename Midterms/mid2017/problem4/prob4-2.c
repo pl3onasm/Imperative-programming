@@ -11,7 +11,7 @@
 int main(int argc, char *argv[]) {
   long fibmem[50];
   int i, runlength, m = 5;
-  scanf("%d", &runlength);
+  (void)! scanf("%d", &runlength);
 
   /* In this version we use the following equation for the number
    * of rabbit pairs in a generation:

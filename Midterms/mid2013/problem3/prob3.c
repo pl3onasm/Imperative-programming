@@ -30,7 +30,7 @@ int sumDivisors (int n) {
 int main(int argc, char *argv[]) {
   int n, m, *numbers, *sums;
 
-  scanf("%d", &n);
+  (void)! scanf("%d", &n);
   numbers = safeCalloc(n, sizeof(int));
   sums = safeCalloc(n, sizeof(int));
 
@@ -38,7 +38,7 @@ int main(int argc, char *argv[]) {
   * Another array stores the sum of the current number's
   * proper divisors, so they have corresponding indexes. */
   for (int i = 0; i < n; ++i) {
-    scanf("%d", &m);
+    (void)! scanf("%d", &m);
     numbers[i] += m;
     sums[i] += sumDivisors(m);
   }

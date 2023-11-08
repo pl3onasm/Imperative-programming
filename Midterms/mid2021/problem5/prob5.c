@@ -21,7 +21,7 @@ int *makeIntArray(int n) {
 
 void readInput(int *arr, int len) {
   for (int i=0; i<len; i++)
-    scanf("%d ", &arr[i]);
+    (void)! scanf("%d ", &arr[i]);
 }
 
 int countPairs (int *f, int n, int *g, int m) {
@@ -36,11 +36,11 @@ int countPairs (int *f, int n, int *g, int m) {
 int main(int argc, char *argv[]) {
   int *f, n, *g, m;
   
-  scanf("%d:", &n);
+  (void)! scanf("%d:", &n);
   f = makeIntArray(n);
   readInput(f,n); 
 
-  scanf("%d:", &m);
+  (void)! scanf("%d:", &m);
   g = makeIntArray(m);
   readInput(g,m); 
   

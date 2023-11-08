@@ -8,10 +8,10 @@
 int main(int argc, char *argv[]) {
   int par, index, handicap, strokes, score = 0;
 
-  scanf("%d", &handicap);
+  (void)! scanf("%d", &handicap);
 
   for (int hole=0; hole<18; hole++) {
-    scanf("%d %d %d", &par, &index, &strokes);
+    (void)! scanf("%d %d %d", &par, &index, &strokes);
     par += handicap/18 + (index <= handicap%18);
     /* personal par is the normal par + 1 or 2 strokes
      * depending on the index */

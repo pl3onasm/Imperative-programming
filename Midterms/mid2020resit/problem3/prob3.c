@@ -17,7 +17,7 @@ int isPrime (int x) {
 
 int main(int argc, char *argv[]) {
   int a, b, n, count = 0;
-  scanf("%d %d %d", &a, &b, &n);
+  (void)! scanf("%d %d %d", &a, &b, &n);
 
   for (int i=a; i<=b-n; ++i) {
     if (isPrime(i) && isPrime(i+n))

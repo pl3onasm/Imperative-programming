@@ -13,7 +13,7 @@
 
 int main(int argc, char *argv[]) {
   int p; 
-  scanf("%d", &p);
+  (void)! scanf("%d", &p);
   for (int q = 2; q < p; ++q) {
     if (p == 3*q*(q+1)+1) {
       printf("YES\n");

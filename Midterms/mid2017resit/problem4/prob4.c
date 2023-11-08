@@ -47,7 +47,7 @@ int getInnerNumber (int x) {
 
 int main(int argc, char *argv[]) {
   int n;
-  scanf ("%d", &n);
+  (void)! scanf ("%d", &n);
   if (isPrime(n) && isPrime(getInnerNumber(n))) printf("YES\n");
   else printf("NO\n");
   return 0;

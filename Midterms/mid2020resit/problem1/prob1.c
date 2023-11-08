@@ -10,7 +10,7 @@ int power(int n, int exp) {
   /* returns n^exp */
   int m=1;
   while (exp != 0) {
-    if (exp%2 == 0) {
+    if (exp % 2 == 0) {
       n *= n; exp /= 2;
     } else {
       m *= n; exp--;
@@ -21,17 +21,18 @@ int power(int n, int exp) {
 
 int countDigits(int n) {
   int count = 0;
-  while (n>0) {
-    count++; n /= 10;
+  while (n > 0) {
+    count++; 
+    n /= 10;
   }
   return count;
 }
 
 int main(int argc, char *argv[]) {
   int n;
-  scanf("%d",&n);
+  (void)! scanf("%d",&n);
   int len = countDigits(n);
-  for (int i=len-1; i>=0; --i) {
+  for (int i= len-1; i >= 0; --i) {
     printf("%d", 9 - n/power(10,i));
     n %= power(10,i);
   }

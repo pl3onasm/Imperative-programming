@@ -58,7 +58,7 @@ int leftRotate (int x, int length) {
 
 int main(int argc, char *argv[]) {
   int a, b, length, valid, n, rot;
-  scanf ("%d %d", &a, &b);
+  (void)! scanf ("%d %d", &a, &b);
 
   for (n = a; n <= b; ++n) {
     length = countDigits(n);

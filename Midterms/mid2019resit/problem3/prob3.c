@@ -8,8 +8,8 @@
 #include <stdlib.h>
 
 int main(int argc, char *argv[]) {
-  int n, count=0;
-  scanf("%d", &n);
+  int n, count = 0;
+  (void)! scanf("%d", &n);
 
   for (int z = 0; z <= n; ++z) {
     for (int y = z; y <= n; ++y) {

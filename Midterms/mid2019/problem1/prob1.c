@@ -22,14 +22,16 @@ int power(int num, int exp) {
 int countDigits(int n) {
   /* returns length of integer n */
   int count=0;
-  while (n != 0) {count++; n /= 10;}
+  while (n != 0) {
+    count++; 
+    n /= 10;}
   return count;
 }
 
 int main(int argc, char *argv[]) {
   int n, digit;
 
-  scanf("%d", &n);
+  (void)! scanf("%d", &n);
   printf("%d=", n);
   int len = countDigits(n);
   int exp = len-1;

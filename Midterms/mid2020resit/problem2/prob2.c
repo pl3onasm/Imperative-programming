@@ -20,7 +20,7 @@ int haveNoCommonDivs (int a, int b) {
 int main(int argc, char *argv[]) {
   int n, d; 
   
-  scanf("%d %d", &d, &n);
+  (void)! scanf("%d %d", &d, &n);
   if (n%d == 0 && haveNoCommonDivs(d, n/d)) printf("YES\n");
   else printf("NO\n");
 

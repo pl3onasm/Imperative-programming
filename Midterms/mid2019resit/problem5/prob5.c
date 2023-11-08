@@ -8,28 +8,28 @@
 #include <stdlib.h>
 
 int main(int argc, char *argv[]) {
-  int n, countf=1;
+  int n, countf = 1;
 
-  scanf("%d", &n);
+  (void)! scanf("%d", &n);
   printf("f(%d)", n);
 
   while (countf > 0) {
 
     if (n > 100) {
-      countf--;
+      --countf;
       n -= 10;
       printf("=");
-      for (int i=1; i<= countf; ++i) printf("f(");
+      for (int i = 1; i <= countf; ++i) printf("f(");
       printf("%d", n);
-      for (int i=1; i<= countf; ++i) printf(")");
+      for (int i = 1; i <= countf; ++i) printf(")");
 
     } else {
-      countf++;
+      ++countf;
       n += 11;
       printf("=");
-      for (int i=1; i<= countf; ++i) printf("f(");
+      for (int i = 1; i <= countf; ++i) printf("f(");
       printf("%d", n);
-      for (int i=1; i<= countf; ++i) printf(")");
+      for (int i = 1; i <= countf; ++i) printf(")");
     }
   }
 

@@ -9,7 +9,7 @@
 void fillPuzzle(int n, int puzzle[][8]) {
   for (int i=0; i<n; ++i) 
     for (int j=0; j<n; ++j) 
-      scanf("%d", &puzzle[i][j]);
+      (void)! scanf("%d", &puzzle[i][j]);
 }
 
 void find0 (int x, int n, int* row, int* col, int puzzle[][8]) {
@@ -59,7 +59,7 @@ int checkPuzzle(int n, int puzzle[][8]) {
 int main(int argc, char *argv[]) {
   int n, x, puzzle[8][8];
   char dir[6];
-  scanf("%d", &n);
+  (void)! scanf("%d", &n);
   fillPuzzle(n, puzzle);
   while (scanf("%s %d", dir, &x) && dir[0] != 'E') {
     if (! slide(dir[0], n, x, puzzle)){

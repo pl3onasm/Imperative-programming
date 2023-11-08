@@ -19,8 +19,8 @@ int main (int argc, char *argv[]) {
   int maxx, maxy, minx, miny;
 
   //reads the coordinates of the rectangle
-  scanf("%d %d", &x0, &y0);
-  scanf("%d %d", &x1, &y1);
+  (void)! scanf("%d %d", &x0, &y0);
+  (void)! scanf("%d %d", &x1, &y1);
   //determines the rectangle's min x & y coordinates
   minx = min(x0, x1);
   miny = min(y0, y1);
@@ -29,7 +29,7 @@ int main (int argc, char *argv[]) {
   maxy = max(y0, y1);
 
   //reads the coordinates of the triangle
-  scanf("%d %d\n%d %d\n%d %d", &x0, &y0, &x1, &y1, &x2, &y2);
+  (void)! scanf("%d %d\n%d %d\n%d %d", &x0, &y0, &x1, &y1, &x2, &y2);
   /* if any of the min or max coordinates of the triangle exceed the
   * boundaries set by the rectangle's min and max coordinates, the
   * triangle does not lie inside the rectangle */

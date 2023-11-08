@@ -10,7 +10,7 @@
 int main(int argc, char *argv[]) {
   int a, b, hcpf = 1; //default for hcpf is 1
   
-  scanf("%d %d", &a, &b);
+  (void)! scanf("%d %d", &a, &b);
   for(int d = 2; (d <= a) && (d <= b); d++) {
     if (a % d == 0 && b % d == 0)
       //if d divides both, then let d be the current highest cpf

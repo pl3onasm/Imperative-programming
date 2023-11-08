@@ -18,7 +18,7 @@ void *safeMalloc (int n) {
 int *readArray (int n) {
   int *arr = safeMalloc(n * sizeof(int));
   for (int i = 0; i < n; i++) 
-    scanf("%d,", &arr[i]);
+    (void)! scanf("%d,", &arr[i]);
   getchar(); 
   return arr;
 }
@@ -39,14 +39,14 @@ void swap (int *a, int *b) {
 
 int main(int argc, char *argv[]) {
   int size; 
-  scanf("%d:", &size);
+  (void)! scanf("%d:", &size);
   int *arr = readArray(size);
   int a, b; char op[5]; 
   while (1) {
-    scanf("%s ", op);
+    (void)! scanf("%s ", op);
     switch (op[0]) {
     case 'M': 
-      scanf("%d %d", &a, &b);
+      (void)! scanf("%d %d", &a, &b);
       arr[a] *= b;
       break;
     case 'T':
@@ -55,10 +55,10 @@ int main(int argc, char *argv[]) {
       return 0;
     case 'S':
       if (op[1] == 'U') {
-        scanf("%d %d", &a, &b);
+        (void)! scanf("%d %d", &a, &b);
         arr[a] -= b;
       } else {
-        scanf("%d %d", &a, &b);
+        (void)! scanf("%d %d", &a, &b);
         swap(&arr[a], &arr[b]);
       }
       break;

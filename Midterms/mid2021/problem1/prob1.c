@@ -11,7 +11,7 @@ int main(int argc, char *argv[]) {
   int a, b, c, d;
   char op;
 
-  scanf("%d/%d%c%d/%d", &a, &b, &op, &c, &d);
+  (void)! scanf("%d/%d%c%d/%d", &a, &b, &op, &c, &d);
 
   if((op == '<' && a*d < b*c) || (op == '>' && a*d > b*c)) printf("YES\n");
   else printf("NO\n");

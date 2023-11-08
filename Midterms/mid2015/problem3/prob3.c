@@ -8,7 +8,7 @@
 
 int main(int argc, char *argv[]) {
   int x, y, sum=0;
-  scanf("%d %d", &x, &y);  
+  (void)! scanf("%d %d", &x, &y);  
   printf("%d*%d=", x, y);
 
   if (x && y) {

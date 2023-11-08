@@ -20,7 +20,7 @@ int sumDivisors (int n) {
 
 int main(int argc, char *argv[]) {
   int a, b;
-  scanf("%d %d", &a, &b);
+  (void)! scanf("%d %d", &a, &b);
   if (sumDivisors(a) == b && a == sumDivisors(b))
     printf("YES\n");
   else printf("NO\n");

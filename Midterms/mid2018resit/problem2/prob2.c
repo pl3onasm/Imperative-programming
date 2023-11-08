@@ -1,7 +1,6 @@
 /* file: prob2-2.c
 * author: David De Potter
 * description: problem 2, queen moves, resit mid2018
-* More concise version
 */
 
 #include <stdio.h>
@@ -17,7 +16,7 @@ int main(int argc, char *argv[]) {
   moves = 14;
 
   int steps[] = {1,-1,1,1,-1,-1,-1,1}; 
-  for (int i=0; i<8; i+=2) {
+  for (int i = 0; i < 8; i += 2) {
     int x = steps[i];
     int y = steps[i+1];
     while (col+x <= 'h' && col+x >= 'a' && row+y <= 8 && row+y >= 1) {

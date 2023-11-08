@@ -35,13 +35,13 @@ void freeMem (int m) {
 int main(int argc, char *argv[]) {
   int m=0, n=0, runs=0, row=0, col=0, length=0;
 
-  scanf("%d %d", &m, &n);
+  (void)! scanf("%d %d", &m, &n);
   createMatrix(m, n); //default null matrix
-  scanf("%d", &runs);
+  (void)! scanf("%d", &runs);
 
   //adjusts rows in matrix to reflect the given runs
   for (int i = 0; i < runs; ++i) {
-    scanf("%d %d %d", &row, &col, &length);
+    (void)! scanf("%d %d %d", &row, &col, &length);
     for (int j = 0; j <= length - 1; ++j)
       matrix[row][col + j] = 1;
   }

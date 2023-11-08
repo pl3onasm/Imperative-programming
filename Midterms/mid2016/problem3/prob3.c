@@ -28,7 +28,7 @@ int isGoodHamming (int x, int n) {
 int main(int argc, char *argv[]) {
   int n, a, b, count=0;
 
-  scanf("%d %d %d", &a, &b, &n);
+  (void)! scanf("%d %d %d", &a, &b, &n);
   for(int x=a; x<=b; x++)
     if (isGoodHamming (x, n))
       count++;

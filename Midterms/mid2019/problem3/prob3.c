@@ -18,7 +18,7 @@ int isRed (int n) {
 int main(int argc, char *argv[]) {
   int money = 0, bet = 1, spin, valid = 1;
 
-  scanf("%d", &money);
+  (void)! scanf("%d", &money);
 
   while (scanf("%d", &spin) && spin != -1) {
     if (isRed(spin)) {

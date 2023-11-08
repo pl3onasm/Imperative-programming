@@ -22,13 +22,13 @@ char *createArray (int n) {
 
 int main(int argc, char *argv[]) {
   int msgLen, keyLen, j=0;
-  scanf("%d %d:", &msgLen, &keyLen);
+  (void)! scanf("%d %d:", &msgLen, &keyLen);
   
   char *word = createArray(msgLen);
   char *key = createArray(keyLen);
   
-  scanf("%s", word);
-  scanf("%s", key);
+  (void)! scanf("%s", word);
+  (void)! scanf("%s", key);
   
   for (int i = 0; i < msgLen; i++) {
     int c = word[i] - 'A';
@@ -36,6 +36,7 @@ int main(int argc, char *argv[]) {
     printf("%c", (c + k) % 26 + 'A');
     if (j == keyLen) j = 0;
   }
+  
   printf("\n");
   free (word); free (key);
   return 0;

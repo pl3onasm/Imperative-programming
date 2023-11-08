@@ -17,13 +17,13 @@ int isPrime (int x) {
 
 int main(int argc, char *argv[]) {
   int n, p, q;
-  scanf("%d", &n);
+  (void)! scanf("%d", &n);
   p = 2; q = 3;
-  while (q-p < n) {
+  while (q - p < n) {
     p = q; 
     do ++q; 
     while (!isPrime(q));
   }
-  printf("%d-%d=%d\n",q,p,q-p);
+  printf("%d-%d=%d\n", q, p, q-p);
   return 0;
 }

@@ -33,7 +33,7 @@ int complement (int x) {
 
 int main (int argc, char *argv[]) {
   int p, c, a, b;
-  scanf ("%d %d", &a, &b);
+  (void)! scanf ("%d %d", &a, &b);
   p = power(10, countDigits(a)) - 1;
   c = complement(a);
   printf("%d-%d=", a, b);

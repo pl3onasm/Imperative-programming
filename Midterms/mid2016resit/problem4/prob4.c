@@ -21,13 +21,16 @@ int isPalindrome (int start, int end, char sentence[]) {
 } 
 
 int main (int argc, char *argv[]) {
-  char sentence[100]; int max=0, start; 
+  char sentence[100]; 
+  int max = 0, start = 0; 
   int len = readInput(sentence);
+  
   for (int i = 0; i < len; ++i) {
     for (int l=len-1; l >= 0; --l) {
       if (isPalindrome(i, l, sentence)) {
         if (l-i+1 > max) {
-          max = l-i+1; start = i;
+          max = l-i+1; 
+          start = i;
         }
       }
     }

@@ -17,7 +17,7 @@ void swap(char *input, int x, int y) {
 int main(int argc, char *argv[]) {
   char input[27], command[5]; int x,y;
   char abc[27] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  scanf("%s", input);
+  (void)! scanf("%s", input);
   
   while (scanf("%s %d %d", command, &x, &y) != 1) 
     swap(input,x,y);

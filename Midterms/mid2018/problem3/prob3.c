@@ -8,10 +8,10 @@
 
 int main(int argc, char *argv[]) {
   int row, x, y; char col;
-  scanf("%c %d", &col, &row); // starting position
+  (void)! scanf("%c %d", &col, &row); // starting position
 
   do {
-    scanf("%d %d", &x, &y);
+    (void)! scanf("%d %d", &x, &y);
     if (x != 0 && y != 0) break;
     if (col+x <= 'h' && col+x >= 'a') col += x;
     else break;

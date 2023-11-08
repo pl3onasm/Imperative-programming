@@ -40,7 +40,7 @@ int checkIfTakuzu (int len, int bin[50]) {
 int main(int argc, char *argv[]) {
   int n, index=0, number=1, bin[50];
 
-  scanf("%d", &n);
+  (void)! scanf("%d", &n);
   while (index != n) {
     number++;
     int len = toBinary(number, bin);

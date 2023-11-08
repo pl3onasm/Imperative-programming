@@ -9,7 +9,7 @@
 int main(int argc, char *argv[]) {
   int a,b,c,d,e,n;
 
-  scanf("%d", &n);
+  (void)! scanf("%d", &n);
   a = 1; //F₀
   b = c = d = e = 0;
   //b = F₁, c = F₂, d = F₃, e = F₄

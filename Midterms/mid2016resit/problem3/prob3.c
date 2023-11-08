@@ -31,8 +31,8 @@ int k_descendants (int p) {
 }
 
 int main(int argc, char *argv[]) {
-  int a, b, p, k, n, max = 0;
-  scanf ("%d %d", &a, &b);
+  int a, b, p, k, n = 0, max = 0;
+  (void)! scanf ("%d %d", &a, &b);
   for (p = a; p <= b; ++p) {
     if (isPrime(p)) {
       k = k_descendants(p);

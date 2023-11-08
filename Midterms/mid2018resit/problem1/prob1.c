@@ -6,25 +6,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int max (int x, int y) {
-  return (x > y ? x : y);
-}
-
-int min (int x, int y) {
-  return (x < y ? x : y);
-}
+#define MAX(a, b) ((a) > (b) ? (a) : (b))
+#define MIN(a, b) ((b) > (a) ? (a) : (b))
 
 int main (int argc, char *argv[]) {
   int n, x0, y0, x1, y1, x2, y2;
   int maxx=0, maxy=0, minx=1000000, miny=1000000;
-  scanf ("%d", &n);
+
+  (void)! scanf ("%d", &n);
+
   for (int i = 1; i <=n; ++i) {
-    scanf("%d %d %d %d %d %d", &x0, &y0, &x1, &y1, &x2, &y2);
-    maxx = max(max(x0, x1), max(x2, maxx));
-    maxy = max(max(y0, y1), max(y2, maxy));
-    minx = min(min(x0, x1), min(x2, minx));
-    miny = min(min(y0, y1), min(y2, miny));
+    (void)! scanf("%d %d %d %d %d %d", &x0, &y0, &x1, &y1, &x2, &y2);
+    maxx = MAX(MAX(x0, x1), MAX(x2, maxx));
+    maxy = MAX(MAX(y0, y1), MAX(y2, maxy));
+    minx = MIN(MIN(x0, x1), MIN(x2, minx));
+    miny = MIN(MIN(y0, y1), MIN(y2, miny));
   }
+
   printf("%d %d %d %d\n", minx, miny, maxx, maxy);
   return 0;
 }

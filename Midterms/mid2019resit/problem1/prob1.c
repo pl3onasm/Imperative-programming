@@ -11,14 +11,15 @@ int binExp(int n){
   // returns highest exponent of 2 smaller than n
   int exp = 0;
   while (n > 1){
-    n >>= 1; ++exp;
+    n >>= 1; 
+    ++exp;
   }
   return exp;
 }
 
 int main(int argc, char *argv[]) {
   int n;
-  scanf("%d", &n);
+  (void)! scanf("%d", &n);
   printf("%d=", n);
   int len = binExp(n);
 

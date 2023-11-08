@@ -17,8 +17,8 @@ int isPrime (int x) {
 
 int digitSum (int n) {
   int sum = 0;
-  while (n>0) {
-    sum += n%10;
+  while (n > 0) {
+    sum += n % 10;
     n /= 10;
   }
   return sum; 
@@ -36,14 +36,14 @@ int digitProduct (int n) {
 int isPerfSquare (int n) {
   // returns 1 if n is a perfect square, 0 otherwise
   int i; 
-  for (i=1; i*i<n; ++i);
-  return (i*i==n); 
+  for (i=1; i*i < n; ++i);
+  return (i*i == n); 
 }
 
 int main(int argc, char *argv[]) {
   int a, b, count=0;
   
-  scanf("%d %d", &a, &b);
+  (void)! scanf("%d %d", &a, &b);
   for (int i = a; i<=b; ++i)
     count += isPrime(digitSum(i)) && isPerfSquare(digitProduct(i)); 
 

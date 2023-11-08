@@ -8,7 +8,8 @@
 
 int main(int argc, char *argv[]) {
   int n, sum = 0, digit, max = 0, occurrence = 0; 
-  scanf("%d", &n);
+  (void)! scanf("%d", &n);
+
   while (n > 0) {
     digit = n % 10;
     n /= 10;
@@ -19,6 +20,7 @@ int main(int argc, char *argv[]) {
       occurrence = 1;
     }
   }
+  
   printf(sum - occurrence * max < max ? "YES\n" : "NO\n");
   return 0;
 }

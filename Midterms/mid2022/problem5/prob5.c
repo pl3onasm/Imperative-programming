@@ -23,7 +23,8 @@ int modExp (int a, int b, int n) {
 
 int main(int argc, char *argv[]) {
   int n; 
-  scanf("%d", &n);
+  (void)! scanf("%d", &n);
+  
   printf((modExp(2,n,2*n+1) + 1) % (2*n + 1) ? "NO\n" : "YES\n");
   return 0;
 }

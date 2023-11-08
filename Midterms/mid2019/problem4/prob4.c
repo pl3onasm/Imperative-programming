@@ -42,7 +42,7 @@ int isArmstrongNumber (int n) {
 
 int main(int argc, char *argv[]) {
   int n, x, index=0;
-  scanf("%d", &n);
+  (void)! scanf("%d", &n);
   for (x = 1; ;++x) {
     if (isArmstrongNumber(x)) index++;
     if (index == n) break;

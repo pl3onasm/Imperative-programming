@@ -21,7 +21,7 @@ int *makeIntArray(int n) {
 
 void readInput(int *arr, int len) {
   for (int i=0; i<len; i++)
-    scanf("%d ", &arr[i]);
+    (void)! scanf("%d ", &arr[i]);
 }
 
 void printArray (int *arr, int len){
@@ -45,7 +45,7 @@ void computeDiffArray (int *arr, int len) {
 int main(int argc, char *argv[]) {
   int n, *a;
   
-  scanf("%d", &n);
+  (void)! scanf("%d", &n);
   a = makeIntArray(n);
   readInput(a,n); 
   

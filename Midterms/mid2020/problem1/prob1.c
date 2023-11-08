@@ -9,18 +9,20 @@
 int countDigits(int n) {
   int count = 0;
   while (n > 0) {
-    n /= 10; count++;
+    n /= 10; 
+    count++;
   }
   return count;
 }
 
 int main(int argc, char *argv[]) {
   int n, length;
-  scanf("%d", &n);
+  (void)! scanf("%d", &n);
   length = countDigits(n);
   printf("%d", n);
+  
   for (int i=0; i < length; ++i) {
-    printf("%d", n%10);
+    printf("%d", n % 10);
     n /= 10; 
   }
   printf("\n");

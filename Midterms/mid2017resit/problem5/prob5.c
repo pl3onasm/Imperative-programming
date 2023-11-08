@@ -14,9 +14,9 @@ void swap (int *a, int *b) {
 
 int main(int argc, char *argv[]) {
   int eq1[2], eq2[2], eq3[2], i, g=0;
-  scanf("%d %d", &eq1[0], &eq1[1]);
-  scanf("%d %d", &eq2[0], &eq2[1]);
-  scanf("%d %d", &eq3[0], &eq3[1]);
+  (void)! scanf("%d %d", &eq1[0], &eq1[1]);
+  (void)! scanf("%d %d", &eq2[0], &eq2[1]);
+  (void)! scanf("%d %d", &eq3[0], &eq3[1]);
   /* we want to get the maximum modulus */
   if (eq1[1] > eq2[1]) swap (eq1, eq2);
   if (eq1[1] > eq3[1]) swap (eq1, eq3);

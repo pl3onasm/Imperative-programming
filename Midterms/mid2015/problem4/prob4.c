@@ -8,7 +8,8 @@
 
 int main(int argc, char *argv[]) {
   int m, n, sum=0;
-  scanf("%d %d", &n, &m);
+  (void)! scanf("%d %d", &n, &m);
+  
   for (int i = 0; i<n; ++i){
     m += i*2;
     sum += m;
