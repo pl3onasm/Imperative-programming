@@ -1,4 +1,4 @@
-/* file: prob5-1.c
+/* file: prob5.c
   author: David De Potter
   description: IP mid2020 resit, problem 5, check
 */
@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h> 
 
-void readInput(char grid[8][8], int *x, int *y){
+void readInput(char grid[][8], int *x, int *y){
   for (int i=0; i<8; ++i) {
     for (int j=0; j<8; j++) {
       (void)! scanf("%c", &grid[i][j]);
@@ -19,13 +19,14 @@ void readInput(char grid[8][8], int *x, int *y){
   }
 }
 
-int inCheck(char grid[8][8], int x, int y) {
+int inCheck(char grid[][8], int x, int y) {
   int ux, uy, dirx, diry; 
-  int dir[]={1,0,-1,0,0,1,0,-1,1,1,-1,1,-1,-1,1,-1}; 
-  for (int i=0; i<16; i+=2){
+  int dir[] = {1,0,-1,0,0,1,0,-1,1,1,-1,1,-1,-1,1,-1}; 
+  
+  for (int i = 0; i < 16; i += 2){
     dirx = dir[i]; diry = dir[i+1];  
-    ux = x+dirx; uy = y+diry; 
-    while ((ux<8 && ux>=0) && (uy<8 && uy>=0)) {
+    ux = x + dirx; uy = y + diry; 
+    while ((ux < 8 && ux >= 0) && (uy < 8 && uy >= 0)) {
       if (grid[ux][uy] == 'Q') return 1;   
       if (grid[ux][uy] == 'p') break;  
       if (grid[ux][uy] == 'K') break;

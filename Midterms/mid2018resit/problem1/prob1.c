@@ -11,7 +11,7 @@
 
 int main (int argc, char *argv[]) {
   int n, x0, y0, x1, y1, x2, y2;
-  int maxx=0, maxy=0, minx=1000000, miny=1000000;
+  int maxx = 0, maxy = 0, minx = 1000000, miny = 1000000;
 
   (void)! scanf ("%d", &n);
 

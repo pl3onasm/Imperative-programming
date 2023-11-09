@@ -33,7 +33,7 @@
 int GCD(int a, int b) {
   // returns the greatest common divisor of a and b
   if (b == 0) return a;
-  return GCD(b, a%b);
+  return GCD(b, a % b);
 }
 
 int noCommonDivisors (int x, int y) {
@@ -42,11 +42,11 @@ int noCommonDivisors (int x, int y) {
 }
 
 int main(int argc, char *argv[]) {
-  int n, a, b, c, x, y, count=0;
+  int n, a, b, c, x, y, count = 0;
   (void)! scanf("%d", &n);
 
-  for (x=1; x < n/3; ++x) {
-    for (y=x+1; y < n-x; ++y) {
+  for (x = 1; x < n/3; ++x) {
+    for (y = x + 1; y < n - x; ++y) {
       a = 2*x*y;
       b = y*y - x*x;    // note that b is always positive
       c = x*x + y*y;

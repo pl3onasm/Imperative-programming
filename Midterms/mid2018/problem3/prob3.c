@@ -13,13 +13,13 @@ int main(int argc, char *argv[]) {
   do {
     (void)! scanf("%d %d", &x, &y);
     if (x != 0 && y != 0) break;
-    if (col+x <= 'h' && col+x >= 'a') col += x;
+    if (col + x <= 'h' && col + x >= 'a') col += x;
     else break;
-    if (row+y <= 8 && row+y >= 1) row += y;
+    if (row + y <= 8 && row + y >= 1) row += y;
     else break;
   } while (x != 0 || y != 0);
 
-  if (x==0 && y==0) printf("%c%d\n", col, row);
+  if (x == 0 && y == 0) printf("%c%d\n", col, row);
   else printf("INVALID\n");
   return 0;
 }

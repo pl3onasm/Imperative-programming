@@ -22,7 +22,7 @@ int checkIfTakuzu (int len, int bin[50]) {
      array bin to see if it meets the Takuzu criteria */
   int count0 = 0, count1 = 0, countAdj1 = 0, countAdj0 = 0;
 
-  for (int i=0; i < len; ++i) {
+  for (int i = 0; i < len; ++i) {
     if (bin[i] == 0) {
       count0++;
       countAdj1 = 0;
@@ -38,9 +38,10 @@ int checkIfTakuzu (int len, int bin[50]) {
 }
 
 int main(int argc, char *argv[]) {
-  int n, index=0, number=1, bin[50];
+  int n, index = 0, number = 1, bin[50];
 
   (void)! scanf("%d", &n);
+  
   while (index != n) {
     number++;
     int len = toBinary(number, bin);

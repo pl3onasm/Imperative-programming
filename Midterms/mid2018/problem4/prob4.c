@@ -18,7 +18,7 @@ int main(int argc, char *argv[]) {
   int n, index=0, x, primalPrimes=0;
 
   (void)! scanf ("%d", &n);
-  for (x=1; ; ++x) {
+  for (x = 1; ; ++x) {
     if (isPrime(x)) {
       ++index;
       if (isPrime(index)) {
