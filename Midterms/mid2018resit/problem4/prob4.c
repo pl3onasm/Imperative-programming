@@ -15,17 +15,15 @@ int isPrime (int x) {
   return 1;
 }
 
-int power(int num, int exp) {
-  /* returns num^exp */
-  int m=1;
-  while (exp!=0) {
-    if (exp%2 == 0) {
-      num *= num; exp >>= 1;
-    } else {
-      m *= num; exp--;
-    }
+int power(int n, int exp) {
+  // returns n^exp using binary exponentiation
+  int pow = 1;
+  while (exp) {
+    if (exp & 1) pow *= n; 
+    n *= n; 
+    exp /= 2;
   }
-  return m;
+  return pow;
 }
 
 int replaceDigits (int p) {

@@ -14,8 +14,9 @@ int isDivisor (int x, int y) {
 int isGoodHamming (int x, int n) {
   /* checks if given number x is a Hamming number
    * with a sum of exponents that equals to n */
-  int sum=0, arr[3]={5, 3, 2};
-  for (int i=0; i<3; ++i) 
+  int sum = 0, arr[3] = {5, 3, 2};
+
+  for (int i = 0; i < 3; ++i) 
     while (isDivisor(x, arr[i])) {
       x /= arr[i];
       sum += 1;
@@ -29,7 +30,8 @@ int main(int argc, char *argv[]) {
   int n, a, b, count=0;
 
   (void)! scanf("%d %d %d", &a, &b, &n);
-  for(int x=a; x<=b; x++)
+
+  for(int x = a; x <= b; x++)
     if (isGoodHamming (x, n))
       count++;
 

@@ -7,20 +7,22 @@
 #include <stdlib.h>
 #include <string.h>
 
-void swap(char *input, int x, int y) {
-  char c;
-  c = input[x];
-  input[x] = input[y];
-  input[y] = c;
+void swap(char *a, char *b) {
+  char temp = *a;
+  *a = *b;
+  *b = temp;
 }
 
 int main(int argc, char *argv[]) {
   char input[27], command[5]; int x,y;
   char abc[27] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  
   (void)! scanf("%s", input);
   
   while (scanf("%s %d %d", command, &x, &y) != 1) 
-    swap(input,x,y);
+    swap(&input[x], &input[y]);
+
   printf(!strcmp(input,abc) ? "YES\n" : "NO\n");
+
   return 0;
 }

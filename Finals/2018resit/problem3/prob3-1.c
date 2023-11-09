@@ -33,10 +33,10 @@ int *readIntVector (int size) {
   return vect;
 }
 
-void swap (int *arr, int i, int j) {
-  int h = arr[i];
-  arr[i] = arr[j];
-  arr[j] = h;
+void swap (int *a, int *b) {
+  int temp = *a;
+  *a = *b;
+  *b = temp; 
 }
 
 int bubbleCount(int *arr, int len) {
@@ -48,7 +48,7 @@ int bubbleCount(int *arr, int len) {
     change=0;
     for (j=0; j+1 < len - i; ++j) {
       if (arr[j] > arr[j+1]) {
-        swap(arr, j, j+1);
+        swap(&arr[j], &arr[j+1]);
         change = 1;
         ++count; 
       }

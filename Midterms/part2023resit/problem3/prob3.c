@@ -16,17 +16,15 @@ int isPrime (int x) {
   return 1;
 }
 
-int power(int num, int exp) {
-  /* exponentiation by squaring */
-  int m = 1;
+int power(int n, int exp) {
+  // returns n^exp using binary exponentiation
+  int pow = 1;
   while (exp) {
-    if (exp % 2 == 0) {
-      num *= num; exp /= 2;
-    } else {
-      m *= num; exp--;
-    }
+    if (exp & 1) pow *= n; 
+    n *= n; 
+    exp /= 2;
   }
-  return m;
+  return pow;
 }
 
 int checkDigits (int n) {

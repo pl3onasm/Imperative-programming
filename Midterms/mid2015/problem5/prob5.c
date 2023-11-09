@@ -19,19 +19,23 @@ int hasNoSeen(int row, int seen[30], int friends[30][30], int n){
 int main(int argc, char *argv[]) {
   int friends[30][30] = {0}; // 30 is the maximum number of persons
   int n, m, groups = 0, seen[30] = {0};
+
   (void)! scanf("%d %d", &n, &m);
+
   for (int i = 0; i<m; ++i){
     int a, b; 
     (void)! scanf("%d %d", &a, &b);
     friends[a][b] = 1;
     friends[b][a] = 1;
   }
+
   for (int i = 0; i<n; ++i){
     seen[i]=1;
     if (hasNoSeen(i, seen, friends, n)) groups++;
     for (int j = i; j < n; ++j)
       if (friends[i][j]) seen[j] = 1; 
   }
+  
   printf("%d\n", groups);
   return 0; 
 }

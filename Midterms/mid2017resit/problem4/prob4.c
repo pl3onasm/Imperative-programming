@@ -16,17 +16,14 @@ int isPrime (int x) {
 }
 
 int power(int n, int exp) {
-  /* returns n^exp using exponentiation by squaring, 
-     aka binary exponentiation */
-  int m=1;
-  while (exp != 0) {
-    if (exp%2 == 0) {
-      n *= n; exp /= 2;
-    } else {
-      m *= n; exp--;
-    }
+  // returns n^exp using binary exponentiation
+  int pow = 1;
+  while (exp) {
+    if (exp & 1) pow *= n; 
+    n *= n; 
+    exp /= 2;
   }
-  return m;
+  return pow;
 }
 
 int countDigits (int p) {
@@ -48,7 +45,9 @@ int getInnerNumber (int x) {
 int main(int argc, char *argv[]) {
   int n;
   (void)! scanf ("%d", &n);
+
   if (isPrime(n) && isPrime(getInnerNumber(n))) printf("YES\n");
   else printf("NO\n");
+  
   return 0;
 }

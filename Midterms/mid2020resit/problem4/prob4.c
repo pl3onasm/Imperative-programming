@@ -42,12 +42,16 @@ int main(int argc, char *argv[]) {
   int n, *f, anc, desc;
   
   (void)! scanf("%d\n", &n); 
+
   f = makeIntArray(n);
   initializeArray(f,n);
   readInput(f,n);
+
   (void)! scanf("ancestor(%d,%d)\n", &anc, &desc);
+
   if (isAncestor(f, n, anc, desc)) printf("YES\n"); 
   else printf("NO\n");
+  
   free(f);
   return 0;
 }

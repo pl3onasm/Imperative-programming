@@ -10,15 +10,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int modExp (int a, int b, int n) {
-  // computes a^b mod n using modular exponentiation
-  int r = 1;
-  while (b > 0) {
-    if (b % 2) r = (r * a) % n;
-    a = (a * a) % n;
-    b /= 2;
+int modExp (int n, int exp, int m) {
+  /* computes n^exp mod m using modular exponentiation */
+  int pow = 1; n %= m;
+  while (exp) {
+    if (exp & 1) pow = (pow * n) % m;
+    n = (n * n) % m;
+    exp /= 2;
   }
-  return r;
+  return pow;
 }
 
 int main(int argc, char *argv[]) {

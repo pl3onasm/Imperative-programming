@@ -19,7 +19,7 @@ int sumDigits (int n) {
   //returns the sum of n's digits
   int sum = 0; 
   while (n > 0) {
-    sum += n%10; 
+    sum += n % 10; 
     n /= 10;
   }
   return sum;
@@ -34,7 +34,7 @@ int sumFactorDigits(int x) {
       x /= d;
       sum += sumDigits(d);
     }
-    d += 1;
+    d++;
   }
   return sum;
 }

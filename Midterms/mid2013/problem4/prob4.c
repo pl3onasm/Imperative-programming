@@ -6,8 +6,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int **matrix;
-
 void *safeCalloc (int n, int k) {
   void *p = calloc(n, k);
   if (p == NULL) {
@@ -17,15 +15,15 @@ void *safeCalloc (int n, int k) {
   return p;
 }
 
-void createMatrix(int m, int n) {
+int **createMatrix(int m, int n) {
   //creates a m x n null matrix
-  matrix = safeCalloc(m,sizeof(int*));
+  int **matrix = safeCalloc(m,sizeof(int*));
   for (int i=0; i<m; ++i)
     matrix[i] = safeCalloc(n,sizeof(int));
-  return;
+  return matrix;
 }
 
-void freeMem (int m) {
+void freeMem (int **matrix, int m) {
   //frees dynamically allocated memory
   for (int row = 0; row < m; ++row)
     free(matrix[row]);
@@ -36,7 +34,7 @@ int main(int argc, char *argv[]) {
   int m=0, n=0, runs=0, row=0, col=0, length=0;
 
   (void)! scanf("%d %d", &m, &n);
-  createMatrix(m, n); //default null matrix
+  int **matrix = createMatrix(m, n); //default null matrix
   (void)! scanf("%d", &runs);
 
   //adjusts rows in matrix to reflect the given runs
@@ -52,6 +50,6 @@ int main(int argc, char *argv[]) {
     printf("\n");
   }
 
-  freeMem(m);
+  freeMem(matrix, m);
   return 0;
 }

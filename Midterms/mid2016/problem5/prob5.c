@@ -49,7 +49,9 @@ int hasNoThreeAdjacentNumbers(int arr[][8]){
 
 int main(int argc, char *argv[]) {
   int rows[8][8], cols[8][8];
+
   readTakuzu(rows);
+  
   //transposes the matrix in order to do checks on its columns
   for (int i=0; i < 8; ++i)   
     for (int j=0; j < 8; ++j)

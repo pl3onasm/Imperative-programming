@@ -7,21 +7,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void swap(int i, int j, int *a){
-  int temp = a[i];
-  a[i] = a[j];
-  a[j] = temp;
+void swap(int *a, int *b) {
+  int temp = *a; 
+  *a = *b; 
+  *b = temp;
 }
 
 int partition(int *arr, int len) {
   int idx=0, pivot = arr[0];
-  swap(0, len-1, arr);
+  swap(&arr[len-1], &arr[0]);
   for (int i = 0; i < len-1; i++)
     if (arr[i] < pivot){
-      swap(i, idx, arr);
+      swap(&arr[i], &arr[idx]);
       idx++;
     }
-  swap(idx, len-1, arr);
+  swap(&arr[len-1], &arr[idx]);
   return idx;
 }
 
