@@ -22,7 +22,8 @@ int countDigits(int n) {
   int count=0;
   while (n != 0) {
     count++; 
-    n /= 10;}
+    n /= 10;
+  }
   return count;
 }
 
@@ -31,16 +32,15 @@ int main(int argc, char *argv[]) {
 
   (void)! scanf("%d", &n);
   printf("%d=", n);
-  int len = countDigits(n);
-  int exp = len-1;
 
-  for (int i = 0; i < len; ++i) {
+  int len = countDigits(n);
+
+  for (int exp = len-1; exp >= 0; exp--) {
     digit = (n / power(10,exp)) % 10;
     if (digit) {
-      if (i) printf(" + ");
+      if (exp < len-1) printf(" + ");
       printf("%d*10^%d", digit, exp);
     } 
-    exp--;
   }
 
   printf("\n");
