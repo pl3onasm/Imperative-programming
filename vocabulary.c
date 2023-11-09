@@ -140,28 +140,25 @@ int sumDivisors (int n) {
 //:::::::::::::::::::::::: EXPONENTIATION ::::::::::::::::::::::://
 
 int power(int n, int exp) {
-  /* returns n^exp using exponentiation by squaring, 
-     aka binary exponentiation */
-  int m=1;
-  while (exp != 0) {
-    if (exp%2 == 0) {
-      n *= n; exp /= 2;
-    } else {
-      m *= n; exp--;
-    }
+  // returns n^exp using binary exponentiation
+  int pow = 1;
+  while (exp) {
+    if (exp & 1) pow *= n; 
+    n *= n; 
+    exp /= 2;
   }
-  return m;
+  return pow;
 }
 
-int modExp (int a, int b, int n) {
-  /* computes a^b mod n using modular exponentiation */
-  int r = 1;
-  while (b > 0) {
-    if (b % 2) r = (r * a) % n;
-    a = (a * a) % n;
-    b /= 2;
+int modExp (int n, int exp, int m) {
+  /* computes n^exp mod m using modular exponentiation */
+  int pow = 1; n %= m;
+  while (exp) {
+    if (exp & 1) pow = (pow * n) % m;
+    n = (n * n) % m;
+    exp /= 2;
   }
-  return r % n;
+  return pow;
 }
 
 //::::::::::::::::::::: PALINDROME CHECKERS ::::::::::::::::::::://
