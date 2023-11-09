@@ -20,7 +20,8 @@ int main(int argc, char *argv[]) {
   int combis[7] = {a, b, c, a+b, a+c, b+c, a+b+c};
   
   for (int i = 0; i < 7; i++)
-    if (combis[i] > half) coalitions++;
+    if (combis[i] > half) 
+      coalitions++;
 
   if (!a || !b || !c) coalitions -= 2;
   if ((!a && !b) || (!a && !c) || (!b && !c)) coalitions--;
