@@ -26,7 +26,7 @@ int min(int x, int y) {
 int countDigits (int n) {
   // returns the number of digits in n
   int count = 0;
-  while (n > 0) {
+  while (n) {
     n /= 10;
     count++;
   }
@@ -43,7 +43,7 @@ void swap (int *a, int *b) {
 int reverse(int n) {
   // returns the reverse of a given integer n
   int rev = 0;
-  while (n > 0) {
+  while (n) {
     rev = rev * 10 + n % 10;
     n /= 10;
   }
@@ -78,7 +78,7 @@ int isPrime (int x) {
 int isPerfSquare (int n) {
   // returns 1 if n is a perfect square, 0 otherwise
   int i; 
-  for (i=1; i*i < n; ++i);
+  for (i = 1; i*i < n; ++i);
   return (i*i == n); 
 }
 
@@ -163,12 +163,12 @@ int modExp (int n, int exp, int m) {
 
 //::::::::::::::::::::: PALINDROME CHECKERS ::::::::::::::::::::://
 
-int isIntPalindrome(int n) {
-  // checks whether a given integer n is a palindrome
+int isIntPalindrome(int n, int base) {
+  // checks whether n is a palindrome in given base
   int rev = 0, m = n;
-  while (m > 0) {
-    rev = rev * 10 + m % 10;
-    m /= 10;
+  while (m) {
+    rev = rev * base + m % base;
+    m /= base;
   }
   return rev == n;
 }
@@ -181,19 +181,10 @@ int isPalindrome (int start, int end, char *s) {
   return isPalindrome(start+1, end-1, s);
 }
 
-int isPalindrome2(char *s, int start) {
-  /* checks whether a given string s is a palindrome;
-     this version only takes one index: where to start */
-  if (start >= strlen(s) / 2) return 1;
-  if (s[start] != s[strlen(s) - start - 1]) return 0;
-  return isPalindrome2(s, start + 1);
-}
-
 //:::::::::::::::::::::: MEMORY ALLOCATION :::::::::::::::::::::://
 
 void *safeMalloc (int n) {
-  /* allocates n bytes of memory and checks whether the allocation
-     was successful */
+  /* allocates memory and checks whether this was successful */
   void *ptr = malloc(n);
   if (ptr == NULL) {
     printf("Error: malloc(%d) failed. Out of memory?\n", n);
@@ -203,8 +194,8 @@ void *safeMalloc (int n) {
 }
 
 void *safeCalloc (int n, int size) {
-  /* allocates n elements of size size, initializing them to 0, and
-     checks whether the allocation was successful */
+  /* allocates memory, initializing it to 0, and
+     checks whether this was successful */
   void *ptr = calloc(n, size);
   if (ptr == NULL) {
     printf("Error: calloc(%d, %d) failed. Out of memory?\n", n, size);
@@ -249,7 +240,7 @@ void freeMatrix (int **matrix, int rows) {
 }
 
 void *safeRealloc (void *ptr, int newSize) {
-  // reallocates memory and checks whether the allocation was successful
+  // reallocates memory and checks whether it was successful
   ptr = realloc(ptr, newSize);
   if (ptr == NULL) {
     printf("Error: realloc(%d) failed. Out of memory?\n", newSize);
