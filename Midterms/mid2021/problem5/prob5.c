@@ -26,7 +26,7 @@ void readInput(int *arr, int len) {
 
 int countPairs (int *f, int n, int *g, int m) {
   int b, count = 0; 
-  for (int a=0; a<n; ++a) {
+  for (int a = 0; a < n; ++a) {
     b = f[a]; 
     count += b < m && g[b] == a; 
   }
@@ -44,8 +44,7 @@ int main(int argc, char *argv[]) {
   g = makeIntArray(m);
   readInput(g,m); 
   
-  if (m > n) printf("%d\n", countPairs(g,m,f,n));
-  else printf("%d\n", countPairs(f,n,g,m));
+  printf("%d\n", n < m ? countPairs(f,n,g,m) : countPairs(g,m,f,n));
 
   free(f); free(g);
   return 0;

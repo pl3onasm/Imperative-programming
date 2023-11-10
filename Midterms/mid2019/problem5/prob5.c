@@ -35,6 +35,7 @@ int main(int argc, char *argv[]) {
   int a, b, count = 0;
 
   (void)! scanf("%d %d", &a, &b);
+  
   for (int n = a; n <= b; n++)
     if (isPrime(n) && isPrimalSum(n))
       count++;

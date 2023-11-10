@@ -39,6 +39,7 @@ char *readString(int *len) {
     s[size++] = ch;
   }
   *len = size;
+  s[size] = '\0'; // add null terminator
   return s;
 }
 

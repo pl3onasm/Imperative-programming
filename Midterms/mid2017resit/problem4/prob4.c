@@ -30,7 +30,8 @@ int countDigits (int p) {
   //counts the number of digits of p
   int count = 0;
   while (p != 0) {
-    count++; p /= 10;
+    count++; 
+    p /= 10;
   }
   return count;
 }

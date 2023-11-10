@@ -16,7 +16,7 @@ void *safeMalloc (int n) {
 }
 
 int *makeIntArray(int n) {
-  /* allocates dynamic int array of size/length n */
+  /* allocates int array of size n */
   return safeMalloc(n * sizeof(int));
 }
 
@@ -49,8 +49,7 @@ int main(int argc, char *argv[]) {
 
   (void)! scanf("ancestor(%d,%d)\n", &anc, &desc);
 
-  if (isAncestor(f, n, anc, desc)) printf("YES\n"); 
-  else printf("NO\n");
+  printf(isAncestor(f, n, anc, desc) ? "YES\n" : "NO\n");
   
   free(f);
   return 0;

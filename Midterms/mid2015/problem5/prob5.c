@@ -7,17 +7,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int hasNoSeen(int row, int seen[30], int friends[30][30], int n){
-  /* checks if a person (row) has only new (unseen) friends thus far,
-     or no friends at all */
+int hasNoSeen(int row, int seen[], int friends[][30], int n){
+  /* checks if a person (row) has only new (unseen) friends 
+     thus far, or no friends at all */
   for(int i = 0; i < n; i++)
     if(friends[row][i] && seen[i])
-      return 0;
+      return 0;     // has a friend we've seen before
   return 1;
 }
 
 int main(int argc, char *argv[]) {
-  int friends[30][30] = {0}; // 30 is the maximum number of persons
+  int friends[30][30] = {0}; // 30 is the max number of persons
   int n, m, groups = 0, seen[30] = {0};
 
   (void)! scanf("%d %d", &n, &m);
@@ -30,7 +30,7 @@ int main(int argc, char *argv[]) {
   }
 
   for (int i = 0; i<n; ++i){
-    seen[i]=1;
+    seen[i] = 1;
     if (hasNoSeen(i, seen, friends, n)) groups++;
     for (int j = i; j < n; ++j)
       if (friends[i][j]) seen[j] = 1; 

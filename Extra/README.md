@@ -12,4 +12,5 @@ This folder contains some extra problems. If you are looking for more practice, 
 | Problem 4 | [Maximum path](prob04) |
 | Problem 5 | [Binary palindromes](prob05) |
 | Problem 6 | [Next smaller number](prob06) |
+| Problem 7 | [Dividing large numbers](prob07) |
 |||

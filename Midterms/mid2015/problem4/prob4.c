@@ -14,6 +14,8 @@ int main(int argc, char *argv[]) {
     m += i*2;
     sum += m;
   }
+  
   printf("%d\n", sum);
+
   return 0;
 }

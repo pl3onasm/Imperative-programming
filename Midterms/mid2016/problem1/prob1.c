@@ -8,21 +8,24 @@
 
 int reverse (int n) {
   //returns the reverse of a given number n
-  int p = n / 10, rev = n % 10;
-  while (p != 0) {
-    rev = rev * 10 + p % 10;
-    p /= 10;
+  int rev = 0;
+  while (n) {
+    rev = rev * 10 + n % 10;
+    n /= 10;
   }
   return rev;
 }
 
 int main(int argc, char *argv[]) {
   int a, b, count = 0;
+
   (void)! scanf("%d %d", &a, &b);
+  
   for (int x = a; x <= b; ++x) {
     if (x % 7 == 0 && reverse(x) % 7 == 0)
       ++count;
   }
+  
   printf("%d\n", count);
   return 0;
 }
