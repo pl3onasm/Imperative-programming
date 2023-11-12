@@ -26,6 +26,7 @@ void find0 (int x, int n, int* row, int* col, int puzzle[][8]) {
 int slide (char dir, int n, int x, int puzzle[][8]) {
   int row=0, col=0;
   find0 (x, n, &row, &col, puzzle);
+
   if (dir == 'R' && col + 1 < n && puzzle[row][col + 1] == 0) {
     puzzle[row][col + 1] = x; 
     return 1;
@@ -59,15 +60,19 @@ int checkPuzzle(int n, int puzzle[][8]) {
 int main(int argc, char *argv[]) {
   int n, x, puzzle[8][8];
   char dir[6];
+
   (void)! scanf("%d", &n);
   fillPuzzle(n, puzzle);
+  
   while (scanf("%s %d", dir, &x) && dir[0] != 'E') {
     if (! slide(dir[0], n, x, puzzle)){
       printf("INVALID\n");
       return 0;
     }
   }
+  
   if (checkPuzzle(n, puzzle)) printf("SOLVED\n");
   else printf("UNSOLVED\n");
+  
   return 0;
 }

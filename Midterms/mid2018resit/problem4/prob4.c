@@ -52,10 +52,13 @@ int isPDS (int n) {
 
 int main (int argc, char *argv[]) {
   int a, b, count=0;
+
   (void)! scanf ("%d %d", &a, &b);
+
   for (int n=a; n <= b; ++n) 
     if (isPDS(n)) count++;
      //counts the number of PDS numbers between a and b
+     
   printf("%d\n", count);
   return 0;
 }

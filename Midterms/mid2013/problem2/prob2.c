@@ -8,7 +8,9 @@
 
 int main(int argc, char *argv[]) {
   int area, x;
+
   (void)! scanf("%d", &area);
+
   x = area * 2;
   /* x is the product a*b, so we need to check all
   * divisors (candidates for integers a and b) of x.
@@ -25,5 +27,6 @@ int main(int argc, char *argv[]) {
         printf("%d %d %d\n", a, b, c);
     }
   }
+  
   return 0;
 }

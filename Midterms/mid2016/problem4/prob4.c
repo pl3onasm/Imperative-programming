@@ -42,9 +42,11 @@ int sumFactorDigits(int x) {
 int main(int argc, char *argv[]) {
   int x;
   (void)! scanf("%d", &x);
+
   if (isPrime(x)) printf("NO\n");
     //smith number has to be a composite
   else 
     printf(sumDigits(x) == sumFactorDigits(x) ? "YES\n" : "NO\n");
+  
   return 0;
 }

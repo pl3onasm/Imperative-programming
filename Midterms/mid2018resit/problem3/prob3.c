@@ -10,7 +10,7 @@ int checkIfTakuzu (int n) {
   /* checks to see if n meets the Takuzu criteria */
   int count0 = 0, count1 = 0, countAdj1 = 0, countAdj0 = 0;
 
-  while (n > 0) {
+  while (n) {
     if (n & 1) {
       count1++;
       countAdj1++;

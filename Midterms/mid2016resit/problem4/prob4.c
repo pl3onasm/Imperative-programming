@@ -23,6 +23,7 @@ int isPalindrome (int start, int end, char sentence[]) {
 int main (int argc, char *argv[]) {
   char sentence[100]; 
   int max = 0, start = 0; 
+
   int len = readInput(sentence);
   
   for (int i = 0; i < len; ++i) {
@@ -35,7 +36,10 @@ int main (int argc, char *argv[]) {
       }
     }
   }
-  for (int i = start; i <= start+max-1; ++i) printf("%c", sentence[i]);
+
+  for (int i = start; i <= start+max-1; ++i) 
+    printf("%c", sentence[i]);
   printf("\n");
+  
   return 0;
 }

@@ -20,6 +20,7 @@ int k_descendants (int p) {
    * desc=1 is the default return value
    */
   int desc = 1, n;
+
   for (int k=2; k <= 6; ++k) {
     //it is given that 1 <= p <= 1000000, so the
     //number of k-descendants will not exceed 6
@@ -27,12 +28,15 @@ int k_descendants (int p) {
     if (isPrime(n)) desc++;
     else break;
   }
+  
   return desc;
 }
 
 int main(int argc, char *argv[]) {
   int a, b, p, k, n = 0, max = 0;
+
   (void)! scanf ("%d %d", &a, &b);
+
   for (p = a; p <= b; ++p) {
     if (isPrime(p)) {
       k = k_descendants(p);
@@ -44,6 +48,7 @@ int main(int argc, char *argv[]) {
       }
     }
   }
+
   printf (max == 0 ? "NONE\n" : "%d %d\n", n, max);
   return 0;
 }

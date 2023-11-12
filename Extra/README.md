@@ -13,4 +13,5 @@ This folder contains some extra problems. If you are looking for more practice, 
 | Problem 5 | [Binary palindromes](prob05) |
 | Problem 6 | [Next smaller number](prob06) |
 | Problem 7 | [Dividing large numbers](prob07) |
+| Problem 8 | [Balanced brackets](prob08) |
 |||

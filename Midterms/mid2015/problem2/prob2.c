@@ -10,6 +10,7 @@ int main(int argc, char *argv[]) {
   int n, count=0, sum, digit, number;
 
   (void)! scanf("%d", &n);  
+  
   for (int i=1; i<=n; ++i) {
     sum = 0, number = i;
     while (sum != 89 && sum != 1) {

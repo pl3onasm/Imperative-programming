@@ -4,38 +4,13 @@ Given is a positive integer $n \leq 10^{18}$. You are asked to find the largest 
 
 ## Examples
 
-Input 1:
-
 ```text
-632
-```
+Input: 632
+Output: 623
 
-Output 1:
+Input: 123656789
+Output: 123598766
 
-```text
-623
-```
-
-Input 2:
-
-```text
-123656789
-```
-
-Output 2:
-
-```text
-123598766
-```
-
-Input 3:
-
-```text
-100
-```
-
-Output 3:
-
-```text
--1
+Input: 100
+Output: -1
 ```
