@@ -1,7 +1,7 @@
-/* file: parentheses.c
+/* file: prob9.c
 * author: David De Potter
 * description: extra, problem 9,
-*  well-formed strings of parentheses
+*   well-formed strings of parentheses
 */
 
 #include <stdio.h>
