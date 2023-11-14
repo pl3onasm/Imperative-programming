@@ -29,6 +29,7 @@ int main (int argc, char *argv[]) {
 
   (void)! scanf("%d", &len);
 
+  // for a string to be well-formed, it must have an even length
   printf("%d\n", len % 2 ? 0 : countParentheses (len, 0, 0, 0));
   
   return 0;
