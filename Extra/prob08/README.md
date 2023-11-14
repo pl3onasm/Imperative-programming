@@ -13,12 +13,12 @@ Output: YES
 Input: ([)]
 Output: NO
 
-Input: {[()]}
+Input: {[()]()}
 Output: YES
 
 Input: {[()}()
 Output: NO
 
-Input: {{[[(())]]}}[]
+Input: {{[[({(){}})[]]]}}
 Output: YES
 ```

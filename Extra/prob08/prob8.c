@@ -52,22 +52,13 @@ int isBalanced(char *s, int len) {
       continue;
     } 
     --top;
-    if (s[i] == ')') {
-      if (top < 0 || stack[top] != '(') {
+    if (top < 0 
+      || (s[i] == ')' && stack[top] != '(') 
+      || (s[i] == ']' && stack[top] != '[') 
+      || (s[i] == '}' && stack[top] != '{')) {
         free(stack);
         return 0;
       }
-    } else if (s[i] == ']') {
-      if (top < 0 || stack[top] != '[') {
-        free(stack);
-        return 0;
-      }
-    } else if (s[i] == '}') {
-      if (top < 0 || stack[top] != '{') {
-        free(stack);
-        return 0;
-      }
-    }
   }
   free(stack);
   return top == 0;  
