@@ -94,6 +94,8 @@ for INFILE in "${INFILES[@]}"; do
     OUTPUT=$(./a.out < "$INFILE")  
     # compare the output with the expected output
     DIF="$(diff -Z "$OUTFILE" <(echo "$OUTPUT"))" 
+    # print DIF 
+    echo -e "$DIF"
     if [ -n "$DIF" ]; then
       # test failed
       if [ -t 1 ]; then echo -e $(red "Test failed.")
@@ -117,7 +119,7 @@ for INFILE in "${INFILES[@]}"; do
           echo -e "\n  line "$OUT""
         fi
       done
-      while [[ $GOT -ne $EXP ]]; do
+      while [[ $GOT -ne $EXP ]] && read -r line; do
         # get next > lines until they match the number of < lines
         read -r line
         if [[ $line == ">"* ]]; then  
