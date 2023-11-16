@@ -10,6 +10,7 @@
 int countParentheses (int len, int idx, int open, int close) {
   /* counts all possible well formed strings of parentheses */
 
+  // base case: we have reached the end of the string
   if (idx == len) {
     if (open == close) return 1;
     return 0;
@@ -25,7 +26,7 @@ int countParentheses (int len, int idx, int open, int close) {
 }
 
 int main (int argc, char *argv[]) {
-  int len, total=0;
+  int len;
 
   (void)! scanf("%d", &len);
 
