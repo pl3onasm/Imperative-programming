@@ -95,7 +95,6 @@ for INFILE in "${INFILES[@]}"; do
     # compare the output with the expected output
     DIF="$(diff -Z "$OUTFILE" <(echo "$OUTPUT"))" 
     # print DIF 
-    echo -e "$DIF"
     if [ -n "$DIF" ]; then
       # test failed
       if [ -t 1 ]; then echo -e $(red "Test failed.")
