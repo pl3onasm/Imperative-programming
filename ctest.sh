@@ -120,7 +120,6 @@ for INFILE in "${INFILES[@]}"; do
       done
       while [[ $GOT -ne $EXP ]] && read -r line; do
         # get next > lines until they match the number of < lines
-        read -r line
         if [[ $line == ">"* ]]; then  
           if [ -t 1 ]; then echo -e "  $(red "$line")"
           else echo -e "  $line"; fi
