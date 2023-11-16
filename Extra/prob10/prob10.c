@@ -52,7 +52,6 @@ void getBitStrings (char *bits, int idx, int n, int count0, int count1) {
   }
 }
 
-
 int main (int argc, char *argv[]) {
   int n;
 
