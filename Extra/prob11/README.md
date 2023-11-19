@@ -1,6 +1,6 @@
 # Segments
 
-The input for this problem is a positive integer $n$ indicating a certain number of segments. This is followed by a colon and a series of $n$ half-open segments. For each $a < b$, the half open segment $[a, b)$ represents the set of numbers $\lbrace x \; \vert \; a \leq x < b \rbrace$.  
+The input for this problem is a positive integer $n$ indicating a certain number of segments. This is followed by a colon and a series of $n$ half-open segments. For each $a < b$, the half open segment $[a, b)$ represents the set of numbers $\lbrace x \, \vert \, a \leq x < b \rbrace$.  
 
 An example of a valid input would be:  
 $$6:[1,5),[7,8),[8,10),[12,15),[2,3),[4,6)$$  
