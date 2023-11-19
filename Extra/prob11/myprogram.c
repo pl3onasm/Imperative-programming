@@ -1,6 +1,6 @@
 /* file: myprogram.c
    author: your name
-   description: extra, problem 10, matching bitstrings
+   description: extra, problem 11, segments
 */
 
 #include <stdio.h>

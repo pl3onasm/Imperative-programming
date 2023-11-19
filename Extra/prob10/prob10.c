@@ -1,7 +1,7 @@
 /* file: prob10.c
 * author: David De Potter
 * description: extra, problem 10,
-*   particular bitstrings
+*   matching bitstrings
 */
 
 #include <stdio.h>
@@ -24,7 +24,7 @@ char *readString (int n) {
   return bits;
 }
 
-void getBitStrings (char *bits, int idx, int n, int count0, int count1) {
+void getBitstrings (char *bits, int idx, int n, int count0, int count1) {
   // prints, in lexicographical order, all bitstrings of length n 
   // with no more than 2 consecutive 0s or 1s
 
@@ -38,16 +38,16 @@ void getBitStrings (char *bits, int idx, int n, int count0, int count1) {
   switch (bits[idx]) {
     case '?':
       bits[idx] = '0';
-      if (count0 < 2) getBitStrings(bits, idx+1, n, count0+1, 0);
+      if (count0 < 2) getBitstrings(bits, idx+1, n, count0+1, 0);
       bits[idx] = '1';
-      if (count1 < 2) getBitStrings(bits, idx+1, n, 0, count1+1);
+      if (count1 < 2) getBitstrings(bits, idx+1, n, 0, count1+1);
       bits[idx] = '?';    // backtrack
       break;
     case '0':
-      if (count0 < 2) getBitStrings(bits, idx+1, n, count0+1, 0);
+      if (count0 < 2) getBitstrings(bits, idx+1, n, count0+1, 0);
       break;
     case '1':
-      if (count1 < 2) getBitStrings(bits, idx+1, n, 0, count1+1);
+      if (count1 < 2) getBitstrings(bits, idx+1, n, 0, count1+1);
       break;
   }
 }
@@ -59,7 +59,7 @@ int main (int argc, char *argv[]) {
 
   char *bits = readString(n);
 
-  getBitStrings(bits, 0, n, 0, 0);
+  getBitstrings(bits, 0, n, 0, 0);
 
   free(bits);
   

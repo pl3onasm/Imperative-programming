@@ -1,4 +1,4 @@
-# Particular bitstrings
+# Matching bitstrings
 
 A binary string is a sequence of 0s and 1s. In this problem you are asked to generate all bitstrings under the following constraints:
 
