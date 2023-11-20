@@ -25,15 +25,9 @@ void *safeMalloc (int n) {
 
 Seg* readInput (int len) {
   /* reads the input and stores it as an array of segments */
-  int s, e;
   Seg *segments = safeMalloc(len*sizeof(Seg));
-  for (int i = 0; i < len; ++i) {
-    (void)! scanf("[%d,%d),", &s, &e);
-    Seg b;
-    b.start = s;
-    b.end = e;
-    segments[i] = b;
-  }
+  for (int i = 0; i < len; ++i)
+    (void)! scanf("[%d,%d),", &segments[i].start, &segments[i].end);
   return segments;
 }
 
@@ -43,9 +37,8 @@ Seg *copySubArray(int left, int right, Seg *arr) {
   int i;
   Seg *copy;
   copy = safeMalloc((right - left)*sizeof(Seg));
-  for (i=left; i < right; i++) {
+  for (i=left; i < right; i++)
     copy[i - left] = arr[i];
-  }
   return copy;
 }
 
