@@ -16,8 +16,8 @@ method problem6(n: nat) returns (a: int)
 ensures a == fSum(n)
 {
   var k, x, y;
-  var e := 0;
   a, k, x, y := 0, 0, 0, 1;
+  
   while k < n
     invariant 0 <= k <= n && x == f(k) && y == f(k+1) && a == fSum(k)
   {
