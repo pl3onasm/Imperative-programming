@@ -54,7 +54,7 @@ You can test your own C code with the [test script](https://github.com/pl3onasm/
 
 If you want to use the script, you basically have two options:  
 
-### $\color{rosybrown}{\text{1. Execution from script's location in the root of the repository}}$  
+### $\color{rosybrown}{\text{1. Execution from script's repo location}}$  
 
 Opening a terminal from the working directory containing your program, the solution, and the folder with the tests, run the below commands.  
 First, make the script executable:
