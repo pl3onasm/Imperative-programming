@@ -69,7 +69,7 @@ Then run the script by using the following command:
 ../../../ctest.sh myprogram.c
 ```
 
-### $\color{rosybrown}{\text{2. Execution from \$PATH}}$
+### $\color{rosybrown}{\text{2. Execution from PATH}}$
 
 Alternatively, you can add the script to your PATH variable and run it from anywhere.  
 To display the current $PATH, run the following command:
