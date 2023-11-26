@@ -35,9 +35,8 @@ Seg *copySubArray(int left, int right, Seg *arr) {
   /* copies a part of a given segment array from the left
    * index to the right one */
   int i;
-  Seg *copy;
-  copy = safeMalloc((right - left)*sizeof(Seg));
-  for (i=left; i < right; i++)
+  Seg *copy = safeMalloc((right - left)*sizeof(Seg));
+  for (i = left; i < right; i++)
     copy[i - left] = arr[i];
   return copy;
 }
