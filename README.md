@@ -39,7 +39,7 @@ Found this repository useful? Help out your (future) fellow students by mailing 
 
 |||
 |:---:|:---:|
-**[2023](https://github.com/pl3onasm/Imperative-programming/tree/main/PF2-3/exam2-2023)**| |
+**[2023](https://github.com/pl3onasm/Imperative-programming/tree/main/PF2-3/exam2-2023)**| **[2023 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/PF2-3/resit2-2023)** |
 |||
 
 ## $\color{darkgoldenrod}{\text{PF 3-3 exams}}$
