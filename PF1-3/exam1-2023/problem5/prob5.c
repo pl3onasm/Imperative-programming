@@ -64,7 +64,6 @@ int main(int argc, char *argv[]) {
     }
   }
   // all moves are valid, check if puzzle is solved
-  if (checkPuzzle(n, puzzle)) printf("SOLVED\n");
-  else printf("UNSOLVED\n");
+  printf(checkPuzzle(n, puzzle) ? "SOLVED\n" : "UNSOLVED\n");
   return 0;
 }

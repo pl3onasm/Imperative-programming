@@ -17,7 +17,7 @@ int isPrime (int x) {
 
 int digitSum (int n) {
   int sum = 0;
-  while (n > 0) {
+  while (n) {
     sum += n % 10;
     n /= 10;
   }
@@ -26,8 +26,8 @@ int digitSum (int n) {
 
 int digitProduct (int n) {
   int prod = 1;
-  while (n>0) {
-    prod *= n%10;
+  while (n) {
+    prod *= n % 10;
     n /= 10;
   }
   return prod; 

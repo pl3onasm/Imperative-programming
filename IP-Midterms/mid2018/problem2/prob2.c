@@ -9,7 +9,7 @@
 int isPalindrome(int n, int base) {
   // check if n is a palindrome in given base
   int rev = 0, m = n;
-  while (m > 0) {
+  while (m) {
     rev = rev * base + m % base;
     m /= base;
   }

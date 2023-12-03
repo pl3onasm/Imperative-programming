@@ -1,6 +1,6 @@
 # $\color{cadetblue}{\text{Imperative Programming}}$
 
-This repository contains old exams for the course Imperative Programming (CS) at the University of Groningen. In 2023, this course has been merged with the course Program Correctness (PC) into the course Programming Fundamentals (PF). This is why you will find exams for both courses in this repository.
+This repository contains old exams for the course Imperative Programming (IP) at the University of Groningen. In 2023, this course has been merged with the course Program Correctness (PC) into the course Programming Fundamentals (PF). This is why you will find exams for both courses in this repository.
 
 All exams are in separate folders, while each exam problem has its own subfolder. For the C questions, these subfolders each hold one or more example solutions, a folder with test cases, and a file called *myprogram.c* which you can use to write and test your own solution. For the proof questions, both exam questions and answers are given in Dafny.
   

@@ -4,7 +4,7 @@
 */
 
 method problem2(n:int, t:int, X:int, Y:int) returns (r:int, s:int)
-requires n == Y + 1 && t == X + 2*Y
+requires n == Y + 1 && t == X + 2 * Y
 ensures r == X && s == Y
 {
   // X and Y are specification constants and are not allowed 

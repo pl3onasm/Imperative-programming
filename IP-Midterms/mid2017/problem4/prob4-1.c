@@ -14,7 +14,7 @@ int main(int argc, char *argv[]) {
   b = c = d = e = 0;
   //b = F₁, c = F₂, d = F₃, e = F₄
 
-  while (n>0) {
+  while (n) {
     /* keep track of bunnies over a period of 5 years
     in which they take 1 year to mature, reproduce for 4 years,
     and die after 5 years

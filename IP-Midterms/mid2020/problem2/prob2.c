@@ -19,7 +19,7 @@ int power(int n, int exp) {
 
 int countDigits(int n) {
   int count = 0;
-  while (n > 0) {
+  while (n) {
     n /= 10; 
     count++;
   }

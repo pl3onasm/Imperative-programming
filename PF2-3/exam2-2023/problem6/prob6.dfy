@@ -4,7 +4,7 @@
 */
 
 ghost function f(n: nat): int {
-  if n <= 1 then n else 2*f(n-1) + 3*f(n-2)
+  if n <= 1 then n else 2 * f(n - 1) + 3 * f(n - 2)
 }
 
 ghost function fSum(n: nat): int {
@@ -19,8 +19,10 @@ ensures a == fSum(n)
 {
   var k, x, y;
   a, k, x, y := ?, ?, ?, ?;   // initialize these variables
+  
   while k < n
-    invariant 0<=k<=n && x==f(k) && y==f(k+1) && a == fSum(k)
+    invariant 0 <= k <= n && x == f(k) 
+              && y == f(k + 1) && a == fSum(k)
   {
     k := k + 1;
     // complete the rest of this method

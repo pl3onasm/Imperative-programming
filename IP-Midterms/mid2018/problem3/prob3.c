@@ -19,7 +19,6 @@ int main(int argc, char *argv[]) {
     else break;
   } while (x != 0 || y != 0);
 
-  if (x == 0 && y == 0) printf("%c%d\n", col, row);
-  else printf("INVALID\n");
+  printf(x || y ? "INVALID\n" : "%c%d\n", col, row);
   return 0;
 }

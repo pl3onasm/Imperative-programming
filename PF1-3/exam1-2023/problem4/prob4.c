@@ -15,7 +15,7 @@ void findSubseqs(char dna[], int nA, int nC, int nT, int nG, int subLen){
   int found = 0;
   int a = 0, c = 0, t = 0, g = 0;   // counters for A, C, T and G in subsequence
   // loop over all chars in dna
-  for (int i=0; i<len; i++){
+  for (int i = 0; i < len; i++){
     if (dna[i] == 'A') a++;
     if (dna[i] == 'C') c++;
     if (dna[i] == 'T') t++;
@@ -24,8 +24,7 @@ void findSubseqs(char dna[], int nA, int nC, int nT, int nG, int subLen){
       // check if the last subLen chars have the correct number of A, C, T and G 
       int subStart = i - subLen + 1;
       if (a == nA && c == nC && t == nT && g == nG){
-        if (!found) printf("%d", subStart);
-        else printf(",%d", subStart);
+        printf(found ? ",%d" : "%d", subStart);
         found = 1;
       }
       // remove the first char of the subsequence to check the next subsequence
@@ -36,8 +35,7 @@ void findSubseqs(char dna[], int nA, int nC, int nT, int nG, int subLen){
       if (dna[subStart] == 'G') g--;
     }
   }
-  if (!found) printf("NO MATCH\n");
-  else printf("\n");
+  printf(found ? "\n" : "NO MATCH\n");
 }
 
 int main(int argc, char *argv[]) {

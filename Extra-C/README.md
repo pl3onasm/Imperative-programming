@@ -1,6 +1,6 @@
-# Extra practice
+# Extra practice in C
 
-This folder contains some extra problems. If you are looking for more practice, you can try them. More problems will be added regularly.
+This folder contains some extra problems. If you are looking for more practice in C, you can try them. More problems will be added regularly.
 
 ## Problems
 
