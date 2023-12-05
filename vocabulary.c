@@ -95,10 +95,8 @@ int toBinary (int n, int *bin) {
 
 int isLeapYear(int year) {
   // determines whether the given year is a leap year
-  if (year % 400 == 0) return 1;
-  if (year % 100 == 0) return 0;
-  if (year % 4 == 0) return 1;
-  return 0;
+  return (year % 4 == 0 && year % 100 != 0) 
+          || year % 400 == 0;
 }
 
 //::::::::::::::::::::::::: DIVISIBILITY :::::::::::::::::::::::://
@@ -140,11 +138,12 @@ int sumDivisors (int n) {
 //:::::::::::::::::::::::: EXPONENTIATION ::::::::::::::::::::::://
 
 int power(int n, int exp) {
-  // returns n^exp using binary exponentiation
+  /* returns n^exp using binary exponentiation also known as
+     exponentiation by squaring */
   int pow = 1;
   while (exp) {
     if (exp & 1) pow *= n; 
-    n *= n; 
+    if (exp > 1) n *= n;
     exp /= 2;
   }
   return pow;
@@ -155,7 +154,7 @@ int modExp (int n, int exp, int m) {
   int pow = 1; n %= m;
   while (exp) {
     if (exp & 1) pow = (pow * n) % m;
-    n = (n * n) % m;
+    if (exp > 1) n = (n * n) % m;
     exp /= 2;
   }
   return pow;

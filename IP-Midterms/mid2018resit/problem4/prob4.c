@@ -20,7 +20,7 @@ int power(int n, int exp) {
   int pow = 1;
   while (exp) {
     if (exp & 1) pow *= n; 
-    n *= n; 
+    if (exp > 1) n *= n; 
     exp /= 2;
   }
   return pow;

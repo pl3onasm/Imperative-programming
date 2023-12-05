@@ -25,12 +25,13 @@ ensures r == f(a, b)
     invariant r * f(i, z) == f(a, b)
     decreases i
   {
-    if (i % 2 == 1) { // i is odd
+    if (i % 2 == 0) {  // i is even
+      z := z * z;
+      i := i / 2;
+    } else {           // i is odd
       r := r * z;
       i := i - 1;
-    }                 // i is even
-    z := z * z;
-    i := i / 2;    
+    }
   }
 }
 

@@ -21,14 +21,14 @@ int power(int n, int exp) {
   int pow = 1;
   while (exp) {
     if (exp & 1) pow *= n; 
-    n *= n; 
+    if (exp > 1) n *= n; 
     exp /= 2;
   }
   return pow;
 }
 
 int checkDigits (int n) {
-  /* returns 0 if n has digits 2, 4, 6, 8 or 5 in it
+  /* returns 0 if n contains digits 2, 4, 6, 8 or 5,
      otherwise returns the number of digits in n */
   int count = 0, d;
   while (n > 0) {

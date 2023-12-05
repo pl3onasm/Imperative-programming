@@ -8,10 +8,8 @@
 
 int isLeapYear(int year) {
   //determines whether the given year is a leap year
-  if (year % 400 == 0) return 1;
-  if (year % 100 == 0) return 0;
-  if (year % 4 == 0) return 1;
-  return 0;
+  return (year % 4 == 0 && year % 100 != 0) 
+          || year % 400 == 0;
 }
 
 int main(int argc, char *argv[]) {
