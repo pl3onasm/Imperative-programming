@@ -14,7 +14,6 @@ This folder contains some extra problems. If you are looking for more practice i
 | Problem 06 | [Next smaller number](prob06) |
 | Problem 07 | [Dividing large numbers](prob07) |
 | Problem 08 | [Balanced brackets](prob08) |
-| Problem 09 | [Well-formed strings of parentheses](prob09) |
-| Problem 10 | [Matching bitstrings](prob10) |
-| Problem 11 | [Segments](prob11) |
+| Problem 09 | [Matching bitstrings](prob09) |
+| Problem 10 | [Segments](prob10) |
 |||

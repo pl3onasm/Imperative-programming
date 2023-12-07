@@ -1,22 +1,32 @@
-# Well-formed strings of parentheses
+# Matching bitstrings
 
-This problem involves strings consisting solely of parentheses. A well-formed string of parentheses is defined by the following (recursive) rules:
+A binary string is a sequence of 0s and 1s. In this problem you are asked to generate all bitstrings under the following constraints:
 
-- The empty string is well-formed.  
-- If $s$ is a well formed string, then $(s)$ is a well-formed string.  
-- If $s$ and $t$ are well formed strings, then their concatenation $st$ is a well-formed string  
+1. no more than two 0s or 1s are allowed directly next to each other,
+2. some positions in the string are prefilled by 0s and 1s which cannot be altered,
+3. the other positions are wildcards indicated with an `?` in which you can pick a 0 or 1 as long as the first constraint is met.
 
-For example, `((()))` and `()()()` are well-formed strings, while `(()`, `)(()` and `(` are not well-formed strings.  
-There are exactly 5 well-formed strings that have length 6: `((()))`, `(()())`, `(())()`, `()(())`, and `()()()`.  
+An example of such a bitstring that satisfies the first condition is `1100101` as there are no more than two 0s or 1s directly next to each other.  
+Now consider the bitstring `0??010`. There are three different options to fill the `?` slots, namely: `001010`, `010010` and `011010`.
 
-The input of this problem consists of an integer $n$, where $1 \leq n \leq 30$. Your program should output the number of well-formed strings of parentheses that have length $n$.
+Write a program that accepts on the input two lines. The first line is a single integer $n$ indicating the length of the constrained bitstring. The second line provides the bitstring itself. Your program should compute all the possible combinations under the provided constraints and output them in lexicographical ordering (i.e. in increasing binary order).
 
-## Examples
+## Example
+
+Input:
 
 ```text
-Input: 6
-Output: 5
+8
+0?1?01?0
+```
 
-Input: 10
-Output: 42
+Output:
+
+```text
+00100100
+00100110
+00110100
+00110110
+01100100
+01100110
 ```

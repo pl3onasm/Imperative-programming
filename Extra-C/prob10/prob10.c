@@ -1,14 +1,20 @@
 /* file: prob10.c
-* author: David De Potter
-* description: extra, problem 10,
-*   matching bitstrings
+  author: David De Potter
+  description: extra, problem 10, segments
 */
 
 #include <stdio.h>
 #include <stdlib.h>
 
+#define MAX(a,b) ((a)>(b)?(a):(b))
+#define MIN(a,b) ((a)<(b)?(a):(b))
+
+typedef struct {
+  int start, end;
+} Seg;
+
 void *safeMalloc (int n) {
-  // checks if memory has been allocated successfully
+  /* checks if memory has been allocated successfully */
   void *p = malloc(n);
   if (p == NULL) {
     printf("Error: malloc(%d) failed. Out of memory?\n", n);
@@ -17,51 +23,99 @@ void *safeMalloc (int n) {
   return p;
 }
 
-char *readString (int n) {
-  // reads a string of n bits
-  char *bits = safeMalloc((n+1)*sizeof(char));
-  (void)! scanf("%s", bits);
-  return bits;
+Seg* readInput (int len) {
+  /* reads the input and stores it as an array of segments */
+  Seg *segments = safeMalloc(len*sizeof(Seg));
+  for (int i = 0; i < len; ++i)
+    (void)! scanf("[%d,%d),", &segments[i].start, &segments[i].end);
+  return segments;
 }
 
-void getBitstrings (char *bits, int idx, int n, int count0, int count1) {
-  // prints, in lexicographical order, all bitstrings of length n 
-  // with no more than 2 consecutive 0s or 1s
+Seg *copySubArray(int left, int right, Seg *arr) {
+  /* copies a part of a given segment array from the left
+   * index to the right one */
+  int i;
+  Seg *copy = safeMalloc((right - left)*sizeof(Seg));
+  for (i = left; i < right; i++)
+    copy[i - left] = arr[i];
+  return copy;
+}
 
-  // base case
-  if (idx == n) {
-    printf("%s\n", bits);
+void mergeSort(int length, Seg *arr) {
+  /* sorts the array in increasing order on the value of the
+   * start field of each segment */
+  int l, r, mid, idx;
+  Seg *left, *right;
+  if (length <= 1) {
     return;
   }
+  mid = length/2;
+  left = copySubArray(0, mid, arr);
+  right = copySubArray(mid, length, arr);
+  mergeSort(mid, left);
+  mergeSort(length - mid, right);
+  idx = l = r = 0;
+  while ((l < mid) && (r < length - mid)) {
+    if (left[l].start < right[r].start) {
+      arr[idx] = left[l];
+      l++;
+    } else {
+      arr[idx] = right[r];
+      r++;
+    }
+    idx++;
+  }
+  while (l < mid) {
+    arr[idx] = left[l];
+    idx++;
+    l++;
+  }
+  while (r < length - mid) {
+    arr[idx] = right[r];
+    idx++;
+    r++;
+  }
+  free(left);
+  free(right);
+}
 
-  // recursive case
-  switch (bits[idx]) {
-    case '?':
-      bits[idx] = '0';
-      if (count0 < 2) getBitstrings(bits, idx+1, n, count0+1, 0);
-      bits[idx] = '1';
-      if (count1 < 2) getBitstrings(bits, idx+1, n, 0, count1+1);
-      bits[idx] = '?';    // backtrack
-      break;
-    case '0':
-      if (count0 < 2) getBitstrings(bits, idx+1, n, count0+1, 0);
-      break;
-    case '1':
-      if (count1 < 2) getBitstrings(bits, idx+1, n, 0, count1+1);
-      break;
+void printSegments (Seg *segments, int n) {
+  /* prints the segments in the array */
+  for (int i = 0; i <= n; ++i) {
+    printf("[%d,%d)", segments[i].start, segments[i].end);
+    printf(i == n ? "\n" : ",");
   }
 }
 
-int main (int argc, char *argv[]) {
+void mergeSegments(Seg *segments, int n) {
+  /* checks each segment pair and merges them as long as
+   * the value of the end field of the current segment
+   * overlaps the start field's value of the next */
+  int curr = 0; // index of current segment in the merged array
+  Seg a, b;
+
+  for (int i = 1; i < n; ++i) {
+    a = segments[curr], b = segments[i];
+    if (a.end >= b.start) {   
+      // merge segments
+      segments[curr].end = MAX (a.end, b.end);
+      segments[curr].start = MIN (a.start, b.start);
+    } else segments[++curr] = segments[i];
+  }
+  printSegments (segments, curr);
+}
+
+int main() {
   int n;
+  (void)! scanf("%d:", &n);
 
-  (void)! scanf("%d", &n);
+  Seg *segments = readInput (n);
 
-  char *bits = readString(n);
+  mergeSort (n, segments);
 
-  getBitstrings(bits, 0, n, 0, 0);
+  mergeSegments(segments, n);
 
-  free(bits);
-  
+  free(segments);
+
   return 0;
 }

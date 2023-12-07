@@ -1,6 +1,6 @@
 /* file: myprogram.c
    author: your name
-   description: extra, problem 9, well-formed strings of parentheses
+   description: extra, problem 9, matching bitstrings
 */
 
 #include <stdio.h>
