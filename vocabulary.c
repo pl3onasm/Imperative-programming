@@ -5,20 +5,19 @@
    your program in order to quickly solve a given problem. 
 */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "vocab.h"
 
-int abs(x) {
+int abs(int x) {
   // returns the absolute value of x
   return x < 0 ? -x : x;
 } 
 
-int max(int x, int y) {
+int maximum (int x, int y) {
   // returns the maximum of x and y
   return x > y ? x : y;
 }
 
-int min(int x, int y) {
+int minimum (int x, int y) {
   // returns the minimum of x and y
   return x < y ? x : y;
 }
@@ -33,14 +32,17 @@ int countDigits (int n) {
   return count;
 }
 
-void swap (int *a, int *b) {
-  // swaps the values of pointers a and b
-  int tmp = *a;
-  *a = *b;
-  *b = tmp;
+void swap (void *a, void *b, int size) {
+  // swaps the values of a and b
+  char *x = a, *y = b, tmp;
+  for (int i = 0; i < size; ++i) {
+    tmp = x[i];
+    x[i] = y[i];
+    y[i] = tmp;
+  }
 }
 
-int reverse(int n) {
+int reverseInt(int n) {
   // returns the reverse of a given integer n
   int rev = 0;
   while (n) {
@@ -76,20 +78,22 @@ int isPrime (int x) {
 }
 
 int isPerfSquare (int n) {
-  // returns 1 if n is a perfect square, 0 otherwise
+  /* returns 1 if n is a perfect square, 0 otherwise;
+     only use if you're not allowed to use sqrt */
   int i; 
   for (i = 1; i*i < n; ++i);
   return (i*i == n); 
 }
 
-int toBinary (int n, int *bin) {
+int toBinary (int n, char *bin) {
   /* converts n to binary and stores the result in bin;
      returns the length of the binary representation */
   int len = 0;
   while (n > 0) {
-    bin[len++] = n % 2; 
+    bin[len++] = n % 2 + '0';
     n >>= 1;
   }
+  reverse(bin, len);
   return len; 
 }
 
@@ -177,7 +181,7 @@ int isPalindrome (int start, int end, char *s) {
      between the given start and end indexes */
   if (start >= end) return 1;
   if (s[start] != s[end]) return 0;
-  return isPalindrome(start+1, end-1, s);
+  return isPalindrome(start + 1, end - 1, s);
 }
 
 //:::::::::::::::::::::: MEMORY ALLOCATION :::::::::::::::::::::://
@@ -205,17 +209,15 @@ void *safeCalloc (int n, int size) {
 
 int *createIntArray (int size) {
   // creates an array of size integers
-  int *arr = safeMalloc(size * sizeof(int));
-  return arr;
+  return safeMalloc(size * sizeof(int));
 }
 
 char *createString(int size){
   // creates a string of size characters
-  char *string = safeMalloc(size * sizeof(char));
-  return string;
+  return safeMalloc(size * sizeof(char));
 }
 
-int **createMatrix (int rows, int cols) {
+int **createIntMatrix (int rows, int cols) {
   // creates a matrix of size rows x cols
   int **matrix = safeMalloc(rows * sizeof(int *));
   for (int i = 0; i < rows; i++)
@@ -231,7 +233,7 @@ int **createNullMatrix(int m, int n) {
   return matrix;
 }
 
-void freeMatrix (int **matrix, int rows) {
+void freeIntMatrix (int **matrix, int rows) {
   // frees a matrix of size rows x cols
   for (int i = 0; i < rows; i++)
     free(matrix[i]);
@@ -250,7 +252,7 @@ void *safeRealloc (void *ptr, int newSize) {
 
 //:::::::::::::::::::::::::: PRINTING :::::::::::::::::::::::::://
 
-void printArray (int *arr, int n) {
+void printIntArray (int *arr, int n) {
   // prints an array of size n
   printf("[");
   for (int i = 0; i < n; i++) {
@@ -260,7 +262,7 @@ void printArray (int *arr, int n) {
   printf("]\n");
 }
 
-void printMatrix (int **matrix, int rows, int cols) {
+void printIntMatrix (int **matrix, int rows, int cols) {
   // prints a matrix of size rows x cols
   printf("[");
   for (int i = 0; i < rows; i++) {
@@ -280,14 +282,14 @@ void printMatrix (int **matrix, int rows, int cols) {
 void readIntArray(int *arr, int size){
   // reads an array of size integers from stdin
   for (int i=0; i < size; i++) 
-    scanf("%d", &arr[i]);
+    (void)! scanf("%d", &arr[i]);
 }
 
-void readIntMatrix(int m, int n, int **arr) {
+void readIntMatrix(int **arr, int m, int n){
   // reads an mxn matrix from stdin
   for (int i=0; i<m; ++i) 
     for (int j=0; j<n; ++j) 
-      scanf("%d", &arr[i][j]);
+      (void)! scanf("%d", &arr[i][j]);
 }
 
 int *readIntVector(int *size) {
@@ -343,7 +345,7 @@ int linSearch (int *arr, int len, int key) {
 }
 
 int binSearch (int *sorted, int len, int key) {
-  /* binary search: searches for key in sorted(!) array 
+  /* binary search: searches for key in **sorted** array 
      and returns its index if found, otherwise returns -1 */
   int left = 0, right = len, mid;
   while (left < right) {
@@ -357,50 +359,40 @@ int binSearch (int *sorted, int len, int key) {
 
 //:::::::::::::::::::::::::: SORTING ::::::::::::::::::::::::::://
 
-int *copySubArray(int left, int right, int arr[]) {
+int *copySubArray(int *arr, int left, int right) {
   /* copies the subarray arr[left..right] into a new array;
      this function is needed for mergeSort and is given on the exam */
-  int i, *copy = safeMalloc((right - left)*sizeof(int));
-  for (i=left; i < right; i++) 
+  int *copy = safeMalloc((right - left)*sizeof(int));
+  for (int i = left; i < right; i++) 
     copy[i - left] = arr[i];
   return copy;
 }
 
-void mergeSort(int length, int arr[]) {
+void mergeSort(int *arr, int length) {
   /* sorts an array of integers in O(n log n) time;
      this function is given on the exam */
-  int l, r, mid, idx, *left, *right;
-  if (length <= 1) {
-    return;
+  int l = 0, r = 0, idx = 0, mid = length/2;
+  if (length <= 1) return;
+  
+  int *left = copySubArray(arr, 0, mid);
+  int *right = copySubArray(arr, mid, length);
+
+  mergeSort(left, mid);
+  mergeSort(right, length - mid);
+  
+  while (l < mid && r < length - mid) {
+    if (left[l] < right[r]) 
+      arr[idx++] = left[l++];
+    else 
+      arr[idx++] = right[r++];
   }
-  mid = length/2;
-  left = copySubArray(0, mid, arr);
-  right = copySubArray(mid, length, arr);
-  mergeSort(mid, left);
-  mergeSort(length - mid, right);
-  idx = 0;
-  l = 0;
-  r = 0;
-  while ((l < mid) && (r < length - mid)) {
-    if (left[l] < right[r]) {
-      arr[idx] = left[l];
-      l++;
-    } else {
-      arr[idx] = right[r];
-      r++;
-    }
-    idx++;
-  }
-  while (l < mid) {
-    arr[idx] = left[l];
-    idx++;
-    l++;
-  }
-  while (r < length - mid) {
-    arr[idx] = right[r];
-    idx++;
-    r++;
-  }
+
+  while (l < mid)
+    arr[idx++] = left[l++];
+
+  while (r < length - mid) 
+    arr[idx++] = right[r++];
+
   free(left);
   free(right);
 }
@@ -412,7 +404,7 @@ void bubbleSort(int *arr, int len) {
     change = 0;
     for (j = 0; j+1 < len - i; ++j) {
       if (arr[j] > arr[j+1]) {
-        swap(&arr[j], &arr[j+1]);
+        swap(&arr[j], &arr[j+1], sizeof(int));
         change = 1;
       }
     }
@@ -441,7 +433,7 @@ void selectionSort(int *arr, int len) {
     min = i;
     for (j = i+1; j < len; ++j) 
       if (arr[j] < arr[min]) min = j;
-    swap(&arr[i], &arr[min]);
+    swap(&arr[i], &arr[min], sizeof(int));
   }
 }
 
@@ -455,19 +447,19 @@ void quickSort(int *arr, int len) {
     while (arr[i] < pivot) ++i;
     while (arr[j] > pivot) --j;
     if (i >= j) break;
-    swap(&arr[i], &arr[j]);
+    swap(&arr[i], &arr[j], sizeof(int));
   }
   quickSort(arr, i);
   quickSort(arr+i, len-i);
 }
 
-void countingSort(int length, int arr[]) {
+void countingSort(int *arr, int length) {
   /* sorts an array of integers in O(n) time */
   int min, max, range, i, j, idx = 0;
   min = max = arr[0];
   for (i = 1; i < length; i++) {
-    min = (arr[i] < min ? arr[i] : min);
-    max = (arr[i] > max ? arr[i] : max);
+    min = minimum (arr[i], min);
+    max = maximum (arr[i], max);
   }
   range = max - min + 1;
   int *count = safeCalloc(range, sizeof(int));
@@ -512,4 +504,11 @@ char *stringCopy(char *s) {
   for (int i=0; i<=len; ++i)
     copy[i] = s[i];
   return copy;
+}
+
+char *reverse (char *str, int len) {
+  // reverses a given string
+  for (int i = 0; i < len/2; ++i) 
+    swap(&str[i], &str[len-i-1], sizeof(char));
+  return str;
 }

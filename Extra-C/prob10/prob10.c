@@ -26,55 +26,50 @@ void *safeMalloc (int n) {
 Seg* readInput (int len) {
   /* reads the input and stores it as an array of segments */
   Seg *segments = safeMalloc(len*sizeof(Seg));
+  
   for (int i = 0; i < len; ++i)
     (void)! scanf("[%d,%d),", &segments[i].start, &segments[i].end);
+  
   return segments;
 }
 
 Seg *copySubArray(int left, int right, Seg *arr) {
   /* copies a part of a given segment array from the left
    * index to the right one */
-  int i;
   Seg *copy = safeMalloc((right - left)*sizeof(Seg));
-  for (i = left; i < right; i++)
+
+  for (int i = left; i < right; i++)
     copy[i - left] = arr[i];
+  
   return copy;
 }
 
 void mergeSort(int length, Seg *arr) {
   /* sorts the array in increasing order on the value of the
    * start field of each segment */
-  int l, r, mid, idx;
-  Seg *left, *right;
-  if (length <= 1) {
-    return;
-  }
-  mid = length/2;
-  left = copySubArray(0, mid, arr);
-  right = copySubArray(mid, length, arr);
+  int l = 0, r = 0, idx = 0, mid = length/2;
+
+  if (length <= 1) return;
+
+  Seg *left = copySubArray(0, mid, arr);
+  Seg *right = copySubArray(mid, length, arr);
+
   mergeSort(mid, left);
   mergeSort(length - mid, right);
-  idx = l = r = 0;
-  while ((l < mid) && (r < length - mid)) {
-    if (left[l].start < right[r].start) {
-      arr[idx] = left[l];
-      l++;
-    } else {
-      arr[idx] = right[r];
-      r++;
-    }
-    idx++;
+  
+  while (l < mid && r < length - mid) {
+    if (left[l].start < right[r].start)
+      arr[idx++] = left[l++];
+    else
+      arr[idx++] = right[r++];
   }
-  while (l < mid) {
-    arr[idx] = left[l];
-    idx++;
-    l++;
-  }
-  while (r < length - mid) {
-    arr[idx] = right[r];
-    idx++;
-    r++;
-  }
+
+  while (l < mid) 
+    arr[idx++] = left[l++];
+  
+  while (r < length - mid) 
+    arr[idx++] = right[r++];
+
   free(left);
   free(right);
 }
@@ -88,19 +83,19 @@ void printSegments (Seg *segments, int n) {
 }
 
 void mergeSegments(Seg *segments, int n) {
-  /* checks each segment pair and merges them as long as
-   * the value of the end field of the current segment
+  /* checks each segment pair and keeps merging them as long 
+   * as the value of the end field of the current segment
    * overlaps the start field's value of the next */
-  int curr = 0; // index of current segment in the merged array
-  Seg a, b;
+  
+  int curr = 0; // index of current segment in the merged (sub)array
 
   for (int i = 1; i < n; ++i) {
-    a = segments[curr], b = segments[i];
+    Seg a = segments[curr], b = segments[i];
     if (a.end >= b.start) {   
       // merge segments
-      segments[curr].end = MAX (a.end, b.end);
       segments[curr].start = MIN (a.start, b.start);
-    } else segments[++curr] = segments[i];
+      segments[curr].end = MAX (a.end, b.end);
+    } else segments[++curr] = b;
   }
   printSegments (segments, curr);
 }
