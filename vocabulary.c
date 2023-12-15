@@ -33,7 +33,7 @@ int countDigits (int n) {
 }
 
 void swap (void *a, void *b, int size) {
-  // swaps the values of a and b
+  // generic swap function
   char *x = a, *y = b, tmp;
   for (int i = 0; i < size; ++i) {
     tmp = x[i];

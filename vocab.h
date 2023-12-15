@@ -1,7 +1,7 @@
 /* file: vocabulary.h
    author: David De Potter
-   description: header file for vocabulary.c, so
-    that you can use it as a library
+   description: header file for vocabulary.c,
+    so you can use it as a library
 */
 
 #ifndef VOCAB_H

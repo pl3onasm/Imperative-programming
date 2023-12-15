@@ -1,7 +1,7 @@
 /* file: vocabTest.c
    author: David De Potter
    Purpose: examples of using functions from vocabulary.c
-   Compile with: gcc -O2 -std=c99 -o a.out vocabulary.c test.c -lm
+   Compile with: gcc -O2 -std=c99 -o a.out vocabulary.c vocabTest.c -lm
 */
 
 #include "vocab.h"
