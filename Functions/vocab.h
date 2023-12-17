@@ -29,8 +29,8 @@ int LCM (int a, int b);
 int areCoprime(int a, int b);
 int sumDivisors(int a);
 
-int power(int a, int b);
-int modExp(int a, int b, int n);
+int power(int a, int exp);
+int modExp(int a, int exp, int mod);
 
 int isIntPalindrome(int a, int b);
 int isPalindrome(int start, int end, char *str);

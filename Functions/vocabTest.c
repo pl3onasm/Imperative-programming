@@ -51,4 +51,6 @@ int main() {
   printf("sorted array: ");
   selectionSort(arr, 10);
   printIntArray(arr, 10);
+
+  return 0;
 }
