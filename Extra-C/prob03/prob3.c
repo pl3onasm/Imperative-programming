@@ -11,29 +11,27 @@ typedef unsigned long long llu;
 llu toLlu(int *digits) {
   // converts the digits array to an unsigned long long
   llu result = 0;
-  for (int i = 0; i < 10; ++i) {
-    result *= 10;
-    result += digits[i];
-  }
+  for (int i = 0; i < 10; ++i) 
+    result = result * 10 + digits[i];
   return result;
 }
 
-void permute(int *digits, int *taken, int start, int end, int div) {
+void permute(int *digits, int *taken, int start, int div) {
   /* computes all permutations of the digits array and prints, in
      ascending order, those that satisfy the divisibility condition */ 
-  if (start == end) {
+  if (start == 10) {
     llu candidate = toLlu(digits);
     if (candidate % div == 0)
       printf("%llu\n", candidate);
     return;
   }
   // recursive case
-  for (int i = 0; i < end; ++i) {
+  for (int i = 0; i < 10; ++i) {
     if (!taken[i]                     // each digit can only be used once   
         && !(start == 0 && i == 0)) { // first digit cannot be 0
       ++taken[i];
       digits[start] = i;  
-      permute(digits, taken, start + 1, end, div);
+      permute(digits, taken, start + 1, div);
       --taken[i];                     // backtrack
     }
   }
@@ -46,7 +44,7 @@ int main() {
   int div; 
   (void)! scanf("%d", &div);
 
-  permute(digits, taken, 0, 10, div);
+  permute(digits, taken, 0, div);
   
   return 0;
 }
