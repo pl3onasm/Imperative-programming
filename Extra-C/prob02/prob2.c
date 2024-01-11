@@ -5,6 +5,9 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+
+#define MAX(a, b) ((a) > (b) ? (a) : (b))
 
 void *safeMalloc (int n) {
   // checks if memory has been allocated successfully
@@ -45,12 +48,11 @@ char *readString(int *len) {
 
 void add(char *a, int lenA, char *b, int lenB) {
   // adds two strings of digits
-  int sumLen = lenA > lenB ? lenA : lenB;                   
-  if (lenA == lenB && a[0] + b[0] - 2 * '0' > 9) ++sumLen;  // one extra if carry
-  char *sum = safeMalloc((sumLen + 1) * sizeof(char));      // one extra for '\0'
+  int sumLen = MAX(lenA, lenB) + 1;   // one extra for possible carry
+  char *sum = safeMalloc((sumLen + 1) * sizeof(char));  // one extra for '\0'
   sum[sumLen] = '\0';
   int carry = 0;
-  for (int i = 0; i < sumLen; ++i) {
+  for (int i = 0; i < sumLen - 1; ++i) {
     int digitA = i < lenA ? a[lenA - i - 1] - '0' : 0;
     int digitB = i < lenB ? b[lenB - i - 1] - '0' : 0;
     int digitSum = digitA + digitB + carry;
@@ -58,6 +60,7 @@ void add(char *a, int lenA, char *b, int lenB) {
     carry = digitSum / 10;
   }
   if (carry) sum[0] = carry + '0';
+  else memmove(sum, sum + 1, sumLen * sizeof(char));
   printf("%s\n", sum);
   free(sum);
 }
