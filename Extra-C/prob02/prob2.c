@@ -48,19 +48,22 @@ char *readString(int *len) {
 
 void add(char *a, int lenA, char *b, int lenB) {
   // adds two strings of digits
-  int sumLen = MAX(lenA, lenB) + 1;   // one extra for possible carry
-  char *sum = safeMalloc((sumLen + 1) * sizeof(char));  // one extra for '\0'
+  int sumLen = MAX(lenA, lenB);   
+  // allocate extra space for carry and null terminator
+  char *sum = safeMalloc((sumLen + 2) * sizeof(char));  
   sum[sumLen] = '\0';
-  int carry = 0;
-  for (int i = 0; i < sumLen - 1; ++i) {
-    int digitA = i < lenA ? a[lenA - i - 1] - '0' : 0;
-    int digitB = i < lenB ? b[lenB - i - 1] - '0' : 0;
-    int digitSum = digitA + digitB + carry;
+  int digitSum = 0;
+  for (int i = 0; i < sumLen; ++i) {
+    digitSum += i < lenA ? a[lenA - i - 1] - '0' : 0;
+    digitSum += i < lenB ? b[lenB - i - 1] - '0' : 0;
     sum[sumLen - i - 1] = digitSum % 10 + '0';
-    carry = digitSum / 10;
+    digitSum /= 10;   // carry
   }
-  if (carry) sum[0] = carry + '0';
-  else memmove(sum, sum + 1, sumLen * sizeof(char));
+  if (digitSum) {
+    // shift all digits + '\0' one position to the right
+    memmove(sum + 1, sum, sumLen + 1);
+    sum[0] = digitSum + '0';
+  }
   printf("%s\n", sum);
   free(sum);
 }
