@@ -9,6 +9,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <limits.h>
+#define MIN(a, b) ((a) < (b) ? (a) : (b))
 
 int isPalindrome(char *s, int start, int end) {
   if (start >= end) return 1;
@@ -17,15 +18,15 @@ int isPalindrome(char *s, int start, int end) {
 }
 
 int minimalPalPartition(int start, int end, char *a) {
-  int x, y = INT_MAX;
+  int x, min = INT_MAX;
   if (start > end) return 0;
   for (int j = start; j <= end; j++) {
     if (isPalindrome(a, start, j)) {
       x = minimalPalPartition(j + 1, end, a);
-      y = x < y ? x : y;
+      min = MIN(min, x);
     }
   }
-  return 1 + y;
+  return 1 + min;
 }
 
 int main(int argc, char *argv[]) {
