@@ -27,9 +27,9 @@ void maximize(int *vec, int idx, int len, int sum, int *max){
     *max = sum > *max ? sum : *max;
     return;
   }
-  // we can still add
+  // see if we can still add
   if (len < 2) maximize(vec, idx-1, len+1, sum + vec[idx], max);
-  //skip
+  // skip
   maximize(vec, idx-1, 0, sum, max);  
 }
 

@@ -21,53 +21,43 @@ void *safeMalloc (int n) {
   return ptr;
 }
 
-int *copySubArray(int left, int right, int arr[]) {
-  int i, *copy = safeMalloc((right - left)*sizeof(int));
-  for (i=left; i < right; i++) {
+int *copySubArray(int *arr, int left, int right) {
+  /* copies the subarray arr[left..right] into a new array */
+  int *copy = safeMalloc((right - left)*sizeof(int));
+  for (int i = left; i < right; i++) 
     copy[i - left] = arr[i];
-  }
   return copy;
 }
 
-int mergeSort(int length, int arr[]) {
-  int l, r, mid, idx, *left, *right;
-  if (length <= 1) {
-    return 0;
-  }
-  mid = length/2;
-  left = copySubArray(0, mid, arr);
-  right = copySubArray(mid, length, arr);
-  int count = mergeSort(mid, left);
-  count += mergeSort(length - mid, right);
-  idx = 0;
-  l = 0;
-  r = 0;
-  while ((l < mid) && (r < length - mid)) {
-    if (left[l] <= right[r]) {
-      // no inversions in this case
-      arr[idx] = left[l];
-      l++;
-    } else {
-      // total number of inversions to add is the number of
-      // elements currently left in the left array: mid - l
-      arr[idx] = right[r];
-      r++; count += mid - l;
+int countInversions(int *arr, int length) {
+  /* sorts an array of integers in O(n log n) time */
+  int l = 0, r = 0, idx = 0, mid = length/2, count = 0;
+  if (length <= 1) return 0;
+  
+  int *left = copySubArray(arr, 0, mid);
+  int *right = copySubArray(arr, mid, length);
+
+  count += countInversions(left, mid);
+  count += countInversions(right, length - mid);
+  
+  while (l < mid && r < length - mid) {
+    if (left[l] <= right[r])    // no inversions in this case
+      arr[idx++] = left[l++];
+    else {                      // total number of inversions to add               
+      arr[idx++] = right[r++];  // is the number of elements currently 
+      count += mid - l;         // left in the left subarray: mid - l
     }
-    idx++;
   }
-  while (l < mid) {
-    arr[idx] = left[l];
-    idx++;
-    l++;
-  }
-  while (r < length - mid) {
-    arr[idx] = right[r];
-    idx++;
-    r++;
-  }
+
+  while (l < mid)
+    arr[idx++] = left[l++];
+
+  while (r < length - mid) 
+    arr[idx++] = right[r++];
+
   free(left);
   free(right);
-  return count; 
+  return count;
 }
 
 int *readIntVector (int size) {
@@ -81,7 +71,7 @@ int main(int argc, char **argv){
   int size; 
   (void)! scanf("%d\n", &size);
   int *vect = readIntVector(size); 
-  printf("%d\n", mergeSort(size, vect));
+  printf("%d\n", countInversions(vect, size));
   free(vect); 
   return 0; 
 }

@@ -53,7 +53,7 @@ int bubbleCount(int *arr, int len) {
         ++count; 
       }
     }
-    if (change == 0) break;
+    if (!change) break;
   }
   return count;
 }

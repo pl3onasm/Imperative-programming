@@ -25,48 +25,38 @@ void createArray (int **arr, int len) {
   *arr = safeCalloc(len, sizeof(int));
 }
 
-int *copySubArray(int left, int right, int arr[]) {
-  int i, *copy;
-  copy = safeCalloc((right - left), sizeof(int));
-  for (i=left; i < right; i++) {
+int *copySubArray(int *arr, int left, int right) {
+  /* copies the subarray arr[left..right] into a new array */
+  int *copy = safeCalloc((right - left), sizeof(int));
+  for (int i = left; i < right; i++) 
     copy[i - left] = arr[i];
-  }
   return copy;
 }
 
-void mergeSort(int length, int arr[]) {
-  int l, r, mid, idx, *left, *right;
-  if (length <= 1) {
-    return;
+void mergeSort(int *arr, int length) {
+  /* sorts an array of integers in O(n log n) time */
+  int l = 0, r = 0, idx = 0, mid = length/2;
+  if (length <= 1) return;
+  
+  int *left = copySubArray(arr, 0, mid);
+  int *right = copySubArray(arr, mid, length);
+
+  mergeSort(left, mid);
+  mergeSort(right, length - mid);
+  
+  while (l < mid && r < length - mid) {
+    if (left[l] < right[r]) 
+      arr[idx++] = left[l++];
+    else 
+      arr[idx++] = right[r++];
   }
-  mid = length/2;
-  left = copySubArray(0, mid, arr);
-  right = copySubArray(mid, length, arr);
-  mergeSort(mid, left);
-  mergeSort(length - mid, right);
-  idx = 0;
-  l = 0;
-  r = 0;
-  while ((l < mid) && (r < length - mid)) {
-    if (left[l] < right[r]) {
-      arr[idx] = left[l];
-      l++;
-    } else {
-      arr[idx] = right[r];
-      r++;
-    }
-    idx++;
-  }
-  while (l < mid) {
-    arr[idx] = left[l];
-    idx++;
-    l++;
-  }
-  while (r < length - mid) {
-    arr[idx] = right[r];
-    idx++;
-    r++;
-  }
+
+  while (l < mid)
+    arr[idx++] = left[l++];
+
+  while (r < length - mid) 
+    arr[idx++] = right[r++];
+
   free(left);
   free(right);
 }
@@ -114,7 +104,7 @@ int main(int argc, char *argv[]) {
   createArray (&sorted, n);
   processInput (series, sorted, n);
 
-  mergeSort (n, sorted);
+  mergeSort (sorted, n);
   printArray (series, sorted, n, k);
   free(series);
   free(sorted);

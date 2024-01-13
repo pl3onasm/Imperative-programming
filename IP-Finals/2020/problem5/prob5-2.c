@@ -23,12 +23,12 @@ int *readIntVector(int size) {
 }
 
 int maximize(int *vec, int idx, int len){
-  int x = 0; 
+  int x = 0, y = 0; 
   if (idx < 0) return 0;
-  // we can still add
+  // see if we can still add
   if (len < 2) x = vec[idx] + maximize(vec, idx-1, len+1);
-  //skip
-  int y = maximize(vec, idx-1, 0);
+  // skip
+  y = maximize(vec, idx-1, 0);
   return x > y ? x : y;  
 }
 

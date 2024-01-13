@@ -1,6 +1,7 @@
 /* file: prob5-2.c
    author: David De Potter
-   version: 5.2, using an int function, getMaxPal
+   version: 5.2, without using isPalindrome. This is faster,
+      because we don't have all the extra work at the base case
    description: IP Final 2021, problem 5, longest palindromic sequence
 */
 
@@ -18,29 +19,16 @@ void *safeCalloc (int n, int size) {
 }
 
 char *createString(int size){
-  char *string = safeCalloc(size, sizeof(char));
-  return string;
+  return safeCalloc(size, sizeof(char));
 }
 
-int isPalindrome (int start, int end, char *s) {
-  if (start >= end) return 1;
-  if (s[start] != s[end]) return 0;
-  return isPalindrome(start+1, end-1, s);
-}
-
-int getMaxPal (char *s, char *seq, int n, int idx, int subLen) {
-  int x = 0;
-  if (idx >= n) {
-    if (isPalindrome(0, subLen-1, seq)) return subLen;
-    return 0;
-  }
-  if (subLen < n) {    // take char at index idx from s
-    seq[subLen] = s[idx];    
-    x = getMaxPal(s, seq, n, idx+1, subLen+1);
-  }
-  // skip current char from s
-  int y = getMaxPal(s, seq, n, idx+1, subLen);
-
+int getMaxPal (char *s, int start, int end) {
+  if (start >= end) 
+    return start == end;
+  if (s[start] == s[end])                // take both 
+    return 2 + getMaxPal(s, start+1, end-1);  
+  int x = getMaxPal(s, start+1, end);    // skip start
+  int y = getMaxPal(s, start, end-1);    // skip end
   return x > y ? x : y;
 }
 
@@ -48,9 +36,8 @@ int main(int argc, char **argv){
   int n; 
   (void)! scanf("%d", &n);
   char *s = createString(n+1);
-  char *seq = createString(n);
   (void)! scanf("%s", s);
-  printf("%d\n", getMaxPal(s, seq, n, 0, 0));
-  free(s); free(seq);
+  printf("%d\n", getMaxPal(s, 0, n-1));
+  free(s); 
   return 0; 
 }

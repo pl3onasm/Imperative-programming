@@ -17,62 +17,48 @@ void *safeMalloc (int n) {
   return ptr;
 }
 
-int *copySubArray(int left, int right, int arr[]) {
+int *copySubArray(int *arr, int left, int right) {
   /* copies the subarray arr[left..right] into a new array */
-  int i, *copy = safeMalloc((right - left)*sizeof(int));
-  for (i=left; i < right; i++) 
+  int *copy = safeMalloc((right - left)*sizeof(int));
+  for (int i = left; i < right; i++) 
     copy[i - left] = arr[i];
   return copy;
 }
 
-void mergeSort(int length, int arr[]) {
+void mergeSort(int *arr, int length) {
   /* sorts an array of integers in O(n log n) time */
-  int l, r, mid, idx, *left, *right;
-  if (length <= 1) {
-    return;
+  int l = 0, r = 0, idx = 0, mid = length/2;
+  if (length <= 1) return;
+  
+  int *left = copySubArray(arr, 0, mid);
+  int *right = copySubArray(arr, mid, length);
+
+  mergeSort(left, mid);
+  mergeSort(right, length - mid);
+  
+  while (l < mid && r < length - mid) {
+    if (left[l] < right[r]) 
+      arr[idx++] = left[l++];
+    else 
+      arr[idx++] = right[r++];
   }
-  mid = length/2;
-  left = copySubArray(0, mid, arr);
-  right = copySubArray(mid, length, arr);
-  mergeSort(mid, left);
-  mergeSort(length - mid, right);
-  idx = 0;
-  l = 0;
-  r = 0;
-  while ((l < mid) && (r < length - mid)) {
-    if (left[l] < right[r]) {
-      arr[idx] = left[l];
-      l++;
-    } else {
-      arr[idx] = right[r];
-      r++;
-    }
-    idx++;
-  }
-  while (l < mid) {
-    arr[idx] = left[l];
-    idx++;
-    l++;
-  }
-  while (r < length - mid) {
-    arr[idx] = right[r];
-    idx++;
-    r++;
-  }
+
+  while (l < mid)
+    arr[idx++] = left[l++];
+
+  while (r < length - mid) 
+    arr[idx++] = right[r++];
+
   free(left);
   free(right);
 }
 
-int *createArray (int size) {
-  // creates an array of size integers
-  int *arr = safeMalloc(size * sizeof(int));
-  return arr;
-}
-
-void readIntArray(int size, int *arr){
+int *readIntArray(int size){
   // reads an array of size integers from stdin
+  int *arr = safeMalloc(size * sizeof(int));
   for (int i=0; i < size; i++) 
     (void)! scanf("%d", &arr[i]);
+  return arr;
 }
 
 void printSet(int n, int *arr){
@@ -84,9 +70,7 @@ void printSet(int n, int *arr){
       if (arr[i] != arr[i-1]) interval = 1;
       ++i;
     }
-    if (interval) { // we encountered an interval and need to close it
-      printf("..%d", arr[i-1]);
-    }
+    if (interval) printf("..%d", arr[i-1]);  // close interval
     if (i < n) printf(",");
   }
   printf("\n"); 
@@ -95,9 +79,8 @@ void printSet(int n, int *arr){
 int main(int argc, char **argv){
   int n; 
   (void)! scanf("%d", &n);
-  int *arr = createArray(n);
-  readIntArray(n, arr);
-  mergeSort (n, arr);
+  int *arr = readIntArray(n);
+  mergeSort(arr, n);
   printSet(n, arr);
   free(arr);
   return 0; 
