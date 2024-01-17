@@ -6,11 +6,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int abs(x) {
-  return x < 0 ? -x : x;
-} 
+#define ABS(x) ((x) < 0 ? -(x) : (x))
 
-void readTime(int time[3]){
+void readTime(int time[]){
   for (int i = 0; i < 3; i++){
     time[i] = (getchar() - '0') * 10 + (getchar() - '0');
     getchar(); // skip ':' or ' '
@@ -26,8 +24,8 @@ int main(int argc, char *argv[]) {
   int diff = (time2[0] - time1[0]) * 3600 + 
     (time2[1] - time1[1]) * 60 + (time2[2] - time1[2]);
   
-  printf("%02d:%02d:%02d\n", abs(diff/3600),
-          abs((diff%3600)/60), abs(diff%60));
+  printf("%02d:%02d:%02d\n", ABS(diff / 3600),
+          ABS((diff % 3600) / 60), ABS(diff % 60));
           
   return 0;
 }

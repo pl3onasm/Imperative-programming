@@ -71,9 +71,8 @@ void printSet(int n, int *arr){
       ++i;
     }
     if (interval) printf("..%d", arr[i-1]);  // close interval
-    if (i < n) printf(",");
+    printf(i < n ? "," : "\n");
   }
-  printf("\n"); 
 }
 
 int main(int argc, char **argv){
