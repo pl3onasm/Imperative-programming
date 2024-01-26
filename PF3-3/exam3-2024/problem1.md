@@ -116,7 +116,7 @@ while (j > 0) {
 }
 ```
 
-The first loop runs $N$ times, computing the sum of the integers from $0$ to $N-1$, so that at termination $j = \frac{N(N-1)}{2}$. The second loop divides $j$ by $2$ at each iteration, so that the loop runs $\log(\frac{N(N-1)}{2}) = \log(N(N-1)) - \log(2) = \log(N) + \log(N-1) - 1$ times. The loops are not nested, and so the most dominant one, the first floop in this case, determines the fragment's complexity, which is thus in $\mathcal{O}(N)$.
+The first loop runs $N$ times, computing the sum of the integers from $0$ to $N-1$, so that at termination $j = \frac{N(N-1)}{2}$. The second loop divides $j$ by $2$ at each iteration, so that the loop runs $\log(\frac{N(N-1)}{2}) = \log(N(N-1)) - \log(2)$ $= \log(N) + \log(N-1) - 1$ times. The loops are not nested, and so the most dominant one, the first floop in this case, determines the fragment's complexity, which is thus in $\mathcal{O}(N)$.
 
 ## Ex9: $\color{rosybrown}{{\mathcal{O}(\sqrt{N})}}$
 
