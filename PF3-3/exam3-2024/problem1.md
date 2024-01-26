@@ -24,6 +24,7 @@ for (int i = 0; i < N; i++) {
 ```
 
 The inner loop runs $N-i$ times, and the outer loop runs $N$ times. So, the total number of iterations is:
+
 $$\begin{align*}
 \sum_{i=0}^{N-1} (N-i) &= \sum_{i=0}^{N-1} N - \sum_{i=0}^{N-1} i \\
 &= N^2 - \sum_{i=0}^{N-1} i\\
