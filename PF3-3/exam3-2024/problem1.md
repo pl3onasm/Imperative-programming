@@ -49,7 +49,7 @@ for (int i = 0; i < s; i++) {
 }
 ```
 
-By the end of the first loop, we have $s = \sqrt{N}$, computed in $\mathcal{O}(\log(N))$ time. The second loop runs $s^2 = N$ times, meaning it is in $\mathcal{O}(N)$. The loops are not nested, which means the fragment's complexity is dominated by the second loop, and is therefore in $\mathcal{O}(N)$.
+By the end of the first loop, we have $s = \sqrt{N}$, computed in $\mathcal{O}(\log(N))$ time. The second loop runs $s^2 = N$ times, meaning it is in $\mathcal{O}(N)$. The loops are not nested, which means the fragment's total complexity is dominated by the second loop, and is therefore in $\mathcal{O}(N)$.
 
 ## Ex4: $\color{rosybrown}{{\mathcal{O}(N \log(N))}}$
 
