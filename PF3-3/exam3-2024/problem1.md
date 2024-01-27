@@ -49,7 +49,7 @@ for (int i = 0; i < s; i++) {
 }
 ```
 
-By the end of the first loop, we have $s \approx \sqrt{N}$, computed in $\mathcal{O}(\log(N))$ time. The second loop runs $s^2 \approx N$ times, meaning it is in $\mathcal{O}(N)$. The loops are not nested, which means the fragment's total complexity is dominated by the second loop, and is therefore in $\mathcal{O}(N)$.
+By the end of the first loop, we have $s \approx \sqrt{N}$, computed in $\mathcal{O}(\log(N))$ time. The second loop runs $s^2 \approx N$ times, meaning it is in $\mathcal{O}(N)$. The loops are not nested, which means the fragment's total complexity is dominated by the second (nested) loop, and is therefore in $\mathcal{O}(N)$.
 
 ## Ex4: $\color{rosybrown}{{\mathcal{O}(N \log(N))}}$
 
@@ -86,7 +86,7 @@ for (int i = N*N; i > 0; i /= 2) {
 }
 ```
 
-The index variable $i$ is divided by $2$ at each iteration, so that the loop runs $\log(N^2) = 2 \log(N)$ times. The fragment's complexity is therefore in $\mathcal{O}(\log(N))$.
+The loop index $i$ is divided by $2$ at each iteration, so that the loop runs $\log(N^2) = 2 \log(N)$ times. The fragment's complexity is therefore in $\mathcal{O}(\log(N))$.
 
 ## Ex7: $\color{rosybrown}{{\mathcal{O}(N^2)}}$
 
@@ -141,7 +141,7 @@ while (i > 0) {
 }
 ```
 
-The variable $i$ starts at $N$. Halving it half of the time while decrementing by $1$ the other half of the time, means that it will take less than $2 \log(N)$ iterations to reach $0$. The fragment's complexity is therefore in $\mathcal{O}(\log(N))$.
+The variable $i$ starts at $N$. Halving it half of the time while decrementing it by $1$ the other half of the time, means that it will take less than $\log(2N) = 1 + \log(N)$ iterations to reach $0$. The fragment's complexity is therefore in $\mathcal{O}(\log(N))$.
 
 ## Ex11: $\color{rosybrown}{{\mathcal{O}(N \log(N))}}$
 
@@ -155,7 +155,7 @@ while (i > 0) {
 }
 ```
 
-The first loop depends on the parity of $i$, and will behave just like the previous exercise, taking less than $2 \log(N)$ iterations to reach $0$. The second loop runs $N$ times, and is nested inside the first loop, so that the fragment's total complexity is in $\mathcal{O}(N \log(N))$.
+The first loop depends on the parity of $i$, and will behave just like the previous exercise, taking less than $\log(2N)$ iterations to reach $0$. The second loop runs $N$ times, and is nested inside the first loop, so that the fragment's total complexity is in $\mathcal{O}(N \log(N))$.
 
 ## Ex12: $\color{rosybrown}{{\mathcal{O}(N^2)}}$
 
