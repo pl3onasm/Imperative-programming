@@ -35,7 +35,7 @@ $$
 
 Hence, the fragment's complexity is in $\mathcal{O}(N^2)$.
 
-## Ex3: $\color{rosybrown}{{\mathcal{O}(\sqrt{N})}}$  
+## Ex3: $\color{rosybrown}{{\mathcal{O}(N)}}$
 
 ```c
 int s = 1, t = 0;
@@ -49,7 +49,7 @@ for (int i = 0; i < s; i++) {
 }
 ```
 
-The first loop runs approximately $s = \log(\sqrt{N})$ times, and the second loop runs $s^2$ times. Since the loops are not nested, the total number of iterations is dominated by the second loop, which runs $s^2$ times and is in $\mathcal{O}(\log^2(\sqrt{N})) = \mathcal{O}(\log^2(N)) = \mathcal{O}(\sqrt{N})$.
+By the end of the first loop, we have $s = \sqrt(N)$, computed in $\mathcal{O}(\log(N))$ time. The second loop runs $s^2 = N$ times, meaning it is in $\mathcal{O}(N)$. The loops are not nested, which means the fragment's complexity is dominated by the second loop, and is therefore in $\mathcal{O}(N)$.
 
 ## Ex4: $\color{rosybrown}{{\mathcal{O}(N \log(N))}}$
 
