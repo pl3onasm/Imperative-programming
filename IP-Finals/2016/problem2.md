@@ -82,8 +82,7 @@ The outer loop runs $N$ times. For each iteration of the outer loop, the inner l
 
 $$
 \begin{align*}
-\sum_{i=0}^{N-1} \log(N - i) &= \sum_{i=0}^{N-1} \log(N) - \log(i) \\
-&= \sum_{i=1}^{N} \log(i) \\
+\sum_{i=0}^{N-1} \log(N - i) &= \sum_{i=1}^{N} \log(i) \\
 &= \log(\prod_{i=1}^{N} i) \\
 &= \log(N!)\\
 &= \mathcal{O}(N\log(N))
