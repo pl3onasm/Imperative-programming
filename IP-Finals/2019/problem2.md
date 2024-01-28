@@ -45,7 +45,8 @@ while (s < N) {
 }
 ```
 
-As the parity of $i$ is flipped each time the loop body is executed, the variable $s$ is doubled half of the time, and incremented by 1 the other half of the time. This means that at most $\log(2N) = \log(N) + 1$ iterations are needed for $s$ to reach $N$. The loop therefore runs in $\mathcal{O}(\log(N))$ time.
+As the parity of $i$ flips each time the loop body is executed, the variable $s$ is doubled half of the time, and incremented by 1 the other half of the time.  
+After $k$ iterations, we have $s = 2^{\lfloor k/2 \rfloor} + \lfloor k/2 \rfloor$. The loop terminates when $s \geq N$, which happens for a value for $k$ that lies between $\log(N)$ and $2\log(N)$. The loop therefore runs in $\mathcal{O}(\log(N))$ time.
 
 ## Ex5: $\color{rosybrown}{{\mathcal{O}(N\log(N))}}$
 

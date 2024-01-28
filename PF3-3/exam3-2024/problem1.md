@@ -151,7 +151,8 @@ while (i > 0) {
 }
 ```
 
-The variable $i$ starts at $N$. In the worst case, we are halving it half of the time and decrementing it by $1$ the other half of the time, so that it takes about $\log(2N) = 1 + \log(N)$ iterations to reach $0$. The fragment's complexity is therefore in $\mathcal{O}(\log(N))$.
+The variable $i$ starts at $N$. In the worst case, we are then halving it half of the time and decrementing it by $1$ the other half of the time. In this case, the loop still needs less than $2\log(N)$ iterations to terminate
+The fragment's complexity is therefore in $\mathcal{O}(\log(N))$.
 
 ## Ex11: $\color{rosybrown}{{\mathcal{O}(N \log(N))}}$
 
@@ -165,7 +166,7 @@ while (i > 0) {
 }
 ```
 
-The first loop will behave just like the previous exercise, taking roughly $\log(2N)$ iterations to reach $0$. The second loop runs $N$ times, and is nested inside the first loop, so that the fragment's total complexity is in $\mathcal{O}(N \log(N))$.
+The first loop will behave just like the previous exercise, taking less than $2 \log(N)$ iterations to reach $0$. The second loop runs $N$ times, and is nested inside the first loop, so that the fragment's total complexity is in $\mathcal{O}(N \log(N))$.
 
 ## Ex12: $\color{rosybrown}{{\mathcal{O}(N^2)}}$
 
