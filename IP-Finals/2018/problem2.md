@@ -13,7 +13,7 @@ while (j > 5) {
 }
 ```
 
-The first loop runs $N$ times, computing the sum of the first $N$ integers, so that by the end $j = $ $\sum_{i=1}^N i $ $= \frac{N(N+1)}{2}$. The second loop iterates a total number of $j - 5$ times. The loops are not nested, so the second loop dominates the overall complexity as it is quadratic in $N$. The fragment's time complexity is therefore in $\mathcal{O}(N^2)$.
+The first loop runs $N$ times, computing the sum of the first $N$ integers, so that by the end $j = \frac{N(N+1)}{2}$ by Gauss' formula. The second loop iterates a total number of $j - 5$ times. The loops are not nested, so the second loop dominates the overall complexity as it is quadratic in $N$. The fragment's time complexity is therefore in $\mathcal{O}(N^2)$.
 
 ## Ex2: $\color{rosybrown}{{\mathcal{O}(\log N)}}$
 
@@ -79,4 +79,4 @@ for (i = 0; i*i < j; i++) {
 }
 ```
 
-The first loop runs $N$ times, computing the sum of the first $N - 1$ integers, so that by the end $j = $ $\sum_{i=1}^{N-1} i $ $= \frac{N(N-1)}{2}$. The second loop runs about $\sqrt{j}$ times, which is linear in $N$. The loops are not nested, so the fragment's time complexity is therefore in $\mathcal{O}(N)$.
+The first loop runs $N$ times, computing the sum of the first $N - 1$ integers, so that in the end $j = \frac{N(N-1)}{2}$ by Gauss' formula. The second loop runs about $\sqrt{j}$ times, which is linear in $N$. The loops are not nested, so the fragment's time complexity is therefore in $\mathcal{O}(N)$.

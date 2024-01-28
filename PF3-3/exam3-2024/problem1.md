@@ -62,7 +62,17 @@ for (int j = N*N; j > 0; j /= 3) {
 }
 ```
 
-The inner loop runs $N/3$ times, and the outer loop runs $\log_3(N^2) = 2 \log_3(N)$ times. The loops are nested, so that the fragment's complexity is in $\mathcal{O}(N \log(N))$.
+The inner loop runs $N/3$ times. The number of iterations of the outer loop is given by the number of times $N^2$ can be divided by $3$ before reaching $0$, which is $\log_3(N^2)$. We can rewrite this as:
+
+$$
+\begin{align*}
+\log_3(N^2) &= \frac{\log(N^2)}{\log(3)} \\
+&= \frac{2}{\log(3)}\log(N) \\
+&= \mathcal{O}(\log(N))
+\end{align*}
+$$
+
+The loops are nested, and so the fragment's total time complexity is in $\mathcal{O}(N \log(N))$.
 
 ## Ex5: $\color{rosybrown}{{\mathcal{O}(N)}}$  
 
@@ -129,7 +139,7 @@ while (i <= N/i) {
 }
 ```
 
-In the worst case, $N$ is a perfect square, so that the loop only terminates at $i = \sqrt{N}$. Therefore, the fragment's complexity is in $\mathcal{O}(\sqrt{N})$.
+The variable $i$ is incremented by $1$ at each iteration, and the termination condition can be rewritten as $i^2 \leq N$, which is equivalent to $i \leq \sqrt{N}$. Therefore, the fragment's complexity is in $\mathcal{O}(\sqrt{N})$.
 
 ## Ex10: $\color{rosybrown}{{\mathcal{O}(\log(N))}}$
 

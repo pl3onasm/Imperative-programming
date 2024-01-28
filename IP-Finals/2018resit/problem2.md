@@ -33,7 +33,7 @@ while (s < N) {
 }
 ```
 
-The variable $s$ is incremented by $i$ in each iteration, while $i$ just counts the number of iterations. After $i$ iterations, $s = \sum_{j=1}^i j = \frac{i(i+1)}{2}$. The loop terminates when $s \geq N$, which happens when $i \geq \sqrt{2N + \frac{1}{4}} - \frac{1}{2}$ $\approx \sqrt{2N}$. The loop therefore runs in $\mathcal{O}(\sqrt{N})$ time.
+The variable $s$ is incremented by $i$ in each iteration, while $i$ just counts the number of iterations. After $i$ iterations, $s = \frac{i(i+1)}{2}$ by Gauss' formula. The loop terminates when $s \geq N$, which happens when $i \geq \sqrt{2N + \frac{1}{4}} - \frac{1}{2}$ $\approx \sqrt{2N}$. The loop therefore runs in $\mathcal{O}(\sqrt{N})$ time.
 
 ## Ex4: $\color{rosybrown}{{\mathcal{O}(N^2)}}$
 
