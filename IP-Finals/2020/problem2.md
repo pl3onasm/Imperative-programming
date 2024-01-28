@@ -89,4 +89,4 @@ for (int i = N; i > N / 2; i = i - 2) {
 }
 ```
 
-The loop index is initialized to $N$, and decremented by $2$ at the end of each iteration. The loop terminates when $i = \frac{N}{4}$, and so the fragment's time complexity is in $\mathcal{O}(N)$.
+The loop index is initialized to $N$, and decremented by $2$ at the end of each iteration. The loop thus terminates after a total number of $\frac{N}{4}$ iterations, and so the fragment's time complexity is in $\mathcal{O}(N)$.
