@@ -76,4 +76,5 @@ for (i = 1; i < N; i *= 2) {
 }
 ```
 
-The outer loop runs $\log(N)$ times, since $i$ is doubled after each iteration. For each iteration of the outer loop, the inner one makes $j$ catch up to the current value of $i$: $j$ is not reset to 0 after each iteration, but its previous value is instead incremented until it equals $i$ again. Therefore, the inner loop runs a total of $N$ times, and since the loops are nested, we obtain an overall time complexity of $\mathcal{O}(N\log(N))$.
+The outer loop runs $\log(N)$ times, since $i$ is doubled after each iteration. For each iteration of the outer loop, the inner one makes $j$ catch up to the current value of $i$: $j$ is not reset to 0 after each iteration, but its previous value is instead incremented until it equals $i$ again. Therefore, the inner loop runs a total of less than $N$ times (since the last doubling of $i$ will make $i$ exceed $N$ but will not affect the value of $j$ anymore).  
+Since the loops are nested, we thus obtain an overall time complexity of $\mathcal{O}(N\log(N))$.
