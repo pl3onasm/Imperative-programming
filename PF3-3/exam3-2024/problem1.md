@@ -35,7 +35,7 @@ $$
 
 Hence, the fragment's complexity is in $\mathcal{O}(N^2)$.
 
-Another, more intuitive way to reach the same conclusion is to note that the outer loop is executed $N$ times, whereas the inner loop is executed **at most** $N$ times, so that the nested loop's complexity becomes quadratic in $N$.
+Another, more intuitive way to reach the same conclusion is to note that the outer loop is executed $N$ times, whereas the inner loop is executed $\color{orchid}{\text{at most}}$ $N$ times, so that the nested loop's complexity becomes quadratic in $N$. However, these types of arguments do not always yield the tightest bound, and so it is better to stick to the more formal approach whenever possible. A telling example is ex5 from 2013, where you would expect from an intuitive argument that the complexity is in $\mathcal{O}(N \log(N))$, which is not wrong, but not tight either, as the tight bound is actually in $\mathcal{O}(N)$.
 
 ## Ex3: $\color{rosybrown}{{\mathcal{O}(N)}}$
 
