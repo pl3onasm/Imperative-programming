@@ -23,7 +23,7 @@ for (int i = 0; i < N; i++) {
 }
 ```
 
-The inner loop runs $N-i$ times, and the outer loop runs $N$ times. So, the total number of iterations is:
+The inner loop is executed $N - i$ times for each value of $i$. So, the total number of iterations is:
 
 $$\begin{align*}
 \sum_{i=0}^{N-1} (N-i) &= \sum_{i=0}^{N-1} N - \sum_{i=0}^{N-1} i \\
@@ -34,6 +34,8 @@ $$\begin{align*}
 $$
 
 Hence, the fragment's complexity is in $\mathcal{O}(N^2)$.
+
+Another, more intuitive way to reach the same conclusion is to note that the outer loop is executed $N$ times, whereas the inner loop is executed **at most** $N$ times, so that the nested loop's complexity becomes quadratic in $N$.
 
 ## Ex3: $\color{rosybrown}{{\mathcal{O}(N)}}$
 
@@ -127,7 +129,7 @@ while (j > 0) {
 ```
 
 The first loop runs $N$ times, computing the sum of the integers from $0$ to $N-1$, so that at termination $j = \frac{N(N-1)}{2}$. The second loop divides $j$ by $2$ at each iteration, so that the loop runs $\log(\frac{N(N-1)}{2}) = \log(N(N-1)) - \log(2)$ $= \log(N) + \log(N-1) - 1$ times.  
-The loops are not nested, and so the most dominant one, the first floop in this case, determines the fragment's complexity, which is thus in $\mathcal{O}(N)$.
+The loops are not nested, and so the most dominant one, the for loop in this case, determines the fragment's complexity, which is thus in $\mathcal{O}(N)$.
 
 ## Ex9: $\color{rosybrown}{{\mathcal{O}(\sqrt{N})}}$
 
@@ -151,7 +153,7 @@ while (i > 0) {
 }
 ```
 
-The variable $i$ starts at $N$. In the worst case, we are then halving it half of the time and decrementing it by $1$ the other half of the time. In this case, the loop still needs less than $2\log(N)$ iterations to terminate
+The variable $i$ starts at $N$. In the worst case, we are then halving it half of the time and decrementing it by $1$ the other half of the time. In this case, the loop needs less than $2\log(N)$ iterations to terminate.
 The fragment's complexity is therefore in $\mathcal{O}(\log(N))$.
 
 ## Ex11: $\color{rosybrown}{{\mathcal{O}(N \log(N))}}$

@@ -49,7 +49,7 @@ while (k > 0) {
 
 The outer loop runs $N$ times. In the worst case, which is when $k = N$, the inner loop runs $N$ times as well. The fragment's time complexity is therefore in $\mathcal{O}(N^2)$.
 
-## Ex5:
+## Ex5: $\color{rosybrown}{{\mathcal{O}(N\log(N))}}$
 
 ```c
 int j = 0, s = 1;
@@ -63,7 +63,7 @@ while (s < N) {
 
 The outer loop runs $\log(N)$ times. In the worst case, which is when $s \approx N$ in the last iteration, the inner loop runs about $N$ times. The loops are nested, and the fragment's time complexity is therefore in $\mathcal{O}(N\log(N))$.
 
-## 
+## Ex6: $\color{rosybrown}{{\mathcal{O}(N\log(N))}}$
 
 ```c
 int j = 0, s = 1;

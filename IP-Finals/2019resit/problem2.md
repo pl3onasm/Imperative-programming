@@ -41,13 +41,13 @@ The loop terminates when $s \geq N^2$. Since $s$ is incremented by $i$ in each i
 
 $$
 \begin{align*}
-&\quad\qquad\frac{i (i-1)}{2} \geq N^2 \\
-&\iff i (i-1) \geq 2 N^2 \\
-&\iff i^2 - i \geq 2 N^2 \\
-&\iff i^2 - i + \frac{1}{4} \geq 2 N^2 + \frac{1}{4} \\
-&\iff (i - \frac{1}{2})^2 \geq 2 N^2 + \frac{1}{4} \\
-&\iff i - \frac{1}{2} \geq \sqrt{2 N^2 + \frac{1}{4}} \\
-&\iff i \geq \sqrt{2 N^2 + \frac{1}{4}} + \frac{1}{2} \approx \sqrt{2} N
+&\frac{i (i-1)}{2} \geq N^2 \\
+\iff &i (i-1) \geq 2 N^2 \\
+\iff &i^2 - i \geq 2 N^2 \\
+\iff &i^2 - i + \frac{1}{4} \geq 2 N^2 + \frac{1}{4} \\
+\iff &(i - \frac{1}{2})^2 \geq 2 N^2 + \frac{1}{4} \\
+\iff &i - \frac{1}{2} \geq \sqrt{2 N^2 + \frac{1}{4}} \\
+\iff &i \geq \sqrt{2 N^2 + \frac{1}{4}} + \frac{1}{2} \approx \sqrt{2} N
 \end{align*}
 $$
 
@@ -59,16 +59,16 @@ Therefore, the fragment's overall time complexity is in $\mathcal{O}(N)$.
 int i = 1, s = 0;
 while (s < N) {
   s = s + i;
-  i += i + i%2;
+  i += i + i % 2;
 }
 ```
 
 The loop terminates when $s \geq N$. The variable $s$ keeps the running sum of all consecutive values of $i$, which in turn is doubled and incremented by $1$ in each iteration, because $i$ remains odd at all times. This means that $s$ reaches $N$ in a little less than $\log{N}$ iterations. Hence, the fragment's overall time complexity is in $\mathcal{O}(\log{N})$.
 
-## Ex5: $\color{rosybrown}{{\mathcal{O}(N^2)}}$ 
+## Ex5: $\color{rosybrown}{{\mathcal{O}(N^2)}}$
 
 ```c
-int i=1, s=0;
+int i = 1, s = 0;
 while (i < N*N) {
   i = 2*i;
 }
@@ -83,18 +83,16 @@ By the end of the first loop, $i$ is the smallest power of $2$ that is greater t
 ## Ex6: $\color{rosybrown}{{\mathcal{O}(N)}}$
 
 ```c
-int i=1, s=0;
+int i = 1, s = 0;
 while (i*i < N) {
   i = 2*i;
 }
-while (i>0) {
-  for (int j=0; j < i; j++) {
+while (i > 0) {
+  for (int j = 0; j < i; j++) {
     s += i + j;
   }
   i--;
 }
 ```
 
-The first loop computes $i \geq \sqrt{N}$ in $\log{\sqrt{N}} = \frac{1}{2}\log{N}$ steps. The second part of the fragment is linear in $N$, because both the outer and the inner loop run about $\sqrt{N}$ times. Therefore, the fragment's overall time complexity is in $\mathcal{O}(N)$.
-
-
+The first loop computes $i \geq \sqrt{N}$ in $\log{(\sqrt{N})} = \frac{1}{2}\log{(N)}$ steps. The second part of the fragment is linear in $N$, because both the outer and the inner loop run about $\sqrt{N}$ times. Therefore, the fragment's overall time complexity is in $\mathcal{O}(N)$.
