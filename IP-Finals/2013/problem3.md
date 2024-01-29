@@ -107,7 +107,7 @@ $$
 \sum_{i=1}^{N-1} (2\log(i) - 1) &= 2\sum_{i=1}^{N-1} \log(i) - \sum_{i=1}^{N-1} 1 \\
 &= 2\log\left(\prod_{i=1}^{N-1} i\right) - (N-1) \\
 &= 2\log((N-1)!) - (N-1) \\
-&\approx 2N\log(N) - 2N - N \\
+&< 2\log(N!) \\
 &= \mathcal{O}(N \log(N)) \\
 \end{align*}
 $$
