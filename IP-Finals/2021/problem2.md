@@ -26,7 +26,7 @@ for (int i = s; i > 1; i -= 2) {
 }
 ```
 
-The first loop is linear: it runs $N$ times. When it ends, we get $s = \frac{N(N-1)}{2}$. The second loop then runs $\frac{N(N-1)}{4}$ times, which is quadratic. Since the loops are not nested, and the second one takes the most time, the overall time complexity is in $\mathcal{O}(N^2)$.
+The first loop is linear: it runs $N$ times. When it ends, we have $s = \frac{N(N-1)}{2}$, by Gauss' formula for the sum of the first $N - 1$ integers. The second loop then runs $\frac{s}{2}$ $=\frac{N(N-1)}{4}$ times, which is quadratic in $N$. Since the loops are not nested, and the second one takes the most time, the overall time complexity is in $\mathcal{O}(N^2)$.
 
 ## Ex3: $\color{rosybrown}{{\mathcal{O}(N)}}$
 
@@ -41,7 +41,7 @@ while (n > 1) {
 }
 ```
 
-The loop keeps dividing $n$ by its divisors until $n$ reaches 1. In the worst case, $N$ is prime, and the loop runs $N$ times: it only terminates after the prime $N$ is divided by itself. Thus, the overall time complexity is in $\mathcal{O}(N)$.
+The loop keeps dividing $n$ by its prime divisors until $n \leq 1$. In the worst case, $N$ is prime, and the loop runs $N$ times: it only terminates after the prime $N$ is divided by itself. Thus, the overall time complexity is in $\mathcal{O}(N)$.
 
 ## Ex4: $\color{rosybrown}{{\mathcal{O}(N\log N)}}$
 
@@ -54,7 +54,7 @@ for (int i = 0; i < N; i++) {
 }
 ```
 
-The outer loop is linear in $N$, and the inner loop runs $\log(i)$ times for each iteration of the outer loop, so that the total number of iterations is given by
+The outer loop is linear in $N$, and the inner loop runs $\log(i)$ times for each iteration of the outer loop, so that the total number of iterations is given by:
 
 $$
 \begin{align*}
@@ -94,5 +94,5 @@ while (i < N) {
 }
 ```
 
-The outer loop runs in $\mathcal{O}(\sqrt{N})$ time, since $i$ is incremented by $j$, which itself is incremented by 1 at each iteration.  
-The inner loop is in $\mathcal{O}(\sqrt{N})$ as well, since $k$ is incremented by 1 at each iteration, and the loop terminates when $k^2 \geq N$. Since the loops are nested, the fragment's overall time complexity is in $\mathcal{O}(N)$.
+If we first look at the outer loop without considering the inner one, we see that $i$ is incremented by $j$, which itself is incremented by $1$ at each iteration, so that $i$ is the sum of the first $j$ integers at the end of each iteration. The outer loop terminates when $i \geq N$, which happens when $\frac{j(j+1)}{2} \geq N$, for which we get the solution $j = \sqrt{2N + \frac{1}{4}} - \frac{1}{2}$ $\approx \sqrt{2N} $. So, the outer loop runs in $\mathcal{O}(\sqrt{N})$ time.  
+The inner loop increments $k$ by $1$ at each iteration, and terminates when $k^2 \geq N$ $\Leftrightarrow$ $k \geq \sqrt{N}$. Thus, the inner loop runs in $\mathcal{O}(\sqrt{N})$ time as well. Since the loops are nested, the overall time complexity is in $\mathcal{O}(N)$.

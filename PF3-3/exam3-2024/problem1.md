@@ -210,6 +210,6 @@ for (int i = 1; i < 10; i++) {
 }
 ```
 
-The innermost loop runs $N-j$ times, the middle loop runs $N-i$ times, where $i$ is at most $9$, and the outer loop runs $9$ times. The outer loop merely adds a constant factor to the complexity, and so we can completely ignore it, and set $i$ to $0$ for convenience. The middle loop then runs $N$ times, and the innermost loop runs $N-j$ times for each value of $j$, so that we get the exact same number of iterations as in [ex2](https://github.com/pl3onasm/Imperative-programming/blob/main/PF3-3/exam3-2024/problem1.md#ex2-colorrosybrownmathcalon2), which is $\frac{N(N+1)}{2}$.
+The innermost loop runs $N-j$ times, the middle loop runs $N-i$ times, where $i$ is at most $9$, and the outer loop runs $9$ times. The outer loop merely adds a constant factor to the complexity, and so we can completely ignore it, and set $i$ to $0$ for convenience. With $i$ set to $0$, the middle loop then runs $N$ times, and the innermost loop runs $N-j$ times for each value of $j$, so that we get the exact same number of iterations as in [ex2](https://github.com/pl3onasm/Imperative-programming/blob/main/PF3-3/exam3-2024/problem1.md#ex2-colorrosybrownmathcalon2), which is $\frac{N(N+1)}{2}$.
 
 Therefore, the fragment's complexity is in $\mathcal{O}(N^2)$.
