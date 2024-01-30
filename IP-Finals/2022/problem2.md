@@ -10,7 +10,18 @@ while (d < N) {
 }
 ```
 
-At the end of each loop iteration, $d$ is exactly equal to the square of $n$, the variable that keeps track of the number of iterations. So at termination, we have $d \approx \sqrt{N}$. Thus, the fragment's overall time complexity is in $\mathcal{O}(\sqrt{N})$.
+At the end of each loop iteration, $d$ equals the square of $n$, the variable that keeps track of the number of iterations. So at loop termination, we have:
+
+$$
+\begin{align*}
+&d \geq N \\
+\Leftrightarrow \quad &n^2 \geq N \\
+\Leftrightarrow \quad &n \geq \sqrt{N}
+\end{align*}
+$$
+
+Thus, the fragment's overall time complexity is in $\mathcal{O}(\sqrt{N})$.
+
 The fragment is based on Gauss' formula for the sum of the first $n$ integers, but modified so that $d$ becomes the exact square of $n$, and not $\frac{n(n+1)}{2}$, at the end of each iteration.
 
 ## Ex2: $\color{rosybrown}{{\mathcal{O}(N^2)}}$
@@ -24,7 +35,17 @@ for (int i = 0; i < N; i++) {
 }
 ```
 
-The outer loop is linear: it runs $N$ times. The inner loop runs at most $\frac{N}{2}$ times, when $i = 0$. Since the loops are nested, the time complexity is in $\mathcal{O}(N^2)$.
+The outer loop is linear: it runs $N$ times. The inner loop runs $\frac{N - i}{2}$ times for each value of $i$, so that the total number of times the body of the inner loop is executed is:
+
+$$
+\begin{align*}
+\sum_{i=0}^{N-1} \frac{N - i}{2} &= \frac{N(N-1)}{2} - \frac{1}{2} \sum_{i=0}^{N-1} i \\
+&= \frac{N(N-1)}{2} - \frac{1}{2} \cdot \frac{N(N-1)}{2} \\
+&= \frac{N(N-1)}{4}
+\end{align*}
+$$
+
+Thus, the fragment's time complexity is in $\mathcal{O}(N^2)$.
 
 ## Ex3: $\color{rosybrown}{{\mathcal{O}(N)}}$  
 
