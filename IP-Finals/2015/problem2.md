@@ -15,12 +15,12 @@ The loop terminates when $s \geq N$, that is, when:
 $$
 \begin{align*}
 &(i-1) + (i-2) + \cdots + 1 \geq N \\
-\iff &\frac{i(i-1)}{2} \geq N \\
-\iff &i^2 - i \geq 2 N \\
-\iff &i^2 - i + \frac{1}{4} \geq 2 N + \frac{1}{4} \\
-\iff &(i - \frac{1}{2})^2 \geq 2 N + \frac{1}{4} \\
-\iff &i - \frac{1}{2} \geq \sqrt{2 N + \frac{1}{4}} \\
-\iff &i \geq \sqrt{2 N + \frac{1}{4}} + \frac{1}{2} \approx \sqrt{2 N}\\
+\Leftrightarrow \quad &\frac{i(i-1)}{2} \geq N \\
+\Leftrightarrow \quad &i^2 - i \geq 2 N \\
+\Leftrightarrow \quad &i^2 - i + \frac{1}{4} \geq 2 N + \frac{1}{4} \\
+\Leftrightarrow \quad &(i - \frac{1}{2})^2 \geq 2 N + \frac{1}{4} \\
+\Leftrightarrow \quad &i - \frac{1}{2} \geq \sqrt{2 N + \frac{1}{4}} \\
+\Leftrightarrow \quad &i \geq \sqrt{2 N + \frac{1}{4}} + \frac{1}{2} \approx \sqrt{2 N}\\
 \end{align*}
 $$
 
@@ -49,7 +49,7 @@ $$
 
 From the calculation above, we conclude that the fragment's time complexity is in $\mathcal{O}(N^2)$.  
 
-Another, more intuitive way to reach the same conclusion is to note that the outer loop is executed $N$ times, whereas the inner loop is executed $\color{orchid}{\text{at most}}$  $N$ times, so that the nested loop's complexity becomes quadratic in $N$. However, these types of arguments do not always yield the tightest bound, and so it is better to stick to the more formal approach whenever possible. A telling example is ex5 from 2013, where you would expect from an intuitive argument that the complexity is in $\mathcal{O}(N \log(N))$, which is not wrong, but not tight either, as the tight bound is in $\mathcal{O}(N)$.
+Another, more intuitive way to reach the same conclusion is to note that the outer loop is executed $N$ times, whereas the inner loop is executed $\color{orchid}{\text{at most}}$  $N$ times, so that the nested loop's complexity becomes quadratic in $N$. However, these types of arguments do not always yield the tightest bound, and so it is better to stick to the more formal approach whenever possible. A case in point is ex5 from 2013, where you would expect from an intuitive argument that the complexity is in $\mathcal{O}(N \log(N))$, which is not wrong, but not tight either, as the tight bound is in $\mathcal{O}(N)$.
 
 ## Ex3: $\color{rosybrown}{{\mathcal{O}(\log(N))}}$
 

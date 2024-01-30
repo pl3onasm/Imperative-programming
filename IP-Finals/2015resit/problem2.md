@@ -40,11 +40,11 @@ At each iteration, $p$ equals the product of the first $i$ integers, so that $p 
 $$
 \begin{align*}
 &\frac{i (i+1)}{2} \geq N \\
-\iff &i^2 + i \geq 2 N \\
-\iff &i^2 + i + \frac{1}{4} \geq 2 N + \frac{1}{4} \\
-\iff &(i + \frac{1}{2})^2 \geq 2 N + \frac{1}{4} \\
-\iff &i + \frac{1}{2} \geq \sqrt{2 N + \frac{1}{4}} \\
-\iff &i \geq \sqrt{2 N + \frac{1}{4}} - \frac{1}{2} \approx \sqrt{2 N} \\
+\Leftrightarrow \quad &i^2 + i \geq 2 N \\
+\Leftrightarrow \quad &i^2 + i + \frac{1}{4} \geq 2 N + \frac{1}{4} \\
+\Leftrightarrow \quad &(i + \frac{1}{2})^2 \geq 2 N + \frac{1}{4} \\
+\Leftrightarrow \quad &i + \frac{1}{2} \geq \sqrt{2 N + \frac{1}{4}} \\
+\Leftrightarrow \quad &i \geq \sqrt{2 N + \frac{1}{4}} - \frac{1}{2} \approx \sqrt{2 N} \\
 \end{align*}
 $$
 
@@ -92,12 +92,12 @@ The loop terminates when $s > N^2$, that is, when:
 $$
 \begin{align*}
 &(i-1) + (i-2) + \cdots + 1 > N^2 \\
-\iff &\frac{i(i-1)}{2} > N^2 \\
-\iff &i^2 - i > 2 N^2 \\
-\iff &i^2 - i + \frac{1}{4} > 2 N^2 + \frac{1}{4} \\
-\iff &(i - \frac{1}{2})^2 > 2 N^2 + \frac{1}{4} \\
-\iff &i - \frac{1}{2} > \sqrt{2 N^2 + \frac{1}{4}} \\
-\iff &i > \sqrt{2 N^2 + \frac{1}{4}} + \frac{1}{2} \approx \sqrt{2} N \\
+\Leftrightarrow \quad &\frac{i(i-1)}{2} > N^2 \\
+\Leftrightarrow \quad &i^2 - i > 2 N^2 \\
+\Leftrightarrow \quad &i^2 - i + \frac{1}{4} > 2 N^2 + \frac{1}{4} \\
+\Leftrightarrow \quad &(i - \frac{1}{2})^2 > 2 N^2 + \frac{1}{4} \\
+\Leftrightarrow \quad &i - \frac{1}{2} > \sqrt{2 N^2 + \frac{1}{4}} \\
+\Leftrightarrow \quad &i > \sqrt{2 N^2 + \frac{1}{4}} + \frac{1}{2} \approx \sqrt{2} N \\
 \end{align*}
 $$
 
