@@ -70,7 +70,18 @@ for (int i = 0; i < N; i++) {
 }
 ```
 
-The outer loop is linear: it runs $N$ times, whereas the inner loop runs at most $\log(N)$ times. Since the loops are nested, the fragment's time complexity is in $\mathcal{O}(N\log N)$.
+The outer loop is linear: it runs $N$ times, whereas the inner loop runs $\log i$ times for each value of $i$. Thus, the total number of iterations is:
+
+$$
+\begin{align*}
+\sum_{i=0}^{N-1} \log i &= \log \left( \prod_{i=0}^{N-1} i \right)\\
+&= \log (N-1)!\\
+& < \log N!\\
+& = \mathcal{O}(N \log N)
+\end{align*}
+$$
+
+Hence, the fragment's complexity is in $\mathcal{O}(N \log N)$.
 
 ## Ex5: $\color{rosybrown}{{\mathcal{O}(\log N)}}$
 
