@@ -77,7 +77,7 @@ for (int j = N*N; j > 0; j /= 3) {
 }
 ```
 
-The inner loop runs $N/3$ times. The number of iterations of the outer loop is given by the number of times $N^2$ can be divided by $3$ before reaching $0$, which is $\log_3(N^2)$. We can rewrite this as:
+The inner loop runs $\frac{N}{3}$ times. The number of iterations of the outer loop is given by the number of times $N^2$ can be divided by $3$ before reaching $0$, which is $\log_3(N^2)$. We can rewrite this as:
 
 $$
 \begin{align*}
@@ -100,7 +100,21 @@ while (i > 0) {
 }
 ```
 
-The variable i starts at $N^2$ and is decremented by $j$ at each iteration. The variable $j$ starts at $0$ and is incremented by $1$ in each loop, so that $j$ is computing the running sum of the integers from $1$ up to the point where $i$ reaches $0$. After $N$ iterations, $i = N^2 - \frac{N(N+1)}{2} = \frac{N(N-1)}{2}$. Ignoring the constant factors, the fragment's complexity is therefore in $\mathcal{O}(N)$.
+The variable $i$ starts at $N^2$ and is decremented by $j$ at each iteration. The variable $j$ starts at $0$ and is updated to the next integer at each iteration. The loop terminates when $i \leq 0$, which is equivalent to $N^2 - \frac{k(k+1)}{2} \leq 0$, where $k$ is the number of iterations, i.e. the value of $j$ at termination. So we have:
+
+$$
+\begin{align*}
+& i \leq 0 \\
+\Leftrightarrow \quad &N^2 - \frac{k(k+1)}{2} \leq 0 \\
+\Leftrightarrow \quad &2N^2 \leq k^2 +k \\
+\Leftrightarrow \quad &2N^2 + \frac{1}{4}\leq k^2 + k + \frac{1}{4}\\
+\Leftrightarrow \quad &2N^2 + \frac{1}{4} \leq (k + \frac{1}{2})^2 \\
+\Leftrightarrow \quad &\sqrt{2N^2 + \frac{1}{4}} \leq k + \frac{1}{2} \\
+\Leftrightarrow \quad &k \geq \sqrt{2N^2 + \frac{1}{4}} - \frac{1}{2} \approx \sqrt{2} N
+\end{align*}
+$$
+
+The fragment's time complexity is therefore in $\mathcal{O}(N)$.
 
 ## Ex6: $\color{rosybrown}{{\mathcal{O}(\log(N))}}$
 
@@ -142,7 +156,7 @@ while (j > 0) {
 ```
 
 The first loop runs $N$ times, computing the sum of the integers from $0$ to $N-1$, so that at termination $j = \frac{N(N-1)}{2}$. The second loop divides $j$ by $2$ at each iteration, so that the loop runs $\log(\frac{N(N-1)}{2}) = \log(N(N-1)) - \log(2)$ $= \log(N) + \log(N-1) - 1$ times.  
-The loops are not nested, and so the most dominant one, the for loop in this case, determines the fragment's complexity, which is thus in $\mathcal{O}(N)$.
+The loops are not nested, and so the most expensive one, the for loop in this case, determines the fragment's complexity, which is thus in $\mathcal{O}(N)$.
 
 ## Ex9: $\color{rosybrown}{{\mathcal{O}(\sqrt{N})}}$
 

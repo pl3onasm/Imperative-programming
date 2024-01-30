@@ -33,7 +33,7 @@ Reasoning
       { x == X + Y, 2*x - y - 7 == 2*Y }
           (divide both sides by 2)
       { x == X + Y, (2*x - y - 7)/2 == Y }
-    y = (2*x-y-7)/2);
+    y = (2*x-y-7)/2;
       { x == X + Y, y == Y }
 
 

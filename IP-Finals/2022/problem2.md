@@ -57,7 +57,7 @@ while (i < N) {
 }
 ```
 
-In each iteration, $i$ is incremented by either $1$ or $2$, depending on the parity of $s$, which changes every iteration. This means that the total number of iterations is $\frac{N}{2} + \frac{N}{4} = \frac{3N}{4}$. Thus, the time complexity is in $\mathcal{O}(N)$.
+In each iteration, $i$ is incremented by either $1$ or $2$, depending on the parity of $s$, which switches in each iteration. Thus, the total number of iterations is $\frac{N}{2} + \frac{N}{4} = \frac{3N}{4}$, and the fragment's complexity is in $\mathcal{O}(N)$.
 
 ## Ex4: $\color{rosybrown}{{\mathcal{O}(N\log N)}}$
 

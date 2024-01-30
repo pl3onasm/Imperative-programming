@@ -90,4 +90,4 @@ for (i = 0; i < 5; i++) {
 }
 ```
 
-The first loop runs $N$ times: it sets the values of the items in the array $a$ to their respective values. The second loop is nested: the outer loop runs $5$ times, whereas the inner loop runs $a[i]$ times, which is at most $\lfloor\frac{N}{5}\rfloor$, given the fact that $a[i]$ is incremented at most $\lfloor\frac{N}{5}\rfloor$ times in the first loop. This means that both the first and the second, nested loop are linear in $N$, and so the fragment's total complexity is in $\mathcal{O}(N)$.
+The first loop runs $N$ times: it sets the values of the items in the array $a$ to their respective values. The second loop is nested: the outer loop runs $5$ times, whereas the inner loop runs $a[i]$ times, which is at most $\lceil\frac{N}{5}\rceil$, given the fact that $a[i]$ is incremented at most $\lceil\frac{N}{5}\rceil$ times in the first loop. This means that both the first and the second, nested loop are linear in $N$, and so the fragment's total complexity is in $\mathcal{O}(N)$.
