@@ -10,7 +10,19 @@ while (s < N) {
 }
 ```
 
-In each loop iteration, the variable $i$ is incrememted by $1$, while the variable $s$ keeps track of the sum of the first $i$ integers. The loop terminates when $s = \frac{i(i+1)}{2} \geq N$. Therefore, the fragment's time complexity is in $\mathcal{O}(\sqrt{N})$.
+In each loop iteration, the variable $i$ is incrememted by $1$, while the variable $s$ keeps track of the sum of the first $i$ integers, so that we have $s = \frac{i(i+1)}{2}$ at the end of each iteration. The loop terminates when:
+
+$$
+\begin{align*}
+& s \geq N \\
+\Leftrightarrow \quad &\frac{i(i+1)}{2} \geq N \\
+\Leftrightarrow \quad &i^2 + i \geq 2N \\
+\Leftrightarrow \quad &(i + \frac{1}{2})^2 \geq 2N + \frac{1}{4} \\
+\Leftrightarrow \quad &i \geq \sqrt{2N + \frac{1}{4}} - \frac{1}{2} \approx \sqrt{2N}
+\end{align*}
+$$
+
+Therefore, the time complexity of the fragment is in $\mathcal{O}(\sqrt{N})$. 
 
 ## Ex2: $\color{rosybrown}{{\mathcal{O}(N^2)}}$
 
@@ -51,8 +63,8 @@ The outer loop is linear in $N$, and the inner loop runs $\log(i)$ times for eac
 
 $$
 \begin{align*}
-\sum_{i=1}^N \log(i) &= \log\left(\prod_{i=1}^N i\right) \\
-&= \log(N!) \\
+\sum_{i=1}^{N-1} \log(i) &= \log\left(\prod_{i=1}^{N-1} i\right) \\
+&= \log((N-1)!) \\
 &= \mathcal{O}(N\log(N))
 \end{align*}
 $$
@@ -68,7 +80,7 @@ for (int i = 1; i < N * N; i = i * 3) {
 }
 ```
 
-The loop condition is $i < N^2$, which means that the loop terminates when $i = 3^k$ for some $k$, so that $3^k \geq N^2$. Taking the logarithm of both sides, we find that $k \geq \log_3(N^2)$, and so the number of iterations is given by
+The loop condition is $i < N^2$, which means that the loop terminates when $i \geq 3^k$ for some $k \in \mathbb{Z^+}$, such that $3^k \geq N^2$. Taking the logarithm of both sides, we find that $k \geq \log_3(N^2)$, and so the number of iterations is given by:
 
 $$
 \begin{align*}
@@ -89,4 +101,5 @@ for (int i = N; i > N / 2; i = i - 2) {
 }
 ```
 
-The loop index is initialized to $N$, and decremented by $2$ at the end of each iteration. The loop thus terminates after a total number of $\frac{N}{4}$ iterations, and so the fragment's time complexity is in $\mathcal{O}(N)$.
+The loop index is initialized to $N$, and decremented by $2$ at the end of each iteration until it reaches $\frac{N}{2}$. Therefore, the loop runs $\frac{N}{4}$ times, and so the time complexity of the fragment is in $\mathcal{O}(N)$.
+

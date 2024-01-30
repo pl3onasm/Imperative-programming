@@ -100,7 +100,7 @@ while (i > 0) {
 }
 ```
 
-The variable $i$ starts at $N^2$ and is decremented by $j$ at each iteration. The variable $j$ starts at $0$ and is updated to the next integer at each iteration. The loop terminates when $i \leq 0$, which is equivalent to $N^2 - \frac{k(k+1)}{2} \leq 0$, where $k$ is the number of iterations, i.e. the value of $j$ at termination. So we have:
+The variable $i$ starts at $N^2$ and is decremented by $j$ at each iteration. The variable $j$ starts at $0$ and is updated to the next integer at each iteration. The loop terminates when $i \leq 0$, which is equivalent to $N^2 - \frac{k(k+1)}{2} \leq 0$, where $k\in \mathbb{Z^+}$ is the number of iterations, i.e. the value of $j$ at termination. So we have:
 
 $$
 \begin{align*}
@@ -156,7 +156,7 @@ while (j > 0) {
 ```
 
 The first loop runs $N$ times, computing the sum of the integers from $0$ to $N-1$, so that at termination $j = \frac{N(N-1)}{2}$. The second loop divides $j$ by $2$ at each iteration, so that the loop runs $\log(\frac{N(N-1)}{2}) = \log(N(N-1)) - \log(2)$ $= \log(N) + \log(N-1) - 1$ times.  
-The loops are not nested, and so the most expensive one, the for loop in this case, determines the fragment's complexity, which is thus in $\mathcal{O}(N)$.
+The loops are not nested, and so the most expensive one, the for loop in this case, determines the fragment's overall time complexity, which is thus in $\mathcal{O}(N)$.
 
 ## Ex9: $\color{rosybrown}{{\mathcal{O}(\sqrt{N})}}$
 

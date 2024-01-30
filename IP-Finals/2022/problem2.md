@@ -75,8 +75,8 @@ The outer loop is linear: it runs $N$ times, whereas the inner loop runs $\log i
 
 $$
 \begin{align*}
-\sum_{i=1}^{N} \log i &= \log \left( \prod_{i=1}^{N} i \right)\\
-&= \log (N)!\\
+\sum_{i=1}^{N-1} \log i &= \log \left( \prod_{i=1}^{N-1} i \right)\\
+&= \log((N-1)!)\\
 & = \mathcal{O}(N \log N)
 \end{align*}
 $$
