@@ -69,7 +69,6 @@ $$
 \begin{align*}
 \sum_{i=1}^{N-1} \log(i) &= \log\left(\prod_{i=1}^{N-1} i\right) \\
 &= \log\left((N-1)!\right) \\
-&< \log\left(N!\right) \\
 &= \mathcal{O}(N \log N)
 \end{align*}
 $$

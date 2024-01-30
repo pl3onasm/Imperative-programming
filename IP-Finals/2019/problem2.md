@@ -59,7 +59,7 @@ for (int i = N*N; i > 0; i = i/2) {
 }
 ```
 
-The outer loop runs $\log(N^2) = 2\log(N)$ times, and the inner loop runs $N$ times. This means that the loop body is executed $2N\log(N)$ times, so that the total running time is in $\mathcal{O}(N\log(N))$.
+The outer loop runs $\log(N^2) = 2\log(N)$ times, and the inner loop runs $N$ times. This means that the inner loop body is executed $2N\log(N)$ times, so that the total running time is in $\mathcal{O}(N\log(N))$.
 
 ## Ex6: $\color{rosybrown}{{\mathcal{O}(N)}}$
 
