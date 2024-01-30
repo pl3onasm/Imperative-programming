@@ -39,9 +39,10 @@ The outer loop is linear: it runs $N$ times. The inner loop runs $\frac{N - i}{2
 
 $$
 \begin{align*}
-\sum_{i=0}^{N-1} \frac{N - i}{2} &= \frac{N(N-1)}{2} - \frac{1}{2} \sum_{i=0}^{N-1} i \\
-&= \frac{N(N-1)}{2} - \frac{1}{2} \cdot \frac{N(N-1)}{2} \\
-&= \frac{N(N-1)}{4}
+\sum_{i=0}^{N-1} \frac{N - i}{2}&= \frac{1}{2}\sum_{i=0}^{N-1} N - \frac{1}{2} \sum_{i=0}^{N-1} i\\
+&= \frac{N \cdot N}{2} - \frac{1}{2} \sum_{i=0}^{N-1} i \\
+&= \frac{ N^2}{2} - \frac{1}{2} \cdot \frac{N(N-1)}{2} \\
+&= \frac{1}{4} N(N+1) \\
 \end{align*}
 $$
 
@@ -74,14 +75,15 @@ The outer loop is linear: it runs $N$ times, whereas the inner loop runs $\log i
 
 $$
 \begin{align*}
-\sum_{i=0}^{N-1} \log i &= \log \left( \prod_{i=0}^{N-1} i \right)\\
-&= \log (N-1)!\\
-& < \log (N!)\\
+\sum_{i=1}^{N} \log i &= \log \left( \prod_{i=1}^{N} i \right)\\
+&= \log (N)!\\
 & = \mathcal{O}(N \log N)
 \end{align*}
 $$
 
-Hence, the fragment's complexity is in $\mathcal{O}(N \log N)$.
+Hence, the fragment's complexity is in $\mathcal{O}(N \log N)$. [^1]
+
+[^1]: Note that we need to let $i$ start at 1 otherwise the log(i) term would be undefined for i = 0. This does not affect the complexity of the fragment, however, since the first iteration of the inner loop would be skipped anyway.
 
 ## Ex5: $\color{rosybrown}{{\mathcal{O}(\log N)}}$
 

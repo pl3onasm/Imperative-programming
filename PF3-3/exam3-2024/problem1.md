@@ -48,7 +48,7 @@ $$
 
 Hence, the fragment's complexity is in $\mathcal{O}(N^2)$.
 
-Another, more intuitive way to reach the same conclusion is to note that the outer loop is executed $N$ times, whereas the inner loop is executed $\color{orchid}{\text{at most}}$ $N$ times, so that the nested loop's complexity becomes quadratic in $N$. However, these types of arguments do not always yield the tightest bound, and so it is better to stick to the more formal approach whenever the upper bound of the inner loop depends on the outer loop's index. A case in point is ex5 from 2013, where you would expect from an intuitive argument that the complexity is in $\mathcal{O}(N \log(N))$, which is not wrong, but not tight either, as the tight bound is actually $\mathcal{O}(N)$.
+Another, more intuitive way to reach the same conclusion is to note that the outer loop is executed $N$ times, whereas the inner loop is executed $\color{orchid}{\text{at most}}$ $N$ times, so that the nested loop's complexity becomes quadratic in $N$. However, these types of arguments do not always yield the tightest bound, and so it is better to stick to the more formal approach whenever the upper bound of the inner loop depends on the outer loop's index. A case in point is [ex5 from 2013](https://github.com/pl3onasm/Imperative-programming/blob/main/IP-Finals/2013/problem3.md#ex5-colorrosybrownmathcalon), where you would expect from an intuitive argument that the complexity is in $\mathcal{O}(N \log(N))$, which is not wrong, but not tight either, as the tight bound is actually $\mathcal{O}(N)$.
 
 ## Ex3: $\color{rosybrown}{{\mathcal{O}(N)}}$
 
@@ -210,4 +210,6 @@ for (int i = 1; i < 10; i++) {
 }
 ```
 
-The innermost loop runs $N-j$ times, the middle loop runs $N-i$ times, and the outer loop runs $9$ times. In the worst case, $i = 1$ and $j = 1$, so that both the middle and innermost loops run $N-1$ times. The outer loop runs $9$ times, and only adds a constant factor to the complexity. The loops are nested, so that the fragment's total complexity is in $\mathcal{O}(N^2)$.
+The innermost loop runs $N-j$ times, the middle loop runs $N-i$ times, where $i$ is at most $9$, and the outer loop runs $9$ times. The outer loop merely adds a constant factor to the complexity, and so we can completely ignore it, and set $i$ to $0$ for convenience. The middle loop then runs $N$ times, and the innermost loop runs $N-j$ times for each value of $j$, so that we get the exact same number of iterations as in [ex2](https://github.com/pl3onasm/Imperative-programming/blob/main/PF3-3/exam3-2024/problem1.md#ex2-colorrosybrownmathcalon2), which is $\frac{N(N+1)}{2}$.
+
+Therefore, the fragment's complexity is in $\mathcal{O}(N^2)$.

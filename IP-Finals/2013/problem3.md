@@ -48,7 +48,7 @@ while (i < N) {
 
 The variable $j$ keeps track of the number of iterations. Use is made of Gauss' formula for the sum of the first $j$ integers, but modified such that $i$ is the exact square of $j$: so we have $i = j^2$, and not $i = j(j+1)/2$, at the end of each loop iteration. The loop terminates when $i \geq N$, so we have $j \geq \sqrt{N}$. The fragment's time complexity is therefore in $\mathcal{O}(\sqrt{N})$.  
 
-Compare this with ex1 from 2014. It is identical, except that the body statements are swapped, reason why $i$ is incremented by $2j - 1$ instead of $2j + 1$ to still obtain $i = j^2$ at the end of each iteration.  
+Compare this with [ex1 from 2014](https://github.com/pl3onasm/Imperative-programming/blob/main/IP-Finals/2014/problem3.md#ex1-colorrosybrownmathcalosqrtn). The fragment is identical, except that the body statements are swapped, reason why $i$ is incremented by $2j - 1$ instead of $2j + 1$ to still obtain $i = j^2$ at the end of each iteration.  
 
 ## Ex4: $\color{rosybrown}{{\mathcal{O}(\log(N))}}$
 
