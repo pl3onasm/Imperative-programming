@@ -89,14 +89,14 @@ The inner loop runs $s$ times for each updated value of $s$, so that the total n
 
 $$
 \begin{align*}
-\sum_{k=1}^{{\lceil\log(N)\rceil}} 2^k &= \sum_{k=0}^{{\lceil\log(N)\rceil}} 2^k - 1 \tag{\color{rosybrown}{1}}\\
-&= 2^{{\lceil\log(N)\rceil} + 1} - 1 - 1 \tag{\color{darkkhaki}{2}}\\
+\sum_{k=1}^{{\lceil\log(N)\rceil}} 2^k &= \sum_{k=0}^{{\lceil\log(N)\rceil}} 2^k - 1 &\color{peru}{(1)}\\
+&= 2^{{\lceil\log(N)\rceil} + 1} - 1 - 1 &\color{darkkhaki}{(2)}\\
 & \leq 2^{{\log(N)} + 2} - 1 - 1 \\
 &= 4N - 2
 \end{align*}
 $$
 
-In ($\color{rosybrown}{1}$) we rewrite the sum, so that the index starts at $0$ instead of $1$. This allows us to use the formula for the sum of a geometric series in ($\color{darkkhaki}{2}$), which is:
+In $\color{peru}{(1)}$ we rewrite the sum, so that the index starts at $0$ instead of $1$. This allows us to use the formula for the sum of a geometric series in $\color{darkkhaki}{(2)}$, which is:
 
 $$
 \sum_{k=0}^n a^k = \frac{a^{n+1} - 1}{a - 1}
