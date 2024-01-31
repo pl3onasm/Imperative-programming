@@ -12,7 +12,7 @@ for (int i = 0; i < N; i++) {
 }
 ```
 
-The outer loop runs $N$ times. The inner loop runs $\log_k{N}$ times, where $k$ is a constant in the range $[2,6]$, meaning that it runs $\log_2{N}$ times in the worst case and $\log_6{N}$ times in the best case. Since the loops are nested, the fragment's overall time complexity is in $\mathcal{O}(N\log{N})$.
+The outer loop runs $N$ times. The inner loop runs $\log_k{N}$ times, where $k$ is a constant in the interval $[2,7)$, meaning that it runs $\log_2{N}$ times in the worst case and $\log_6{N}$ times in the best case. Since the loops are nested, the fragment's overall time complexity is in $\mathcal{O}(N\log{N})$.
 
 ## Ex2: $\color{rosybrown}{{\mathcal{O}(\sqrt{N})}}$
 
@@ -25,7 +25,7 @@ while (i*j < 2*N) {
 }
 ```
 
-In each iteration the variable $i$ is incremented by 1 and the variable $j$ is incremented by 2. The loop terminates when $i \cdot j \geq 2 \cdot N$ $\iff \frac{i \cdot j}{2} \geq N$. Since we have $j  = 2 i$ at the end of each iteration, the loop condition becomes $i^2 \geq N \iff i \geq \sqrt{N}$. Hence, the fragment's overall time complexity is in $\mathcal{O}(\sqrt{N})$.
+In each iteration the variable $i$ is incremented by $1$ and the variable $j$ is incremented by $2$. The loop terminates when $i \cdot j \geq 2 N$ $\Leftrightarrow \frac{i \cdot j}{2} \geq N$. Since we have $j  = 2 i$ at the end of each iteration, the satisfied loop condition becomes $i^2 \geq N \Leftrightarrow i \geq \sqrt{N}$. Hence, the fragment's overall time complexity is in $\mathcal{O}(\sqrt{N})$.
 
 ## Ex3: $\color{rosybrown}{{\mathcal{O}(N)}}$
 
@@ -37,12 +37,11 @@ while (s < N*N) {
 }
 ```
 
-The loop terminates when $s \geq N^2$. Since $s$ is incremented by $i$ in each iteration, we have $s = \frac{i \cdot (i-1)}{2}$ by Gauss' formula. Hence, the loop terminates when
+The loop terminates when $s \geq N^2$. Since $s$ is incremented by $i$ in each iteration, we have $s = \frac{i \cdot (i-1)}{2}$ by Gauss' formula. Note that $i$ is incremented $\color{mediumorchid}{\text{after}}$ $s$ is updated, so that when the loop condition is checked, the value of $s$ equals the sum of the first $i - 1$ positive integers. Hence, the loop terminates when
 
 $$
 \begin{align*}
 &\frac{i (i-1)}{2} \geq N^2 \\
-\Leftrightarrow \quad &i (i-1) \geq 2 N^2 \\
 \Leftrightarrow \quad &i^2 - i \geq 2 N^2 \\
 \Leftrightarrow \quad &i^2 - i + \frac{1}{4} \geq 2 N^2 + \frac{1}{4} \\
 \Leftrightarrow \quad &(i - \frac{1}{2})^2 \geq 2 N^2 + \frac{1}{4} \\
@@ -78,7 +77,7 @@ while (i > 0) {
 }
 ```
 
-By the end of the first loop, $i$ is the smallest power of $2$ that is greater than or equal to $N^2$. Since $i$ is doubled in each iteration, the first loop runs $\log{N^2} = 2\log{N}$ times. The second loop, on the other hand, runs $i$ times, which is in $\mathcal{O}(N^2)$. Therefore, the fragment's overall time complexity is in $\mathcal{O}(N^2)$.
+By the end of the first loop, $i$ is the smallest power of $2$ that is greater than or equal to $N^2$. Since $i$ is doubled in each iteration, the first loop runs $\log(N^2) = 2\log{N}$ times. The second loop, on the other hand, runs $i$ times, which is in $\mathcal{O}(N^2)$. Since the loops are not nested, the fragment's overall time complexity is determined by the most complex loop, and is therefore in $\mathcal{O}(N^2)$.
 
 ## Ex6: $\color{rosybrown}{{\mathcal{O}(N)}}$
 

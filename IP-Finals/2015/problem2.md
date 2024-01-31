@@ -14,7 +14,7 @@ The loop terminates when $s \geq N$, that is, when:
 
 $$
 \begin{align*}
-&(i-1) + (i-2) + \cdots + 1 \geq N \\
+&1 + 2 + \cdots + (i-1) \geq N \\ 
 \Leftrightarrow \quad &\frac{i(i-1)}{2} \geq N \\
 \Leftrightarrow \quad &i^2 - i \geq 2 N \\
 \Leftrightarrow \quad &i^2 - i + \frac{1}{4} \geq 2 N + \frac{1}{4} \\
@@ -24,7 +24,7 @@ $$
 \end{align*}
 $$
 
-Note that $i$ is incremented after $s$ is updated, so that when the loop condition is checked, the value of $s$ is the sum of the first $i - 1$ integers. From the calculation above, we conclude that the fragment's time complexity is in $\mathcal{O}(\sqrt{N})$.
+Note that $i$ is incremented $\color{mediumorchid}{\text{after}}$ $s$ is updated, so that when the loop condition is checked, the value of $s$ is the sum of the first $i - 1$ integers. From the calculation above, we conclude that the fragment's time complexity is in $\mathcal{O}(\sqrt{N})$.
 
 ## Ex2: $\color{rosybrown}{{\mathcal{O}(N^2)}}$
 

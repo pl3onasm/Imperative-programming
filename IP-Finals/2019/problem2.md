@@ -9,7 +9,7 @@ for (int i = 0; i < N; i += s) {
 }
 ```
 
-After each iteration, the loop index $i$ is incremented by $s$, which is itself incremented by $1$ in each execution of the loop body. This means that $i$ is first incremented by 1, then by 2, then 3, ..., so that after $k$ iterations $i = \frac{k(k+1)}{2}$. The loop terminates when $i \geq N$, which happens when $k \geq \sqrt{2N + \frac{1}{4}} - \frac{1}{2}$. The loop therefore runs in $\mathcal{O}(\sqrt{N})$ time.
+After each iteration, the loop index $i$ is incremented by $s$, which is itself incremented by $1$ in each execution of the loop body. This means that $i$ is first incremented by $1$, then by $2$, then $3$, ..., so that after $k$ iterations $i = \frac{k(k+1)}{2}$. The loop terminates when $i \geq N$, which happens when $k \geq \sqrt{2N + \frac{1}{4}} - \frac{1}{2}$. The loop therefore runs in $\mathcal{O}(\sqrt{N})$ time.
 
 ## Ex2: $\color{rosybrown}{{\mathcal{O}(\log(N))}}$
 
@@ -45,7 +45,7 @@ while (s < N) {
 }
 ```
 
-As the parity of $i$ flips each time the loop body is executed, the variable $s$ is doubled half of the time, and incremented by 1 the other half of the time.  
+As the parity of $i$ flips each time the loop body is executed, the variable $s$ is doubled half of the time, and incremented by $1$ the other half of the time.  
 After $k$ iterations, we have $s = 2^{\lfloor k/2 \rfloor} + \lfloor k/2 \rfloor$. The loop terminates when $s \geq N$, which happens for a value for $k$ that lies between $\log(N)$ and $2\log(N)$. The loop therefore runs in $\mathcal{O}(\log(N))$ time.
 
 ## Ex5: $\color{rosybrown}{{\mathcal{O}(N\log(N))}}$
@@ -59,7 +59,7 @@ for (int i = N*N; i > 0; i = i/2) {
 }
 ```
 
-The outer loop runs $\log(N^2) = 2\log(N)$ times, and the inner loop runs $N$ times. This means that the inner loop body is executed $2N\log(N)$ times, so that the total running time is in $\mathcal{O}(N\log(N))$.
+The outer loop runs $\log(N^2) = 2\log(N)$ times, and the inner loop runs $N$ times. This means that the inner loop body is executed $2N\log(N)$ times, so that the fragment's overall time complexity is in $\mathcal{O}(N\log(N))$.
 
 ## Ex6: $\color{rosybrown}{{\mathcal{O}(N)}}$
 
@@ -73,5 +73,5 @@ for (int i = 0; i < N; i += k) {
 }
 ```
 
-The outer loop has an index $i$ which after each iteration is incremented by $k$, which is itself incremented by $1$ in each execution of the loop body. This means that $i$ is first incremented by 1, then by 2, then 3, ..., so that after $k$ iterations $i = \frac{k(k+1)}{2}$. The loop terminates when $i \geq N$, which happens when $k \geq \sqrt{2N + \frac{1}{4}} - \frac{1}{2}$, so that $k\approx \sqrt{2N}$.  
-The inner loop runs $\sqrt{N}$ times, so that the loop body is executed about $\sqrt{2}N$ times, and the fragment's total running time is in $\mathcal{O}(N)$.
+The outer loop has an index $i$ which after each iteration is incremented by $k$, which is itself incremented by $1$ in each execution of the loop body. This means that $i$ is first incremented by $1$, then by $2$, then $3$, ..., so that after $k$ iterations $i = \frac{k(k+1)}{2}$. The loop terminates when $i \geq N$, which happens when $k \geq \sqrt{2N + \frac{1}{4}} - \frac{1}{2}$, so that $k\approx \sqrt{2N}$.  
+The inner loop runs $\sqrt{N}$ times, so that the inner loop body is executed about $\sqrt{2}N$ times, and the fragment's total time complexity is in $\mathcal{O}(N)$.
