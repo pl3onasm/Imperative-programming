@@ -77,14 +77,15 @@ The outer loop runs $\log_3(N)$ times, since $i$ is multiplied by 3 at the end o
 
 $$
 \begin{align*}
-\sum_{i=1}^{\log_3(N)} (3^i - 1) &= \sum_{i=0}^{\log_3(N)} (3^i) - 1 - \sum_{i=1}^{\log_3(N)} 1 \tag{1} \\
-&= \frac{3^{\log_3(N) + 1} - 1}{3 - 1} - 1 - \log_3(N) \tag{2} \\
-&= \frac{3N - 1}{2} - \log_3(N) - 1 \\
-& \approx \frac{3N}{2}
+\sum_{i=1}^{\lfloor\log_3(N)\rfloor} (3^i - 1) &= \sum_{i=0}^{\lfloor\log_3(N)\rfloor} (3^i) - 1 - \sum_{i=1}^{\lfloor\log_3(N)\rfloor} 1 \tag{\color{rosybrown}{1}} \\
+&= \frac{3^{\lfloor\log_3(N)\rfloor + 1} - 1}{3 - 1} - 1 - \lfloor\log_3(N)\rfloor \tag{\color{darkkhaki}{2}} \\
+&\leq \frac{3^{\log_3(N) + 1} - 1}{3 - 1} - 1 - \log_3(N) \\
+&= \frac{3N - 1}{2} - 1 - \log_3(N) \\
+&= \mathcal{O}(N)
 \end{align*}
 $$
 
-In (1) we rewrite the first sum, so that the index starts at $0$ instead of $1$. This allows us to use the formula for the sum of a geometric series in (2), which is:
+In ($\color{rosybrown}{1}$) we rewrite the first sum, so that the index starts at $0$ instead of $1$. This allows us to use the formula for the sum of a geometric series in ($\color{darkkhaki}{2}$), which is:
 
 $$
 \sum_{k=0}^n a^k = \frac{a^{n+1} - 1}{a - 1}
