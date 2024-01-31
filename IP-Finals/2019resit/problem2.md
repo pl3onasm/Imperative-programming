@@ -41,11 +41,11 @@ The loop terminates when $s \geq N^2$. Since $s$ is incremented by $i$ in each i
 
 $$
 \begin{align*}
-&\frac{i (i-1)}{2} \geq N^2 \\[2ex]
-\Leftrightarrow \quad &i^2 - i \geq 2 N^2 \\[2ex]
-\Leftrightarrow \quad &i^2 - i + \frac{1}{4} \geq 2 N^2 + \frac{1}{4} \\[2ex]
-\Leftrightarrow \quad &(i - \frac{1}{2})^2 \geq 2 N^2 + \frac{1}{4} \\[2ex]
-\Leftrightarrow \quad &i - \frac{1}{2} \geq \sqrt{2 N^2 + \frac{1}{4}} \\[2ex]
+&\frac{i (i-1)}{2} \geq N^2 \\
+\Leftrightarrow \quad &i^2 - i \geq 2 N^2 \\
+\Leftrightarrow \quad &i^2 - i + \frac{1}{4} \geq 2 N^2 + \frac{1}{4} \\
+\Leftrightarrow \quad &(i - \frac{1}{2})^2 \geq 2 N^2 + \frac{1}{4} \\
+\Leftrightarrow \quad &i - \frac{1}{2} \geq \sqrt{2 N^2 + \frac{1}{4}} \\
 \Leftrightarrow \quad &i \geq \sqrt{2 N^2 + \frac{1}{4}} + \frac{1}{2} \approx \sqrt{2} N
 \end{align*}
 $$

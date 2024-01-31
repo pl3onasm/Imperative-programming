@@ -82,9 +82,9 @@ The outer loop runs $N$ times. For each iteration of the outer loop, the inner l
 
 $$
 \begin{align*}
-\sum_{i=0}^{N-1} \log(N - i) &= \sum_{i=1}^{N} \log(i) \\[3ex]
-&= \log\left(\prod_{i=1}^{N} i\right) \\[3ex]
-&= \log(N!)\\[0.5ex]
+\sum_{i=0}^{N-1} \log(N - i) &= \sum_{i=1}^{N} \log(i) \\
+&= \log\left(\prod_{i=1}^{N} i\right) \\
+&= \log(N!)\\
 &= \mathcal{O}(N\log(N))
 \end{align*}
 $$

@@ -27,9 +27,9 @@ The outer loop runs $N$ times, whereas the inner loop runs $N - i$ times, where 
 
 $$
 \begin{align*}
-\sum_{i=0}^{N-1} (N - i) &= \sum_{i=0}^{N-1} N - \sum_{i=0}^{N-1} i \\[3.5ex]
-&= N^2 - \frac{N(N-1)}{2} \\[2ex]
-&= \frac{N(N+1)}{2} \\[2ex]
+\sum_{i=0}^{N-1} (N - i) &= \sum_{i=0}^{N-1} N - \sum_{i=0}^{N-1} i \\
+&= N^2 - \frac{N(N-1)}{2} \\
+&= \frac{N(N+1)}{2} \\
 &= \mathcal{O}(N^2)
 \end{align*}
 $$
@@ -77,11 +77,11 @@ The outer loop runs $\log_3(N)$ times, since $i$ is multiplied by 3 at the end o
 
 $$
 \begin{align*}
-&\quad \sum_{i=1}^{\lfloor\log_3(N)\rfloor} (3^i - 1) \\[3.5ex]
-=&\quad \sum_{i=0}^{\lfloor\log_3(N)\rfloor} (3^i) - 1 - \sum_{i=1}^{\lfloor\log_3(N)\rfloor} 1 &\color{peru}{(1)} \\[3.5ex]
-=&\quad \frac{3^{\lfloor\log_3(N)\rfloor + 1} - 1}{3 - 1} - 1 - \lfloor\log_3(N)\rfloor &\color{darkkhaki}{(2)} \\[3ex]
-\leq &\quad\frac{3^{\log_3(N) + 1} - 1}{3 - 1} - 1 - \log_3(N) \\[3ex]
-=&\quad \frac{3N - 1}{2} - 1 - \log_3(N) \\[2ex]
+&\quad \sum_{i=1}^{\lfloor\log_3(N)\rfloor} (3^i - 1) \\
+=&\quad \sum_{i=0}^{\lfloor\log_3(N)\rfloor} (3^i) - 1 - \sum_{i=1}^{\lfloor\log_3(N)\rfloor} 1 &\color{peru}{(1)} \\
+=&\quad \frac{3^{\lfloor\log_3(N)\rfloor + 1} - 1}{3 - 1} - 1 - \lfloor\log_3(N)\rfloor &\color{darkkhaki}{(2)} \\
+\leq &\quad\frac{3^{\log_3(N) + 1} - 1}{3 - 1} - 1 - \log_3(N) \\
+=&\quad \frac{3N - 1}{2} - 1 - \log_3(N) \\
 =&\quad \mathcal{O}(N)
 \end{align*}
 $$
@@ -112,11 +112,11 @@ The outer loop runs $N - 1$ times. The variable $s$ takes the running sum of the
 
 $$
 \begin{align*}
-&\quad\sum_{i=1}^{N-1} (2\log(i) - 1) \\[3.5ex]
-= &\quad 2\sum_{i=1}^{N-1} \log(i) - \sum_{i=1}^{N-1} 1 \\[3.5ex]
-=&\quad 2\log\left(\prod_{i=1}^{N-1} i\right) - (N-1) \\[3.5ex]
-=&\quad 2\log((N-1)!) - (N-1) \\[1ex]
-< &\quad 2\log(N!) \\[1ex]
+&\quad\sum_{i=1}^{N-1} (2\log(i) - 1) \\
+= &\quad 2\sum_{i=1}^{N-1} \log(i) - \sum_{i=1}^{N-1} 1 \\
+=&\quad 2\log\left(\prod_{i=1}^{N-1} i\right) - (N-1) \\
+=&\quad 2\log((N-1)!) - (N-1) \\
+< &\quad 2\log(N!) \\
 =&\quad \mathcal{O}(N \log(N)) \\
 \end{align*}
 $$

@@ -58,8 +58,8 @@ The outer loop is linear in $N$, and the inner loop runs $\log(i)$ times for eac
 
 $$
 \begin{align*}
-\sum_{i=1}^{N-1} \log(i) &= \log\left(\prod_{i=1}^{N-1} i\right) \\[3ex]
-&= \log((N-1)!) \\[0.4ex]
+\sum_{i=1}^{N-1} \log(i) &= \log\left(\prod_{i=1}^{N-1} i\right) \\
+&= \log((N-1)!) \\
 &= \mathcal{O}(N\log(N))
 \end{align*}
 $$

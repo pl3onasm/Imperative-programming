@@ -15,9 +15,9 @@ In each loop iteration, the variable $i$ is incrememted by $1$, while the variab
 $$
 \begin{align*}
 & s \geq N \\[1ex]
-\Leftrightarrow \quad &\frac{i(i+1)}{2} \geq N \\[2ex]
-\Leftrightarrow \quad &i^2 + i \geq 2N \\[2ex]
-\Leftrightarrow \quad &(i + \frac{1}{2})^2 \geq 2N + \frac{1}{4} \\[2ex]
+\Leftrightarrow \quad &\frac{i(i+1)}{2} \geq N \\
+\Leftrightarrow \quad &i^2 + i \geq 2N \\
+\Leftrightarrow \quad &(i + \frac{1}{2})^2 \geq 2N + \frac{1}{4} \\
 \Leftrightarrow \quad &i \geq \sqrt{2N + \frac{1}{4}} - \frac{1}{2} \approx \sqrt{2N}
 \end{align*}
 $$

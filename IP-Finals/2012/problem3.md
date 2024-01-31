@@ -67,8 +67,8 @@ The outer loop runs $N - 1$ times, whereas the inner loop runs $\log(i)$ times. 
 
 $$
 \begin{align*}
-\sum_{i=1}^{N-1} \log(i) &= \log\left(\prod_{i=1}^{N-1} i\right) \\[3ex]
-&= \log\left((N-1)!\right) \\[1ex]
+\sum_{i=1}^{N-1} \log(i) &= \log\left(\prod_{i=1}^{N-1} i\right) \\
+&= \log\left((N-1)!\right) \\
 &= \mathcal{O}(N \log N)
 \end{align*}
 $$
