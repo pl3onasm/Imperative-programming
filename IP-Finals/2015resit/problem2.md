@@ -91,7 +91,7 @@ The loop terminates when $s > N^2$, that is, when:
 
 $$
 \begin{align*}
-&(i-1) + (i-2) + \cdots + 1 > N^2 \\
+&1 + 2 + \cdots + (i - 1) > N^2 \\
 \Leftrightarrow \quad &\frac{i(i-1)}{2} > N^2 \\
 \Leftrightarrow \quad &i^2 - i > 2 N^2 \\
 \Leftrightarrow \quad &i^2 - i + \frac{1}{4} > 2 N^2 + \frac{1}{4} \\
@@ -101,4 +101,4 @@ $$
 \end{align*}
 $$
 
-Note that $i$ is incremented after $s$ is updated, so that when the loop condition is checked, the value of $s$ is the sum of the first $i - 1$ integers. From the calculation above, we conclude that the fragment's time complexity is in $\mathcal{O}(N)$.
+Note that $i$ is incremented $\color{mediumorchid}{\text{after}}$ $s$ is updated, so that when the loop condition is checked, the value of $s$ is the sum of the first $i - 1$ integers. From the calculation above, we conclude that the fragment's time complexity is in $\mathcal{O}(N)$.

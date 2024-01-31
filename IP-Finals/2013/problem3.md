@@ -76,17 +76,23 @@ for (i = 1; i < N; i *= 3) {
 The outer loop runs $\log_3(N)$ times, since $i$ is multiplied by 3 at the end of each iteration. The inner loop runs $i - 1$ times, where $i$ ranges from $1$ to $N - 1$ in steps of factor 3. The total number of iterations is therefore given by:
 
 $$
-\begin{align*}
-\sum_{i=1}^{\log_3(N)} (3^i - 1) &= \sum_{i=1}^{\log_3(N)} 3^i - \sum_{i=1}^{\log_3(N)} 1 \\
-&= 3\left(\frac{1 - 3^{\log_3(N)}}{1 - 3}\right) - \log_3(N) \\
-&= \frac{3N - 3}{2} - \log_3(N) \\
-&\approx \frac{3N}{2} \\
-\end{align*}
+\begin{align}
+\sum_{i=1}^{\log_3(N)} (3^i - 1) &= \sum_{i=0}^{\log_3(N)} 3^i - 1 - \sum_{i=1}^{\log_3(N)} 1 \\
+&= \frac{3^{\log_3(N) + 1} - 1}{3 - 1} - 1 - \log_3(N) \\
+&= \frac{3N - 1}{2} - \log_3(N) - 1 \\
+& \approx \frac{3N}{2} 
+\end{align}
+$$
+
+In (1) we had to rewrite the first sum, since the index starts at $1$ instead of $0$. This allows us to use the formula for the sum of a geometric series in (2), which is:
+
+$$
+\sum_{k=0}^n a^k = \frac{a^{n+1} - 1}{a - 1}
 $$
 
 Thus, the fragment's time complexity is in $\mathcal{O}(N)$.
 
-Note that we could have run an argument for a complexity in $\mathcal{O}(N \log(N))$ by stating that the inner loop runs $\color{orchid}{\text{at most}}$ $N$ times. This is not wrong, but an overestimate, as the tight bound is in $\mathcal{O}(N)$. It is testomony to the fact that rough reasoning does not always yield the tightest bound.
+Note that we could have run an argument for a complexity in $\mathcal{O}(N \log(N))$ by stating that the inner loop runs $\color{orchid}{\text{at most}}$ $N$ times. This is not wrong, but an overestimate, as the tight bound is in $\mathcal{O}(N)$. It is testomony to the fact that rough reasoning does not always yield the tightest bound. The same situation arises in [Ex5 of the 2018 resit exam](https://github.com/pl3onasm/Imperative-programming/blob/main/IP-Finals/2018resit/problem2.md#ex5-colorrosybrownmathcalonlogn).
 
 ## Ex6: $\color{rosybrown}{{\mathcal{O}(N \log(N))}}$
 

@@ -33,7 +33,21 @@ while (s < N) {
 }
 ```
 
-The variable $s$ is incremented by $i$ in each iteration, while $i$ just counts the number of iterations. After $i$ iterations, $s = \frac{i(i+1)}{2}$ by Gauss' formula. The loop terminates when $s \geq N$, which happens when $i \geq \sqrt{2N + \frac{1}{4}} - \frac{1}{2}$ $\approx \sqrt{2N}$. The loop therefore runs in $\mathcal{O}(\sqrt{N})$ time.
+The variable $s$ is incremented by $i$ in each iteration, while $i$ just counts the number of iterations. After $i$ iterations, $s = \frac{i(i+1)}{2}$ by Gauss' formula. The loop terminates when:
+
+$$
+\begin{align*}
+& s \geq N \\
+\Leftrightarrow \quad & \frac{i(i+1)}{2} \geq N \\
+\Leftrightarrow \quad &  i^2 + i \geq 2N \\
+\Leftrightarrow \quad & i^2 + i + \frac{1}{4} \geq 2N + \frac{1}{4} \\
+\Leftrightarrow \quad & \left(i + \frac{1}{2}\right)^2 \geq 2N + \frac{1}{4} \\
+\Leftrightarrow \quad & i + \frac{1}{2} \geq \sqrt{2N + \frac{1}{4}} \\
+\Leftrightarrow \quad & i \geq \sqrt{2N + \frac{1}{4}} - \frac{1}{2} \approx \sqrt{2N}
+\end{align*}
+$$
+
+The overall number of iterations is therefore in $\mathcal{O}(\sqrt{N})$.
 
 ## Ex4: $\color{rosybrown}{{\mathcal{O}(N^2)}}$
 
@@ -47,9 +61,18 @@ while (k > 0) {
 }
 ```
 
-The outer loop runs $N$ times. In the worst case, which is when $k = N$, the inner loop runs $N$ times as well. The fragment's time complexity is therefore in $\mathcal{O}(N^2)$.
+The outer loop runs $N$ times: $k$ is initialized to $N$, decremented by $1$ in each iteration, and the loop terminates when $k = 0$. The inner loop runs $k$ times for each updated value of $k$, so that the fragment's total number of iterations is given by:
 
-## Ex5: $\color{rosybrown}{{\mathcal{O}(N\log(N))}}$
+$$
+\begin{align*}
+\sum_{k=N}^1 k &= \sum_{k=1}^N k \\
+&= \frac{N(N+1)}{2}
+\end{align*}
+$$
+
+The fragment's time complexity is therefore in $\mathcal{O}(N^2)$.
+
+## Ex5: $\color{rosybrown}{{\mathcal{O}(N)}}$
 
 ```c
 int j = 0, s = 1;
@@ -61,9 +84,29 @@ while (s < N) {
 }
 ```
 
-The outer loop runs $\log(N)$ times. In the worst case, which is when $s \approx N$ in the last iteration, the inner loop runs about $N$ times. The loops are nested, and the fragment's time complexity is therefore in $\mathcal{O}(N\log(N))$.
+The outer loop runs $\lceil\log(N)\rceil$ times: $s$ is initialized to $1$, updated to the next power of $2$ in each iteration, and the loop terminates when $s \geq N$, that is, when $s = 2^k$ with $k \geq \log(N)$, where $k \in \mathbb{N}$ is the number of iterations.
+The inner loop runs $s$ times for each updated value of $s$, so that the total number of iterations is given by:
 
-## Ex6: $\color{rosybrown}{{\mathcal{O}(N\log(N))}}$
+$$
+\begin{align}
+\sum_{k=1}^{{\lceil\log(N)\rceil}} 2^k &= \sum_{k=0}^{{\lceil\log(N)\rceil}} 2^k - 1 \\
+&= 2^{{\lceil\log(N)\rceil} + 1} - 1 - 1 \\
+& \leq 2^{{\log(N)} + 2} - 1 - 1 \\
+&= 4N - 2
+\end{align}
+$$
+
+In (1) we had to rewrite the first sum, since the index starts at $1$ instead of $0$. This allows us to use the formula for the sum of a geometric series in (2), which is:
+
+$$
+\sum_{k=0}^n a^k = \frac{a^{n+1} - 1}{a - 1}
+$$
+
+From the above, we therefore have that the fragment's time complexity is in $\mathcal{O}(N)$.
+
+Note that we could have run an argument for a complexity in $\mathcal{O}(N \log(N))$ by stating that the inner loop runs $\color{orchid}{\text{at most}}$ a total of approximately $N$ times. This is not wrong, but an overestimate, as the tight bound is in $\mathcal{O}(N)$. It is testomony to the fact that rough reasoning does not always yield the tightest bound. The same situation arises in [Ex5 of the 2013 exam](https://github.com/pl3onasm/Imperative-programming/blob/main/IP-Finals/2013/problem3.md#ex5-colorrosybrownmathcalon).
+
+## Ex6: $\color{rosybrown}{{\mathcal{O}(N \log(N))}}$
 
 ```c
 int j = 0, s = 1;
@@ -75,4 +118,17 @@ while (s < N) {
 }
 ```
 
-This is the same as the previous example, except that the inner loop runs in the opposite direction and terminates when $i \geq N$. In the worst case, which is when $s = 2$ in the first iteration, the inner loop runs $N - 2$ times. The outer loop, just like in the previous example, runs $\log(N)$ times. The fragment's time complexity is therefore in $\mathcal{O}(N\log(N))$ again.
+Just like in the previous example, the outer loop runs $\lceil\log(N)\rceil$ times. The inner loop runs $N - s$ times for each updated value of $s$, so that the total number of iterations is given by:
+
+$$
+\begin{align*}
+\sum_{k=1}^{{\lceil\log(N)\rceil}} (N - 2^k) &= N{\lceil\log(N)\rceil} - \sum_{k=0}^{{\lceil\log(N)\rceil}} (2^k) -1\\
+&= N{\lceil\log(N)\rceil} - (2^{{\lceil\log(N)\rceil} + 1} - 1) - 1 \\
+&= N{\lceil\log(N)\rceil} - 2^{{\lceil\log(N)\rceil} + 1} \\
+& \leq N(\log(N) + 1) - 2^{{\log(N)} + 2} \\
+&= N\log(N) - 3N \\
+&= \mathcal{O}(N\log(N))
+\end{align*}
+$$
+
+The fragment's time complexity is therefore in $\mathcal{O}(N \log(N))$.
