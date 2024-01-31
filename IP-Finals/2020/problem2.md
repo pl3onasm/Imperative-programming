@@ -63,8 +63,7 @@ The outer loop is linear in $N$, and the inner loop runs $\log(i)$ times for eac
 
 $$
 \begin{align*}
-\sum_{i=1}^{N-1} \log(i) &= \log\left(\prod_{i=1}^{N-1} i\right) \\[3ex]
-&= \log((N-1)!) \\[0.5ex]
+\sum_{i=1}^{N-1} \log(i) &= \log\left(\prod_{i=1}^{N-1} i\right) \\
 &= \mathcal{O}(N\log(N))
 \end{align*}
 $$
@@ -84,8 +83,8 @@ The loop condition is $i < N^2$, which means that the loop terminates when $i \g
 
 $$
 \begin{align*}
-\log_3(N^2) &= \frac{\log(N^2)}{\log(3)} \\[3ex]
-&= \frac{2}{\log(3)} \log(N) \\[3ex]
+\log_3(N^2) &= \frac{\log(N^2)}{\log(3)} \\
+&= \frac{2}{\log(3)} \log(N) \\
 &= \mathcal{O}(\log(N))
 \end{align*}
 $$

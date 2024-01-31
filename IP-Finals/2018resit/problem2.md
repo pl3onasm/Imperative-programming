@@ -37,7 +37,7 @@ The variable $s$ is incremented by $i$ in each iteration, while $i$ just counts 
 
 $$
 \begin{align*}
-& s \geq N \\[1ex]
+& s \geq N \\
 \Leftrightarrow \quad & \frac{i(i+1)}{2} \geq N \\
 \Leftrightarrow \quad &  i^2 + i \geq 2N \\
 \Leftrightarrow \quad & i^2 + i + \frac{1}{4} \geq 2N + \frac{1}{4} \\
@@ -65,7 +65,7 @@ The outer loop runs $N$ times: $k$ is initialized to $N$, decremented by $1$ in 
 
 $$
 \begin{align*}
-\sum_{k=N}^1 k &= \sum_{k=1}^N k \\[3ex]
+\sum_{k=N}^1 k &= \sum_{k=1}^N k \\
 &= \frac{N(N+1)}{2}
 \end{align*}
 $$
