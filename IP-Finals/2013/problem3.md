@@ -76,12 +76,12 @@ for (i = 1; i < N; i *= 3) {
 The outer loop runs $\log_3(N)$ times, since $i$ is multiplied by 3 at the end of each iteration. The inner loop runs $i - 1$ times, where $i$ ranges from $1$ to $N - 1$ in steps of factor 3. The total number of iterations is therefore given by:
 
 $$
-\begin{align}
-\sum_{i=1}^{\log_3(N)} (3^i - 1) &= \sum_{i=0}^{\log_3(N)} 3^i - 1 - \sum_{i=1}^{\log_3(N)} 1 \\
-&= \frac{3^{\log_3(N) + 1} - 1}{3 - 1} - 1 - \log_3(N) \\
+\begin{align*}
+\sum_{i=1}^{\log_3(N)} (3^i - 1) &= \sum_{i=0}^{\log_3(N)} (3^i) - 1 - \sum_{i=1}^{\log_3(N)} 1 \tag{1} \\
+&= \frac{3^{\log_3(N) + 1} - 1}{3 - 1} - 1 - \log_3(N) \tag{2} \\
 &= \frac{3N - 1}{2} - \log_3(N) - 1 \\
 & \approx \frac{3N}{2}
-\end{align}
+\end{align*}
 $$
 
 In (1) we rewrite the first sum, so that the index starts at $0$ instead of $1$. This allows us to use the formula for the sum of a geometric series in (2), which is:

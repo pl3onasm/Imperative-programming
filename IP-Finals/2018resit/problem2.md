@@ -88,12 +88,12 @@ The outer loop runs $\lceil\log(N)\rceil$ times: $s$ is initialized to $1$, upda
 The inner loop runs $s$ times for each updated value of $s$, so that the total number of iterations is given by:
 
 $$
-\begin{align}
-\sum_{k=1}^{{\lceil\log(N)\rceil}} 2^k &= \sum_{k=0}^{{\lceil\log(N)\rceil}} 2^k - 1 \\
-&= 2^{{\lceil\log(N)\rceil} + 1} - 1 - 1 \\
+\begin{align*}
+\sum_{k=1}^{{\lceil\log(N)\rceil}} 2^k &= \sum_{k=0}^{{\lceil\log(N)\rceil}} 2^k - 1 \tag{1}\\
+&= 2^{{\lceil\log(N)\rceil} + 1} - 1 - 1 \tag{2}\\
 & \leq 2^{{\log(N)} + 2} - 1 - 1 \\
 &= 4N - 2
-\end{align}
+\end{align*}
 $$
 
 In (1) we rewrite the sum, so that the index starts at $0$ instead of $1$. This allows us to use the formula for the sum of a geometric series in (2), which is:
