@@ -96,7 +96,7 @@ $$
 \end{align}
 $$
 
-In (1) we had to rewrite the first sum, since the index starts at $1$ instead of $0$. This allows us to use the formula for the sum of a geometric series in (2), which is:
+In (1) we rewrite the sum, so that the index starts at $0$ instead of $1$. This allows us to use the formula for the sum of a geometric series in (2), which is:
 
 $$
 \sum_{k=0}^n a^k = \frac{a^{n+1} - 1}{a - 1}

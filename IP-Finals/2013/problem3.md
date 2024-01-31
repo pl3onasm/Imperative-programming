@@ -80,11 +80,11 @@ $$
 \sum_{i=1}^{\log_3(N)} (3^i - 1) &= \sum_{i=0}^{\log_3(N)} 3^i - 1 - \sum_{i=1}^{\log_3(N)} 1 \\
 &= \frac{3^{\log_3(N) + 1} - 1}{3 - 1} - 1 - \log_3(N) \\
 &= \frac{3N - 1}{2} - \log_3(N) - 1 \\
-& \approx \frac{3N}{2} 
+& \approx \frac{3N}{2}
 \end{align}
 $$
 
-In (1) we had to rewrite the first sum, since the index starts at $1$ instead of $0$. This allows us to use the formula for the sum of a geometric series in (2), which is:
+In (1) we rewrite the first sum, so that the index starts at $0$ instead of $1$. This allows us to use the formula for the sum of a geometric series in (2), which is:
 
 $$
 \sum_{k=0}^n a^k = \frac{a^{n+1} - 1}{a - 1}
