@@ -89,10 +89,11 @@ The inner loop runs $s$ times for each updated value of $s$, so that the total n
 
 $$
 \begin{align*}
-\sum_{k=1}^{{\lceil\log(N)\rceil}} 2^k &= \sum_{k=0}^{{\lceil\log(N)\rceil}} 2^k - 1 &\color{peru}{(1)}\\
-&= 2^{{\lceil\log(N)\rceil} + 1} - 1 - 1 &\color{darkkhaki}{(2)}\\
-& \leq 2^{{\log(N)} + 2} - 1 - 1 \\
-&= 4N - 2
+&\quad \sum_{k=1}^{{\lceil\log(N)\rceil}} 2^k \\
+=&\quad \sum_{k=0}^{{\lceil\log(N)\rceil}} 2^k - 1 &\color{peru}{(1)}\\
+=&\quad 2^{{\lceil\log(N)\rceil} + 1} - 1 - 1 &\color{darkkhaki}{(2)}\\
+\leq&\quad  2^{{\log(N)} + 2} - 1 - 1 \\
+=&\quad 4N - 2
 \end{align*}
 $$
 
@@ -122,12 +123,13 @@ Just like in the previous example, the outer loop runs $\lceil\log(N)\rceil$ tim
 
 $$
 \begin{align*}
-\sum_{k=1}^{{\lceil\log(N)\rceil}} (N - 2^k) &= N{\lceil\log(N)\rceil} - \sum_{k=0}^{{\lceil\log(N)\rceil}} (2^k) -1\\
-&= N{\lceil\log(N)\rceil} - (2^{{\lceil\log(N)\rceil} + 1} - 1) - 1 \\
-&= N{\lceil\log(N)\rceil} - 2^{{\lceil\log(N)\rceil} + 1} \\
-& \leq N(\log(N) + 1) - 2^{{\log(N)} + 2} \\
-&= N\log(N) - 3N \\
-&= \mathcal{O}(N\log(N))
+&\quad\sum_{k=1}^{{\lceil\log(N)\rceil}} (N - 2^k) \\
+=&\quad N{\lceil\log(N)\rceil} - \sum_{k=0}^{{\lceil\log(N)\rceil}} (2^k) -1\\
+=&\quad N{\lceil\log(N)\rceil} - (2^{{\lceil\log(N)\rceil} + 1} - 1) - 1 \\
+=&\quad N{\lceil\log(N)\rceil} - 2^{{\lceil\log(N)\rceil} + 1} \\
+ \leq&\quad N(\log(N) + 1) - 2^{{\log(N)} + 2} \\
+=&\quad N\log(N) - 3N \\
+=&\quad \mathcal{O}(N\log(N))
 \end{align*}
 $$
 
