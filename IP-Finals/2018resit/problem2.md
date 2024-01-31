@@ -37,12 +37,12 @@ The variable $s$ is incremented by $i$ in each iteration, while $i$ just counts 
 
 $$
 \begin{align*}
-& s \geq N \\
-\Leftrightarrow \quad & \frac{i(i+1)}{2} \geq N \\
-\Leftrightarrow \quad &  i^2 + i \geq 2N \\
-\Leftrightarrow \quad & i^2 + i + \frac{1}{4} \geq 2N + \frac{1}{4} \\
-\Leftrightarrow \quad & \left(i + \frac{1}{2}\right)^2 \geq 2N + \frac{1}{4} \\
-\Leftrightarrow \quad & i + \frac{1}{2} \geq \sqrt{2N + \frac{1}{4}} \\
+& s \geq N \\[1ex]
+\Leftrightarrow \quad & \frac{i(i+1)}{2} \geq N \\[2ex]
+\Leftrightarrow \quad &  i^2 + i \geq 2N \\[1ex]
+\Leftrightarrow \quad & i^2 + i + \frac{1}{4} \geq 2N + \frac{1}{4} \\[3ex]
+\Leftrightarrow \quad & \left(i + \frac{1}{2}\right)^2 \geq 2N + \frac{1}{4} \\[3ex]
+\Leftrightarrow \quad & i + \frac{1}{2} \geq \sqrt{2N + \frac{1}{4}} \\[3ex]
 \Leftrightarrow \quad & i \geq \sqrt{2N + \frac{1}{4}} - \frac{1}{2} \approx \sqrt{2N}
 \end{align*}
 $$
@@ -65,7 +65,7 @@ The outer loop runs $N$ times: $k$ is initialized to $N$, decremented by $1$ in 
 
 $$
 \begin{align*}
-\sum_{k=N}^1 k &= \sum_{k=1}^N k \\
+\sum_{k=N}^1 k &= \sum_{k=1}^N k \\[3ex]
 &= \frac{N(N+1)}{2}
 \end{align*}
 $$
@@ -89,15 +89,16 @@ The inner loop runs $s$ times for each updated value of $s$, so that the total n
 
 $$
 \begin{align*}
-&\quad \sum_{k=1}^{{\lceil\log(N)\rceil}} 2^k \\
-=&\quad \sum_{k=0}^{{\lceil\log(N)\rceil}} 2^k - 1 &\color{peru}{(1)}\\
-=&\quad 2^{{\lceil\log(N)\rceil} + 1} - 1 - 1 &\color{darkkhaki}{(2)}\\
-\leq&\quad  2^{{\log(N)} + 2} - 1 - 1 \\
-=&\quad 4N - 2
+&\quad \sum_{k=1}^{{\lceil\log(N)\rceil}} 2^k \\[3ex]
+=&\quad \sum_{k=0}^{{\lceil\log(N)\rceil}} 2^k - 1 &\color{peru}{(1)}\\[3ex]
+=&\quad 2^{{\lceil\log(N)\rceil} + 1} - 1 - 1 &\color{darkkhaki}{(2)}\\[0.5ex]
+\leq&\quad  2^{{\log(N)} + 2} - 1 - 1 \\[0.5ex]
+=&\quad 4N - 2\\[0.5ex]
+=&\quad \mathcal{O}(N)
 \end{align*}
 $$
 
-In $\color{peru}{(1)}$ we rewrite the sum, so that the index starts at $0$ instead of $1$. This allows us to use the formula for the sum of a geometric series in $\color{darkkhaki}{(2)}$, which is:
+In $\color{peru}{(1)}$ we rewrite the sum, so that the index $k$ starts at $0$ instead of $1$. This allows us to use the formula for the sum of a geometric series in $\color{darkkhaki}{(2)}$, which is:
 
 $$
 \sum_{k=0}^n a^k = \frac{a^{n+1} - 1}{a - 1}
@@ -123,14 +124,17 @@ Just like in the previous example, the outer loop runs $\lceil\log(N)\rceil$ tim
 
 $$
 \begin{align*}
-&\quad\sum_{k=1}^{{\lceil\log(N)\rceil}} (N - 2^k) \\
-=&\quad N{\lceil\log(N)\rceil} - \sum_{k=0}^{{\lceil\log(N)\rceil}} (2^k) -1\\
-=&\quad N{\lceil\log(N)\rceil} - (2^{{\lceil\log(N)\rceil} + 1} - 1) - 1 \\
-=&\quad N{\lceil\log(N)\rceil} - 2^{{\lceil\log(N)\rceil} + 1} \\
- \leq&\quad N(\log(N) + 1) - 2^{{\log(N)} + 2} \\
-=&\quad N\log(N) - 3N \\
+&\quad\sum_{k=1}^{{\lceil\log(N)\rceil}} (N - 2^k) \\[3ex]
+=&\quad\sum_{k=1}^{{\lceil\log(N)\rceil}} (N) - \sum_{k=1}^{{\lceil\log(N)\rceil}} (2^k) \\[3ex]
+=&\quad N{\lceil\log(N)\rceil} - \sum_{k=0}^{{\lceil\log(N)\rceil}} (2^k) -1 &\color{peru}{(1)}\\[3ex]
+=&\quad N{\lceil\log(N)\rceil} - (2^{{\lceil\log(N)\rceil} + 1} - 1) - 1 &\color{darkkhaki}{(2)}\\[0.5ex]
+=&\quad N{\lceil\log(N)\rceil} - 2^{{\lceil\log(N)\rceil} + 1} \\[0.5ex]
+ \leq&\quad N(\log(N) + 1) - 2^{{\log(N)} + 2} \\[0.5ex]
+=&\quad N\log(N) - 3N \\[0.5ex]
 =&\quad \mathcal{O}(N\log(N))
 \end{align*}
 $$
+
+Just like in the previous example, we rewrite the sum in $\color{peru}{(1)}$ so that the index $k$ starts at $0$ instead of $1$. This allows us to use the formula for the sum of a geometric series in $\color{darkkhaki}{(2)}$.
 
 The fragment's time complexity is therefore in $\mathcal{O}(N \log(N))$.

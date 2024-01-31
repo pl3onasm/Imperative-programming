@@ -14,10 +14,10 @@ In each loop iteration, the variable $i$ is incrememted by $1$, while the variab
 
 $$
 \begin{align*}
-& s \geq N \\
-\Leftrightarrow \quad &\frac{i(i+1)}{2} \geq N \\
-\Leftrightarrow \quad &i^2 + i \geq 2N \\
-\Leftrightarrow \quad &(i + \frac{1}{2})^2 \geq 2N + \frac{1}{4} \\
+& s \geq N \\[1ex]
+\Leftrightarrow \quad &\frac{i(i+1)}{2} \geq N \\[2ex]
+\Leftrightarrow \quad &i^2 + i \geq 2N \\[2ex]
+\Leftrightarrow \quad &(i + \frac{1}{2})^2 \geq 2N + \frac{1}{4} \\[2ex]
 \Leftrightarrow \quad &i \geq \sqrt{2N + \frac{1}{4}} - \frac{1}{2} \approx \sqrt{2N}
 \end{align*}
 $$
@@ -63,8 +63,8 @@ The outer loop is linear in $N$, and the inner loop runs $\log(i)$ times for eac
 
 $$
 \begin{align*}
-\sum_{i=1}^{N-1} \log(i) &= \log\left(\prod_{i=1}^{N-1} i\right) \\
-&= \log((N-1)!) \\
+\sum_{i=1}^{N-1} \log(i) &= \log\left(\prod_{i=1}^{N-1} i\right) \\[3ex]
+&= \log((N-1)!) \\[0.5ex]
 &= \mathcal{O}(N\log(N))
 \end{align*}
 $$
@@ -84,8 +84,8 @@ The loop condition is $i < N^2$, which means that the loop terminates when $i \g
 
 $$
 \begin{align*}
-\log_3(N^2) &= \frac{\log(N^2)}{\log(3)} \\
-&= \frac{2}{\log(3)} \log(N) \\
+\log_3(N^2) &= \frac{\log(N^2)}{\log(3)} \\[3ex]
+&= \frac{2}{\log(3)} \log(N) \\[3ex]
 &= \mathcal{O}(\log(N))
 \end{align*}
 $$

@@ -14,12 +14,12 @@ The loop terminates when $s \geq N$, that is, when:
 
 $$
 \begin{align*}
-&1 + 2 + \cdots + (i-1) \geq N \\ 
-\Leftrightarrow \quad &\frac{i(i-1)}{2} \geq N \\
-\Leftrightarrow \quad &i^2 - i \geq 2 N \\
-\Leftrightarrow \quad &i^2 - i + \frac{1}{4} \geq 2 N + \frac{1}{4} \\
-\Leftrightarrow \quad &(i - \frac{1}{2})^2 \geq 2 N + \frac{1}{4} \\
-\Leftrightarrow \quad &i - \frac{1}{2} \geq \sqrt{2 N + \frac{1}{4}} \\
+&1 + 2 + \cdots + (i-1) \geq N \\[2ex]
+\Leftrightarrow \quad &\frac{i(i-1)}{2} \geq N \\[2ex]
+\Leftrightarrow \quad &i^2 - i \geq 2 N \\[2ex]
+\Leftrightarrow \quad &i^2 - i + \frac{1}{4} \geq 2 N + \frac{1}{4} \\[2ex]
+\Leftrightarrow \quad &(i - \frac{1}{2})^2 \geq 2 N + \frac{1}{4} \\[2ex]
+\Leftrightarrow \quad &i - \frac{1}{2} \geq \sqrt{2 N + \frac{1}{4}} \\[2ex]
 \Leftrightarrow \quad &i \geq \sqrt{2 N + \frac{1}{4}} + \frac{1}{2} \approx \sqrt{2 N}\\
 \end{align*}
 $$
@@ -40,9 +40,9 @@ for (i = 0; i < N; i++) {
 The inner loop is executed $N - i$ times for each value of $i$, so that the total number of times the body of the inner loop is executed is:
 
 $$\begin{align*}
-\sum_{i=0}^{N-1} (N-i) &= \sum_{i=0}^{N-1} N - \sum_{i=0}^{N-1} i \\
-&= N^2 - \sum_{i=0}^{N-1} i\\
-&= N^2 - \frac{N(N-1)}{2}\\
+\sum_{i=0}^{N-1} (N-i) &= \sum_{i=0}^{N-1} N - \sum_{i=0}^{N-1} i \\[3ex]
+&= N^2 - \sum_{i=0}^{N-1} i\\[3.5ex]
+&= N^2 - \frac{N(N-1)}{2}\\[2ex]
 &= \frac{N(N+1)}{2}
 \end{align*}
 $$
@@ -108,10 +108,10 @@ for (i = 0; i < N; i++) {
 The inner loop is executed $\log(i^2) = 2\log(i)$ times for each value of $i$ ranging from $1$ to $N-1$, so that the total number of iterations is given by:
 
 $$\begin{align*}
-\sum_{i=1}^{N-1} 2\log(i) &= 2\sum_{i=1}^{N-1} \log(i) \\
-&= 2\log\left(\prod_{i=1}^{N-1} i\right) \\
-&= 2\log\left((N-1)!\right) \\
-&< 2\log(N!) \\
+\sum_{i=1}^{N-1} 2\log(i) &= 2\sum_{i=1}^{N-1} \log(i) \\[3ex]
+&= 2\log\left(\prod_{i=1}^{N-1} i\right) \\[3.5ex]
+&= 2\log\left((N-1)!\right) \\[1ex]
+&< 2\log(N!) \\[1ex]
 &= \mathcal{O}(N \log(N)) \\
 \end{align*}
 $$

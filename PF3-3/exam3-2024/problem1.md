@@ -14,11 +14,11 @@ At the end of each iteration, we have $s = i^2 + 2i$. The fragment is based on G
 
 $$
 \begin{align*}
-& s \geq N \\
-\Leftrightarrow \quad  &i^2 + 2i \geq N \\
-\Leftrightarrow \quad &i^2 + 2i + 1 \geq N + 1 \\
-\Leftrightarrow \quad &(i + 1)^2 \geq N + 1 \\
-\Leftrightarrow \quad &i + 1 \geq \sqrt{N + 1} \\
+& s \geq N \\[1ex]
+\Leftrightarrow \quad  &i^2 + 2i \geq N \\[1ex]
+\Leftrightarrow \quad &i^2 + 2i + 1 \geq N + 1 \\[1ex]
+\Leftrightarrow \quad &(i + 1)^2 \geq N + 1 \\[1ex]
+\Leftrightarrow \quad &i + 1 \geq \sqrt{N + 1} \\[1ex]
 \Leftrightarrow \quad &i \geq \sqrt{N + 1} - 1
 \end{align*}
 $$
@@ -39,9 +39,9 @@ for (int i = 0; i < N; i++) {
 The inner loop is executed $N - i$ times for each value of $i$. So, the total number of iterations is:
 
 $$\begin{align*}
-\sum_{i=0}^{N-1} (N-i) &= \sum_{i=0}^{N-1} N - \sum_{i=0}^{N-1} i \\
-&= N^2 - \sum_{i=0}^{N-1} i\\
-&= N^2 - \frac{N(N-1)}{2}\\
+\sum_{i=0}^{N-1} (N-i) &= \sum_{i=0}^{N-1} N - \sum_{i=0}^{N-1} i \\[3ex]
+&= N^2 - \sum_{i=0}^{N-1} i\\[3.5ex]
+&= N^2 - \frac{N(N-1)}{2}\\[2ex]
 &= \frac{N(N+1)}{2}
 \end{align*}
 $$
@@ -81,8 +81,8 @@ The inner loop runs $\frac{N}{3}$ times. The number of iterations of the outer l
 
 $$
 \begin{align*}
-\log_3(N^2) &= \frac{\log(N^2)}{\log(3)} \\
-&= \frac{2}{\log(3)}\log(N) \\
+\log_3(N^2) &= \frac{\log(N^2)}{\log(3)} \\[2ex]
+&= \frac{2}{\log(3)}\log(N) \\[2ex]
 &= \mathcal{O}(\log(N))
 \end{align*}
 $$
@@ -105,11 +105,11 @@ The variable $i$ starts at $N^2$ and is decremented by $j$ at each iteration. Th
 $$
 \begin{align*}
 & i \leq 0 \\
-\Leftrightarrow \quad &N^2 - \frac{k(k+1)}{2} \leq 0 \\
-\Leftrightarrow \quad &2N^2 \leq k^2 +k \\
-\Leftrightarrow \quad &2N^2 + \frac{1}{4}\leq k^2 + k + \frac{1}{4}\\
-\Leftrightarrow \quad &2N^2 + \frac{1}{4} \leq (k + \frac{1}{2})^2 \\
-\Leftrightarrow \quad &\sqrt{2N^2 + \frac{1}{4}} \leq k + \frac{1}{2} \\
+\Leftrightarrow \quad &N^2 - \frac{k(k+1)}{2} \leq 0 \\[2ex]
+\Leftrightarrow \quad &2N^2 \leq k^2 +k \\[1ex]
+\Leftrightarrow \quad &2N^2 + \frac{1}{4}\leq k^2 + k + \frac{1}{4}\\[2ex]
+\Leftrightarrow \quad &2N^2 + \frac{1}{4} \leq (k + \frac{1}{2})^2 \\[2ex]
+\Leftrightarrow \quad &\sqrt{2N^2 + \frac{1}{4}} \leq k + \frac{1}{2} \\[2ex]
 \Leftrightarrow \quad &k \geq \sqrt{2N^2 + \frac{1}{4}} - \frac{1}{2} \approx \sqrt{2} N
 \end{align*}
 $$

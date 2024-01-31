@@ -26,8 +26,8 @@ The number of iterations of the loop is given by the number of times $i$ can be 
 
 $$
 \begin{align*}
-\log_3(N^2) &= \frac{\log(N^2)}{\log(3)} \\
-&= \frac{2}{\log(3)}\log(N) \\
+\log_3(N^2) &= \frac{\log(N^2)}{\log(3)} \\[2ex]
+&= \frac{2}{\log(3)}\log(N) \\[2ex]
 &= \mathcal{O}(\log(N))
 \end{align*}
 $$
