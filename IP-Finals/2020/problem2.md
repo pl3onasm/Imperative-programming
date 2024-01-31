@@ -14,7 +14,7 @@ In each loop iteration, the variable $i$ is incrememted by $1$, while the variab
 
 $$
 \begin{align*}
-& s \geq N \\[1ex]
+& s \geq N \\
 \Leftrightarrow \quad &\frac{i(i+1)}{2} \geq N \\
 \Leftrightarrow \quad &i^2 + i \geq 2N \\
 \Leftrightarrow \quad &(i + \frac{1}{2})^2 \geq 2N + \frac{1}{4} \\
