@@ -29,14 +29,14 @@ $$
 \begin{align*}
   & \quad \sum_{k=1}^{\lfloor \log(N) \rfloor} \frac{N - 2^k + 1}{2} \\
 = & \quad \frac{1}{2} \sum_{k=1}^{\lfloor \log(N) \rfloor} (N+1) - \frac{1}{2} \sum_{k=1}^{\lfloor \log(N) \rfloor} 2^k \\
-= & \quad \frac{1}{2} \lfloor \log(N) \rfloor (N+1) - \frac{1}{2} \sum_{k=0}^{\lfloor \log(N) \rfloor} (2^{k}) + \frac{1}{2} \\
-= & \quad \frac{1}{2} \lfloor \log(N) \rfloor (N+1) - 2^{\lfloor \log(N) \rfloor} + 1 &\color{peru}{(1)} \\
+= & \quad \frac{1}{2} \lfloor \log(N) \rfloor (N+1) - \frac{1}{2} \sum_{k=0}^{\lfloor \log(N) \rfloor} (2^{k}) + \frac{1}{2} &\color{peru}{(1)}\\
+= & \quad \frac{1}{2} \lfloor \log(N) \rfloor (N+1) - 2^{\lfloor \log(N) \rfloor} + 1 &\color{darkkhaki}{(2)} \\
 \leq & \quad \frac{1}{2} \log(N) (N+1) - 2^{\log(N)} + 1 \\
 = & \quad \mathcal{O}(N \log(N)) \\
 \end{align*}
 $$
 
-In $\color{peru}{(1)}$ we use the formula for the sum of a geometric series, with $a = 2$ and $n = \lfloor \log(N) \rfloor$:
+In $\color{peru}{(1)}$ we rewrite the sum, so that the index $k$ starts at $0$ instead of $1$. This allows us to use the formula for the sum of a geometric series in $\color{darkkhaki}{(2)}$, with $a = 2$ and $n = \lfloor \log(N) \rfloor$:
 
 $$
 \sum_{k=0}^n a^k = \frac{a^{n+1} - 1}{a - 1} \quad \text{for} \quad a \neq 1
