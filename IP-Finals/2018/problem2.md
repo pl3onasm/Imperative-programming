@@ -83,7 +83,7 @@ $$
 
 From the above, we conclude that the fragment's time complexity is in $\mathcal{O}(N\log(N))$.
 
-[^1]: Note that we let the index k start from 1, since the first iteration of the outer loop does not run the inner loop. This is because the inner loop's condition is $j < N$, which is not satisfied when $i = N$. So the counting of the total number of iterations starts for i = N/2 which corresponds to k = 1.
+[^1]: Note that we let the index k start from 1, since the first iteration of the outer loop does not run the inner loop. This is because the inner loop's condition is $j < N$, which is not satisfied when i = N. The counting of the total number of iterations starts for i = N/2 which corresponds to k = 1. The expression still holds for k = 0, since the summand is 0, but the calculation is a little easier if we start from k = 1.
 
 ## Ex6: $\color{rosybrown}{{\mathcal{O}(N)}}$
 
