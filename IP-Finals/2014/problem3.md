@@ -10,9 +10,7 @@ while (i < N) {
 }
 ```
 
-The variable $j$ keeps track of the number of iterations. Use is made of Gauss' formula for the sum of the first $j$ integers, but modified such that $i$ is the exact square of $j$: so we have $i = j^2$, and not $i = j(j+1)/2$, at the end of each loop iteration. The loop terminates when $i \geq N$, so we have $j \geq \sqrt{N}$. The fragment's time complexity is therefore in $\mathcal{O}(\sqrt{N})$.  
-
-Compare this with [ex3 from 2013](https://github.com/pl3onasm/Imperative-programming/blob/main/IP-Finals/2013/problem3.md#ex3-colorrosybrownmathcalosqrtn). The fragment is identical, except that the body statements are swapped, reason why $i$ is incremented by $2j + 1$ instead of $2j - 1$ to still obtain $i = j^2$ at the end of each iteration.  
+The variable $j$ keeps track of the number of iterations. Use is made of Gauss' formula for the sum of the first $j$ integers, but modified such that $i$ is the exact square of $j$: so we have $i = j^2$, and not $i = j(j+1)/2$, at the end of each loop iteration. The loop terminates when $i \geq N$, so we have $j \geq \sqrt{N}$. The fragment's time complexity is therefore in $\mathcal{O}(\sqrt{N})$.
 
 ## Ex2: $\color{rosybrown}{{\mathcal{O}(\log N)}}$
 
@@ -27,7 +25,7 @@ while (i > 1) {
 }
 ```
 
-The variable $i$ is initialized to $N$, and then halved if it is even, or incremented by one to make it even if it is odd. The loop terminates when $i = 1$. In the worst case, $i$ is halved half of the time, and incremented by one the other half of the time. In this case, the loop needs less than $2\log_2 N$ iterations to terminate. The fragment's time complexity is therefore in $\mathcal{O}(\log N)$.
+The variable $i$ is initialized to $N$, and then halved if it is even, or incremented by one to make it even if it is odd. The loop terminates when $i = 1$. In the worst case, $i$ is halved half of the time, and incremented by one the other half of the time. In this case, the loop needs less than $2\log(N)$ iterations to terminate. The fragment's time complexity is therefore in $\mathcal{O}(\log N)$.
 
 ## Ex3: $\color{rosybrown}{{\mathcal{O}(N)}}$
 
@@ -66,7 +64,7 @@ for (i = 0; i < N; i++) {
 }
 ```
 
-The inner loop is executed $N-1$ times for each iteration of the outer loop, which is executed $N$ times. The loops are nested, so fragment's time complexity is therefore in $\mathcal{O}(N^2)$.
+The inner loop is executed $N-1$ times for each iteration of the outer loop, which is executed $N$ times. The loops are nested, so the fragment's total time complexity is therefore in $\mathcal{O}(N^2)$.
 
 ## Ex6: $\color{rosybrown}{{\mathcal{O}(N \log N)}}$
 
@@ -82,4 +80,14 @@ while (prod > 0) {
 }
 ```
 
-The first loop computes the factorial of $N - 1$, in $N - 1$ iterations. The second loop divides $(N-1)!$ by two until it reaches zero, in $\log \left((N-1)!\right)$ $< \log (N!) = \mathcal{O}(N \log N)$ time. The fragment's time complexity is thus determined by the second, most expensive loop, and is therefore in $\mathcal{O}(N \log N)$.
+The first loop computes the factorial of $N - 1$, in $N - 1$ iterations. The second loop divides $(N-1)!$ by two until it reaches zero, so that this loop's number of iterations is given by:
+
+$$
+\begin{align*}
+& \quad \log \left( (N-1)!\right) \\
+< & \quad \log \left( (N)!\right) \\
+= & \quad \mathcal{O}(N \log N)
+\end{align*}
+$$
+
+The fragment's time complexity is thus determined by the second, most expensive loop, and is therefore in $\mathcal{O}(N \log N)$.
