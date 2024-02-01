@@ -23,7 +23,7 @@ for (i = 0; i < N; i++) {
 }
 ```
 
-The outer loop runs $N$ times, whereas the inner loop runs $N - 2i$ times, where $i$ ranges from $0$ to $N - 1$. However, for a correct computation of the total number of iterations, we need to take into account that both the lower and upper bound of the inner loop depend on $i$. That is, the lower bound increases by $i$, while at the same time the upper bound decreases by $i$. So after $i = \lfloor \frac{N}{2} \rfloor - 1$, there are no more iterations. Thus, the total number of iterations is given by:
+The outer loop runs $N$ times, whereas the inner loop runs $N - 2i$ times, where $i$ ranges from $0$ to $N - 1$. However, for a correct computation of the total number of iterations, we need to take into account that both the lower and upper bound of the inner loop depend on $i$. That is, the lower bound increases by $i$, while at the same time the upper bound decreases by $i$ for each iteration of the outer loop. So after $i = \lfloor \frac{N}{2} \rfloor - 1$, there are no more iterations. Thus, the total number of iterations is given by:
 
 $$
 \begin{align*}
@@ -95,7 +95,7 @@ $$
 
 Thus, the fragment's time complexity is in $\mathcal{O}(N)$.
 
-Note that we could have run an argument for a complexity in $\mathcal{O}(N \log(N))$ by stating that the outer loop runs in logarithmic time and the inner loop runs $\color{orchid}{\text{at most}}$ $N$ times (or $N$ times in the worst case), so that the nested loop's total complexity becomes linearithmic in $N$. This is not wrong, but an overestimate, as the tight bound is in $\mathcal{O}(N)$. It is testomony to the fact that rough reasoning does not always yield the tightest bound. The same situation arises in [Ex5 of the 2018 resit exam](https://github.com/pl3onasm/Imperative-programming/blob/main/IP-Finals/2018resit/problem2.md#ex5-colorrosybrownmathcalonlogn).
+Note that we could have run an argument for a complexity in $\mathcal{O}(N \log(N))$ by stating that the outer loop runs in logarithmic time and the inner loop runs $\color{orchid}{\text{at most}}$ $N$ times (or $N$ times in the worst case), so that the nested loop's total complexity becomes linearithmic in $N$. This is not wrong, but an overestimate, as the tightest bound is in $\mathcal{O}(N)$. It is testomony to the fact that rough reasoning does not always yield the tightest bound. The same situation arises in e.g. [Ex5 2018 resit](https://github.com/pl3onasm/Imperative-programming/blob/main/IP-Finals/2018resit/problem2.md#ex5-colorrosybrownmathcalonlogn), and [Ex2 2017 resit](https://github.com/pl3onasm/Imperative-programming/blob/main/IP-Finals/2017resit/problem2.md#ex1-colorrosybrownmathcalon).
 
 ## Ex6: $\color{rosybrown}{{\mathcal{O}(N \log(N))}}$
 

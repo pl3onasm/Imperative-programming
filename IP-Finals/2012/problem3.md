@@ -10,7 +10,7 @@ while (i < j) {
 }
 ```
 
-Both variables run through their consecutive values, until they meet in the middle at which point the loop terminates. The total number of iterations is $N/2$, and the fragment's complexity is therefore in $\mathcal{O}(N)$.
+Both variables run through their consecutive values, until they meet in the middle at which point the loop terminates. The total number of iterations is $\frac{N}{2}$, and the fragment's complexity is therefore in $\mathcal{O}(N)$.
 
 ## Ex2: $\color{rosybrown}{{\mathcal{O}(\log N)}}$
 
@@ -25,7 +25,7 @@ while (j - i > 1) {
 }
 ```
 
-This is similar to a binary search algorithm. At each iteration, the size of the interval is halved, and the loop terminates when the interval is of size $1$ or less. The number of iterations is therefore the number of times $N$ can be halved before reaching $1$, which is $\log(N)$. Thus, the fragment's complexity is in $\mathcal{O}(\log N)$.
+This is a binary search algorithm. At each iteration, the size of the interval is halved, and the loop terminates when the interval is of size $1$ or less. The number of iterations is therefore the number of times $N$, the size of the search interval, can be halved before reaching $1$, which is $\log(N)$. Thus, the fragment's complexity is in $\mathcal{O}(\log N)$.
 
 ## Ex3: $\color{rosybrown}{{\mathcal{O}(\sqrt{N})}}$
 
@@ -63,12 +63,13 @@ for (i = 1; i < N; i++) {
 }
 ```
 
-The outer loop runs $N - 1$ times, whereas the inner loop runs $\log(i)$ times. The total number of iterations is therefore given by:
+The outer loop runs $N - 1$ times, whereas the inner loop runs $\log(i-1)$ times. The total number of iterations is therefore given by:
 
 $$
 \begin{align*}
-\sum_{i=1}^{N-1} \log(i) &= \log\left(\prod_{i=1}^{N-1} i\right) \\
-&= \log\left((N-1)!\right) \\
+\sum_{i=1}^{N-1} \log(i-1) &= \log\left(\prod_{i=1}^{N-1} (i-1)\right) \\
+&= \log\left((N-2)!\right) \\
+& < \log\left(N!\right) \\
 &= \mathcal{O}(N \log N)
 \end{align*}
 $$

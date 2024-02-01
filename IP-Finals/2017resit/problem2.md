@@ -31,7 +31,7 @@ $$
 
 From the above, we therefore have that the fragment's time complexity is in $\mathcal{O}(N)$.
 
-Note that we could have run an argument for a complexity in $\mathcal{O}(N \log(N))$ by stating that the outer loop runs in logarithmic time and the inner loop runs $\color{orchid}{\text{at most}}$ $N$ times (or $N$ times in the worst case), so that the nested loop's total complexity becomes linearithmic in $N$. This is not wrong, but an overestimate, as the tight bound is $\mathcal{O}(N)$. It is testomony to the fact that rough reasoning does not always yield the tightest bound. The same situation arises in [2013 Ex5](https://github.com/pl3onasm/Imperative-programming/blob/main/IP-Finals/2013/problem3.md#ex5-colorrosybrownmathcalon), and [2018 Ex5](https://github.com/pl3onasm/Imperative-programming/blob/main/IP-Finals/2018resit/problem2.md#ex5-colorrosybrownmathcalon).
+Note that we could have run an argument for a complexity in $\mathcal{O}(N \log(N))$ by stating that the outer loop runs in logarithmic time and the inner loop runs $\color{orchid}{\text{at most}}$ $N$ times (or $N$ times in the worst case), so that the nested loop's total complexity becomes linearithmic in $N$. This is not wrong, but an overestimate, as the tight bound is $\mathcal{O}(N)$. It is testomony to the fact that rough reasoning does not always yield the tightest bound. The same situation arises in [Ex5 2013](https://github.com/pl3onasm/Imperative-programming/blob/main/IP-Finals/2013/problem3.md#ex5-colorrosybrownmathcalon), and [Ex5 2018 resit](https://github.com/pl3onasm/Imperative-programming/blob/main/IP-Finals/2018resit/problem2.md#ex5-colorrosybrownmathcalon).
 
 ## Ex2: $\color{rosybrown}{{\mathcal{O}(N\log(N))}}$
 
