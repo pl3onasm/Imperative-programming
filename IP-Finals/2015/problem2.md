@@ -41,8 +41,8 @@ The inner loop is executed $N - i$ times for each value of $i$, so that the tota
 
 $$\begin{align*}
 \sum_{i=0}^{N-1} (N-i) &= \sum_{i=0}^{N-1} N - \sum_{i=0}^{N-1} i \\
-&= N^2 - \sum_{i=0}^{N-1} i\\[3.5ex]
-&= N^2 - \frac{N(N-1)}{2}\\[2ex]
+&= N^2 - \sum_{i=0}^{N-1} i\\
+&= N^2 - \frac{N(N-1)}{2}\\
 &= \frac{N(N+1)}{2}
 \end{align*}
 $$
