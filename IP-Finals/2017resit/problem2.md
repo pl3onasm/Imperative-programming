@@ -48,7 +48,7 @@ The fragment is similar to the previous one, but the loops are nested in the opp
 
 $$
 \begin{align*}
-& \quad \sum_{i=N}^1 \log(i) \\
+\sum_{i=N}^1 \log(i)\quad 
 = & \quad \sum_{i=1}^N \log(i) \\
 = & \quad \log \left( \prod_{i=1}^N i \right) \\
 = & \quad \log(N!) \\
@@ -73,7 +73,7 @@ The outer loop runs $N$ times, and the inner loop runs $\frac {i}{2}$ times for 
 
 $$
 \begin{align*}
-& \quad \sum_{i=N}^1 \frac{i}{2} \\
+ \sum_{i=N}^1 \frac{i}{2}\quad
 = & \quad \frac{1}{2} \sum_{i=1}^N i \\
 = & \quad \frac{1}{2} \cdot \frac{N(N+1)}{2} \\
 = & \quad \mathcal{O}(N^2)

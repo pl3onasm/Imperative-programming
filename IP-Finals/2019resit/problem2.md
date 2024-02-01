@@ -37,7 +37,7 @@ while (s < N*N) {
 }
 ```
 
-The loop terminates when $s \geq N^2$. Since $s$ is incremented by $i$ in each iteration, we have $s = \frac{i \cdot (i-1)}{2}$ by Gauss' formula. Note that $i$ is incremented $\color{mediumorchid}{\text{after}}$ $s$ is updated, so that when the loop condition is checked, the value of $s$ equals the sum of the first $i - 1$ positive integers. Hence, the loop terminates when:
+The loop terminates when $s \geq N^2$. Since $s$ is incremented by $i$ in each iteration, we have $s = \frac{i (i-1)}{2}$ by Gauss' formula. Note that $i$ is incremented $\color{mediumorchid}{\text{after}}$ $s$ is updated, so that when the loop condition is checked, the value of $s$ equals the sum of the first $i - 1$ positive integers. Hence, the loop terminates when:
 
 $$
 \begin{align*}

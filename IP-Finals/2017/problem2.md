@@ -11,7 +11,7 @@ for (int i = 0; i < N; i += 3) {
 }
 ```
 
-The outer loop runs $N/3$ times, and the inner loop runs $\log(3N) = \log(3) + \log(N)$ times. Since the loops are nested, we obtain the total number of iterations by multiplying the number of iterations of the outer loop by the number of iterations of the inner loop, and come to an overall time complexity of $\mathcal{O}(N\log(N))$.
+The outer loop runs $\frac{N}{3}$ times, and the inner loop runs $\log(3N) = \log(3) + \log(N)$ times. Since the loops are nested, we obtain the total number of iterations by multiplying the number of iterations of the outer loop by the ones of the inner loop, and come to an overall time complexity of $\mathcal{O}(N\log(N))$.
 
 ## Ex2: $\color{rosybrown}{{\mathcal{O}(\log(N))}}$
 
@@ -22,7 +22,7 @@ for (int i = 1; i < N*N; i *= 3) {
 }
 ```
 
-The number of iterations of the loop is given by the number of times $i$ can be multiplied by 3 before it exceeds $N^2$. This is equivalent to solving the equation $3^k = N^2$ for $k$, which yields $k = \log_3(N^2)$. We can rewrite this as:
+The number of iterations of the loop is given by the number of times $i$ can be multiplied by 3 before it exceeds $N^2$. This is equivalent to solving the equation $3^k = N^2$ for $k \in \mathbb{N}$, which yields $k = \log_3(N^2)$. We can rewrite this as:
 
 $$
 \begin{align*}
@@ -48,8 +48,19 @@ while (i > 0) {
 }
 ```
 
-The first loop runs until $s = \frac{i(i-1)}{2} \geq N$, which is equivalent to solving the quadratic equation $i^2 - i - 2N = 0$ for $i$. This yields $i = \sqrt{2N + \frac{1}{4}} + \frac{1}{2}$ $\approx \sqrt{2N}$.  
-The second loop decrements $i$ until it reaches 0 in a total of $\sqrt{2N}$ steps. The loops are not nested, so we obtain an overall time complexity of $\mathcal{O}(\sqrt{N})$.
+The first loop terminates when $s \geq N$. Since $s$ is incremented by $i$ in each iteration, we have $s = \frac{i (i-1)}{2}$ by Gauss' formula. Note that $i$ is incremented $\color{mediumorchid}{\text{after}}$ $s$ is updated, so that when the loop condition is checked, the value of $s$ equals the sum of the first $i - 1$ positive integers. Hence, the loop terminates when:
+
+$$
+\begin{align*}
+&\frac{i (i-1)}{2} \geq N \\
+\Leftrightarrow \quad &i^2 - i \geq 2 N \\
+\Leftrightarrow \quad &i^2 - i + \frac{1}{4} \geq 2 N + \frac{1}{4} \\
+\Leftrightarrow \quad &(i - \frac{1}{2})^2 \geq 2 N + \frac{1}{4} \\
+\Leftrightarrow \quad &i - \frac{1}{2} \geq \sqrt{2 N + \frac{1}{4}} \\
+\Leftrightarrow \quad &i \geq \sqrt{2 N + \frac{1}{4}} + \frac{1}{2} \approx \sqrt{2 N}
+\end{align*}
+$$
+The second loop decrements $i$ until it reaches 0 in a total of about $\sqrt{2N}$ steps. The loops are not nested, so we obtain an overall time complexity of $\mathcal{O}(\sqrt{N})$.
 
 ## Ex4: $\color{rosybrown}{{\mathcal{O}(N^2)}}$
 
@@ -62,8 +73,17 @@ for (i = 0; i < N; i++) {
 }
 ```
 
-The outer loop runs $N$ times, and the inner loop runs at most $\frac{5(N-1)}{2}$ times when $i$ reaches its maximum value of $N-1$.  
-Since the loops are nested, the fragment runs in $\mathcal{O}(N^2)$ time.
+The outer loop runs $N$ times, and the inner loop runs $5i$ times for each iteration of the outer loop. Thus, the total number of iterations is given by:
+
+$$
+\begin{align*}
+\sum_{i=0}^{N-1} 5i &= 5 \sum_{i=0}^{N-1} i \\
+&= 5 \frac{N(N-1)}{2} \\
+&= \mathcal{O}(N^2)
+\end{align*}
+$$
+
+Thus, the overall time complexity is in $\mathcal{O}(N^2)$.
 
 ## Ex5: $\color{rosybrown}{{\mathcal{O}(N\log(N))}}$
 
@@ -77,7 +97,7 @@ for (int i = N; i > 0; i--) {
 }
 ```
 
-The outer loop runs $N$ times. The inner loop runs $\log_d(N) = \frac{\log(N)}{\log(d)}$ times, where $d \in \left[2, 7\right)$, which is in $\mathcal{O}(\log(N))$ time. Since the loops are nested, we obtain an overall time complexity of $\mathcal{O}(N\log(N))$.
+The outer loop runs $N$ times. The inner loop runs $\log_d(N) = \frac{\log(N)}{\log(d)}$ times, where $d \in \left[2, 7\right)$, which is in $\mathcal{O}(\log(N))$. Since the loops are nested, we obtain an overall time complexity of $\mathcal{O}(N\log(N))$.
 
 ## Ex6: $\color{rosybrown}{{\mathcal{O}(N)}}$
 
@@ -89,5 +109,4 @@ while (s < N*N) {
 }
 ```
 
-The loop runs until $s = \frac{i(i-1)}{2} \geq N^2$, which is equivalent to solving the quadratic equation $i^2 - i - 2N^2 = 0$ for $i$. This yields $i = \frac{1}{2} + \sqrt{2N^2 + \frac{1}{4}}$ $\approx \sqrt{2}N$.
-Thus, the total number of iterations is in $\mathcal{O}(N)$.
+This loop is the same as the first one in [ex3](https://github.com/pl3onasm/Imperative-programming/blob/main/IP-Finals/2017/problem2.md#ex3-colorrosybrownmathcalosqrtn), except that the loop condition here is $s < N^2$ instead of $s < N$. Following the same reasoning, we obtain that the loop terminates when $i \geq \sqrt{2 N^2 + \frac{1}{4}} + \frac{1}{2} \approx \sqrt{2} N$. Thus, the overall time complexity is in $\mathcal{O}(N)$.
