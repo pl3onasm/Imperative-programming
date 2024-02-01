@@ -58,8 +58,8 @@ The outer loop is linear in $N$, and the inner loop runs $\log(i)$ times for eac
 
 $$
 \begin{align*}
-\sum_{i=1}^{N-1} \log(i) &= \log\left(\prod_{i=1}^{N-1} i\right) \\
-&= \log((N-1)!) \\
+\sum_{i=1}^{N-1} \log(i-1) &= \log\left(\prod_{i=1}^{N-1} (i-1)\right) \\
+&= \log((N-2)!) \\
 &= \mathcal{O}(N\log(N))
 \end{align*}
 $$

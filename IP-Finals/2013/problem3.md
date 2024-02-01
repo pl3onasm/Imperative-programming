@@ -23,7 +23,7 @@ for (i = 0; i < N; i++) {
 }
 ```
 
-The outer loop runs $N$ times, whereas the inner loop runs $N - 2i$ times, where $i$ ranges from $0$ to $N - 1$. However, for a correct computation of the total number of iterations, we need to take into account that both the lower and upper bound of the inner loop depend on $i$. That is, the lower bound increases by $i$, while at the same time the upper bound decreases by $i$ for each iteration of the outer loop. So after $i = \lfloor \frac{N}{2} \rfloor - 1$, there are no more iterations. Thus, the total number of iterations is given by:
+The outer loop runs $N$ times, whereas the inner loop runs $N - 2i$ times, where $i$ ranges from $0$ to $N - 1$. However, for a correct computation of the total number of iterations, we need to take into account that both the lower and upper bound of the inner loop depend on $i$. That is, the lower bound increases by $i$, while at the same time the upper bound decreases by $i$ for each iteration of the outer loop. So after $i = \lfloor \frac{N}{2} \rfloor - 1$, there are no more iterations of the inner loop. Thus, the total number of iterations is given by:
 
 $$
 \begin{align*}
