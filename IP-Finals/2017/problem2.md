@@ -74,17 +74,17 @@ for (i = 0; i < N; i++) {
 }
 ```
 
-The outer loop runs $N$ times, and the inner loop runs $5i$ times for each iteration of the outer loop. Thus, the total number of iterations is given by:
+The outer loop runs $N$ times, and the inner loop runs $\frac{5i}{2}$ times for each iteration of the outer loop. Thus, the total number of iterations is given by:
 
 $$
 \begin{align*}
-\sum_{i=0}^{N-1} 5i &= 5 \sum_{i=0}^{N-1} i \\
-&= 5 \frac{N(N-1)}{2} \\
+\sum_{i=0}^{N-1} \frac{5i}{2} &= \frac{5}{2} \sum_{i=0}^{N-1} i \\
+&= \frac{5}{2} \frac{N (N-1)}{2} &\color{peru}{(1)}\\
 &= \mathcal{O}(N^2)
 \end{align*}
 $$
 
-Thus, the overall time complexity is in $\mathcal{O}(N^2)$.
+In $\color{peru}{(1)}$, we used Gauss' formula to compute the sum of the first $N - 1$ positive integers. From the above, we conclude that the overall time complexity is in $\mathcal{O}(N^2)$.
 
 ## Ex5: $\color{rosybrown}{{\mathcal{O}(N\log(N))}}$
 

@@ -22,7 +22,27 @@ for (i = 1; i < N; i *= 2) {
 }
 ```
 
-The outer loop runs $\log(N)$ times, since $i$ is doubled at each iteration. The inner loop runs at most $\frac{N - 2}{2} = \frac{N}{2} - 1$ times, which is linear in $N$. The loops are nested, so the total time complexity is in $\mathcal{O}(N\log N)$.
+The outer loop runs $\log(N)$ times, since it doubles $i$ at the end of each iteration. This means that $i$ is always a power of $2$, that is, $i = 2^k$ for $k \in \lbrace 0, 1, \ldots, \lfloor \log(N) - 1 \rfloor \rbrace$.  
+The inner loop runs $\frac{N - i + 1}{2}$ times for each value of $i$. The total number of iterations is therefore:
+
+$$
+\begin{align*}
+  & \quad \sum_{k=1}^{\lfloor \log(N) \rfloor} \frac{N - 2^k + 1}{2} \\
+= & \quad \frac{1}{2} \sum_{k=1}^{\lfloor \log(N) \rfloor} (N+1) - \frac{1}{2} \sum_{k=1}^{\lfloor \log(N) \rfloor} 2^k \\
+= & \quad \frac{1}{2} \lfloor \log(N) \rfloor (N+1) - \frac{1}{2} \sum_{k=0}^{\lfloor \log(N) \rfloor} (2^{k}) + \frac{1}{2} \\
+= & \quad \frac{1}{2} \lfloor \log(N) \rfloor (N+1) - 2^{\lfloor \log(N) \rfloor} + 1 &\color{peru}{(1)} \\
+\leq & \quad \frac{1}{2} \log(N) (N+1) - 2^{\log(N)} + 1 \\
+= & \quad \mathcal{O}(N \log(N)) \\
+\end{align*}
+$$
+
+In $\color{peru}{(1)}$ we use the formula for the sum of a geometric series, with $a = 2$ and $n = \lfloor \log(N) \rfloor$:
+
+$$
+\sum_{k=0}^n a^k = \frac{a^{n+1} - 1}{a - 1} \quad \text{for} \quad a \neq 1
+$$
+
+From the above, we therefore have that the fragment's time complexity is in $\mathcal{O}(N)$.
 
 ## Ex3: $\color{rosybrown}{{\mathcal{O}(\sqrt{N})}}$
 
@@ -63,7 +83,7 @@ while (i > 0) {
 }
 ```
 
-The loop runs $\log(N)$ times, since $i$ is halved at each iteration. The if statement ensures that $i$ is even at each iteration, after which it is halved. Therefore, the fragment's time complexity is in $\mathcal{O}(\log N)$.
+The loop runs $\log(N)$ times, since $i$ is halved at each iteration. The *if* statement merely ensures that $i$ is always even before dividing it by $2$. Therefore, the fragment's time complexity is in $\mathcal{O}(\log N)$.
 
 ## Ex5: $\color{rosybrown}{{\mathcal{O}(N^2)}}$
 
@@ -75,7 +95,7 @@ while (2*i <= N*N) {
 }
 ```
 
-At each iteration, $i$ is incremented by $1$. When the loop terminates, $i = \frac{N^2}{2} + 1$. Therefore, the fragment's time complexity is in $\mathcal{O}(N^2)$.
+At each iteration, $i$ is incremented by $1$, so that $i$ keeps track of the number of iterations. When the loop terminates, we have $2i > N^2$, that is, $i > \frac{N^2}{2}$. Hence, the fragment's time complexity is in $\mathcal{O}(N^2)$.
 
 ## Ex6: $\color{rosybrown}{{\mathcal{O}(N)}}$
 
