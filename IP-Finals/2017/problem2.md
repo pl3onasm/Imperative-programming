@@ -60,6 +60,7 @@ $$
 \Leftrightarrow \quad &i \geq \sqrt{2 N + \frac{1}{4}} + \frac{1}{2} \approx \sqrt{2 N}
 \end{align*}
 $$
+
 The second loop decrements $i$ until it reaches 0 in a total of about $\sqrt{2N}$ steps. The loops are not nested, so we obtain an overall time complexity of $\mathcal{O}(\sqrt{N})$.
 
 ## Ex4: $\color{rosybrown}{{\mathcal{O}(N^2)}}$
