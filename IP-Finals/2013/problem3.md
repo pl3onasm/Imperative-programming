@@ -86,15 +86,15 @@ $$
 \end{align*}
 $$
 
-In $\color{peru}{(1)}$ we rewrite the first sum, so that the index starts at $0$ instead of $1$. This allows us to use the formula for the sum of a geometric series in $\color{darkkhaki}{(2)}$, which is:
+In $\color{peru}{(1)}$ we rewrite the first sum, so that the index $i$ starts at $0$ instead of $1$. This allows us to use the formula for the sum of a geometric series in $\color{darkkhaki}{(2)}$, which is:
 
 $$
-\sum_{k=0}^n a^k = \frac{a^{n+1} - 1}{a - 1}
+\sum_{k=0}^n a^k = \frac{a^{n+1} - 1}{a - 1} \quad \text{for} \quad a \neq 1
 $$
 
 Thus, the fragment's time complexity is in $\mathcal{O}(N)$.
 
-Note that we could have run an argument for a complexity in $\mathcal{O}(N \log(N))$ by stating that the inner loop runs $\color{orchid}{\text{at most}}$ $N$ times. This is not wrong, but an overestimate, as the tight bound is in $\mathcal{O}(N)$. It is testomony to the fact that rough reasoning does not always yield the tightest bound. The same situation arises in [Ex5 of the 2018 resit exam](https://github.com/pl3onasm/Imperative-programming/blob/main/IP-Finals/2018resit/problem2.md#ex5-colorrosybrownmathcalonlogn).
+Note that we could have run an argument for a complexity in $\mathcal{O}(N \log(N))$ by stating that the outer loop runs in logarithmic time and the inner loop runs $\color{orchid}{\text{at most}}$ $N$ times (or $N$ times in the worst case), so that the nested loop's total complexity becomes linearithmic in $N$. This is not wrong, but an overestimate, as the tight bound is in $\mathcal{O}(N)$. It is testomony to the fact that rough reasoning does not always yield the tightest bound. The same situation arises in [Ex5 of the 2018 resit exam](https://github.com/pl3onasm/Imperative-programming/blob/main/IP-Finals/2018resit/problem2.md#ex5-colorrosybrownmathcalonlogn).
 
 ## Ex6: $\color{rosybrown}{{\mathcal{O}(N \log(N))}}$
 

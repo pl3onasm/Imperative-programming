@@ -101,12 +101,12 @@ $$
 In $\color{peru}{(1)}$ we rewrite the sum, so that the index $k$ starts at $0$ instead of $1$. This allows us to use the formula for the sum of a geometric series in $\color{darkkhaki}{(2)}$, which is:
 
 $$
-\sum_{k=0}^n a^k = \frac{a^{n+1} - 1}{a - 1}
+\sum_{k=0}^n a^k = \frac{a^{n+1} - 1}{a - 1} \quad \text{for} \quad a \neq 1
 $$
 
 From the above, we therefore have that the fragment's time complexity is in $\mathcal{O}(N)$.
 
-Note that we could have run an argument for a complexity in $\mathcal{O}(N \log(N))$ by stating that the inner loop runs $\color{orchid}{\text{at most}}$ a total of approximately $N$ times. This is not wrong, but an overestimate, as the tight bound is in $\mathcal{O}(N)$. It is testomony to the fact that rough reasoning does not always yield the tightest bound. The same situation arises in [Ex5 of the 2013 exam](https://github.com/pl3onasm/Imperative-programming/blob/main/IP-Finals/2013/problem3.md#ex5-colorrosybrownmathcalon).
+Note that we could have run an argument for a complexity in $\mathcal{O}(N \log(N))$ by stating that the outer loop runs in logarithmic time and the inner loop runs $\color{orchid}{\text{at most}}$ $N$ times (or $N$ times in the worst case), so that the nested loop's total complexity becomes linearithmic in $N$. This is not wrong, but an overestimate, as the tight bound is $\mathcal{O}(N)$. It is testomony to the fact that rough reasoning does not always yield the tightest bound. The same situation arises in [Ex5 of the 2013 exam](https://github.com/pl3onasm/Imperative-programming/blob/main/IP-Finals/2013/problem3.md#ex5-colorrosybrownmathcalon).
 
 ## Ex6: $\color{rosybrown}{{\mathcal{O}(N \log(N))}}$
 
@@ -135,6 +135,6 @@ $$
 \end{align*}
 $$
 
-Just like in the previous example, we rewrite the sum in $\color{peru}{(1)}$ so that the index $k$ starts at $0$ instead of $1$. This allows us to use the formula for the sum of a geometric series in $\color{darkkhaki}{(2)}$.
+Just like in the previous exercise, we rewrite the sum in $\color{peru}{(1)}$ so that the index $k$ starts at $0$ instead of $1$. This allows us to use the formula for the sum of a geometric series in $\color{darkkhaki}{(2)}$.
 
 The fragment's time complexity is therefore in $\mathcal{O}(N \log(N))$.

@@ -100,7 +100,7 @@ while (i > 0) {
 }
 ```
 
-The variable $i$ starts at $N^2$ and is decremented by $j$ at each iteration. The variable $j$ starts at $0$ and is updated to the next integer at each iteration. The loop terminates when $i \leq 0$, which is equivalent to $N^2 - \frac{k(k+1)}{2} \leq 0$, where $k\in \mathbb{Z^+}$ is the number of iterations, i.e. the value of $j$ at termination. So we have:
+The variable $i$ starts at $N^2$ and is decremented by $j$ at each iteration. The variable $j$ starts at $0$ and is updated to the next integer at each iteration. The loop terminates when $i \leq 0$, which is equivalent to $N^2 - \frac{k(k+1)}{2} \leq 0$, where $k\in \mathbb{N}$ is the number of iterations, i.e. the value of $j$ at termination. So we have:
 
 $$
 \begin{align*}

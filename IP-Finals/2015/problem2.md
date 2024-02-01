@@ -40,7 +40,7 @@ for (i = 0; i < N; i++) {
 The inner loop is executed $N - i$ times for each value of $i$, so that the total number of times the body of the inner loop is executed is:
 
 $$\begin{align*}
-\sum_{i=0}^{N-1} (N-i) &= \sum_{i=0}^{N-1} N - \sum_{i=0}^{N-1} i \\[3ex]
+\sum_{i=0}^{N-1} (N-i) &= \sum_{i=0}^{N-1} N - \sum_{i=0}^{N-1} i \\
 &= N^2 - \sum_{i=0}^{N-1} i\\[3.5ex]
 &= N^2 - \frac{N(N-1)}{2}\\[2ex]
 &= \frac{N(N+1)}{2}
@@ -49,7 +49,7 @@ $$
 
 From the calculation above, we conclude that the fragment's time complexity is in $\mathcal{O}(N^2)$.  
 
-Another, more intuitive way to reach the same conclusion is to note that the outer loop is executed $N$ times, whereas the inner loop is executed $\color{orchid}{\text{at most}}$  $N$ times, so that the nested loop's complexity becomes quadratic in $N$. However, these types of arguments do not always yield the tightest bound, and so it is better to stick to the more formal approach whenever possible. A case in point is [ex5 from 2013](https://github.com/pl3onasm/Imperative-programming/blob/main/IP-Finals/2013/problem3.md#ex5-colorrosybrownmathcalon), where you would expect from an intuitive argument that the complexity is in $\mathcal{O}(N \log(N))$, which is not wrong, but not tight either, as the tight bound is in $\mathcal{O}(N)$.
+Another, more intuitive way to reach the same conclusion is to note that the outer loop is executed $N$ times, whereas the inner loop is executed $\color{orchid}{\text{at most}}$  $N$ times, so that the nested loop's complexity becomes quadratic in $N$. However, these types of arguments do not always yield the tightest bound, and so it is better to stick to the more formal approach whenever the upper or lower bound of the inner loop depends on the outer loop's index. A case in point is [ex5 from 2013](https://github.com/pl3onasm/Imperative-programming/blob/main/IP-Finals/2013/problem3.md#ex5-colorrosybrownmathcalon), where you would expect from an intuitive argument that the complexity is in $\mathcal{O}(N \log(N))$, which is not wrong, but not tight either, as the tight bound is in $\mathcal{O}(N)$.
 
 ## Ex3: $\color{rosybrown}{{\mathcal{O}(\log(N))}}$
 
