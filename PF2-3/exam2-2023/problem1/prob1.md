@@ -64,13 +64,13 @@ ${\color{peru}(c)} \quad // \quad x == B \space \land \space y == A$
 
 ```java
 // ..... 
-x := x + 3*y + 5;
+x := x + 3 * y + 5;
 // 10 < x <= 16
 ```
 
-${\color{peru}(a)} \quad // \quad 10 < 2 * x + 6 * y < 20$  
-${\color{peru}(b)} \quad // \quad 0 < x + 3 * y < 6$  
-${\color{peru}(c)} \quad // \quad 10 <= x + 3 * y + 5 < 16$  
+${\color{peru}(a)} \quad // \quad 10 \space < \space 2 * x + 6 * y \space < \space 20$  
+${\color{peru}(b)} \quad // \quad 0 \space < \space x + 3 * y \space < \space 6$  
+${\color{peru}(c)} \quad // \quad 10 \space \leq \space x + 3 * y + 5 \space < \space 16$  
 
 &nbsp;
 
@@ -85,3 +85,5 @@ z, x, y := x - y, x + y + z, z - y;
 ${\color{peru}(a)} \quad // \quad x + y + z == A + B \space \land \space z - y == 3 * B - A$  
 ${\color{peru}(b)} \quad // \quad 3 * x - 3 * y == A + B \space \land \space x - 2 * y == 3 * B - A$  
 ${\color{peru}(c)} \quad // \quad x + 2 * y == 2 * A - 2 * B \space \land \space z == y - A + 3 * B$  
+
+&nbsp;

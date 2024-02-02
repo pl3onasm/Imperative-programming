@@ -110,3 +110,4 @@ $\qquad \lbrace \space  x + y + z == A + B \space \land \space z - y == 3 * B - 
 $\quad \color{cornflowerblue} z, \space x, \space y := x - y, \space x + y + z,\space z - y;$  
 $\qquad \lbrace \space x == A + B \space \land \space y == 3 * B - A \space \rbrace$  
 
+&nbsp;
