@@ -2,7 +2,7 @@
 
 ## ${\color{darkkhaki}\text{Prob 1.1: }}{\color{olive}\text{ b}}$
 
-```dafny
+```java
 // x == y + 7  
 .....
 // x == 11  
