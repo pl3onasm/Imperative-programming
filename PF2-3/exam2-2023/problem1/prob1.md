@@ -6,9 +6,9 @@ constants (so not program variables).
 
 ## $\color{darkkhaki}\text{Prob 1.1}$
 
-```dafny
+```java
 // x == y + 7 
-??
+.....
 // x == 11
 ```
 
@@ -20,9 +20,9 @@ ${\color{peru}(c)} \quad x := 11 - (x + y + 7);$
 
 ## $\color{darkkhaki}\text{Prob 1.2}$
 
-```dafny
+```java
 // x == A && y == B 
-??
+.....
 // x == B - A && y == A + B 
 ```
 
@@ -34,9 +34,9 @@ ${\color{peru}(c)} \quad y := x + y; \space x := y - 2 * x;$
 
 ## $\color{darkkhaki}\text{Prob 1.3}$
 
-```dafny
+```java
 // x == A && y == B 
-??
+.....
 // x - y == A - B
 ```
 
@@ -48,7 +48,7 @@ ${\color{peru}(c)} \quad x := y; \space y := x;$
 
 ## $\color{darkkhaki}\text{Prob 1.4}$
 
-```dafny
+```java
 // .....
 y := x - y; x := x - y;
 // x == A - B && y == B
@@ -62,7 +62,7 @@ ${\color{peru}(c)} \quad // \quad x == B \space \land \space y == A$
 
 ## $\color{darkkhaki}\text{Prob 1.5}$
 
-```dafny
+```java
 // ..... 
 x := x + 3*y + 5;
 // 10 < x <= 16
@@ -76,7 +76,7 @@ ${\color{peru}(c)} \quad // \quad 10 <= x + 3 * y + 5 < 16$
 
 ## $\color{darkkhaki}\text{Prob 1.6}$
 
-```dafny
+```java
 // .....
 z, x, y := x - y, x + y + z, z - y; 
 //  x == A + B && y == 3 * B - A
