@@ -23,21 +23,22 @@ for (i = 0; i < N; i++) {
 }
 ```
 
-The outer loop runs $N$ times, whereas the inner loop runs $N - 2i$ times, where $i$ ranges from $0$ to $N - 1$. However, for a correct computation of the total number of iterations, we need to take into account that both the lower and upper bound of the inner loop depend on $i$. That is, the lower bound increases by $i$, while at the same time the upper bound decreases by $i$ for each iteration of the outer loop. So after $i = \lfloor \frac{N}{2} \rfloor - 1$, there are no more iterations of the inner loop. Thus, the total number of iterations is given by:
+The outer loop runs $N$ times, whereas the inner loop runs $N - 2i$ times, where $i$ ranges from $0$ to $N - 1$. However, for a correct computation of the total number of iterations, we also need to take into account that both the lower and upper bound of the inner loop depend on $i$. That is, the lower bound increases by $i$, while at the same time the upper bound decreases by $i$ for each iteration of the outer loop. So after $i = \frac{N}{2}$, there are no more iterations. Thus, the total number of iterations is given by:
 
 $$
 \begin{align*}
-  & \quad \sum_{i=0}^{\lfloor\frac{N}{2}\rfloor - 1} (N - 2i) \\
-  =& \quad \sum_{i=0}^{\lfloor\frac{N}{2}\rfloor - 1} N - \sum_{i=0}^{\lfloor\frac{N}{2}\rfloor - 1} 2i \\
-  =& \quad \lfloor\frac{N}{2}\rfloor N - 2\sum_{i=0}^{\lfloor\frac{N}{2}\rfloor - 1} i \\
-  =& \quad \lfloor\frac{N}{2}\rfloor N - 2\frac{\lfloor\frac{N}{2}\rfloor(\lfloor\frac{N}{2}\rfloor - 1)}{2} &\color{peru}{(1)}\\
-  =& \quad \lfloor\frac{N}{2}\rfloor N - \lfloor\frac{N}{2}\rfloor(\lfloor\frac{N}{2}\rfloor - 1) \\
-  =& \quad \lfloor\frac{N^2}{4}\rfloor + \lfloor\frac{N}{2}\rfloor \\
+  & \quad \sum_{i=0}^{N/2} (N - 2i) \\
+  =& \quad \sum_{i=0}^{N/2} N - \sum_{i=0}^{N/2} 2i \\
+  =& \quad (\frac{N}{2} + 1) \cdot N - 2\sum_{i=0}^{N/2} i \\
+  =& \quad \frac{N^2}{2} + N - 2\frac{\frac{N}{2}(\frac{N}{2} + 1)}{2} &\color{peru}{(1)}\\
+  =& \quad \frac{N^2}{2} + N - \frac{N^2}{4} - \frac{N}{2} \\
+  =& \quad \frac{N^2}{4} + \frac{N}{2} \\
   =& \quad \mathcal{O}(N^2)
 \end{align*}
 $$
 
-In $\color{peru}{(1)}$, we used Gauss' formula to compute the sum of the first $\lfloor\frac{N}{2}\rfloor - 1$ positive integers. From the calculations above, we conclude that the fragment's time complexity is in $\mathcal{O}(N^2)$.
+In $\color{peru}{(1)}$, we used Gauss' formula to compute the sum of the first $\frac{N}{2}$ positive integers. Also note that just like in the code fragments, the division always is integer division, so that e.g. $\frac{N}{2} = \lfloor\frac{N}{2}\rfloor$.  
+From the calculations above, we conclude that the fragment's time complexity is in $\mathcal{O}(N^2)$.
 
 ## Ex3: $\color{rosybrown}{{\mathcal{O}(\sqrt{N})}}$
 
