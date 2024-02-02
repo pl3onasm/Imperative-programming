@@ -1,6 +1,6 @@
 # $\color{cadetblue}{\text{Problem 1}}$
 
-## 1.1: $\color{rosybrown}\text{\bf b}$
+## ${\color{darkkhaki}\text{Prob 1.1: }}{\color{olive}\text{\bf b}}$
 
 ```dafny
 // x == y + 7  
@@ -9,7 +9,7 @@
 ```
 
 $\qquad \lbrace \space x == y + 7 \space \rbrace$  
-$\qquad \quad \color{darkgoldenrod} (\space \text{prepare } x := x - y + 4\space)$  
+$\qquad \quad \color{peru} (\space \text{prepare } x := x - y + 4\space)$  
 $\qquad \lbrace \space x - y == 7 \space \rbrace$  
 $\qquad \lbrace \space x - y + 4 == 11 \space\rbrace$  
 $\quad \color{cornflowerblue} x := x - y + 4;$  
@@ -17,7 +17,7 @@ $\qquad \lbrace \space x == 11 \space \rbrace$
 
 &nbsp;
 
-## 1.2: $\color{rosybrown}\text{\bf c}$
+## ${\color{darkkhaki}\text{Prob 1.2: }}{\color{olive}\text{\bf c}}$
 
 ```dafny
 // x == A && y == B 
@@ -37,7 +37,7 @@ $\qquad \lbrace \space x == B - A \space \land \space y == A + B \space \rbrace$
 
 &nbsp;
 
-## 1.3: $\color{rosybrown}\text{\bf b}$
+## ${\color{darkkhaki}\text{Prob 1.3: }}{\color{olive}\text{\bf b}}$
 
 ```dafny
 // x == A && y == B 
@@ -58,7 +58,7 @@ $\qquad \lbrace \space x - y == A - B \space \rbrace$
 
 &nbsp;
 
-## 1.4: $\color{rosybrown}\text{\bf a}$
+## ${\color{darkkhaki}\text{Prob 1.4: }}{\color{olive}\text{\bf a}}$
 
 ```dafny
 // .....
@@ -78,7 +78,7 @@ $\qquad \lbrace \space x == A - B \space \land \space y == B \space \rbrace$
 
 &nbsp;
 
-## 1.5: $\color{rosybrown}\text{\bf a}$
+## ${\color{darkkhaki}\text{Prob 1.5: }}{\color{olive}\text{\bf a}}$
 
 ```dafny
 // .....
@@ -98,7 +98,7 @@ $\qquad \lbrace \space 10 < x \leq 16 \space \rbrace $
 
 &nbsp;
 
-## 1.6: $\color{rosybrown}\text{\bf a}$
+## ${\color{darkkhaki}\text{Prob 1.6: }}{\color{olive}\text{\bf a}}$
 
 ```dafny
 // .....
