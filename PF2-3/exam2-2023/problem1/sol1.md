@@ -31,7 +31,8 @@ $\qquad \lbrace\space x == A \space\land\space x + y == A + B \space\rbrace$
 $\quad \color{cornflowerblue} y := x + y;$  
 $\qquad \lbrace\space x == A \space\land\space y == A + B \space\rbrace$  
 $\qquad\quad \color{darkseagreen} (\space \text{prepare } x := y - 2 * x \space)$  
-$\qquad \lbrace\space y - 2 * x == A + B - 2 * A \space\land\space y == A + B \space\rbrace$  
+$\qquad \lbrace\space y - 2 * x == A + B - 2 * A \space \land $  
+$\qquad \space \space \space y == A + B \space\rbrace$  
 $\quad \color{cornflowerblue} x := y - 2 * x;$  
 $\qquad \lbrace \space x == B - A \space \land \space y == A + B \space \rbrace$  
 
@@ -106,7 +107,8 @@ z, x, y := x - y, x + y + z, z - y;
 //  x == A + B && y == 3 * B - A
 ```
 
-$\qquad \lbrace \space  x + y + z == A + B \space \land \space z - y == 3 * B - A \space \rbrace$  
+$\qquad \lbrace \space  x + y + z == A + B \space \land$ 
+$\qquad \space \space \space z - y == 3 * B - A \space \rbrace$  
 $\quad \color{cornflowerblue} z, \space x, \space y := x - y, \space x + y + z,\space z - y;$  
 $\qquad \lbrace \space x == A + B \space \land \space y == 3 * B - A \space \rbrace$  
 

@@ -55,7 +55,8 @@ y := x - y; x := x - y;
 ```
 
 ${\color{peru}(a)} \quad // \quad x == A \space \land \space y == A - B$  
-${\color{peru}(b)} \quad // \quad x == 2 * A - 3 * B \space \land \space y == A - 2 * B$  
+${\color{peru}(b)} \quad // \quad x == 2 * A - 3 * B \space \land$  
+$ \qquad \space // \qquad y == A - 2 * B$  
 ${\color{peru}(c)} \quad // \quad x == B \space \land \space y == A$  
 
 &nbsp;
@@ -82,8 +83,11 @@ z, x, y := x - y, x + y + z, z - y;
 //  x == A + B && y == 3 * B - A
 ```
 
-${\color{peru}(a)} \quad // \quad x + y + z == A + B \space \land \space z - y == 3 * B - A$  
-${\color{peru}(b)} \quad // \quad 3 * x - 3 * y == A + B \space \land \space x - 2 * y == 3 * B - A$  
-${\color{peru}(c)} \quad // \quad x + 2 * y == 2 * A - 2 * B \space \land \space z == y - A + 3 * B$  
+${\color{peru}(a)} \quad // \quad x + y + z == A + B \space \land$  
+$\qquad \space // \qquad z - y == 3 * B - A$  
+${\color{peru}(b)} \quad // \quad 3 * x - 3 * y == A + B \space \land$  
+$ \qquad \space // \qquad x - 2 * y == 3 * B - A$  
+${\color{peru}(c)} \quad // \quad x + 2 * y == 2 * A - 2 * B \space \land$  
+$\qquad \space // \qquad z == y - A + 3 * B$  
 
 &nbsp;
