@@ -19,9 +19,9 @@ $\qquad \lbrace \space x == 11 \space \rbrace$
 
 ## ${\color{darkkhaki}\text{Prob 1.2: }}{\color{olive}\text{ c}}$
 
-```dafny
+```java
 // x == A && y == B 
-??
+......
 // x == B - A && y == A + B 
 ```
 
@@ -39,9 +39,9 @@ $\qquad \lbrace \space x == B - A \space \land \space y == A + B \space \rbrace$
 
 ## ${\color{darkkhaki}\text{Prob 1.3: }}{\color{olive}\text{ b}}$
 
-```dafny
+```java
 // x == A && y == B 
-??
+.....
 // x - y == A - B 
 ```
 
@@ -60,7 +60,7 @@ $\qquad \lbrace \space x - y == A - B \space \rbrace$
 
 ## ${\color{darkkhaki}\text{Prob 1.4: }}{\color{olive}\text{ a}}$
 
-```dafny
+```java
 // .....
 y := x - y; x := x - y;
 // x == A - B && y == B
@@ -80,9 +80,9 @@ $\qquad \lbrace \space x == A - B \space \land \space y == B \space \rbrace$
 
 ## ${\color{darkkhaki}\text{Prob 1.5: }}{\color{olive}\text{ a}}$
 
-```dafny
+```java
 // .....
-x := x + 3*y + 5;
+x := x + 3 * y + 5;
 // 10 < x <= 16
 ```
 
@@ -100,7 +100,7 @@ $\qquad \lbrace \space 10 < x \leq 16 \space \rbrace $
 
 ## ${\color{darkkhaki}\text{Prob 1.6: }}{\color{olive}\text{ a}}$
 
-```dafny
+```java
 // .....
 z, x, y := x - y, x + y + z, z - y; 
 //  x == A + B && y == 3 * B - A
