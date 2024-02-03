@@ -9,7 +9,7 @@
 ```
 
 $\quad \lbrace \space x = y * z \space \rbrace$  
-$\qquad \color{darkseagreen} (\space \text{subract equal terms from both sides} \space)$  
+$\qquad \color{darkseagreen} (\space \text{subtract equal terms from both sides} \space)$  
 $\quad \lbrace \space x - z = y * z - z \space \rbrace$  
 $\qquad \color{darkseagreen} (\space \text{prepare } y := y - 1 \space)$  
 $\quad \lbrace \space x - z = z * (y - 1) \space \rbrace$  
