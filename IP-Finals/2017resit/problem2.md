@@ -125,18 +125,18 @@ $$
 \begin{align*}
 & \quad \sum_{k=1}^{\lceil \log(N) \rceil} (2^k - 2^{k-1}) \\
 = & \quad \sum_{k=1}^{\lceil \log(N) \rceil} 2^{k-1} \\
-= & \quad \sum_{k=0}^{\lceil \log(N) \rceil - 1} 2^k \\
-= & \quad 2^{\lceil \log(N) \rceil} - 1 &\color{peru}{(1)}\\
+= & \quad \sum_{k=0}^{\lceil \log(N) \rceil - 1} 2^k &\color{peru}{(1)}\\
+= & \quad 2^{\lceil \log(N) \rceil} - 1 &\color{darkkhaki}{(2)}\\
 \leq & \quad 2^{\log(N) + 1} - 1 \\
 = & \quad 2N - 1 \\
 = & \quad \mathcal{O}(N)
 \end{align*}
 $$
 
-Therefore, the fragment's time complexity is in $\mathcal{O}(N)$.
-
-In $\color{peru}{(1)}$ we use the formula for the sum of a geometric series, with $a = 2$ and $n = \lceil \log(N) \rceil - 1$:
+In $\color{peru}{(1)}$ we rewrite the sum, so that the index $k$ starts at $0$ instead of $1$. This allows us to use the formula for the sum of a geometric series in $\color{darkkhaki}{(2)}$, with $a = 2$ and $n = \lceil \log(N) \rceil - 1$:
 
 $$
 \sum_{k=0}^n a^k = \frac{a^{n+1} - 1}{a - 1} \quad \text{for} \quad a \neq 1
 $$
+
+From the above, we therefore have that the fragment's time complexity is in $\mathcal{O}(N)$.
