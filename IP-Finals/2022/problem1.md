@@ -14,7 +14,7 @@ $\qquad \color{darkseagreen} (\space \text{multiply both sides by 3} \space)$
 $\quad \lbrace \space 3 * x = 3 * A + 6 \space \rbrace$  
 $\qquad \color{darkseagreen} (\space \text{move constant term to lhs} \space)$  
 $\quad \lbrace \space 3 * x - 6 = 3 * A \space \rbrace$  
-$\qquad \color{darkseagreen} (\space \text{regroup and add 1 to both sides} \space)$
+$\qquad \color{darkseagreen} (\space \text{regroup and add 1 to both sides} \space)$  
 $\quad \lbrace \space 3 * (x - 2) + 1 = 3 * A + 1 \space \rbrace$  
 $\space \color{cornflowerblue} x := 3 * (x - 2) + 1;$  
 $\quad \lbrace \space x = 3 * A + 1 \space \rbrace$  
