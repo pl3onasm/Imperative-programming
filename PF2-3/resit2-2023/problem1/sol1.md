@@ -8,17 +8,17 @@
 // x = y + 7 
 ```
 
-$\quad \lbrace \space x == 11 \space \rbrace$  
-$\quad \lbrace \space x == 4 + 7 \space \rbrace$  
+$\quad \lbrace \space x = 11 \space \rbrace$  
+$\quad \lbrace \space x = 4 + 7 \space \rbrace$  
 $\space \color{cornflowerblue} y := 4;$  
-$\quad \lbrace \space x == y + 7 \space \rbrace$  
+$\quad \lbrace \space x = y + 7 \space \rbrace$  
 
 &nbsp;
 
 ## ${\color{darkkhaki}\text{Prob 1.2: }}{\color{olive}\text{ c}}$
 
 ```java
-// x = B - A && y = A + B 
+// x = B - A ∧ y = A + B 
 .....
 // (x + y)/2 = A + B 
 ```
@@ -39,7 +39,7 @@ $\quad \lbrace \space ( \space x + y \space) / 2 = A + B \space \rbrace$
 ## ${\color{darkkhaki}\text{Prob 1.3: }}{\color{olive}\text{ b}}$
 
 ```java
-// x - y = A - B && x + y = A + B 
+// x - y = A - B ∧ x + y = A + B 
 .....
 // x + y = A + B 
 ```
@@ -65,7 +65,7 @@ $\quad \lbrace \space x + y = A + B \space \rbrace$
 ```java
 // .....
  y := y + x; x := x - y;
-// x + y = A && y = B
+// x + y = A ∧ y = B
 ```
 
 $\quad \lbrace \space x = A \space \land \space y = B-A \space \rbrace$  
@@ -83,7 +83,7 @@ $\quad \lbrace \space x + y = A \space \land \space y = B \space \rbrace$
 ## ${\color{darkkhaki}\text{Prob 1.5: }}{\color{olive}\text{ b}}$
 
 ```java
-// x = A, y = B 
+// x = A ∧ y = B 
 z := x; y := x + y; x := x + y + z;
 // .....
 ```
@@ -106,7 +106,7 @@ $\quad \lbrace \space x = 3 * A + B \space \land \space y = B + A \space \land \
 ## ${\color{darkkhaki}\text{Prob 1.6: }}{\color{olive}\text{ a}}$
 
 ```java
-// x = A + B && y = A - B 
+// x = A + B ∧ y = A - B 
 z := x - y; x := x + y + z; y := z - y;
 // .....
 ```

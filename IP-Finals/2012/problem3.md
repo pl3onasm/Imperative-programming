@@ -90,5 +90,5 @@ for (i = 0; i < 5; i++) {
 }
 ```
 
-The first loop runs $N$ times: it sets the values of the items in the array $a$ to their respective values. The second loop is nested: the outer loop runs $5$ times, whereas the inner loop runs $a[i]$ times, which is at most $\frac{N}{5} + 1$, given the fact that $a[i]$ is incremented at most $\frac{N}{5} + 1$ times in the first loop. Note that just like in the code fragments, the division always is integer division, so that $\frac{N}{5} = \lfloor\frac{N}{5}\rfloor$.  
+The first loop runs $N$ times: it sets the values of the items in the array $a$ to their respective values. The second loop is nested: the outer loop runs $5$ times, whereas the inner loop runs $a[i]$ times, which is at most $\lfloor\frac{N}{5}\rfloor + 1$, given the fact that $a[i]$ is incremented at most $\lfloor\frac{N}{5}\rfloor + 1$ times in the first loop.
 This means that both the first and the second, nested loop are linear in $N$, and so the fragment's total complexity is in $\mathcal{O}(N)$.

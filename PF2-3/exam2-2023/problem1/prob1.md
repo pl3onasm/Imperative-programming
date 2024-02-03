@@ -21,9 +21,9 @@ ${\color{peru}(c)} \quad x := 11 - (x + y + 7);$
 ## $\color{darkkhaki}\text{Prob 1.2}$
 
 ```java
-// x = A && y = B 
+// x = A ∧ y = B 
 .....
-// x = B - A && y = A + B 
+// x = B - A ∧ y = A + B 
 ```
 
 ${\color{peru}(a)} \quad x := y - x; \space y := x + y;$  
@@ -35,7 +35,7 @@ ${\color{peru}(c)} \quad y := x + y; \space x := y - 2 * x;$
 ## $\color{darkkhaki}\text{Prob 1.3}$
 
 ```java
-// x = A && y = B 
+// x = A ∧ y = B 
 .....
 // x - y = A - B
 ```
@@ -51,7 +51,7 @@ ${\color{peru}(c)} \quad x := y; \space y := x;$
 ```java
 // .....
 y := x - y; x := x - y;
-// x = A - B && y = B
+// x = A - B ∧ y = B
 ```
 
 ${\color{peru}(a)} \quad x = A \space \land \space y = A - B$  
@@ -79,7 +79,7 @@ ${\color{peru}(c)} \quad 10 \space \leq \space x + 3 * y + 5 \space < \space 16$
 ```java
 // .....
 z, x, y := x - y, x + y + z, z - y; 
-//  x = A + B && y = 3 * B - A
+//  x = A + B ∧ y = 3 * B - A
 ```
 
 ${\color{peru}(a)} \quad x + y + z = A + B \space \land \space z - y = 3 * B - A$  

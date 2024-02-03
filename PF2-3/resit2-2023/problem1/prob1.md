@@ -21,7 +21,7 @@ ${\color{peru}(c)} \quad x := 11 - (x + y + 7);$
 ## $\color{darkkhaki}\text{Prob 1.2}$
 
 ```java
-// x = B - A && y = A + B 
+// x = B - A ∧ y = A + B 
 .....
 // (x + y)/2 = A + B 
 ```
@@ -35,7 +35,7 @@ ${\color{peru}(c)} \quad y := x + y; \space x := y - 2  *  x;$
 ## $\color{darkkhaki}\text{Prob 1.3}$
 
 ```java
-// x - y = A - B && x + y = A + B 
+// x - y = A - B ∧ x + y = A + B 
 .....
 // x + y = A + B 
 ```
@@ -51,7 +51,7 @@ ${\color{peru}(c)} \quad x := 1 - x; \space y := 1 - y;$
 ```java
 // .....
  y := y + x; x := x - y;
-// x + y = A && y = B
+// x + y = A ∧ y = B
 ```
 
 ${\color{peru}(a)} \quad x = A \space \land \space y = B - A$  
@@ -63,7 +63,7 @@ ${\color{peru}(c)} \quad 2 * x - 3 * y = A  \space \land \space x - 2 * y = B$
 ## $\color{darkkhaki}\text{Prob 1.5}$
 
 ```java
-// x = A, y = B 
+// x = A ∧ y = B 
 z := x; y := x + y; x := x + y + z;
 // .....
 ```
@@ -80,7 +80,7 @@ $\qquad \quad \land \space z = B$
 ## $\color{darkkhaki}\text{Prob 1.6}$
 
 ```java
-// x = A + B && y = A - B 
+// x = A + B ∧ y = A - B 
 z := x - y; x := x + y + z; y := z - y;
 // .....
 ```

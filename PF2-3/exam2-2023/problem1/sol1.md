@@ -20,9 +20,9 @@ $\quad \lbrace \space x = 11 \space \rbrace$
 ## ${\color{darkkhaki}\text{Prob 1.2: }}{\color{olive}\text{ c}}$
 
 ```java
-// x = A && y = B 
+// x = A ∧ y = B 
 ......
-// x = B - A && y = A + B 
+// x = B - A ∧ y = A + B 
 ```
 
 $\quad \lbrace \space x = A \space \land \space y = B \space \rbrace$  
@@ -40,7 +40,7 @@ $\quad \lbrace \space x = B - A \space \land \space y = A + B \space \rbrace$
 ## ${\color{darkkhaki}\text{Prob 1.3: }}{\color{olive}\text{ b}}$
 
 ```java
-// x = A && y = B 
+// x = A ∧ y = B 
 .....
 // x - y = A - B 
 ```
@@ -63,7 +63,7 @@ $\quad \lbrace \space x - y = A - B \space \rbrace$
 ```java
 // .....
 y := x - y; x := x - y;
-// x = A - B && y = B
+// x = A - B ∧ y = B
 ```
 
 $\quad \lbrace \space x = A \space \land \space y = A - B \space \rbrace$  
@@ -103,7 +103,7 @@ $\quad \lbrace \space 10 < x \leq 16 \space \rbrace $
 ```java
 // .....
 z, x, y := x - y, x + y + z, z - y; 
-//  x = A + B && y = 3 * B - A
+//  x = A + B ∧ y = 3 * B - A
 ```
 
 $\quad \lbrace \space  x + y + z = A + B \space \land z - y = 3 * B - A \space \rbrace$  
