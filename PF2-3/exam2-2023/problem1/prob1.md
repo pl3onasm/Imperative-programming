@@ -7,9 +7,9 @@ constants (so not program variables).
 ## $\color{darkkhaki}\text{Prob 1.1}$
 
 ```java
-// x == y + 7 
+// x = y + 7 
 .....
-// x == 11
+// x = 11
 ```
 
 ${\color{peru}(a)} \quad y := 4;$  
@@ -21,9 +21,9 @@ ${\color{peru}(c)} \quad x := 11 - (x + y + 7);$
 ## $\color{darkkhaki}\text{Prob 1.2}$
 
 ```java
-// x == A && y == B 
+// x = A && y = B 
 .....
-// x == B - A && y == A + B 
+// x = B - A && y = A + B 
 ```
 
 ${\color{peru}(a)} \quad x := y - x; \space y := x + y;$  
@@ -35,9 +35,9 @@ ${\color{peru}(c)} \quad y := x + y; \space x := y - 2 * x;$
 ## $\color{darkkhaki}\text{Prob 1.3}$
 
 ```java
-// x == A && y == B 
+// x = A && y = B 
 .....
-// x - y == A - B
+// x - y = A - B
 ```
 
 ${\color{peru}(a)} \quad x := x + y; \space y := y + x;$  
@@ -51,13 +51,13 @@ ${\color{peru}(c)} \quad x := y; \space y := x;$
 ```java
 // .....
 y := x - y; x := x - y;
-// x == A - B && y == B
+// x = A - B && y = B
 ```
 
-${\color{peru}(a)} \quad // \quad x == A \space \land \space y == A - B$  
-${\color{peru}(b)} \quad // \quad x == 2 * A - 3 * B \space \land$  
-$\qquad \space // \qquad y == A - 2 * B$  
-${\color{peru}(c)} \quad // \quad x == B \space \land \space y == A$  
+${\color{peru}(a)} \quad // \quad x = A \space \land \space y = A - B$  
+${\color{peru}(b)} \quad // \quad x = 2 * A - 3 * B \space \land$  
+$\qquad \space // \qquad y = A - 2 * B$  
+${\color{peru}(c)} \quad // \quad x = B \space \land \space y = A$  
 
 &nbsp;
 
@@ -80,14 +80,14 @@ ${\color{peru}(c)} \quad // \quad 10 \space \leq \space x + 3 * y + 5 \space < \
 ```java
 // .....
 z, x, y := x - y, x + y + z, z - y; 
-//  x == A + B && y == 3 * B - A
+//  x = A + B && y = 3 * B - A
 ```
 
-${\color{peru}(a)} \quad // \quad x + y + z == A + B \space \land$  
-$\qquad \space // \qquad z - y == 3 * B - A$  
-${\color{peru}(b)} \quad // \quad 3 * x - 3 * y == A + B \space \land$  
-$\qquad \space // \qquad x - 2 * y == 3 * B - A$  
-${\color{peru}(c)} \quad // \quad x + 2 * y == 2 * A - 2 * B \space \land$  
-$\qquad \space // \qquad z == y - A + 3 * B$  
+${\color{peru}(a)} \quad // \quad x + y + z = A + B \space \land$  
+$\qquad \space // \qquad z - y = 3 * B - A$  
+${\color{peru}(b)} \quad // \quad 3 * x - 3 * y = A + B \space \land$  
+$\qquad \space // \qquad x - 2 * y = 3 * B - A$  
+${\color{peru}(c)} \quad // \quad x + 2 * y = 2 * A - 2 * B \space \land$  
+$\qquad \space // \qquad z = y - A + 3 * B$  
 
 &nbsp;
