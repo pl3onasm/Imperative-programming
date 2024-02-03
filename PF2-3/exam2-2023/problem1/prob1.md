@@ -54,10 +54,9 @@ y := x - y; x := x - y;
 // x = A - B && y = B
 ```
 
-${\color{peru}(a)} \quad // \quad x = A \space \land \space y = A - B$  
-${\color{peru}(b)} \quad // \quad x = 2 * A - 3 * B \space \land$  
-$\qquad \space // \qquad y = A - 2 * B$  
-${\color{peru}(c)} \quad // \quad x = B \space \land \space y = A$  
+${\color{peru}(a)} \quad x = A \space \land \space y = A - B$  
+${\color{peru}(b)} \quad x = 2 * A - 3 * B \space \land \space y = A - 2 * B$  
+${\color{peru}(c)} \quad x = B \space \land \space y = A$  
 
 &nbsp;
 
@@ -69,9 +68,9 @@ x := x + 3 * y + 5;
 // 10 < x <= 16
 ```
 
-${\color{peru}(a)} \quad // \quad 10 \space < \space 2 * x + 6 * y \space < \space 20$  
-${\color{peru}(b)} \quad // \quad 0 \space < \space x + 3 * y \space < \space 6$  
-${\color{peru}(c)} \quad // \quad 10 \space \leq \space x + 3 * y + 5 \space < \space 16$  
+${\color{peru}(a)} \quad 10 \space < \space 2 * x + 6 * y \space < \space 20$  
+${\color{peru}(b)} \quad 0 \space < \space x + 3 * y \space < \space 6$  
+${\color{peru}(c)} \quad 10 \space \leq \space x + 3 * y + 5 \space < \space 16$  
 
 &nbsp;
 
@@ -83,11 +82,10 @@ z, x, y := x - y, x + y + z, z - y;
 //  x = A + B && y = 3 * B - A
 ```
 
-${\color{peru}(a)} \quad // \quad x + y + z = A + B \space \land$  
-$\qquad \space // \qquad z - y = 3 * B - A$  
-${\color{peru}(b)} \quad // \quad 3 * x - 3 * y = A + B \space \land$  
-$\qquad \space // \qquad x - 2 * y = 3 * B - A$  
-${\color{peru}(c)} \quad // \quad x + 2 * y = 2 * A - 2 * B \space \land$  
-$\qquad \space // \qquad z = y - A + 3 * B$  
+${\color{peru}(a)} \quad x + y + z = A + B \space \land \space z - y = 3 * B - A$  
+${\color{peru}(b)} \quad 3 * x - 3 * y = A + B$  
+$\qquad \quad \land \space x - 2 * y = 3 * B - A$  
+${\color{peru}(c)} \quad x + 2 * y = 2 * A - 2 * B$  
+$\qquad \quad \land \space z = y - A + 3 * B$  
 
 &nbsp;
