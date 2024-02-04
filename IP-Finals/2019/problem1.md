@@ -44,7 +44,7 @@ $\quad \lbrace \space x = B \space \land \space y = A \space \rbrace$
 
 &nbsp;
 
-## ${\color{darkkhaki}\text{Prob 1.3: }}{\color{olive}\text{ }}$
+## ${\color{darkkhaki}\text{Prob 1.3: }}{\color{olive}\text{ c}}$
 
 ```java
 // x + y = A ∧ 2 * x + y = B
