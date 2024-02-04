@@ -14,7 +14,7 @@ $\quad \lbrace \space 3 * x = 3 * A \space \rbrace$
 $\qquad \color{darkseagreen} (\space \text{add equal terms to both sides} \space)$  
 $\quad \lbrace \space 3 * x + 18 = 3 * A + 18 \space \rbrace$  
 $\space \color{cornflowerblue} x := 3 * x + 18;$  
-$\quad \lbrace \space x = 3 * x + 18 \space \rbrace$  
+$\quad \lbrace \space x = 3 * A + 18 \space \rbrace$  
 
 &nbsp;
 
