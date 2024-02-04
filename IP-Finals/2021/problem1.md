@@ -13,7 +13,7 @@ $\qquad \color{darkseagreen} (\space \text{subtract equal terms from both sides}
 $\quad \lbrace \space x - z = y * z - z \space \rbrace$  
 $\qquad \color{darkseagreen} (\space \text{prepare } y := y - 1 \space)$  
 $\quad \lbrace \space x - z = z * (y - 1) \space \rbrace$  
-$\space \color{cornflowerblue} y \textrm{-}\textrm{-};$  
+$\space \color{cornflowerblue} y {\small \text{-}\text{-}};$  
 $\qquad \color{darkseagreen} (\space \text{this is the same as y := y - 1} \space)$  
 $\quad \lbrace \space x - z = z * y \space \rbrace$  
 $\space \color{cornflowerblue} x := x - z;$  
@@ -31,7 +31,7 @@ $\quad \lbrace \space x = z * y \space \rbrace$
 
 $\quad \lbrace \space 3 * x + 5 * y = A \space \rbrace$  
 $\quad \lbrace \space 3 * x + 3 * y + 2 * y = A \space \rbrace$  
-$\qquad \color{darkseagreen} (\space \text{prepare } x := x + y; \space)$  
+$\qquad \color{darkseagreen} (\space \text{prepare } x := x + y \space)$  
 $\quad \lbrace \space 3 * (x + y) + 2 * y = A \space \rbrace$  
 $\space \color{cornflowerblue} x := x + y;$  
 $\quad \lbrace \space 3 * x + 2 * y = A \space \rbrace$  
