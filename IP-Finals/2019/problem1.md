@@ -56,7 +56,7 @@ $\quad \lbrace \space x + y = A \space \land \space 2 * x + y = B \space \rbrace
 $\qquad \color{darkseagreen} (\space \text{prepare } x := x + 1 \space)$  
 $\quad \lbrace \space (x + 1) - 1 + y = A$  
 $\qquad \land \space 2 * (x + 1) - 2 + y = B \space \rbrace$  
-$\space \color{cornflowerblue} x{\scriptsize \text{++}};$
+$\space \color{cornflowerblue} x{\scriptsize \text{++}};$  
 $\quad \lbrace \space x + y - 1 = A \space \land \space 2 * x + y - 2 = B \space \rbrace$  
 $\qquad \color{darkseagreen} (\space \text{prepare } y := y - 1 \space)$  
 $\quad \lbrace \space x + (y - 1) = A$  
