@@ -14,7 +14,7 @@ $\quad \lbrace \space x - z = y * z - z \space \rbrace$
 $\qquad \color{darkseagreen} (\space \text{prepare } y := y - 1 \space)$  
 $\quad \lbrace \space x - z = z * (y - 1) \space \rbrace$  
 $\space \color{cornflowerblue} y {\small \text{-}\text{-}};$  
-$\qquad \color{darkseagreen} (\space \text{this is the same as y := y - 1} \space)$  
+$\qquad \color{darkseagreen} (\space \text{y\text{-}\text{-} is the same as y := y - 1} \space)$  
 $\quad \lbrace \space x - z = z * y \space \rbrace$  
 $\space \color{cornflowerblue} x := x - z;$  
 $\quad \lbrace \space x = z * y \space \rbrace$  
