@@ -65,7 +65,7 @@ ${\color{peru}(c)} \quad x = B \space \land \space y = A$
 ```java
 // ..... 
 x := x + 3 * y + 5;
-// 10 < x <= 16
+// 10 < x ≤ 16
 ```
 
 ${\color{peru}(a)} \quad 10 \space < \space 2 * x + 6 * y \space < \space 20$  

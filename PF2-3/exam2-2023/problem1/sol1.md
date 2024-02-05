@@ -83,18 +83,18 @@ $\quad \lbrace \space x = A - B \space \land \space y = B \space \rbrace$
 ```java
 // .....
 x := x + 3 * y + 5;
-// 10 < x <= 16
+// 10 < x ≤ 16
 ```
 
-$\quad \lbrace \space 10 < 2 * x + 6 * y < 20 \space \rbrace $  
+$\quad \lbrace \space 10 \space <\space 2 * x + 6 * y \space <\space 20 \space \rbrace $  
 $\qquad  \color{darkseagreen} (\space \text{divide all sides by 2} \space)$  
-$\quad \lbrace \space 5 < x + 3 * y < 10 \space \rbrace $  
+$\quad \lbrace \space 5 \space <\space x + 3 * y \space <\space 10 \space \rbrace $  
 $\qquad \color{darkseagreen} (\space \text{add 5 to all sides} \space)$  
-$\quad \lbrace \space 10 < x + 3 * y + 5 < 15 \space \rbrace $  
+$\quad \lbrace \space 10 \space <\space x + 3 * y + 5 \space <\space 15 \space \rbrace $  
 $\space \color{cornflowerblue} x := x + 3 * y + 5;$  
-$\quad \lbrace \space 10 < x < 15 \space \rbrace $  
+$\quad \lbrace \space 10 \space <\space x \space <\space 15 \space \rbrace $  
 $\qquad \color{darkseagreen} (\space \text{weakening} \space)$  
-$\quad \lbrace \space 10 < x \leq 16 \space \rbrace $  
+$\quad \lbrace \space 10 \space <\space x \space \leq \space 16 \space \rbrace $  
 
 &nbsp;
 

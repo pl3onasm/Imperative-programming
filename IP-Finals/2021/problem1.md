@@ -14,7 +14,7 @@ $\quad \lbrace \space x - z = y * z - z \space \rbrace$
 $\qquad \color{darkseagreen} (\space \text{prepare } y := y - 1 \space)$  
 $\quad \lbrace \space x - z = z * (y - 1) \space \rbrace$  
 $\space \color{cornflowerblue} y {\small \text{-}\text{-}};$  
-$\qquad \color{darkseagreen} (\space \text{y\text{-}\text{-} is the same as y := y - 1} \space)$  
+$\qquad \color{darkseagreen} (\space \text{y-}\text{-}\text{ is the same as y := y - 1} \space)$  
 $\quad \lbrace \space x - z = z * y \space \rbrace$  
 $\space \color{cornflowerblue} x := x - z;$  
 $\quad \lbrace \space x = z * y \space \rbrace$  
@@ -48,14 +48,14 @@ $\quad \lbrace \space y = A \space \rbrace$
 // x ≤ A < x + y
 ```
 
-$\quad \lbrace \space x * x \leq A < (x + 1) * (x + 1) \space \rbrace$  
+$\quad \lbrace \space x * x \space \leq \space A \space < \space (x + 1) * (x + 1) \space \rbrace$  
 $\qquad \color{darkseagreen} (\space \text{prepare } y := 2 * x + 1 \space)$  
 $\qquad \color{darkseagreen} (\space \text{expand product} \space)$  
-$\quad \lbrace \space x * x \leq A < x * x + 2 * x + 1 \space \rbrace$  
+$\quad \lbrace \space x * x \space \leq \space A \space < \space x * x + 2 * x + 1 \space \rbrace$  
 $\space \color{cornflowerblue} y := 2 * x + 1;$  
-$\quad \lbrace \space x * x \leq A < x * x + y \space \rbrace$  
+$\quad \lbrace \space x * x \space \leq \space A \space < \space x * x + y \space \rbrace$  
 $\space \color{cornflowerblue} x := x * x;$  
-$\quad \lbrace \space x \leq A < x + y \space \rbrace$  
+$\quad \lbrace \space x \space \leq \space A \space < \space x + y \space \rbrace$  
 
 &nbsp;
 

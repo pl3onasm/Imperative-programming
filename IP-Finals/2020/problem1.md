@@ -49,12 +49,12 @@ $\quad \lbrace \space x = A \space \rbrace$
 // 5 ≤ y < 14
 ```
 
-$\quad \lbrace \space 3 \leq x + y * y < 12 \space \rbrace$  
+$\quad \lbrace \space 3 \space \leq \space  x + y * y \space < \space 12 \space \rbrace$  
 $\qquad \color{darkseagreen} (\space \text{prepare } x := x + y * y + 2 \space)$  
 $\qquad \color{darkseagreen} (\space \text{add 2 to all sides } \space)$  
-$\quad \lbrace \space 5 \leq x + y * y + 2 < 14 \space \rbrace$  
+$\quad \lbrace \space 5 \space \leq \space x + y * y + 2 \space <\space  14 \space \rbrace$  
 $\space \color{cornflowerblue} x := x + y * y + 2;$  
-$\quad \lbrace \space 5 \leq y < 14 \space \rbrace$  
+$\quad \lbrace \space 5 \space \leq \space y \space < \space 14 \space \rbrace$  
 
 &nbsp;
 
@@ -93,18 +93,18 @@ y := y + z; x := 2 * x + y;
 // .....
 ```
 
-$\quad \lbrace \space 4 * x + 2 * y + 2 * z < 12 \space \rbrace$  
+$\quad \lbrace \space 4 * x + 2 * y + 2 * z \space < \space 12 \space \rbrace$  
 $\qquad \color{darkseagreen} (\space \text{prepare } y := y + z \space)$  
 $\qquad \color{darkseagreen} (\space \text{regroup terms} \space)$  
-$\quad \lbrace \space 4 * x + 2 * (y + z) < 12 \space \rbrace$  
+$\quad \lbrace \space 4 * x + 2 * (y + z) \space < \space 12 \space \rbrace$  
 $\space \color{cornflowerblue} y := y + z;$  
-$\quad \lbrace \space 4 * x + 2 * y < 12 \space \rbrace$  
+$\quad \lbrace \space 4 * x + 2 * y \space < \space 12 \space \rbrace$  
 $\qquad \color{darkseagreen} (\space \text{prepare } x := 2 * x + y \space)$  
 $\qquad \color{darkseagreen} (\space \text{regroup terms} \space)$  
-$\quad \lbrace \space 2 * (2 * x + y) < 12 \space \rbrace$  
+$\quad \lbrace \space 2 * (2 * x + y) \space < \space 12 \space \rbrace$  
 $\space \color{cornflowerblue} x := 2 * x + y;$  
-$\quad \lbrace \space 2 * x < 12 \space \rbrace$  
-$\quad \lbrace \space x < 6 \space \rbrace$  
+$\quad \lbrace \space 2 * x \space < \space 12 \space \rbrace$  
+$\quad \lbrace \space x \space < \space 6 \space \rbrace$  
 
 &nbsp;
 
