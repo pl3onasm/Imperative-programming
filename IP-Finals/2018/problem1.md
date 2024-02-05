@@ -104,7 +104,7 @@ z := x; x := y; y := z;
 $\quad \lbrace \space x = A \space \land \space y = B \space \rbrace$  
 $\space \color{cornflowerblue} z := x;$  
 $\quad \lbrace \space x = A \space \land \space y = B \space \land \space z = A \space \rbrace$  
-$\space \color{cornflowerblue} z := y;$  
+$\space \color{cornflowerblue} x := y;$  
 $\quad \lbrace \space x = B \space \land \space y = B \space \land \space z = A \space \rbrace$  
 $\space \color{cornflowerblue} y := z;$  
 $\quad \lbrace \space x = B \space \land \space y = A \space \land \space z = A \space \rbrace$  
