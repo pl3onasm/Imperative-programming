@@ -56,9 +56,9 @@ $\quad \lbrace \space x + 3 * y + 3 * z + 1$
 $\qquad = (A + 1) * (A + 1) * (A + 1) \space$  
 $\qquad \land \space y = A * A \space \land \space z = A\space \rbrace$  
 $\space \color{cornflowerblue} x := x + 3 * y + 3 * z + 1;$  
-$\quad \lbrace \space x = (A + 1) * (A + 1) * (A + 1)$
+$\quad \lbrace \space x = (A + 1) * (A + 1) * (A + 1)$  
 $\qquad \land \space y = A * A \space \land \space z = A\space \rbrace$  
-$\quad \lbrace \space x = (A + 1) * (A + 1) * (A + 1)\space \rbrace$
+$\quad \lbrace \space x = (A + 1) * (A + 1) * (A + 1)\space \rbrace$  
 
 &nbsp;
 
