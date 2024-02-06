@@ -122,7 +122,7 @@ $\qquad \land \space x - y = A - 2 * B \space \rbrace$
 $\space \color{cornflowerblue} z := x - y;$  
 $\quad \lbrace \space x = A - B \space \land \space y = B \space \land \space z = A - 2 * B \space \rbrace$  
 $\qquad \color{darkseagreen} (\space \text{prepare } y := z - y \space)$  
-$\quad \lbrace \space x = A - B \space \land \space z = A - 3 * B \space \rbrace$  
+$\quad \lbrace \space x = A - B \space \land \space z - y = A - 3 * B \space \rbrace$  
 $\space \color{cornflowerblue} y := z - y;$  
 $\quad \lbrace \space x = A - B \space \land \space y = A - 3 * B \space \rbrace$  
 
