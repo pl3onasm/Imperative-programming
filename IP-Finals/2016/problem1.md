@@ -10,7 +10,7 @@
 
 $\quad \lbrace \space 6 \space < \space x + 2 * y \space < \space 11 \space \rbrace$  
 $\qquad \color{darkseagreen} (\space \text{prepare } x := x + 2 * y - 1 \space)$  
-$\qquad \color{darkseagreen} (\space \text{subtract 1 from all sides} \space)$
+$\qquad \color{darkseagreen} (\space \text{subtract 1 from all sides} \space)$  
 $\quad \lbrace \space 5 \space < \space x + 2 * y - 1 \space < \space 10 \space \rbrace$  
 $\space \color{cornflowerblue} x := x + 2 * y - 1;$  
 $\quad \lbrace \space 5 \space < \space x \space < \space 10 \space \rbrace$  
