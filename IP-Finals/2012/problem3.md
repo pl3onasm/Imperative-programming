@@ -63,13 +63,12 @@ for (i = 1; i < N; i++) {
 }
 ```
 
-The outer loop runs $N - 1$ times, whereas the inner loop runs $\log(i-1)$ times. The total number of iterations is therefore given by:
+The outer loop runs $N - 1$ times, whereas the inner loop runs $\log(i)$ times for each value of $i$. The total number of iterations is therefore given by:
 
 $$
 \begin{align*}
-\sum_{i=1}^{N-1} \log(i-1) &= \log\left(\prod_{i=1}^{N-1} (i-1)\right) \\
-&= \log\left((N-2)!\right) \\
-& < \log\left(N!\right) \\
+\sum_{i=1}^{N-1} \log(i) &= \log\left(\prod_{i=1}^{N-1} i\right) \\
+&= \log\left((N-1)!\right) \\
 &= \mathcal{O}(N \log N)
 \end{align*}
 $$

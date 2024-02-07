@@ -58,15 +58,15 @@ The outer loop is linear in $N$, and the inner loop runs $\log(i)$ times for eac
 
 $$
 \begin{align*}
-\sum_{i=1}^{N-1} \log(i-1) &= \log\left(\prod_{i=1}^{N-1} (i-1)\right) \\
-&= \log((N-2)!) \\
-&= \mathcal{O}(N\log(N))
+\sum_{i=1}^{N-1} \log (i) &= \log \left( \prod_{i=1}^{N-1} i \right)\\
+&= \log((N-1)!)\\
+& = \mathcal{O}(N \log N)
 \end{align*}
 $$
 
-Hence, the time complexity of the fragment is in $\mathcal{O}(N\log(N))$.[^1]
+Hence, the fragment's complexity is in $\mathcal{O}(N \log N)$.  [^1]
 
-[^1]: Note that we need to let i start at 1 otherwise the log(i) term would be undefined for i = 0. This does not affect the complexity of the fragment, however, since the first iteration of the inner loop would be skipped anyway.
+[^1]: Note that we need to let i start from 1, not 0, in the inner loop, otherwise the logarithm would be undefined for i = 0. This does not affect the time complexity, however, as the first iteration of the inner loop is skipped anyway.  
 
 ## Ex5: $\color{rosybrown}{{\mathcal{O}(\log N)}}$
 

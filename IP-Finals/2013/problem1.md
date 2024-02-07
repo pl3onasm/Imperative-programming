@@ -15,7 +15,7 @@ $\quad \lbrace \space 42 * x = 42 * X \space \rbrace$
 $\qquad \color{darkseagreen} (\space \text{add 21 to both sides} \space)$  
 $\quad \lbrace \space 42 * x + 21 = 42 * X + 21 \space \rbrace$  
 $\space \color{cornflowerblue} x := 42 * x + 21;$  
-$\quad \lbrace \space 42 * X + 21 \space \rbrace$  
+$\quad \lbrace \space x = 42 * X + 21 \space \rbrace$  
 
 &nbsp;
 
