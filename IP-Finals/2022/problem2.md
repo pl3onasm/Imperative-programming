@@ -83,7 +83,7 @@ $$
 
 Hence, the fragment's complexity is in $\mathcal{O}(N \log N)$.  [^1]
 
-[^1]: Note that we need to let i start from 1, not 0, in the inner loop, otherwise the logarithm would be undefined for i = 0. This does not affect the time complexity, however, as the first iteration of the inner loop is skipped anyway.  
+[^1]: Note that we need to let i start from 1, not 0, otherwise the logarithm would be undefined for i = 0. This does not affect the time complexity, however, as the first iteration of the inner loop is skipped anyway.  
 
 ## Ex5: $\color{rosybrown}{{\mathcal{O}(\log N)}}$
 
