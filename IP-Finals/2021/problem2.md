@@ -54,7 +54,7 @@ for (int i = 0; i < N; i++) {
 }
 ```
 
-The outer loop is linear in $N$, and the inner loop runs $\log(i)$ times for each iteration of the outer loop, so that the total number of iterations is given by:
+The outer loop runs $N$ times, and the inner loop runs $\log(i)$ times for each iteration of the outer loop, so that the total number of iterations is given by:
 
 $$
 \begin{align*}
@@ -66,7 +66,7 @@ $$
 
 Hence, the fragment's complexity is in $\mathcal{O}(N \log N)$.  [^1]
 
-[^1]: Note that we need to let i start from 1, not 0, in the inner loop, otherwise the logarithm would be undefined for i = 0. This does not affect the time complexity, however, as the first iteration of the inner loop is skipped anyway.  
+[^1]: Note that we need to let i start from 1, not 0, otherwise the logarithm would be undefined for i = 0. This does not affect the time complexity, however, as the first iteration of the inner loop is skipped anyway.  
 
 ## Ex5: $\color{rosybrown}{{\mathcal{O}(\log N)}}$
 
