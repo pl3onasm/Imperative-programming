@@ -93,7 +93,7 @@ $\qquad \color{darkseagreen} (\space \text{add 5 to all sides} \space)$
 $\quad \lbrace \space 10 \space <\space x + 3 * y + 5 \space <\space 15 \space \rbrace $  
 $\space \color{cornflowerblue} x := x + 3 * y + 5;$  
 $\quad \lbrace \space 10 \space <\space x \space <\space 15 \space \rbrace $  
-$\qquad \color{darkseagreen} (\space \text{weakening} \space)$  
+$\qquad \color{darkseagreen} (\space \text{weakening of the postcondition} \space)$  
 $\quad \lbrace \space 10 \space <\space x \space \leq \space 16 \space \rbrace $  
 
 &nbsp;

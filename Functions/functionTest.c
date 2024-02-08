@@ -1,12 +1,13 @@
-/* file: vocabTest.c
+/* file: functionTest.c
    author: David De Potter
-   Purpose: examples of using functions from vocabulary.c
-   Compile with: gcc -O2 -std=c99 -o a.out vocabulary.c vocabTest.c -lm
+   Purpose: examples of using functions from the functions library
+   Compile with: gcc -O2 -std=c99 -o a.out functions.c functionTest.c -lm
 */
 
-#include "vocab.h"
+#include "functions.h"
 
 int main() {
+  printf("\nSome usage examples of the functions\n\n");
   int a = 5, b = -7;
   printf("min(%d, %d) = %d\n", a, b, minimum(a, b));
   printf("max(%d, %d) = %d\n", a, b, maximum(a, b));
@@ -20,10 +21,10 @@ int main() {
   printf("isPrime(%d) = %d\n", c, isPrime(c));
   printf("isPerfSquare(%d) = %d\n\n", c, isPerfSquare(c));
 
-  char str[100];
-  printf("length of %d in binary = %d\n", c, toBinary(c, str));
-  printf("binary representation of %d = %s\n\n", c, str);
-
+  char *bin = toBinary(c + 200);
+  printf("binary representation of %d = %s\n\n", c + 200, bin);
+  free(bin);
+  
   int year = 2020;
   printf("isLeapYear(%d) = %d\n\n", year, isLeapYear(year));
 
@@ -32,18 +33,19 @@ int main() {
   printf("GCD(%d, %d) = %d\n", d, e, GCD(d, e));
   printf("LCM(%d, %d) = %d\n", d, e, LCM(d, e));
   printf("areCoprime(%d, %d) = %d\n", d, e, areCoprime(d, e));
-  printf("sumDivisors(%d) = %d\n\n", d, sumDivisors(d));
 
   int f = 2, g = 3;
   printf("power(%d, %d) = %d\n", f, g, power(f, g));
   printf("modExp(%d, %d, %d) = %d\n\n", f, g, a, modExp(f, g, a));
 
   int h = 12321;
-  printf("isIntPalindrome(%d) = %d\n", h, isIntPalindrome(h, 10));
+  printf("isIntPalindrome(%d) = %d\n", h, isIntPalindrome(h));
   char str2[] = "abba";
-  printf("isPalindrome(%s) = %d\n\n", str2, isPalindrome(0, 3, str2));
-  char str3[] = "hello";
-  printf("reverse(%s) = %s\n\n", str3, reverse(str3, 4));
+  printf("isStrPalindrome(%s) = %d\n\n", str2, isStrPalindrome(&str2[0], &str2[3]));
+  char str3[] = "hello world!";
+  printf("reverseString(%s) = ", str3);
+  reverseString(str3);
+  printf("%s\n\n", str3);
 
   int arr[] = {9, 2, 5, 1, 7, 3, 4, 6, 8, 0};
   printf("array: ");
