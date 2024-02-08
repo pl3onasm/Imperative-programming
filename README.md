@@ -1,4 +1,4 @@
-# $\color{cadetblue}{\text{Imperative Programming}}$
+# ${\color{cadetblue} \text{Imperative Programming}}$
 
 This repository contains old exams for the course Imperative Programming (IP) at the University of Groningen. In 2023, this course was merged with the course Program Correctness (PC) into the new course Programming Fundamentals (PF). This is why you will find exams for both courses in this repository. All exams were created by [dr. A. Meijster](https://www.rug.nl/staff/a.meijster/), and make up for great practice material.
 
@@ -6,7 +6,7 @@ For the C questions, the subfolders each hold one or more example solutions, a f
   
 Found this repository useful? Help out your (future) fellow students by mailing your exam paper to [me](mailto:pl3onasm@gmail.com) or sending a pull request. It's up to you to keep this repository up to date!
 
-## $\color{darkgoldenrod}{\text{IP Finals}}$
+## ${\color{darkgoldenrod}\text{IP Finals}}$
 
 ||||
 |:---:|:---:|:---:|
@@ -17,7 +17,7 @@ Found this repository useful? Help out your (future) fellow students by mailing 
 | **[2020](https://github.com/pl3onasm/Imperative-programming/tree/main/IP-Finals/2020)**| **[2021](https://github.com/pl3onasm/Imperative-programming/tree/main/IP-Finals/2021)**| **[2022](https://github.com/pl3onasm/Imperative-programming/tree/main/IP-Finals/2022)**|
 ||||
 
-## $\color{darkgoldenrod}{\text{IP Midterms}}$
+## ${\color{darkgoldenrod}\text{IP Midterms}}$
 
 ||||
 |:---:|:---:|:---:|
@@ -28,34 +28,34 @@ Found this repository useful? Help out your (future) fellow students by mailing 
 | **[2021](https://github.com/pl3onasm/Imperative-programming/tree/main/IP-Midterms/mid2021)**| **[2021 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/IP-Midterms/mid2021resit)**|**[2022](https://github.com/pl3onasm/Imperative-programming/tree/main/IP-Midterms/mid2022)**|
 ||||
 
-## $\color{darkgoldenrod}{\text{PF 1-3 exams}}$
+## ${\color{darkgoldenrod}\text{PF 1-3 exams}}$
 
 |||
 |:---:|:---:|
-**[2023](https://github.com/pl3onasm/Imperative-programming/tree/main/PF1-3/exam1-2023)**| **[2023 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/PF2-3/exam2-2023)**|
+|**[2023](https://github.com/pl3onasm/Imperative-programming/tree/main/PF1-3/exam1-2023)**| **[2023 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/PF2-3/exam2-2023)**|
 |||
 
-## $\color{darkgoldenrod}{\text{PF 2-3 exams}}$
-
-|||
-|:---:|:---:|
-**[2023](https://github.com/pl3onasm/Imperative-programming/tree/main/PF2-3/exam2-2023)**| **[2023 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/PF2-3/resit2-2023)** |
-|||
-
-## $\color{darkgoldenrod}{\text{PF 3-3 exams}}$
+## ${\color{darkgoldenrod}\text{PF 2-3 exams}}$
 
 |||
 |:---:|:---:|
-**[2024](https://github.com/pl3onasm/Imperative-programming/tree/main/PF3-3/exam3-2024)**||
+|**[2023](https://github.com/pl3onasm/Imperative-programming/tree/main/PF2-3/exam2-2023)**| **[2023 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/PF2-3/resit2-2023)** |
 |||
 
-## $\color{cadetblue}{\text{Testing}}$
+## ${\color{darkgoldenrod}\text{PF 3-3 exams}}$
+
+|||
+|:---:|:---:|
+|**[2024](https://github.com/pl3onasm/Imperative-programming/tree/main/PF3-3/exam3-2024)**||
+|||
+
+## ${\color{cadetblue}\text{Testing}}$
 
 You can test your own C code with the [test script](https://github.com/pl3onasm/Imperative-programming/blob/main/ctest.sh). It will try to compile your code and run it on all the test cases. It will also compare your output with the expected output, and check for memory leaks by running a Valgrind test. If a test fails, the script will display the line numbers where a mismatch between the expected and the actual output was found, followed by the corresponding lines themselves, so you can easily spot the error. Lines in green and preceded by `<` represent the expected output, while lines in red and preceded by `>` are the actual (incorrect) output. In order to avoid too much clutter, the script will only display the first 6 lines where mismatches were found and will indicate how many more there are if applicable.
 
 If you want to use the script, you basically have two options:  
 
-### $\color{rosybrown}{\text{1. Execution from script's repo location}}$  
+### ${\color{rosybrown}\text{1. Execution from script's repo location}}$  
 
 Opening a terminal from the working directory containing your program, the solution, and the folder with the tests, run the below commands.  
 First, make the script executable:
@@ -70,7 +70,7 @@ Then run the script by using the following command:
 ../../../ctest.sh myprogram.c
 ```
 
-### $\color{rosybrown}{\text{2. Execution from PATH}}$
+### ${\color{rosybrown}\text{2. Execution from PATH}}$
 
 Alternatively, you can add the script to your PATH variable and run it from anywhere.  
 To display the current $PATH, run the following command:
@@ -99,7 +99,7 @@ You may also choose to redirect the output to a file, in which case the color co
 ctest.sh myprogram.c > results.txt
 ```
 
-## $\color{cadetblue}{\text{Notes}}$
+## ${\color{cadetblue}\text{Notes}}$
 
 All commands were given with Ubuntu in mind. If you are using a different Linux distribution, you may need to change the commands accordingly.
 
@@ -114,7 +114,7 @@ valgrind --leak-check=full ./a.out < tests/input.in
 
 &nbsp;&nbsp;&nbsp;
 
-## $\color{cadetblue}{\text{Output example of the script}}$
+## ${\color{cadetblue}\text{Output example of the script}}$
 
 <p align="center" width="50%">
 <img src="example.jpg"
