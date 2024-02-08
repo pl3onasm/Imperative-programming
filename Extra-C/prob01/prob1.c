@@ -1,6 +1,6 @@
 /* file: prob1.c
    author: David De Potter
-   description: extra, prob1, sum of multiples
+   description: extra, problem 1, sum of multiples
 
    Explanation:
     The sum of all natural numbers from 1 to n is given by the

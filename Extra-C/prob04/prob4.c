@@ -1,72 +1,51 @@
 /* file: prob4.c
    author: David De Potter
-   description: extra, prob4, maximum path
+   description: extra, problem 4, binary palindromes
 */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX(a, b) ((a) > (b) ? (a) : (b))
-
-void *safeMalloc (int n) {
-  /* allocates memory and checks whether it was successful */
-  void *ptr = malloc(n);
-  if (ptr == NULL) {
-    printf("Error: malloc(%d) failed. Out of memory?\n", n);
-    exit(EXIT_FAILURE);
+int isPalindrome(int n) {
+  // checks if n is a binary palindrome with
+  // odd number of 1s
+  int rev = 0, orig = n, sum = 0;
+  while (orig) {
+    rev = (rev << 1) | (orig & 1);
+    orig >>= 1;
+    sum += rev & 1;
   }
-  return ptr;
+  return rev == n && sum % 2;
 }
 
-int **readTriangle (int n) {
-  /* reads the triangle from stdin */
-  int **triangle = safeMalloc(n * sizeof(int *));
-  for (int i = 0; i < n; ++i) {
-    triangle[i] = safeMalloc((i + 1) * sizeof(int));
-    for (int j = 0; j <= i; ++j)
-      (void)! scanf("%d ", &triangle[i][j]);
+void printBinary(int n) {
+  // prints the binary representation of n
+  while (n) {
+    printf("%d", n & 1);
+    n >>= 1;
   }
-  return triangle;
 }
 
-void free2Dmem (int **arr, int n) {
-  /* frees the memory allocated to a 2D array */
-  for (int i = 0; i < n; ++i)
-    free(arr[i]);
-  free(arr);
-}
-
-int maxPath (int **triangle, int n) {
-  /* computes the maximum path cost */
-  int i, j, max;
-
-  // calculate the maximum path cost for each cell
-  for (i = 1; i < n; ++i) {
-    for (j = 0; j <= i; ++j) {
-      max = 0;
-      if (j < i) max = triangle[i - 1][j];
-      if (j > 0) max = MAX(max, triangle[i - 1][j - 1]);
-      triangle[i][j] += max;
+void generatePalindromes(int a, int b) {
+  // generates all binary palindromes in [a, b] 
+  // having odd number of 1s
+  int found = 0;
+  for (int i = a; i <= b; ++i)
+    if (isPalindrome(i)) {
+      found = 1;
+      printf("%d: ", i); 
+      printBinary(i);
+      printf("\n");
     }
-  }
-  
-  // take maximum of the last row
-  max = triangle[n - 1][0];
-  for (j = 1; j < n; ++j)
-    max = MAX(max, triangle[n - 1][j]);
-
-  return max;
+  if (!found)
+    printf("0\n");
 }
 
 int main() {
-  int n;
-  (void)! scanf("%d", &n);
+  int a, b;
+  (void)! scanf("%d %d", &a, &b);
 
-  int **triangle = readTriangle(n);
-
-  printf("%d\n", maxPath(triangle, n));
-
-  free2Dmem(triangle, n);
+  generatePalindromes(a, b);
   
   return 0;
 }

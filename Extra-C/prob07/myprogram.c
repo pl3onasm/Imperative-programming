@@ -1,6 +1,6 @@
 /* file: myprogram.c
    author: your name
-   description: extra, problem 7, dividing large numbers
+   description: extra, problem 7, matching bitstrings
 */
 
 #include <stdio.h>

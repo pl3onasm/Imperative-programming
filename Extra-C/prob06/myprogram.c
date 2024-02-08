@@ -1,6 +1,6 @@
 /* file: myprogram.c
    author: your name
-   description: extra, problem 6, next smaller number
+   description: extra, problem 6, balanced brackets
 */
 
 #include <stdio.h>

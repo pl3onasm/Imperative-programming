@@ -1,6 +1,6 @@
 /* file: myprogram.c
    author: your name
-   description: extra, problem 5, binary palindromes
+   description: extra, problem 5, next smaller number
 */
 
 #include <stdio.h>

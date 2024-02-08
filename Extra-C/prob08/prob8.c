@@ -1,76 +1,116 @@
 /* file: prob8.c
-* author: David De Potter
-* description: extra, problem 8, balanced brackets
+  author: David De Potter
+  description: extra, problem 8, segments
 */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-void *safeCalloc (int n, int size) {
-  /* allocates memory and checks if it was successful */
-  void *ptr = calloc(n, size);
-  if (ptr == NULL) {
-    printf("Error: calloc(%d, %d) failed. Out of memory?\n", n, size);
-    exit(EXIT_FAILURE);
-  }
-  return ptr;
-}
+#define MAX(a,b) ((a)>(b)?(a):(b))
+#define MIN(a,b) ((a)<(b)?(a):(b))
 
-void *safeRealloc (void *p, int n) {
-  // checks if memory has been reallocated successfully
-  p = realloc(p, n);
+typedef struct {
+  int start, end;
+} Seg;
+
+void *safeMalloc (int n) {
+  /* checks if memory has been allocated successfully */
+  void *p = malloc(n);
   if (p == NULL) {
-    printf("Error: realloc(%d) failed. Out of memory?\n", n);
+    printf("Error: malloc(%d) failed. Out of memory?\n", n);
     exit(EXIT_FAILURE);
   }
   return p;
 }
 
-char *readString(int *len) {
-  // reads a string of characters and determines its length
-  int capacity = 50, size = 0;
-  char ch;
-  char *s = safeCalloc(capacity, sizeof(char));
-  while (scanf("%c", &ch) && ch != '\n' && ch != EOF) {
-    if (size >= capacity) {
-      capacity *= 2;
-      s = safeRealloc(s, capacity * sizeof(char));
-    }
-    s[size++] = ch;
-  }
-  *len = size;
-  s[size] = '\0'; // add null terminator
-  return s;
+Seg* readInput (int len) {
+  /* reads the input and stores it as an array of segments */
+  Seg *segments = safeMalloc(len*sizeof(Seg));
+  
+  for (int i = 0; i < len; ++i)
+    (void)! scanf("[%d,%d),", &segments[i].start, &segments[i].end);
+  
+  return segments;
 }
 
-int isBalanced(char *s, int len) {
-  char *stack = safeCalloc(len, sizeof(char));
-  int top = 0;
-  for (int i = 0; i < len; i++) {
-    if (s[i] == '(' || s[i] == '[' || s[i] == '{') {
-      stack[top++] = s[i];
-      continue;
-    } 
-    --top;
-    if (top < 0 
-      || (s[i] == ')' && stack[top] != '(') 
-      || (s[i] == ']' && stack[top] != '[') 
-      || (s[i] == '}' && stack[top] != '{')) {
-        free(stack);
-        return 0;
-      }
+Seg *copySubArray(int left, int right, Seg *arr) {
+  /* copies a part of a given segment array from the left
+   * index to the right one */
+  Seg *copy = safeMalloc((right - left)*sizeof(Seg));
+
+  for (int i = left; i < right; i++)
+    copy[i - left] = arr[i];
+  
+  return copy;
+}
+
+void mergeSort(int length, Seg *arr) {
+  /* sorts the array in increasing order on the value of the
+   * start field of each segment */
+  int l = 0, r = 0, idx = 0, mid = length/2;
+
+  if (length <= 1) return;
+
+  Seg *left = copySubArray(0, mid, arr);
+  Seg *right = copySubArray(mid, length, arr);
+
+  mergeSort(mid, left);
+  mergeSort(length - mid, right);
+  
+  while (l < mid && r < length - mid) {
+    if (left[l].start < right[r].start)
+      arr[idx++] = left[l++];
+    else
+      arr[idx++] = right[r++];
   }
-  free(stack);
-  return top == 0;  
+
+  while (l < mid) 
+    arr[idx++] = left[l++];
+  
+  while (r < length - mid) 
+    arr[idx++] = right[r++];
+
+  free(left);
+  free(right);
+}
+
+void printSegments (Seg *segments, int n) {
+  /* prints the segments in the array */
+  for (int i = 0; i <= n; ++i) {
+    printf("[%d,%d)", segments[i].start, segments[i].end);
+    printf(i == n ? "\n" : ",");
   }
+}
 
+void mergeSegments(Seg *segments, int n) {
+  /* checks each segment pair and keeps merging them as long 
+   * as the value of the end field of the current segment
+   * overlaps the start field's value of the next */
+  
+  int curr = 0; // index of current segment in the merged (sub)array
 
-int main (int argc, char *argv[]) {
-  int len;
-  char *s = readString(&len);
+  for (int i = 1; i < n; ++i) {
+    Seg a = segments[curr], b = segments[i];
+    if (a.end >= b.start) {   
+      // merge segments
+      segments[curr].start = MIN (a.start, b.start);
+      segments[curr].end = MAX (a.end, b.end);
+    } else segments[++curr] = b;
+  }
+  printSegments (segments, curr);
+}
 
-  printf(isBalanced(s, len) ? "YES\n" : "NO\n");
+int main() {
+  int n;
+  (void)! scanf("%d:", &n);
 
-  free(s);
+  Seg *segments = readInput (n);
+
+  mergeSort (n, segments);
+
+  mergeSegments(segments, n);
+
+  free(segments);
+
   return 0;
 }

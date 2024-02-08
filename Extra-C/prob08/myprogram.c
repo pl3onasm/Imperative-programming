@@ -1,6 +1,6 @@
 /* file: myprogram.c
    author: your name
-   description: extra, problem 8, balanced brackets
+   description: extra, problem 8, segments
 */
 
 #include <stdio.h>

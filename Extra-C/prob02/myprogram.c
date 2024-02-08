@@ -1,6 +1,6 @@
 /* file: myprogram.c
    author: your name
-   description: extra, problem 2, adding large numbers
+   description: extra, problem 2, pandigital divisibility
 */
 
 #include <stdio.h>

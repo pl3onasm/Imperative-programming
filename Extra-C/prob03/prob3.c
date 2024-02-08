@@ -1,50 +1,72 @@
 /* file: prob3.c
    author: David De Potter
-   description: extra, prob3, pandigital divisibility
+   description: extra, problem 3, maximum path
 */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef unsigned long long llu;
+#define MAX(a, b) ((a) > (b) ? (a) : (b))
 
-llu toLlu(int *digits) {
-  // converts the digits array to an unsigned long long
-  llu result = 0;
-  for (int i = 0; i < 10; ++i) 
-    result = result * 10 + digits[i];
-  return result;
+void *safeMalloc (int n) {
+  /* allocates memory and checks whether it was successful */
+  void *ptr = malloc(n);
+  if (ptr == NULL) {
+    printf("Error: malloc(%d) failed. Out of memory?\n", n);
+    exit(EXIT_FAILURE);
+  }
+  return ptr;
 }
 
-void permute(int *digits, int *taken, int start, int div) {
-  /* computes all permutations of the digits array and prints, in
-     ascending order, those that satisfy the divisibility condition */ 
-  if (start == 10) {
-    llu candidate = toLlu(digits);
-    if (candidate % div == 0)
-      printf("%llu\n", candidate);
-    return;
+int **readTriangle (int n) {
+  /* reads the triangle from stdin */
+  int **triangle = safeMalloc(n * sizeof(int *));
+  for (int i = 0; i < n; ++i) {
+    triangle[i] = safeMalloc((i + 1) * sizeof(int));
+    for (int j = 0; j <= i; ++j)
+      (void)! scanf("%d ", &triangle[i][j]);
   }
-  // recursive case
-  for (int i = 0; i < 10; ++i) {
-    if (!taken[i]                     // each digit can only be used once   
-        && !(start == 0 && i == 0)) { // first digit cannot be 0
-      ++taken[i];
-      digits[start] = i;  
-      permute(digits, taken, start + 1, div);
-      --taken[i];                     // backtrack
+  return triangle;
+}
+
+void free2Dmem (int **arr, int n) {
+  /* frees the memory allocated to a 2D array */
+  for (int i = 0; i < n; ++i)
+    free(arr[i]);
+  free(arr);
+}
+
+int maxPath (int **triangle, int n) {
+  /* computes the maximum path cost */
+  int i, j, max;
+
+  // calculate the maximum path cost for each cell
+  for (i = 1; i < n; ++i) {
+    for (j = 0; j <= i; ++j) {
+      max = 0;
+      if (j < i) max = triangle[i - 1][j];
+      if (j > 0) max = MAX(max, triangle[i - 1][j - 1]);
+      triangle[i][j] += max;
     }
   }
+  
+  // take maximum of the last row
+  max = triangle[n - 1][0];
+  for (j = 1; j < n; ++j)
+    max = MAX(max, triangle[n - 1][j]);
+
+  return max;
 }
 
 int main() {
-  int digits[10];
-  int taken[10] = {0};
+  int n;
+  (void)! scanf("%d", &n);
 
-  int div; 
-  (void)! scanf("%d", &div);
+  int **triangle = readTriangle(n);
 
-  permute(digits, taken, 0, div);
+  printf("%d\n", maxPath(triangle, n));
+
+  free2Dmem(triangle, n);
   
   return 0;
 }

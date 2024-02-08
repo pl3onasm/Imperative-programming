@@ -1,20 +1,25 @@
-# Adding large numbers
+# Pandigital divisibility
 
-Given are two positive integers $a$ and $b$ having $n$ and $m$ digits respectively, where $n, m \leq 10^3$. The output of your program should be the sum of $a$ and $b$.
+In this problem, we say that a number is *pandigital* if it contains all the digits from $0$ to $9$ exactly once. For example, $1023456789$ is a pandigital number, but $102345678$ and $1023457890$ are not.
 
-The input is given on two lines. The first line contains $a$ and the second line contains $b$. Both lines terminate with a newline character.
+The input consists of a positive integer $d \leq 10^7$. The output of your pogram should be all the pandigital numbers that are divisible by $d$. The pandigital numbers should be printed *in ascending order*, each on a new line. Numbers with a leading $0$ should be omitted. You are not allowed to use a sorting algorithm.
 
 ## Example
 
 Input:
 
 ```text
-987654321098765410
-22345678911234567812
+7777170
 ```
 
 Output:
 
 ```text
-23333333232333333222
+1749863250 
+1827634950  
+2916438750  
+3281965740  
+4728519360  
+5918426370  
+8749316250
 ```

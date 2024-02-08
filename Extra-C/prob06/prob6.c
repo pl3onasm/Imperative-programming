@@ -1,49 +1,76 @@
 /* file: prob6.c
-   author: David De Potter
-   description: extra, prob6, next smaller number
+* author: David De Potter
+* description: extra, problem 6, balanced brackets
 */
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
-void swap(char *a, char *b) {
-  // swap the values of a and b
-  char tmp = *a;
-  *a = *b;
-  *b = tmp; 
+void *safeCalloc (int n, int size) {
+  /* allocates memory and checks if it was successful */
+  void *ptr = calloc(n, size);
+  if (ptr == NULL) {
+    printf("Error: calloc(%d, %d) failed. Out of memory?\n", n, size);
+    exit(EXIT_FAILURE);
+  }
+  return ptr;
 }
 
-int main() {
-  char arr[20];
-  (void)! scanf("%s", arr);
-  
-  int len = strlen(arr);
-  int i = len - 2;
+void *safeRealloc (void *p, int n) {
+  // checks if memory has been reallocated successfully
+  p = realloc(p, n);
+  if (p == NULL) {
+    printf("Error: realloc(%d) failed. Out of memory?\n", n);
+    exit(EXIT_FAILURE);
+  }
+  return p;
+}
 
-  // find 1st digit from the right that breaks the 
-  // descending order from right to left
-  while (i >= 0 && arr[i] <= arr[i + 1]) i--;
+char *readString(int *len) {
+  // reads a string of characters and determines its length
+  int capacity = 50, size = 0;
+  char ch;
+  char *s = safeCalloc(capacity, sizeof(char));
+  while (scanf("%c", &ch) && ch != '\n' && ch != EOF) {
+    if (size >= capacity) {
+      capacity *= 2;
+      s = safeRealloc(s, capacity * sizeof(char));
+    }
+    s[size++] = ch;
+  }
+  *len = size;
+  s[size] = '\0'; // add null terminator
+  return s;
+}
 
-  if (i < 0) {  // number is the smallest possible
-    printf("-1\n");
-    return 0;
+int isBalanced(char *s, int len) {
+  char *stack = safeCalloc(len, sizeof(char));
+  int top = 0;
+  for (int i = 0; i < len; i++) {
+    if (s[i] == '(' || s[i] == '[' || s[i] == '{') {
+      stack[top++] = s[i];
+      continue;
+    } 
+    --top;
+    if (top < 0 
+      || (s[i] == ')' && stack[top] != '(') 
+      || (s[i] == ']' && stack[top] != '[') 
+      || (s[i] == '}' && stack[top] != '{')) {
+        free(stack);
+        return 0;
+      }
+  }
+  free(stack);
+  return top == 0;  
   }
 
-  // find the next smaller digit from the right
-  int j = len - 1;
-  while (arr[j] >= arr[i]) j--;
 
-  swap(&arr[i], &arr[j]);
+int main (int argc, char *argv[]) {
+  int len;
+  char *s = readString(&len);
 
-  // sort the rest of the string in descending order
-  j = len - 1;
-  i++;
-  while (i < j) 
-    swap(&arr[i++], &arr[j--]);
+  printf(isBalanced(s, len) ? "YES\n" : "NO\n");
 
-  // print if there are no leading zeros
-  printf(arr[0] == '0' ? "-1\n" : "%s\n", arr);
-
+  free(s);
   return 0;
 }

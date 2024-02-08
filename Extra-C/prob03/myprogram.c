@@ -1,6 +1,6 @@
 /* file: myprogram.c
    author: your name
-   description: extra, problem 3, pandigital divisibility
+   description: extra, problem 3, maximum path
 */
 
 #include <stdio.h>

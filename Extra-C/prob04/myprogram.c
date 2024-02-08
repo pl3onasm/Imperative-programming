@@ -1,6 +1,6 @@
 /* file: myprogram.c
    author: your name
-   description: extra, problem 4, maximum path
+   description: extra, problem 4, binary palindromes
 */
 
 #include <stdio.h>
