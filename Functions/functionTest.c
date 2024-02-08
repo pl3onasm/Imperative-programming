@@ -6,6 +6,9 @@
 
 #include "functions.h"
 
+#include <stdio.h>
+#include <stdlib.h>
+
 int main() {
   printf("\nSome usage examples of the functions\n\n");
   int a = 5, b = -7;

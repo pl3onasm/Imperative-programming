@@ -4,6 +4,8 @@
 */
 
 #include "functions.h"
+#include <stdio.h>    // for printf, scanf
+#include <stdlib.h>   // for malloc, calloc, realloc, free
 #include <math.h>     // for sqrt
 #include <string.h>   // for strcpy, strlen
 #include <ctype.h>    // for tolower

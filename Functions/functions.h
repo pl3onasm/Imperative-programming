@@ -7,9 +7,6 @@
 #ifndef FUNCTIONS_H_INCLUDED    
 #define FUNCTIONS_H_INCLUDED
 
-#include <stdio.h>
-#include <stdlib.h>
-
 //::::::::::::::::::::: Integer manipulation :::::::::::::::::::://
 
 int countDigits(int a);
