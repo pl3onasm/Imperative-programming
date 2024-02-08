@@ -94,4 +94,14 @@ while (i > 0) {
 }
 ```
 
-The first loop computes $i \geq \sqrt{N}$ in $\log{(\sqrt{N})} = \frac{1}{2}\log{(N)}$ steps. The second part of the fragment is linear in $N$, because both the outer and the inner loop run about $\sqrt{N}$ times. Therefore, the fragment's overall time complexity is in $\mathcal{O}(N)$.
+The first loop computes $i \approx \sqrt{N}$ in $\log{(\sqrt{N})} = \frac{1}{2}\log{(N)}$ steps. The second part of the fragment has an outer loop that runs $\sqrt{N}$ times and an inner loop that runs $i$ times for each consecutive value of $i$. The total number of iterations of the second loop is therefore:
+
+$$
+\begin{align*}
+\sum_{i=1}^{\sqrt{N}} i &= \frac{\sqrt{N}(\sqrt{N}+1)}{2} \\
+&= \frac{N + \sqrt{N}}{2}\\
+&= \mathcal{O}(N)
+\end{align*}
+$$
+
+Clearly, the second, nested loop is the most expensive and determines the overall time complexity of the fragment, which is in $\mathcal{O}(N)$.
