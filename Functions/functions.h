@@ -6,7 +6,7 @@
 #ifndef FUNCTIONS_H_INCLUDED    
 #define FUNCTIONS_H_INCLUDED
 
-//::::::::::::::::::::: Integer manipulation :::::::::::::::::::://
+//::::::::::::::::::::::::: INTEGERS.C :::::::::::::::::::::::::://
 
 int countDigits(int a);
     // returns the number of digits in the given integer
@@ -31,7 +31,7 @@ int isLeapYear(int year);
 int isIntPalindrome(int a);
     // returns 1 if the integer is a palindrome, 0 otherwise
 
-//::::::::::::::::::::::: Math functions :::::::::::::::::::::::://
+//:::::::::::::::::::::::::: MATH.C :::::::::::::::::::::::::::::://
 
 int minimum(int a, int b);
     // returns the minimum of the two given integers
@@ -68,7 +68,7 @@ int power(int a, int exp);
 int modExp(int a, int exp, int mod);
     // returns a raised to the power of exp, modulo mod
 
-//:::::::::::::::::::::: Memory management :::::::::::::::::::::://
+//::::::::::::::::::::::::: MEMORY.C ::::::::::::::::::::::::::::://
 
 void swap(void *a, void *b, int size);
     // swaps the contents of the memory at a and b
@@ -100,7 +100,7 @@ void freeIntMatrix(int **matrix, int rows);
 void *safeRealloc(void *ptr, int newSize);
     // reallocates memory and checks if it succeeded
 
-//:::::::::::::::::::::::: I/O functions :::::::::::::::::::::::://
+//::::::::::::::::::::::::::: IO.C ::::::::::::::::::::::::::::::://
 
 void printIntArray(int *array, int size);
     // prints the size integers in the given array
@@ -126,7 +126,7 @@ char *readLine(int *size);
     // reads chars until newline is encountered
     // returns the string and sets the size
 
-//:::::::::::::::::::::: Search algorithms :::::::::::::::::::::://
+//:::::::::::::::::::::::: SEARCHING.C ::::::::::::::::::::::::::://
 
 int linSearch(int *array, int size, int key);
     // linear search for the key in the array;
@@ -136,7 +136,7 @@ int binSearch(int *sorted, int size, int key);
     // binary search for the key in the sorted array;
     // returns the index of the key in the array
 
-//::::::::::::::::::::: String manipulation ::::::::::::::::::::://
+//::::::::::::::::::::::::: STRINGS.C :::::::::::::::::::::::::::://
 
 int compareStrings(char *str1, char *str2);
     // case insensitive comparison of two strings;
@@ -152,7 +152,7 @@ int isStrPalindrome(char *start, char *end);
     // checks if a (sub)string is a palindrome between
     // pointers start and end; returns 1 if true, 0 otherwise
 
-//:::::::::::::::::::::: Sorting algorithms ::::::::::::::::::::://
+//::::::::::::::::::::::::: SORTING.C :::::::::::::::::::::::::::://
 
 int *copySubArray(int *array, int start, int end);
     // returns a copy of the subarray from start to end
