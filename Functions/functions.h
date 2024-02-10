@@ -178,4 +178,4 @@ void countingSort(int *array, int size);
     // sorts an array of size integers using counting sort in O(n);
     // assumes the range is not too large
 
-#endif
+#endif // FUNCTIONS_H_INCLUDED

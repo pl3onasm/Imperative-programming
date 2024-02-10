@@ -64,7 +64,8 @@ $\quad \lbrace \space x + y = A + B \space \rbrace$
 
 ```java
 // .....
- y := y + x; x := x - y;
+ y := y + x; 
+ x := x - y;
 // x + y = A ∧ y = B
 ```
 
@@ -84,7 +85,9 @@ $\quad \lbrace \space x + y = A \space \land \space y = B \space \rbrace$
 
 ```java
 // x = A ∧ y = B 
-z := x; y := x + y; x := x + y + z;
+z := x; 
+y := x + y; 
+x := x + y + z;
 // .....
 ```
 
@@ -107,7 +110,9 @@ $\quad \lbrace \space x = 3 * A + B \space \land \space y = B + A \space \land \
 
 ```java
 // x = A + B ∧ y = A - B 
-z := x - y; x := x + y + z; y := z - y;
+z := x - y; 
+x := x + y + z; 
+y := z - y;
 // .....
 ```
 

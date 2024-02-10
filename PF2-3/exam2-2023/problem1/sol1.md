@@ -62,7 +62,8 @@ $\quad \lbrace \space x - y = A - B \space \rbrace$
 
 ```java
 // .....
-y := x - y; x := x - y;
+y := x - y; 
+x := x - y;
 // x = A - B ∧ y = B
 ```
 

@@ -50,7 +50,8 @@ ${\color{peru}(c)} \quad x := y; \space y := x;$
 
 ```java
 // .....
-y := x - y; x := x - y;
+y := x - y; 
+x := x - y;
 // x = A - B ∧ y = B
 ```
 
