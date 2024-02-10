@@ -3,7 +3,7 @@
 # Developed and tested on Ubuntu 22.04 LTS, with GNU bash, version 5.1.16
 
 # This script will try to compile your program and test its correctness
-# by running it on all the test cases for the current problem.
+# by running it on all test cases for the current problem.
 # It will also perform a test for memory leaks.
 # The argument is the name of the program to test.
 # Example: $ ../../../ctest.sh myprogram.c 
@@ -40,7 +40,28 @@ if ! [ -x "$(command -v gcc)" ]; then
   exit 1
 fi
 
-gcc -O2 -std=c99 -pedantic -Wall -o a.out "$1" -lm
+# Check if the functions library is included in the program to test
+if grep -q "functions.h" "$1"; then
+  # Verify if the library is in one of the possible parent directories
+  PATHS=("." ".." "../.." "../../..")
+  LIBPATH=""
+  for P in "${PATHS[@]}"; do
+    if [ -f "$P/Functions/functions.h" ]; then
+      LIBPATH="$P/Functions"
+      break
+    fi
+  done
+  if [ -z "$LIBPATH" ]; then
+    echo -e "\nFunctions library not found."
+    exit 1
+  fi
+  # Compile the program with the library included
+  echo -e "\nCompiling the program with the functions library..."
+  gcc -O2 -std=c99 -pedantic -Wall -o a.out "$1" "$LIBPATH"/*.c -lm
+else
+  # Compile the program without the library
+  gcc -O2 -std=c99 -pedantic -Wall -o a.out "$1" -lm
+fi
 
 # Check if compilation was successful
 if [[ $? -ne 0 ]]; then
@@ -48,7 +69,7 @@ if [[ $? -ne 0 ]]; then
   exit 1
 fi
 
-echo -e "\nProgram successfully compiled as a.out\n"
+echo -e "\nProgram successfully compiled as a.out"
 
 DIR=./tests   # default test folder
 # If ./tests does not exist, ask for a test folder or exit
@@ -69,6 +90,8 @@ if [ $LEN -eq 0 ]; then
   exit 1
 fi
 
+echo 
+
 # Print header for test results
 if [ -t 1 ]; then
   echo -e $(cyan "┌──────────────────────────┐") 
@@ -77,8 +100,9 @@ if [ -t 1 ]; then
 else
   echo -e "┌──────────────────────────┐" 
   echo -e "│       TEST RESULTS       │"
-  echo -e "└──────────────────────────┘" 
+  echo -e "└──────────────────────────┘"
 fi
+
 echo
 
 # Compare the output of the program with the expected output
@@ -162,10 +186,10 @@ else
     else echo -e "PASSED!"; fi
     PASSED=$((PASSED + 1))
   else
-    if [ -t 1 ]; then echo -e $(red "Test failed.")
+    if [ -t 1 ]; then echo -e $(red "Failed.")
       if [ $CHECK1 -eq 0 ]; then echo -e $(red "Not all memory freed."); fi
       if [ $CHECK2 -eq 0 ]; then echo -e $(red "Memory errors detected."); fi
-    else echo -e "Test failed."
+    else echo -e "Failed."
       if [ $CHECK1 -eq 0 ]; then echo -e "Not all memory freed."; fi
       if [ $CHECK2 -eq 0 ]; then echo -e "Memory errors detected."; fi
     fi
