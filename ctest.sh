@@ -9,37 +9,32 @@
 # Example: $ ../../../ctest.sh myprogram.c 
 
 # Define some colors for output
-RED="\e[31m"
-GREEN="\e[32m"
-BCYAN="\e[96m"
-MAGENTA="\e[35m"
-BBLUE="\e[1;34m"
-ENDCOLOR="\e[0m"
-
-function bcyan {
-  printf "${BCYAN}$@${ENDCOLOR}"
+function cyan {
+  printf "\e[1;36m$@\e[0m"
 }
-function bblue {
-  printf "${BBLUE}$@${ENDCOLOR}"
+function blue {
+  printf "\e[1;34m$@\e[0m"
 }
 function red {
-  printf "${RED}$@${ENDCOLOR}"
+  printf "\e[31m$@\e[0m"
 }
 function green {
-  printf "${GREEN}$@${ENDCOLOR}"
+  printf "\e[32m$@\e[0m"
 }
 function magenta {
-  printf "${MAGENTA}$@${ENDCOLOR}"
+  printf "\e[35m$@\e[0m"
 }
 
-PASSED=0
+PASSED=0  # number of passed tests
 
+# Check if an argument, the program to test, is provided
 if [ $# -eq 0 ]; then
   echo -e "\nNo argument supplied!"
   echo "Usage: $0 myprogram.c"
   exit 1
 fi
 
+# Check if compiler is installed
 if ! [ -x "$(command -v gcc)" ]; then
   echo -e "\nCompiler not found! Please install gcc."
   exit 1
@@ -47,6 +42,7 @@ fi
 
 gcc -O2 -std=c99 -pedantic -Wall -o a.out "$1" -lm
 
+# Check if compilation was successful
 if [[ $? -ne 0 ]]; then
   echo -e "\nCompilation failed."
   exit 1
@@ -54,24 +50,30 @@ fi
 
 echo -e "\nProgram successfully compiled as a.out\n"
 
-DIR=./tests
-if [ ! -d "$DIR" ]; then
-  echo "Test folder not found!"
-  echo "Please make sure you are working from the correct directory."
-  exit 1
-fi
+DIR=./tests   # default test folder
+# If ./tests does not exist, ask for a test folder or exit
+while [ ! -d "$DIR" ]; do
+  echo -e "\nCould not find $DIR"
+  echo "Please provide a test folder or type 'exit' to quit."
+  read -p "Test folder: " DIR
+  if [ "$DIR" == "exit" ]; then
+    exit 1
+  fi
+done
 
-readarray -d '' INFILES < <(printf '%s\0' ./tests/*.in | sort -zV)
+# Get all the input files from the test folder in DIR and sort them
+readarray -d '' INFILES < <(printf '%s\0' "$DIR"/*.in | sort -zV)
 LEN=${#INFILES[@]}
 if [ $LEN -eq 0 ]; then
   echo "No test cases found!"
   exit 1
 fi
 
+# Print header for test results
 if [ -t 1 ]; then
-  echo -e $(bcyan "┌──────────────────────────┐") 
-  echo -e "$(bcyan "│")       $(bblue "TEST RESULTS")       $(bcyan "│")"
-  echo -e $(bcyan "└──────────────────────────┘")
+  echo -e $(cyan "┌──────────────────────────┐") 
+  echo -e "$(cyan "│")       $(blue "TEST RESULTS")       $(cyan "│")"
+  echo -e $(cyan "└──────────────────────────┘")
 else
   echo -e "┌──────────────────────────┐" 
   echo -e "│       TEST RESULTS       │"
@@ -82,8 +84,8 @@ echo
 # Compare the output of the program with the expected output
 for INFILE in "${INFILES[@]}"; do
   if [ -t 1 ]; then 
-    echo -e $(bblue "Test ${INFILE:8}")
-    echo -e $(bblue "----------")
+    echo -e $(blue "Test ${INFILE:8}")
+    echo -e $(blue "----------")
   else echo -e "Test ${INFILE:8}\n---------- "; fi
   OUTFILE="${INFILE%.*}.out"
   if [ ! -f "$OUTFILE" ]; then
@@ -94,16 +96,16 @@ for INFILE in "${INFILES[@]}"; do
     OUTPUT=$(./a.out < "$INFILE")  
     # compare the output with the expected output
     DIF="$(diff -Z "$OUTFILE" <(echo "$OUTPUT"))" 
-    # print DIF 
-    if [ -n "$DIF" ]; then
-      # test failed
-      if [ -t 1 ]; then echo -e $(red "Test failed.")
-      else echo -e "Test failed."; fi
-      
-      EXP=0; GOT=0  # number of expected and got lines
 
-      # print the first 6 mismatches
-      echo "$DIF" | (while [[ $EXP -lt 6 ]] && read -r line; do
+    if [ -n "$DIF" ]; then
+      # test failed if there are differences
+      if [ -t 1 ]; then echo -e $(red "Failed.")
+      else echo -e "Failed."; fi
+      
+      EXP=0; GOT=0  # number of expected and actual lines in the diff
+
+      # print the first 5 mismatches
+      echo "$DIF" | (while [[ $EXP -lt 5 ]] && read -r line; do
         if [[ $line == "<"* ]]; then
           if [ -t 1 ]; then echo -e "  $(green "$line")"
           else echo -e "  $line"; fi
@@ -145,8 +147,8 @@ done
 
 # Check for memory issues with valgrind
 if [ -t 1 ]; then 
-  echo -e $(bblue "Valgrind test")
-  echo -e $(bblue "------------- ")
+  echo -e $(blue "Valgrind test")
+  echo -e $(blue "------------- ")
 else echo -e "Valgrind test\n------------- "; fi
 
 if ! [ -x "$(command -v valgrind)" ]; then
