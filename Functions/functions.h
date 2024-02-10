@@ -1,7 +1,6 @@
 /* file: functions.h
    author: David De Potter
-   description: header file for functions.c,
-    so it can be used as a library
+   description: header file for the functions library
 */
 
 #ifndef FUNCTIONS_H_INCLUDED    
