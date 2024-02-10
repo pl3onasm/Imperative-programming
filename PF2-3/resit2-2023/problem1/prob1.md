@@ -50,7 +50,8 @@ ${\color{peru}(c)} \quad x := 1 - x; \space y := 1 - y;$
 
 ```java
 // .....
- y := y + x; x := x - y;
+ y := y + x; 
+ x := x - y;
 // x + y = A ∧ y = B
 ```
 
@@ -64,7 +65,9 @@ ${\color{peru}(c)} \quad 2 * x - 3 * y = A  \space \land \space x - 2 * y = B$
 
 ```java
 // x = A ∧ y = B 
-z := x; y := x + y; x := x + y + z;
+z := x; 
+y := x + y; 
+x := x + y + z;
 // .....
 ```
 
@@ -81,7 +84,9 @@ $\qquad \quad \land \space z = B$
 
 ```java
 // x = A + B ∧ y = A - B 
-z := x - y; x := x + y + z; y := z - y;
+z := x - y; 
+x := x + y + z; 
+y := z - y;
 // .....
 ```
 

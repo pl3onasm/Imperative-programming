@@ -28,13 +28,11 @@ $\quad \lbrace \space x = 3 * A + 18 \space \rbrace$
 
 $\quad \lbrace \space 4 * x + 2 * y + 2 * z = 2 * A \space \rbrace$  
 $\qquad \color{darkseagreen} (\space \text{prepare } x := 2 * x - y \space)$  
-$\quad \lbrace \space 2 * (2 * x) + 2 * y + 2 * z = 2 * A \space \rbrace$  
-$\qquad \color{darkseagreen} (\space \text{split and regroup} \space)$  
-$\quad \lbrace \space 2 * (2 * x - y) + 4 * y + 2 * z = 2 * A \space \rbrace$  
-$\space \color{cornflowerblue} x := 2 * x - y;$  
-$\quad \lbrace \space 2 * x + 4 * y + 2 * z = 2 * A \space \rbrace$  
-$\qquad \color{darkseagreen} (\space \text{prepare } x := x + 2 * y + z \space)$  
 $\qquad \color{darkseagreen} (\space \text{divide both sides by 2} \space)$  
+$\quad \lbrace \space 2 * x + y + z = A \space \rbrace$  
+$\qquad \color{darkseagreen} (\space \text{split and regroup} \space)$  
+$\quad \lbrace \space (2 * x - y) + 2 * y + z = A \space \rbrace$  
+$\space \color{cornflowerblue} x := 2 * x - y;$  
 $\quad \lbrace \space x + 2 * y + z = A \space \rbrace$  
 $\space \color{cornflowerblue} x := x + 2 * y + z;$  
 $\quad \lbrace \space x = A \space \rbrace$  
@@ -62,7 +60,9 @@ $\quad \lbrace \space 5 \space \leq \space y \space < \space 14 \space \rbrace$
 
 ```java
 // x = A ∧ y = B
-x := 2 * x - y; y := y + x; x := x - y;
+x := 2 * x - y; 
+y := y + x; 
+x := x - y;
 // .....
 ```
 
@@ -89,7 +89,8 @@ $\quad \lbrace \space x = - B \space \land \space y = 2 * A \space \rbrace$
 
 ```java
 // 4 * x + 2 * y + 2 * z < 12 
-y := y + z; x := 2 * x + y;
+y := y + z; 
+x := 2 * x + y;
 // .....
 ```
 
@@ -112,7 +113,9 @@ $\quad \lbrace \space x \space < \space 6 \space \rbrace$
 
 ```java
 // x = A ∧ y = B
-x := 2 * x + 2 * y; y := x - 2 * y; x := (x - y)/2;
+x := 2 * x + 2 * y; 
+y := x - 2 * y; 
+x := (x - y)/2;
 // .....
 ```
 

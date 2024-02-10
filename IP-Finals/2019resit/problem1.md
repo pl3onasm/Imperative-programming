@@ -10,7 +10,7 @@
 
 $\quad \lbrace \space x = A \space \land \space x + y = B \space \rbrace$  
 $\qquad \color{darkseagreen} (\space \text{prepare } x := x + y \space)$  
-$\qquad \color{darkseagreen} (\space \text{isolate y and substitute x} \space)$  
+$\qquad \color{darkseagreen} (\space \text{subtract equality 1 from eq 2} \space)$  
 $\quad \lbrace \space x = A \space \land \space y = B - A \space \rbrace$  
 $\qquad \color{darkseagreen} (\space \text{add equal terms to both sides} \space)$  
 $\quad \lbrace \space x + y = B \space \land \space y = B - A \space \rbrace$  
@@ -33,14 +33,12 @@ $\quad \lbrace \space x = B \space \land \space x - y = A \space \rbrace$
 
 $\quad \lbrace \space x - y = A \space \land \space x = B \space \rbrace$  
 $\qquad \color{darkseagreen} (\space \text{prepare } x := x - y \space)$  
-$\qquad \color{darkseagreen} (\space \text{isolate y and substitute x} \space)$  
-$\quad \lbrace \space y = B - A \space \land \space x = B \space \rbrace$  
-$\qquad \color{darkseagreen} (\space \text{subtract equal terms from both sides} \space)$  
-$\quad \lbrace \space y = B - A \space \land \space x - y = A \space \rbrace$  
+$\qquad \color{darkseagreen} (\space \text{subtract equality 1 from eq 2} \space)$  
+$\quad \lbrace \space x - y = A \space \land \space y = B - A \space \rbrace$  
 $\space \color{cornflowerblue} x := x - y;$  
-$\quad \lbrace \space y = B - A \space \land \space x = A \space \rbrace$  
+$\quad \lbrace \space x = A \space \land \space y = B - A \space \rbrace$  
 $\qquad \color{darkseagreen} (\space \text{substitute A for x} \space)$  
-$\quad \lbrace \space y + x = B \space \land \space x = A \space \rbrace$  
+$\quad \lbrace \space x = A \space \land \space x + y = B \space \rbrace$  
 
 &nbsp;
 
@@ -76,7 +74,8 @@ $\quad \lbrace \space x = 4 * A \space \land \space y = 5 * A - 3 * B \space \rb
 
 ```java
 // x = A ∧ y = B
-x := 2 * x + y; y := 2 * x + y;
+x := 2 * x + y; 
+y := 2 * x + y;
 // .....
 ```
 
@@ -99,7 +98,9 @@ $\quad \lbrace \space x = 2 * A + B \space \land \space y = 4 * A + 3 * B \space
 
 ```java
 // x = A ∧ y = B
-x := 2 * x + 2 * y; y := x - 2 * y; x := x - y;
+x := 2 * x + 2 * y; 
+y := x - 2 * y; 
+x := x - y;
 // .....
 ```
 
@@ -123,19 +124,21 @@ $\quad \lbrace \space x = 2 * A + 2 * B \space \land \space y = 2 * A \space \rb
 
 ```java
 // x + y = A ∧ 2 * x + y = B
-x := x + 1; y := y - 1;
+x := x + 1; 
+y := y - 1;
 // .....
 ```
 
 $\quad \lbrace \space x + y = A \space \land \space 2 * x + y = B \space \rbrace$  
 $\qquad \color{darkseagreen} (\space \text{prepare } x := x + 1 \space)$  
-$\quad \lbrace \space (x + 1) -1 + y = A \space \land \space 2 * x + y = B \space \rbrace$  
+$\quad \lbrace \space (x + 1) -1 + y = A$  
+$\qquad \land \space 2 * (x + 1) - 2 + y = B \space \rbrace$  
 $\space \color{cornflowerblue} x := x + 1;$  
-$\quad \lbrace \space x -1 + y = A \space \land \space 2 * x + y = B \space \rbrace$  
+$\quad \lbrace \space x -1 + y = A \space \land \space 2 * x + y - 2 = B \space \rbrace$  
 $\qquad \color{darkseagreen} (\space \text{prepare } y := y - 1 \space)$  
 $\quad \lbrace \space x -1 + (y -1) + 1 = A$  
-$\qquad \land \space 2 * x + (y-1) + 1 = B \space \rbrace$  
+$\qquad \land \space 2 * x + (y-1) - 1 = B \space \rbrace$  
 $\space \color{cornflowerblue} y := y - 1;$  
-$\quad \lbrace \space x + y = A \space \land \space 2 * x + y + 1 = B \space \rbrace$  
+$\quad \lbrace \space x + y = A \space \land \space 2 * x + y - 1 = B \space \rbrace$  
 
 &nbsp;

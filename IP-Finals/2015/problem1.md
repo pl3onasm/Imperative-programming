@@ -63,7 +63,8 @@ $\quad \lbrace \space x = X \space \rbrace$
 
 ```java
 // z + y > 4
-x := z + 1; y := x + y;
+x := z + 1; 
+y := x + y;
 // .....
 ```
 
@@ -82,7 +83,8 @@ $\quad \lbrace \space y \space > \space 5  \space \rbrace$
 
 ```java
 // x = X ∧ y = Y ∧ z = Z
-z := x + y + z; x := z - x - y; 
+z := x + y + z; 
+x := z - x - y; 
 y := z - x;
 // .....
 ```
@@ -110,7 +112,8 @@ $\quad \lbrace \space x = Z \space \land \space y = X + Y \space \land \space z 
 
 ```java
 // x = 3 * X - 2 * Y + 1 ∧ y = X
-y := (3 * y - x + 1)/2; x := (x + 2 * y - 1)/3; 
+y := (3 * y - x + 1)/2; 
+x := (x + 2 * y - 1)/3; 
 // .....
 ```
 

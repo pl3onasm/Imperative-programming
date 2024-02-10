@@ -43,7 +43,8 @@ $\quad \lbrace \space 3 * x + 5 * y = A \space \rbrace$
 
 ```java
 // x + y = A ∧ x + z = B
-x := x + y; y := y - z;
+x := x + y; 
+y := y - z;
 // .....
 ```
 
@@ -65,7 +66,8 @@ $\quad \lbrace \space x = A \space \land \space y = A - B \rbrace$
 
 ```java
 // x = A ∧ y = B
-x := x - y; y := y - x;
+x := x - y; 
+y := y - x;
 // .....
 ```
 
@@ -77,6 +79,7 @@ $\quad \lbrace \space x = A - B \space \land \space y = B \space \rbrace$
 $\qquad \color{darkseagreen} (\space \text{prepare } y := y - x \space)$  
 $\qquad \color{darkseagreen} (\space \text{subtract equal terms from both sides} \space)$  
 $\quad \lbrace \space x = A - B \space \land \space  y - x = B - (A - B) \space \rbrace$  
+$\qquad \color{darkseagreen} (\space \text{simplify} \space)$  
 $\quad \lbrace \space x = A - B \space \land \space  y - x = 2 * B - A \space \rbrace$  
 $\space \color{cornflowerblue} y := y - x;$  
 $\quad \lbrace \space x = A - B \space \land \space  y = 2 * B - A \space \rbrace$  
@@ -87,7 +90,9 @@ $\quad \lbrace \space x = A - B \space \land \space  y = 2 * B - A \space \rbrac
 
 ```java
 // x = B ∧ y = A 
-x := x - y; y := x + y; x := y - x;
+x := x - y; 
+y := x + y; 
+x := y - x;
 // .....
 ```
 
@@ -98,6 +103,7 @@ $\space \color{cornflowerblue} x := x - y;$
 $\quad \lbrace \space x = B - A \space \land \space y = A \space\rbrace$  
 $\qquad \color{darkseagreen} (\space \text{prepare } y := x + y \space)$  
 $\quad \lbrace \space x = B - A \space \land \space x + y = B - A + A \space \rbrace$  
+$\qquad \color{darkseagreen} (\space \text{simplify} \space)$  
 $\quad \lbrace \space x = B - A \space \land \space x + y = B \space \rbrace$  
 $\space \color{cornflowerblue} y := x + y;$  
 $\quad \lbrace \space x = B - A \space \land \space y = B \space \rbrace$  
@@ -115,7 +121,9 @@ $\quad \lbrace \space x = A \space \land \space y = B \space \rbrace$
 
 ```java
 // x = A ∧ y = B
-y := x - y; x := x + y; y := x + y;
+y := x - y; 
+x := x + y; 
+y := x + y;
 // .....
 ```
 
@@ -123,6 +131,7 @@ $\quad \lbrace \space x = A \space \land \space y = B \space \rbrace$
 $\qquad \color{darkseagreen} (\space \text{prepare } y := x - y \space)$  
 $\qquad \color{darkseagreen} (\space \text{multiply both sides by -1} \space)$  
 $\quad \lbrace \space x = A \space \land \space - y = -B \space \rbrace$  
+$\qquad \color{darkseagreen} (\space \text{add equal terms to both sides} \space)$  
 $\quad \lbrace \space x = A \space \land \space x - y = A - B \space \rbrace$  
 $\space \color{cornflowerblue} y := x - y;$  
 $\quad \lbrace \space x = A \space \land \space y = A - B \space\rbrace$  

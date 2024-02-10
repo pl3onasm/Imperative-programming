@@ -11,9 +11,8 @@
 $\quad \lbrace \space x + 2 * y = A \space \land \space x + y = 2 * A \space \rbrace$  
 $\qquad \color{darkseagreen} (\space \text{prepare } y := - y \space)$  
 $\qquad \color{darkseagreen} (\space \text{subtract 1st equality from the 2nd} \space)$  
-$\quad \lbrace \space x + 2 * y = A \space \land \space -y = A \space \rbrace$  
+$\quad \lbrace \space  -y = A \space \rbrace$  
 $\space \color{cornflowerblue} y := - y;$  
-$\quad \lbrace \space x + 2 * y = A \space \land \space y = A \space \rbrace$  
 $\quad \lbrace \space y = A \space \rbrace$  
 
 &nbsp;
@@ -76,7 +75,8 @@ $\quad \lbrace \space x = 2 * A - B \space \land \space y = 2 * B - 3 * A \space
 
 ```java
 // x = A + 2 * B ∧ y = A + B
-y := x - y; x := x - y;
+y := x - y; 
+x := x - y;
 // .....
 ```
 
@@ -98,7 +98,9 @@ $\quad \lbrace \space x = A + B \space \land \space y = B \space \rbrace$
 
 ```java
 // x = A ∧ y = 2 * B
-z := x; x := y; y := z;
+z := x; 
+x := y; 
+y := z;
 // .....
 ```
 
@@ -116,7 +118,9 @@ $\quad \lbrace \space x = 2 * B \space \land \space y = A \space \rbrace$
 
 ```java
 // x + z = A ∧ y + z = A - B
-x := x - y; z := y + z; y := x + z;
+x := x - y; 
+z := y + z; 
+y := x + z;
 // .....
 ```
 

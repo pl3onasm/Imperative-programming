@@ -65,7 +65,8 @@ $\quad \lbrace \space x = y * y \space \rbrace$
 
 ```java
 // y + z > 4
-x := z + 1; y := x + y;
+x := z + 1; 
+y := x + y;
 // .....
 ```
 
@@ -83,8 +84,10 @@ $\quad \lbrace \space y \space > \space 5 \space \rbrace$
 
 ```java
 // x = X ∧ y = Y 
-x := x + y; y := 2 * x - y;
-x := y - 2 * x; y := x + y;
+x := x + y; 
+y := 2 * x - y;
+x := y - 2 * x; 
+y := x + y;
 // .....
 ```
 
@@ -117,7 +120,9 @@ $\quad \lbrace \space x = - Y \space \land \space y = 2 * X \space \rbrace$
 
 ```java
 // x = X ∧ y = X + Y ∧ z = X + Y + Z
-z := z - y; y := y - x; x := x - z;
+z := z - y; 
+y := y - x; 
+x := x - z;
 // .....
 ```
 

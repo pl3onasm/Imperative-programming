@@ -63,7 +63,9 @@ $\quad \lbrace \space x \space \leq \space A \space < \space x + y \space \rbrac
 
 ```java
 // x = A ∧ y = B
-x := x - y; y := x + y; x := 2 * x - y;
+x := x - y; 
+y := x + y; 
+x := 2 * x - y;
 // .....
 ```
 
@@ -79,9 +81,7 @@ $\space \color{cornflowerblue} y := x + y;$
 $\quad \lbrace \space x = A - B \space \land \space y = A \space \rbrace$  
 $\qquad \color{darkseagreen} (\space \text{prepare } x := 2 * x - y \space)$  
 $\quad \lbrace \space 2 * x = 2 * A - 2 * B \space \land \space y = A \space \rbrace$  
-$\qquad \color{darkseagreen} (\space \text{move one A to lhs} \space)$  
-$\quad \lbrace \space 2 * x - A = A - 2 * B \space \land \space y = A \space \rbrace$  
-$\qquad \color{darkseagreen} (\space \text{substitute A for y} \space)$  
+$\qquad \color{darkseagreen} (\space \text{subtract equal terms from both sides} \space)$  
 $\quad \lbrace \space 2 * x - y = A - 2 * B \space \land \space y = A \space \rbrace$  
 $\space \color{cornflowerblue} x := 2 * x - y;$  
 $\quad \lbrace \space A - 2 * B \space \land \space y = A \space \rbrace$
@@ -92,7 +92,9 @@ $\quad \lbrace \space A - 2 * B \space \land \space y = A \space \rbrace$
 
 ```java
 // x = A ∧ y = B 
-x := 3 * x + y; y := x - y; x := x - y;
+x := 3 * x + y; 
+y := x - y; 
+x := x - y;
 // .....
 ```
 
@@ -121,7 +123,9 @@ $\quad \lbrace \space x = B \space \land \space y = 3 * A \space \rbrace$
 
 ```java
 // x = A ∧ y = B
-x := 2 * x + 2 * y; y := 2 * x - y; x := y - x;
+x := 2 * x + 2 * y; 
+y := 2 * x - y; 
+x := y - x;
 // .....
 ```
 

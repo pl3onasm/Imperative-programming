@@ -1,4 +1,4 @@
-/* file: vocabulary.c
+/* file: functions.c
    author: David De Potter
    description: a collection of some useful functions
 */
@@ -71,12 +71,7 @@ int isLeapYear(int year) {
 
 int isIntPalindrome(int n) {
   // checks whether given integer n is a palindrome
-  int rev = 0, m = n;
-  while (m) {
-    rev = rev * 10 + m % 10;
-    m /= 10;
-  }
-  return rev == n;
+  return n == reverseInt(n);
 }
 
 //::::::::::::::::::::::: Math functions :::::::::::::::::::::::://
@@ -111,23 +106,23 @@ int isPerfSquare(int n) {
   return root * root == n;
 }
 
-int isDivisor (int x, int y) {
+int isDivisor(int x, int y) {
   // checks whether y evenly divides x
   return x % y == 0;
 }
 
-int GCD (int a, int b) {
+int GCD(int a, int b) {
   // returns the greatest common divisor of a and b
   if (b == 0) return a;
   return GCD(b, a % b);
 }
 
-int LCM (int a, int b) {
+int LCM(int a, int b) {
   // returns the least common multiple of a and b
   return a / GCD(a, b) * b;
 }
 
-int areCoprime (int a, int b) {
+int areCoprime(int a, int b) {
   /* checks if a and b have no common divisors,
      i.e. if they are coprime */
   return GCD(a, b) == 1;
@@ -145,7 +140,7 @@ int power(int n, int exp) {
   return pow;
 }
 
-int modExp (int n, int exp, int mod) {
+int modExp(int n, int exp, int mod) {
   /* computes n^exp mod m using modular exponentiation */
   int pow = 1; n %= mod;
   while (exp) {
@@ -158,7 +153,7 @@ int modExp (int n, int exp, int mod) {
 
 //:::::::::::::::::::::: Memory management :::::::::::::::::::::://
 
-void swap (void *a, void *b, int size) {
+void swap(void *a, void *b, int size) {
   // swaps the contents of the memory at a and b
   // of the given memory size
   unsigned char *x = a, *y = b, tmp;
@@ -169,7 +164,7 @@ void swap (void *a, void *b, int size) {
   }
 }
 
-void *safeMalloc (int n) {
+void *safeMalloc(int n) {
   // allocates memory and checks whether this was successful
   void *ptr = malloc(n);
   if (ptr == NULL) {
@@ -179,7 +174,7 @@ void *safeMalloc (int n) {
   return ptr;
 }
 
-void *safeCalloc (int n, int size) {
+void *safeCalloc(int n, int size) {
   /* allocates memory, initialized to 0, and
      checks whether this was successful */
   void *ptr = calloc(n, size);
@@ -190,17 +185,17 @@ void *safeCalloc (int n, int size) {
   return ptr;
 }
 
-int *createIntArray (int size) {
+int *createIntArray(int size) {
   // creates an array of size integers
   return safeMalloc(size * sizeof(int));
 }
 
-char *createString(int size){
+char *createString(int size) {
   // creates a string of size characters
-  return safeMalloc( (size + 1) * sizeof(char));
+  return safeMalloc((size + 1) * sizeof(char));
 }
 
-int **createIntMatrix (int rows, int cols) {
+int **createIntMatrix(int rows, int cols) {
   // creates a integer matrix of size rows x cols
   int **matrix = safeMalloc(rows * sizeof(int*));
   for (int i = 0; i < rows; i++)
@@ -216,14 +211,14 @@ int **createNullMatrix(int m, int n) {
   return matrix;
 }
 
-void freeIntMatrix (int **matrix, int rows) {
+void freeIntMatrix(int **matrix, int rows) {
   // frees a matrix of size rows x cols
   for (int i = 0; i < rows; i++)
     free(matrix[i]);
   free(matrix);
 }
 
-void *safeRealloc (void *ptr, int newSize) {
+void *safeRealloc(void *ptr, int newSize) {
   // reallocates memory and checks whether it was successful
   ptr = realloc(ptr, newSize);
   if (ptr == NULL) {
@@ -235,7 +230,7 @@ void *safeRealloc (void *ptr, int newSize) {
 
 //:::::::::::::::::::::::: I/O functions :::::::::::::::::::::::://
 
-void printIntArray (int *arr, int n) {
+void printIntArray(int *arr, int n) {
   // prints an array of size n
   printf("[");
   for (int i = 0; i < n; i++) 
@@ -243,7 +238,7 @@ void printIntArray (int *arr, int n) {
   printf("]\n");
 }
 
-void printIntMatrix (int **matrix, int rows, int cols) {
+void printIntMatrix(int **matrix, int rows, int cols) {
   // prints a matrix of size rows x cols
   for (int i = 0; i < rows; i++) {
     for (int j = 0; j < cols; j++) 
@@ -251,13 +246,13 @@ void printIntMatrix (int **matrix, int rows, int cols) {
   }
 }
 
-void readIntArray(int *arr, int size){
+void readIntArray(int *arr, int size) {
   // reads an array of size integers from stdin
   for (int i=0; i < size; i++) 
     (void)! scanf("%d", &arr[i]);
 }
 
-void readIntMatrix(int **arr, int m, int n){
+void readIntMatrix(int **arr, int m, int n) {
   // reads an m x n matrix from stdin
   for (int i=0; i<m; ++i) 
     for (int j=0; j<n; ++j) 
@@ -267,11 +262,11 @@ void readIntMatrix(int **arr, int m, int n){
 int *readIntVector(int *size) {
   /* reads int array as long as integer input lasts; 
      stores its length in size */
-  int n, len = 0, *vec = safeMalloc(100*sizeof(int)); 
+  int n, len = 0, *vec = safeMalloc(100 * sizeof(int)); 
   while (scanf("%d", &n) == 1) {
     vec[len++] = n;
     if (len % 100 == 0)
-      vec = safeRealloc(vec, (len+100)*sizeof(int));
+      vec = safeRealloc(vec, (len + 100) * sizeof(int));
   }
   *size = len;
   return vec;
@@ -281,11 +276,11 @@ char *readText(int *size) {
   /* reads a string from stdin, including new line chars, 
      and returns the string and stores its length in size */
   char c; int len = 0; 
-  char *str = safeMalloc(100*sizeof(char));
+  char *str = safeMalloc(100 * sizeof(char));
   while (scanf("%c", &c) == 1) {
     str[len++] = c; 
     if (len % 100 == 0) 
-      str = safeRealloc(str, (len+100) * sizeof(char));
+      str = safeRealloc(str, (len + 100) * sizeof(char));
   }
   str[len] = '\0';
   *size = len;
@@ -296,11 +291,11 @@ char *readLine(int *size) {
   /* reads a line from stdin, returns the string, 
      and stores its length in size */
   char c; int len = 0; 
-  char *str = safeMalloc(100*sizeof(char));
+  char *str = safeMalloc(100 * sizeof(char));
   while (scanf("%c", &c) == 1 && c != '\n') {
     str[len++] = c; 
     if (len % 100 == 0) 
-      str = safeRealloc(str, (len+100) * sizeof(char));
+      str = safeRealloc(str, (len + 100) * sizeof(char));
   }
   str[len] = '\0';
   *size = len;
@@ -309,7 +304,7 @@ char *readLine(int *size) {
 
 //:::::::::::::::::::::: Search algorithms :::::::::::::::::::::://
 
-int linSearch (int *arr, int len, int key) {
+int linSearch(int *arr, int len, int key) {
   /* linear search: searches for key in arr and 
      returns its index if found, otherwise returns -1 */
   int i;
@@ -318,7 +313,7 @@ int linSearch (int *arr, int len, int key) {
   return -1;
 }
 
-int binSearch (int *sorted, int len, int key) {
+int binSearch(int *sorted, int len, int key) {
   /* binary search: searches for key in **sorted** array 
      and returns its index if found, otherwise returns -1 */
   int left = 0, right = len, mid;
@@ -333,7 +328,7 @@ int binSearch (int *sorted, int len, int key) {
 
 //::::::::::::::::::::: String manipulation ::::::::::::::::::::://
 
-int isStrPalindrome (char *start, char *end) {
+int isStrPalindrome(char *start, char *end) {
   /* checks whether a string is a palindrome;
      start and end are pointers to the first and last
      characters of the (sub)string we want to check */
@@ -359,7 +354,7 @@ int compareStrings(char *s1, char *s2) {
 char *copyString(char *s) {
   /* returns a copy of string s, which must be 
      freed by the caller */
-  char *copy = safeMalloc((strlen(s)+1)*sizeof(char));
+  char *copy = safeMalloc((strlen(s)+1) * sizeof(char));
   strcpy(copy, s);
   return copy;
 }
@@ -376,7 +371,7 @@ void reverseString(char *str) {
 int *copySubArray(int *arr, int left, int right) {
   /* copies the subarray arr[left..right] into a new array;
      this function is needed for mergeSort and is given on the exam */
-  int *copy = safeMalloc((right - left)*sizeof(int));
+  int *copy = safeMalloc((right - left) * sizeof(int));
   for (int i = left; i < right; i++) 
     copy[i - left] = arr[i];
   return copy;

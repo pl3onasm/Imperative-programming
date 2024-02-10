@@ -58,7 +58,8 @@ $\quad \lbrace \space x = X + Y \space \land \space y = Y \space \rbrace$
 
 ```java
 // x = X ∧ y = Y
-y := x + y; x := x * (y - x);
+y := x + y; 
+x := x * (y - x);
 // .....
 ```
 
@@ -78,7 +79,8 @@ $\quad \lbrace \space x = X * Y \space \land \space y = Y \space \rbrace$
 
 ```java
 // x = X ∧ y = Y
-x := y; y := x;
+x := y; 
+y := x;
 // .....
 ```
 
@@ -94,7 +96,8 @@ $\quad \lbrace \space x = Y \space \land \space y = Y \space \rbrace$
 
 ```java
 // x = X ∧ y = Y
-x := x + y; y := x - y; 
+x := x + y; 
+y := x - y; 
 // .....
 ```
 

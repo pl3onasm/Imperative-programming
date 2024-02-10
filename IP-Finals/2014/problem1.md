@@ -68,7 +68,8 @@ $\quad \lbrace \space x = (X + 1) * (X + 1) * (X + 1)\space \rbrace$
 
 ```java
 // x = X + Y ∧ y = 2 * X - 7
-x := 2 * x - y; y := (x - 7)/2;
+x := 2 * x - y; 
+y := (x - 7)/2;
 // .....
 ```
 
@@ -93,7 +94,8 @@ $\quad \lbrace \space y = Y \space \rbrace$
 
 ```java
 // x = X ∧ y = Y 
-x := x + y; y := 2 * (x - y);
+x := x + y; 
+y := 2 * (x - y);
 x := (2 * x - y)/2;
 // .....
 ```
@@ -124,7 +126,9 @@ $\quad \lbrace \space x = Y \space \land \space y = 2 * X \space \rbrace$
 
 ```java
 // y = X ∧ z = X + Y ∧ x = X + Y + Z
-z := z - y; y := x - y; x := x - z;
+z := z - y; 
+y := x - y; 
+x := x - z;
 // .....
 ```
 

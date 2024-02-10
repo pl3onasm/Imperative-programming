@@ -1,6 +1,6 @@
 # ${\color{cadetblue} \text{Imperative Programming}}$
 
-This repository contains old exams for the course Imperative Programming (IP) at the University of Groningen. In 2023, this course was merged with the course Program Correctness (PC) into the new course Programming Fundamentals (PF). This is why you will find exams for both courses in this repository. All exams were created by [dr. A. Meijster](https://www.rug.nl/staff/a.meijster/), and make up for great practice material.
+This repository contains old exams for the course Imperative Programming (IP) at the University of Groningen. In 2023, this course was merged with the course Program Correctness (PC) into the new course Programming Fundamentals (PF). This is why you will find exams for both courses in this repository. All exams were created by [dr. A. Meijster](https://www.rug.nl/staff/a.meijster/), and make for great practice material.
 
 For the C questions, the subfolders each hold one or more example solutions, a folder with test cases, and a file called *myprogram.c* which you can use to write and test your own solution. For the proof questions, both exam questions and answers are given in Dafny.  
   
@@ -51,7 +51,7 @@ Found this repository useful? Help out your (future) fellow students by mailing 
 
 ## ${\color{cadetblue}\text{Testing}}$
 
-You can test your own C code with the [test script](https://github.com/pl3onasm/Imperative-programming/blob/main/ctest.sh). It will try to compile your code and run it on all the test cases. It will also compare your output with the expected output, and check for memory leaks by running a Valgrind test. If a test fails, the script will display the line numbers where a mismatch between the expected and the actual output was found, followed by the corresponding lines themselves, so you can easily spot the error. Lines in green and preceded by `<` represent the expected output, while lines in red and preceded by `>` are the actual (incorrect) output. In order to avoid too much clutter, the script will only display the first 6 lines where mismatches were found and will indicate how many more there are if applicable.
+You can test your own C code with the [test script](https://github.com/pl3onasm/Imperative-programming/blob/main/ctest.sh). It will try to compile your code and run it on all the test cases. It will also compare your output with the expected output, and check for memory leaks by running a Valgrind test. If a test fails, the script will display the line numbers where a mismatch between the expected and the actual output was found, followed by the corresponding lines themselves, so you can easily spot the error. Lines in green and preceded by `<` represent the expected output, while lines in red and preceded by `>` are the actual (incorrect) output. In order to avoid too much clutter, the script will only display the first 5 lines where mismatches were found and will indicate how many more there are if applicable.
 
 If you want to use the script, you basically have two options:  
 

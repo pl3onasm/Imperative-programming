@@ -69,7 +69,8 @@ $\quad \lbrace \space x - 2 * B = A \space \land \space y = B \space \rbrace$
 
 ```java
 // x = A ∧ y = B
-y := 2 * (x + y); x := 2 * (x + y);
+y := 2 * (x + y); 
+x := 2 * (x + y);
 // .....
 ```
 
@@ -97,7 +98,9 @@ $\quad \lbrace \space x = 6 * A + 4 * B \space \land \space y = 2 * A + 2 * B \s
 
 ```java
 // x = A ∧ y = B
-z := x; x := y; y := z;
+z := x; 
+x := y; 
+y := z;
 // .....
 ```
 
@@ -115,7 +118,9 @@ $\quad \lbrace \space x = B \space \land \space y = A \space \land \space z = A 
 
 ```java
 // y = A ∧ x = z = B
-z := x - y; x := x + y + z; y := z - y;
+z := x - y; 
+x := x + y + z; 
+y := z - y;
 // .....
 ```
 

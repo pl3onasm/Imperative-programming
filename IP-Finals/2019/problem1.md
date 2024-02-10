@@ -70,7 +70,8 @@ $\quad \lbrace \space x + y = A \space \land \space 2 * x + y - 1 = B \space \rb
 
 ```java
 // x = 2 * A - B ∧ y = A + B
-y := x + y; x := x + y;
+y := x + y; 
+x := x + y;
 // .....
 ```
 
@@ -90,7 +91,8 @@ $\quad \lbrace \space x = 5 * A - B \space \land \space y = 3 * A \space \rbrace
 
 ```java
 // x = 2 * A - B ∧ y = A + B
-x := x + y; y := x + y;
+x := x + y; 
+y := x + y;
 // .....
 ```
 
@@ -110,7 +112,9 @@ $\quad \lbrace \space x = 3 * A \space \land \space y = 4 * A + B \space \rbrace
 
 ```java
 // x = A ∧ y = B
-x := x + 2 * y; y := x - y; x := x - y;
+x := x + 2 * y; 
+y := x - y; 
+x := x - y;
 // .....
 ```
 

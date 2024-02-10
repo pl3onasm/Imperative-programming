@@ -66,7 +66,8 @@ $\quad \lbrace \space x = (A + 1) * (A + 1) * (A + 1)\space \rbrace$
 
 ```java
 // x = B ∧ y = A
-x := y; y := x;
+x := y; 
+y := x;
 // .....
 ```
 
@@ -82,7 +83,8 @@ $\quad \lbrace \space x = A \space \land \space y = A \space \rbrace$
 
 ```java
 // x = A + 2 ∧ y = 2 * A
-x := 3 * x - 4; y := x - y;
+x := 3 * x - 4; 
+y := x - y;
 // .....
 ```
 
@@ -103,7 +105,9 @@ $\quad \lbrace \space x = 3 * A + 2 \space \land \space y = A + 2 \space \rbrace
 
 ```java
 // y = A ∧ z = A + B ∧ x = A + B + C
-z := z - y; y := x - y; x := x - z; 
+z := z - y; 
+y := x - y; 
+x := x - z; 
 // .....
 ```
 

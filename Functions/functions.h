@@ -1,4 +1,4 @@
-/* file: vocabulary.h
+/* file: functions.h
    author: David De Potter
    description: header file for functions.c,
     so it can be used as a library
@@ -23,8 +23,8 @@ int rightRotate(int a);
     // returns the integer a with the rightmost digit
     // moved to the leftmost position
 
-char *toBinary(int n);
-    // returns a string with the binary representation of n
+char *toBinary(int a);
+    // returns a string with the binary representation of a
 
 int isLeapYear(int year);
     // returns 1 if the year is a leap year, 0 otherwise
