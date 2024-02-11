@@ -48,7 +48,7 @@ $\quad \lbrace \space x = y * y + X \space \land \space y + 1 = Y \space \rbrace
 $\qquad \color{darkseagreen} (\space \text{prepare } y := y + 1 \space)$  
 $\qquad \color{darkseagreen} (\space \text{use } (u + v)^2 = u^2 + 2uv + v^2 \space)$  
 $\quad \lbrace \space x = (y + 1) * (y + 1) - 2 * (y + 1) $  
-$\qquad \qquad + 1 + X \land \space y + 1 = Y \space \rbrace$  
+$\qquad \qquad + 1 + X \space \land \space y + 1 = Y \space \rbrace$  
 $\space \color{cornflowerblue} y := y + 1;$  
 $\quad \lbrace \space x = y * y - 2 * y + 1 + X \space \land \space y = Y \space \rbrace$  
 $\qquad \color{darkseagreen} (\space \text{prepare } x := x + 2 * y - 1 \space)$  

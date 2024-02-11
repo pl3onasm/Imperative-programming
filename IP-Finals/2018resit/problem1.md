@@ -54,7 +54,7 @@ $\quad \lbrace \space x = A - B \space \land \space y = A + B \space \rbrace$
 $\quad \lbrace \space x = A \space \land \space y = B \space \rbrace$  
 $\qquad \color{darkseagreen} (\space \text{prepare } x := x + 1 \space)$  
 $\quad \lbrace \space (x + 1) - 1 = A \space \land \space y = B \space \rbrace$  
-$\space \color{cornflowerblue} x := x + 1;$
+$\space \color{cornflowerblue} x := x + 1;$  
 $\quad \lbrace \space x - 1 = A \space \land \space y = B \space \rbrace$  
 $\qquad \color{darkseagreen} (\space \text{prepare } y := y + 1 \space)$  
 $\quad \lbrace \space x - 1 = A \space \land \space (y+1) -1 = B \space \rbrace$  

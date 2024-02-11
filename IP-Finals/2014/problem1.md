@@ -15,7 +15,7 @@ $\quad \lbrace \space 21 * x = 42 * X \space \rbrace$
 $\qquad \color{darkseagreen} (\space \text{add 21 to both sides} \space)$  
 $\quad \lbrace \space 21 * x + 21 = 42 * X + 21 \space \rbrace$  
 $\space \color{cornflowerblue} x := 21 * x + 21;$  
-$\quad \lbrace \space 42 * X + 21 \space \rbrace$  
+$\quad \lbrace \space x = 42 * X + 21 \space \rbrace$  
 
 &nbsp;
 
@@ -87,7 +87,6 @@ $\quad \lbrace \space (x - 7)/2 = Y \space \land \space y = 2 * X - 7 \space \rb
 $\space \color{cornflowerblue} y := (x - 7)/2;$  
 $\quad \lbrace \space y = Y \space \rbrace$
 
-
 &nbsp;
 
 ## ${\color{darkkhaki}\text{Prob 1.5: }}{\color{olive}\text{ b}}$
@@ -113,7 +112,7 @@ $\space \color{cornflowerblue} y := 2 * (x - y);$
 $\quad \lbrace \space x = X + Y \space \land \space y = 2 * X \space \rbrace$  
 $\qquad \color{darkseagreen} (\space \text{prepare } x := (2 * x - y)/2 \space)$  
 $\quad \lbrace \space 2 * x = 2 * X + 2 * Y \space \land \space y = 2 * X \space \rbrace$  
-$\qquad \color{darkseagreen} (\space \text{add equal terms to both sides} \space)$  
+$\qquad \color{darkseagreen} (\space \text{subtract equal terms from both sides} \space)$  
 $\quad \lbrace \space 2 * x - y = 2 * Y \space \land \space y = 2 * X \space \rbrace$  
 $\qquad \color{darkseagreen} (\space \text{divide both sides by 2} \space)$  
 $\quad \lbrace \space (2 * x - y)/2 = Y \space \land \space y = 2 * X \space \rbrace$  
@@ -143,7 +142,7 @@ $\qquad \color{darkseagreen} (\space \text{add equal terms to both sides} \space
 $\quad \lbrace \space x - y = Y + Z \space \land \space z = Y$  
 $\qquad \land \space x = X + Y + Z \space \rbrace$  
 $\space \color{cornflowerblue} y := x - y;$  
-$\quad \lbrace \space y = Y + Z \space \land \space y = Y \space \land \space x = X + Y + Z \space \rbrace$  
+$\quad \lbrace \space y = Y + Z \space \land \space z = Y \space \land \space x = X + Y + Z \space \rbrace$  
 $\qquad \color{darkseagreen} (\space \text{prepare } x := x - z \space)$  
 $\quad \lbrace \space y = Y + Z \space \land \space z = Y \space \land \space x - z = X + Z \space \rbrace$  
 $\space \color{cornflowerblue} x := x - z;$  

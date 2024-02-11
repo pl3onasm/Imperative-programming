@@ -71,7 +71,7 @@ $\quad \lbrace \space x = X \space \land \space y = X + Y \space \rbrace$
 $\qquad \color{darkseagreen} (\space \text{prepare } x := x * (y - x) \space)$  
 $\quad \lbrace \space x * (y - x) = X * Y \space \land \space y = X + Y \space \rbrace$  
 $\space \color{cornflowerblue} x := x * (y - x);$  
-$\quad \lbrace \space x = X * Y \space \land \space y = Y \space \rbrace$  
+$\quad \lbrace \space x = X * Y \space \land \space y = X + Y \space \rbrace$  
 
 &nbsp;
 

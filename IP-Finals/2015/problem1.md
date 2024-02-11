@@ -70,11 +70,10 @@ y := x + y;
 
 $\quad \lbrace \space z + y \space > \space 4  \space \rbrace$  
 $\qquad \color{darkseagreen} (\space \text{prepare } x := z + 1 \space)$  
-$\quad \lbrace \space z + 1 + y - 1 \space > \space 4  \space \rbrace$  
+$\quad \lbrace \space z + 1 + y \space > \space 5  \space \rbrace$  
 $\space \color{cornflowerblue} x := z + 1;$  
-$\quad \lbrace \space x + y - 1 \space > \space 4  \space \rbrace$  
+$\quad \lbrace \space x + y \space > \space 5  \space \rbrace$  
 $\space \color{cornflowerblue} y := x + y;$  
-$\quad \lbrace \space y - 1 \space > \space 4  \space \rbrace$  
 $\quad \lbrace \space y \space > \space 5  \space \rbrace$  
 
 &nbsp;
