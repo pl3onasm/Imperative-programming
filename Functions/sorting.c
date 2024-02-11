@@ -79,7 +79,7 @@ void selectionSort(int *arr, int len) {
 }
 
 void quickSort(int *arr, int len) {
-  /* sorts an array of integers in expected ϴ(nlogn) time,
+  /* sorts an array of integers in expected ϴ(n log n) time,
      worst-case performance, however, is in ϴ(n²) */
   int i, j, pivot;
   if (len <= 1) return;

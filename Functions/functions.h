@@ -161,13 +161,13 @@ void mergeSort(int *array, int size);
     // sorts an array of size integers using merge sort in O(n log n)
 
 void bubbleSort(int *array, int size);
-    // sorts an array of size integers using bubble sort in O(n^2)
+    // sorts an array of size integers using bubble sort in O(n²)
 
 void insertionSort(int *array, int size);
-    // sorts an array of size integers using insertion sort in O(n^2)
+    // sorts an array of size integers using insertion sort in O(n²)
 
 void selectionSort(int *array, int size);
-    // sorts an array of size integers using selection sort in O(n^2)
+    // sorts an array of size integers using selection sort in O(n²)
 
 void quickSort(int *array, int size);
     // sorts an array of size integers using quick sort 
