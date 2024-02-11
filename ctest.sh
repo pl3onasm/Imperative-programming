@@ -7,6 +7,8 @@
 # It will also perform a test for memory leaks.
 # The argument is the name of the program to test.
 # Example: $ ../../../ctest.sh myprogram.c 
+# If the program includes the functions library, it will be compiled with it.
+
 
 # Define some colors for output
 function cyan {
@@ -41,7 +43,8 @@ if ! [ -x "$(command -v gcc)" ]; then
 fi
 
 # Check if the functions library is included in the program to test
-if grep -q "functions.h" "$1"; then
+# and is not commented out with // or /* */ on the same line
+if grep -q '^[ ]*#include[ ./\"]*Functions/functions.h' "$1"; then
   # Verify if the library is in one of the possible parent directories
   PATHS=("." ".." "../.." "../../..")
   LIBPATH=""
@@ -108,10 +111,10 @@ echo
 # Compare the output of the program with the expected output
 for INFILE in "${INFILES[@]}"; do
   if [ -t 1 ]; then 
-    echo -e $(blue "Test ${INFILE:8}")
+    echo -e $(blue "Test ${INFILE##*/}")  # print filename without path   
     echo -e $(blue "----------")
-  else echo -e "Test ${INFILE:8}\n---------- "; fi
-  OUTFILE="${INFILE%.*}.out"
+  else echo -e "Test ${INFILE##*/}\n---------- "; fi
+  OUTFILE="${INFILE%.*}.out"     # replace .in with .out
   if [ ! -f "$OUTFILE" ]; then
     echo -e "Test file $OUTFILE not found!\n"
     continue
