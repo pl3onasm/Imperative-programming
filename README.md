@@ -32,7 +32,7 @@ Found this repository useful? Help out your (future) fellow students by mailing 
 
 |||
 |:---:|:---:|
-|**[2023](PF1-3/exam1-2023)**| **[2023 resit](PF1-3/exam2-2023)**|
+|**[2023](PF1-3/exam1-2023)**| **[2023 resit](PF1-3/resit1-2023)**|
 |||
 
 ## ${\color{darkgoldenrod}\text{PF 2-3 exams}}$
