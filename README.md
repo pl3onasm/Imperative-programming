@@ -10,43 +10,43 @@ Found this repository useful? Help out your (future) fellow students by mailing 
 
 ||||
 |:---:|:---:|:---:|
-| **[2012](https://github.com/pl3onasm/Imperative-programming/tree/main/IP-Finals/2012)**| **[2013](https://github.com/pl3onasm/Imperative-programming/tree/main/IP-Finals/2013)**| **[2014](https://github.com/pl3onasm/Imperative-programming/tree/main/IP-Finals/2014)**|
-| **[2015](https://github.com/pl3onasm/Imperative-programming/tree/main/IP-Finals/2015)**| **[2015 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/IP-Finals/2015resit)**| **[2016](https://github.com/pl3onasm/Imperative-programming/tree/main/IP-Finals/2016)**|
-| **[2017](https://github.com/pl3onasm/Imperative-programming/tree/main/IP-Finals/2017)**| **[2017 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/IP-Finals/2017resit)**| **[2018](https://github.com/pl3onasm/Imperative-programming/tree/main/IP-Finals/2018)**|
-| **[2018 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/IP-Finals/2018resit)**| **[2019](https://github.com/pl3onasm/Imperative-programming/tree/main/IP-Finals/2019)**| **[2019 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/IP-Finals/2019resit)**|
-| **[2020](https://github.com/pl3onasm/Imperative-programming/tree/main/IP-Finals/2020)**| **[2021](https://github.com/pl3onasm/Imperative-programming/tree/main/IP-Finals/2021)**| **[2022](https://github.com/pl3onasm/Imperative-programming/tree/main/IP-Finals/2022)**|
+| **[2012](IP-Finals/2012)**| **[2013](IP-Finals/2013)**| **[2014](IP-Finals/2014)**|
+| **[2015](IP-Finals/2015)**| **[2015 resit](IP-Finals/2015resit)**| **[2016](IP-Finals/2016)**|
+| **[2017](IP-Finals/2017)**| **[2017 resit](IP-Finals/2017resit)**| **[2018](IP-Finals/2018)**|
+| **[2018 resit](IP-Finals/2018resit)**| **[2019](IP-Finals/2019)**| **[2019 resit](IP-Finals/2019resit)**|
+| **[2020](IP-Finals/2020)**| **[2021](IP-Finals/2021)**| **[2022](IP-Finals/2022)**|
 ||||
 
 ## ${\color{darkgoldenrod}\text{IP Midterms}}$
 
 ||||
 |:---:|:---:|:---:|
-| **[2013](https://github.com/pl3onasm/Imperative-programming/tree/main/IP-Midterms/mid2013)**| **[2015](https://github.com/pl3onasm/Imperative-programming/tree/main/IP-Midterms/mid2015)**| **[2016](https://github.com/pl3onasm/Imperative-programming/tree/main/IP-Midterms/mid2016)**|
-| **[2016 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/IP-Midterms/mid2016resit)**| **[2017](https://github.com/pl3onasm/Imperative-programming/tree/main/IP-Midterms/mid2017)**| **[2017 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/IP-Midterms/mid2017resit)**|
-| **[2018](https://github.com/pl3onasm/Imperative-programming/tree/main/IP-Midterms/mid2018)** | **[2018 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/IP-Midterms/mid2018resit)**|**[2019](https://github.com/pl3onasm/Imperative-programming/tree/main/IP-Midterms/mid2019)**|
-|**[2019 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/IP-Midterms/mid2019resit)**| **[2020](https://github.com/pl3onasm/Imperative-programming/tree/main/IP-Midterms/mid2020)**| **[2020 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/IP-Midterms/mid2020resit)**|
-| **[2021](https://github.com/pl3onasm/Imperative-programming/tree/main/IP-Midterms/mid2021)**| **[2021 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/IP-Midterms/mid2021resit)**|**[2022](https://github.com/pl3onasm/Imperative-programming/tree/main/IP-Midterms/mid2022)**|
+| **[2013](IP-Midterms/mid2013)**| **[2015](IP-Midterms/mid2015)**| **[2016](IP-Midterms/mid2016)**|
+| **[2016 resit](IP-Midterms/mid2016resit)**| **[2017](IP-Midterms/mid2017)**| **[2017 resit](IP-Midterms/mid2017resit)**|
+| **[2018](IP-Midterms/mid2018)** | **[2018 resit](IP-Midterms/mid2018resit)**|**[2019](IP-Midterms/mid2019)**|
+|**[2019 resit](IP-Midterms/mid2019resit)**| **[2020](IP-Midterms/mid2020)**| **[2020 resit](IP-Midterms/mid2020resit)**|
+| **[2021](IP-Midterms/mid2021)**| **[2021 resit](IP-Midterms/mid2021resit)**|**[2022](IP-Midterms/mid2022)**|
 ||||
 
 ## ${\color{darkgoldenrod}\text{PF 1-3 exams}}$
 
 |||
 |:---:|:---:|
-|**[2023](https://github.com/pl3onasm/Imperative-programming/tree/main/PF1-3/exam1-2023)**| **[2023 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/PF2-3/exam2-2023)**|
+|**[2023](PF1-3/exam1-2023)**| **[2023 resit](PF1-3/exam2-2023)**|
 |||
 
 ## ${\color{darkgoldenrod}\text{PF 2-3 exams}}$
 
 |||
 |:---:|:---:|
-|**[2023](https://github.com/pl3onasm/Imperative-programming/tree/main/PF2-3/exam2-2023)**| **[2023 resit](https://github.com/pl3onasm/Imperative-programming/tree/main/PF2-3/resit2-2023)** |
+|**[2023](PF2-3/exam2-2023)**| **[2023 resit](PF2-3/resit2-2023)** |
 |||
 
 ## ${\color{darkgoldenrod}\text{PF 3-3 exams}}$
 
 |||
 |:---:|:---:|
-|**[2024](https://github.com/pl3onasm/Imperative-programming/tree/main/PF3-3/exam3-2024)**||
+|**[2024](PF3-3/exam3-2024)**||
 |||
 
 ## ${\color{cadetblue}\text{Testing}}$
@@ -79,7 +79,7 @@ To display the current $PATH, run the following command:
 echo $PATH
 ```
 
-Then, copy the script to one of the folders in $PATH. For example:
+Then, copy the script to one of the folders in $PATH. If you have copied the script to the folder before, the command will simply overwrite the previous version. For example:
 
 ```linux
 sudo cp ctest.sh /usr/bin/
@@ -98,6 +98,18 @@ You may also choose to redirect the output to a file, in which case the color co
 ```linux
 ctest.sh myprogram.c > results.txt
 ```
+
+## ${\color{cadetblue}\text{Functions library}}$
+
+The folder [functions](Functions) contains some useful function implementations in C. Have a look at the [header file](Functions/functions.h) to see which functions are available and how to use them.  
+
+You can choose to include these functions in your own code, or use them as a reference to write your own implementation. If you want to work with these functions, you can do so by adding the include directive with the appropriate path. For example:
+
+```c
+#include "../../../Functions/functions.h"
+```
+
+Including the header file in this way will also make the test script compile your own code along with the functions from the library. Since the library is small, it is not necessary to work with a static or dynamic library.
 
 ## ${\color{cadetblue}\text{Notes}}$
 
