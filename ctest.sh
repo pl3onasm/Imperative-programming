@@ -78,10 +78,11 @@ DIR=./tests   # default test folder
 # If ./tests does not exist, ask for a test folder or exit
 while [ ! -d "$DIR" ]; do
   echo -e "\nCould not find $DIR"
-  echo "Please provide a test folder or type 'exit' to quit."
-  read -p "Test folder: " DIR
-  if [ "$DIR" == "exit" ]; then
-    exit 1
+  echo "Please provide a test folder or press Enter to quit:"
+  read -r DIR
+  if [ -z "$DIR" ]; then
+    echo "Compiled program not tested."
+    exit 0
   fi
 done
 
