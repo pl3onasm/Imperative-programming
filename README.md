@@ -51,7 +51,7 @@ Found this repository useful? Help out your (future) fellow students by mailing 
 
 ## ${\color{cadetblue}\text{Testing}}$
 
-You can test your own C code with the [test script](https://github.com/pl3onasm/Imperative-programming/blob/main/ctest.sh). It will try to compile your code and run it on all the test cases. It will also compare your output with the expected output, and check for memory leaks by running a Valgrind test. If a test fails, the script will display the line numbers where a mismatch between the expected and the actual output was found, followed by the corresponding lines themselves, so you can easily spot the error. Lines in green and preceded by `<` represent the expected output, while lines in red and preceded by `>` are the actual (incorrect) output. In order to avoid too much clutter, the script will only display the first 5 lines where mismatches were found and will indicate how many more there are if applicable.
+You can test your own C code with the [test script](ctest.sh). It will try to compile your code and run it on all the test cases. It will also compare your output with the expected output, and check for memory leaks by running a Valgrind test. If a test fails, the script will display the line numbers where a mismatch between the expected and the actual output was found, followed by the corresponding lines themselves, so you can easily spot the error. Lines in green and preceded by `<` represent the expected output, while lines in red and preceded by `>` are the actual (incorrect) output. In order to avoid too much clutter, the script will only display the first 5 lines where mismatches were found and will indicate how many more there are if applicable.
 
 If you want to use the script, you basically have two options:  
 
@@ -91,7 +91,7 @@ Now you can run the script from the directory containing your program and the fo
 ctest.sh myprogram.c
 ```  
 
-&nbsp;&nbsp;&nbsp;
+&nbsp;
 
 You may also choose to redirect the output to a file, in which case the color codes will be removed automatically to render a plain text file:
 
@@ -103,13 +103,13 @@ ctest.sh myprogram.c > results.txt
 
 The folder [functions](Functions) contains some useful function implementations in C. Have a look at the [header file](Functions/functions.h) to see which functions are available and how to use them.  
 
-You can choose to include these functions in your own code, or use them as a reference to write your own implementation. If you want to work with these functions, you can do so by adding the include directive with the appropriate path. For example:
+You can choose to include these functions in your own code, or use them as a reference to write your own implementation. If you want to work with these functions, just add the include directive with the appropriate path. For example:
 
 ```c
 #include "../../../Functions/functions.h"
 ```
 
-Including the header file in this way will also make the test script compile your own code along with the functions from the library. Since the library is small, it is not necessary to work with a static or dynamic library.
+Including the header file in this way will also make the test script compile your own code along with the functions from the library. Since the library is small, it is not necessary to work with a static or dynamic library. Here is an example of a program using the library: [example](libtest.c).
 
 ## ${\color{cadetblue}\text{Notes}}$
 
