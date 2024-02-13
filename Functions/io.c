@@ -29,17 +29,17 @@ void readIntMatrix(int **arr, int m, int n) {
       (void)! scanf("%d", &arr[i][j]);
 }
 
-int *readIntVector(int *size) {
+int *readInts(int *size) {
   /* reads int array as long as integer input lasts; 
      stores its length in size */
-  int n, len = 0, *vec = safeMalloc(100 * sizeof(int)); 
+  int n, len = 0, *arr = safeMalloc(100 * sizeof(int)); 
   while (scanf("%d", &n) == 1) {
-    vec[len++] = n;
+    arr[len++] = n;
     if (len % 100 == 0)
-      vec = safeRealloc(vec, (len + 100) * sizeof(int));
+      arr = safeRealloc(arr, (len + 100) * sizeof(int));
   }
   *size = len;
-  return vec;
+  return arr;
 }
 
 char *readText(int *size) {

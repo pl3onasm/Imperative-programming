@@ -12,6 +12,7 @@ int countDigits(int n) {
 
 int reverseInt(int n) {
   /* returns the reverse of a given integer n
+     leading zeros are ignored, e.g. 1230 -> 321
      Input of at most 9 digits long to avoid overflow */
   int rev = 0;
   while (n) {

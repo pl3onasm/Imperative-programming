@@ -64,12 +64,12 @@ int power(int n, int exp) {
   return pow;
 }
 
-int modExp(int n, int exp, int mod) {
+int modExp(int n, int exp, int m) {
   /* computes n^exp mod m using modular exponentiation */
-  int pow = 1; n %= mod;
+  int pow = 1; n %= m;
   while (exp) {
-    if (exp & 1) pow = (pow * n) % mod;
-    if (exp > 1) n = (n * n) % mod;
+    if (exp & 1) pow = (pow * n) % m;
+    if (exp > 1) n = (n * n) % m;
     exp /= 2;
   }
   return pow;

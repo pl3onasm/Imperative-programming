@@ -24,13 +24,14 @@ int rightRotate(int a);
     // to the leftmost position. Input of at most 9 digits.
 
 char *toBinary(int a);
-    // returns a string with the binary representation of a
+    // returns a string with the binary representation of a,
+    // to be freed by the caller
 
 int isLeapYear(int year);
     // returns 1 if the year is a leap year, 0 otherwise
 
 char *toString(int a);
-    // returns a string representation of the given integer
+    // converts the integer to a string, to be freed by the caller
 
 int isIntPalindrome(int a);
     // returns 1 if the integer is a palindrome, 0 otherwise
@@ -79,8 +80,8 @@ int modExp(int a, int exp, int mod);
 //::::::::::::::::::::::::: MEMORY.C ::::::::::::::::::::::::::::://
 
 void swap(void *a, void *b, int size);
-    // swaps the contents of the memory at a and b
-    // of the given memory size
+    // swaps the contents of the memory at a and b of the 
+    // given memory size. Can be used for any type of data
 
 void *safeMalloc(int n);
     // allocates memory and checks if it succeeded
@@ -122,7 +123,7 @@ void readIntArray(int *array, int size);
 void readIntMatrix(int **matrix, int rows, int cols);
     // reads rows x cols integers into the given matrix
 
-int *readIntVector(int *size);
+int *readInts(int *size);
     // reads integers as long as the input lasts; 
     // returns the array and sets the size
 
