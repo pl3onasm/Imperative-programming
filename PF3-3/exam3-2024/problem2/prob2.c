@@ -2,6 +2,10 @@
   file: prob2.c
   author: David De Potter
   description: PF 3/3rd term 2024, problem 2, lychrel
+  note: the check for overflow in reverseInt is not 
+    required to pass the test cases, but is recommended
+    because the problem statement specifies that the 
+    input number can range from 0 to MAX_INT (2^31-1)
 */
 
 #include <stdio.h>
@@ -9,13 +13,17 @@
 #include <limits.h>
 
 int reverseInt (int n) {
-  /* reverses an integer */
+  // reverses an integer n 
+  // returns INT_MAX if the reverse overflows
   int rev = 0;
   while (n) {
+    // check for overflow
+    if (rev > INT_MAX / 10)
+      return INT_MAX;
     rev = rev * 10 + n % 10;
     n /= 10;
   }
-  return rev;
+  return rev;   
 }
 
 int main(int argc, char *argv[]) {

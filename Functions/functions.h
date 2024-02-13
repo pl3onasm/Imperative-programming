@@ -13,20 +13,24 @@ int countDigits(int a);
 
 int reverseInt(int a);
     // returns the reverse of the given integer as a new integer
+    // Input of at most 9 digits long to avoid overflow
 
 int leftRotate(int a);
-    // returns the integer a with the leftmost digit
-    // moved to the rightmost position 
+    // returns the integer a with the leftmost digit moved
+    // to the rightmost position. Input of at most 9 digits. 
 
 int rightRotate(int a);
-    // returns the integer a with the rightmost digit
-    // moved to the leftmost position
+    // returns the integer a with the rightmost digit moved
+    // to the leftmost position. Input of at most 9 digits.
 
 char *toBinary(int a);
     // returns a string with the binary representation of a
 
 int isLeapYear(int year);
     // returns 1 if the year is a leap year, 0 otherwise
+
+char *toString(int a);
+    // returns a string representation of the given integer
 
 int isIntPalindrome(int a);
     // returns 1 if the integer is a palindrome, 0 otherwise
@@ -44,18 +48,22 @@ int abs(int a);
 
 int isPrime(int a);
     // returns 1 if the integer is prime, 0 otherwise
+    // input is assumed to be non-negative
 
 int isPerfSquare(int a);
     // returns 1 if the integer is a perfect square, 0 otherwise
+    // input is assumed to be non-negative
 
 int isDivisor(int a, int b);
     // returns 1 if a is a divisor of b, 0 otherwise
 
 int GCD(int a, int b);
     // returns the greatest common divisor of the two integers
+    // input is assumed to be non-negative
 
 int LCM(int a, int b);
     // returns the least common multiple of the two integers
+    // input is assumed to be non-negative
 
 int areCoprime(int a, int b);
     // returns 1 if the integers are coprime (i.e. if they 
@@ -63,7 +71,7 @@ int areCoprime(int a, int b);
 
 int power(int a, int exp);
     // returns a raised to the power of exp, 
-    // using repeated squaring
+    // using repeated squaring. May overflow for large exponents
 
 int modExp(int a, int exp, int mod);
     // returns a raised to the power of exp, modulo mod
@@ -130,11 +138,11 @@ char *readLine(int *size);
 
 int linSearch(int *array, int size, int key);
     // linear search for the key in the array;
-    // returns the index of the key in the array
+    // returns the index of the key in the array, -1 if not found
 
 int binSearch(int *sorted, int size, int key);
     // binary search for the key in the sorted array;
-    // returns the index of the key in the array
+    // returns the index of the key in the array, -1 if not found
 
 //::::::::::::::::::::::::: STRINGS.C :::::::::::::::::::::::::::://
 
