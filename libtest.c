@@ -19,7 +19,7 @@ int isValidInt(char *str, int *n) {
     return 0;
   }
   // try to convert the input to an int
-  *n = (int) strtol(str, &end, 10);
+  *n = strtol(str, &end, 10);
   // return 1 if the input was fully converted to a pos int
   return *end == '\n' && *n > 0;      
 }
@@ -39,14 +39,18 @@ int main() {
     }
     
     // print some properties of the input number
-    printf("The input has %d digit%s.\n", countDigits(n), 
-      countDigits(n) == 1 ? "" : "s");
-    printf("The number is %sa prime.\n", isPrime(n) ? "" : "not ");
-    printf("It is %sa perfect square.\n", isPerfSquare(n) ? "" : "not ");
-    printf("Its reverse is %d.\n", reverseInt(n));
     char *bin = toBinary(n);
-    printf("Its binary representation is %s, which is %sa palindrome.\n",
-       bin, isStrPalindrome(bin, bin + strlen(bin) - 1) ? "" : "not ");
+    int nDigits = countDigits(n);
+    printf("The input has %d digit%s.\n"
+           "The number is %sa prime.\n"
+           "It is %sa perfect square.\n"
+           "Its reverse is %d.\n"
+           "Its binary representation is %s, which is %sa palindrome.\n",
+           nDigits, nDigits == 1 ? "" : "s",
+           isPrime(n) ? "" : "not ",
+           isPerfSquare(n) ? "" : "not ",
+           reverseInt(n), 
+           bin, isStrPalindrome(bin, bin + strlen(bin) - 1) ? "" : "not ");
     free(bin);
   }
   return 0;

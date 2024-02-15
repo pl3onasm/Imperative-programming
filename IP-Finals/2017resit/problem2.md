@@ -11,7 +11,7 @@ for (int i = N; i > 0; i /= 2) {
 }
 ```
 
-The outer loop runs $\log(N)$ times, since $i$ starts at $N$ and is then halved after each iteration. The inner loop runs $i$ times for each value of $i$, which is $\frac{N}{2^k}$ for $k \in \lbrace 0, 1, \dots, \log(N) \rbrace$. The total number of iterations of the inner loop is therefore given by:
+The outer loop runs $\log(N)$ times, since $i$ starts at $N$ and is then halved after each iteration. The inner loop runs $i$ times for each value of $i$, which is $\frac{N}{2^k}$ for $k \in \lbrace 0, 1, \dots, \lceil \log(N) \rceil \rbrace$. The total number of iterations of the inner loop is therefore given by:
 
 $$
 \begin{align*}
