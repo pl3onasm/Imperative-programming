@@ -1,6 +1,7 @@
-/* file: prob3.c
+/* file: prob3-1.c
    author: David De Potter
    description: extra, problem 3, maximum path
+   version: 3.1, both time and space complexity are in O(n²)
 */
 
 #include <stdio.h>

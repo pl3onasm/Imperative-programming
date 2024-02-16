@@ -6,6 +6,7 @@ void swap(void *a, void *b, int size) {
   memcpy(buffer, a, size);
   memcpy(a, b, size);
   memcpy(b, buffer, size);
+  free(buffer);
 }
 
   // allocates memory and checks whether this was successful

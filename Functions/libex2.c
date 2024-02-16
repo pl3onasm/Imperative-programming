@@ -19,7 +19,7 @@ int main() {
   (void)! scanf("%d %d", &rows, &cols);
 
   // allocate memory for the 2D array
-  CREATE_MATRIX(matrix, int, rows, cols);
+  CREATE_MATRIX(int, matrix, rows, cols);
 
   // read input from stdin into the matrix
   READ_MATRIX(matrix, "%d", rows, cols);
@@ -31,7 +31,7 @@ int main() {
 
   // read an array of integers (size is given)
   (void)! scanf("%d", &size);
-  CREATE_ARRAY(ints, int, size);
+  CREATE_ARRAY(int, ints, size);
   READ_ARRAY(ints, "%d", size);
 
   // print the integer array
@@ -40,25 +40,25 @@ int main() {
   
   // sort the integer array
   mergeSort(ints, size);
-  printf("The sorted integer array is:\n");
+  printf("\nThe sorted integer array is:\n");
   PRINT_ARRAY(ints, "%d", size);
   free(ints);
   
   // read the array of doubles (size is not given)
-  READ(dbls, double, "%lf", size);
+  READ(double, dbls, "%lf", size);
 
   // print the array
-  printf("The double input has %d elements:\n", size);
+  printf("\nThe double input has %d elements:\n", size);
   PRINT_ARRAY(dbls, "%.2lf", size);
   free(dbls);
 
   // read one line of input 
   char *str = readUntil('\n', &size);
-  printf("The input string is:\n%s\n", str);
+  printf("\nThe input string is:\n%s\n", str);
   free(str);
 
   // read all text until the end of the file 
-  READ(text, char, "%c", size);
+  READ(char, text, "%c", size);
 
   printf("\nThe piece of text has %d characters:\n", size);
   printf("%s\n\n", text);

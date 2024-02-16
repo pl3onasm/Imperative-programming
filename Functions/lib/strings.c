@@ -26,7 +26,7 @@ int compareStrings(char *s1, char *s2) {
   // returns a copy of string str, which must be 
   // freed by the caller
 char *copyString(char *str) {
-  CREATE_ARRAY(copy, char, strlen(str) + 1);
+  CREATE_ARRAY(char, copy, strlen(str) + 1);
   strcpy(copy, str);
   return copy;
 }

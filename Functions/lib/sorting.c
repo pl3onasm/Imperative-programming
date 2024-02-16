@@ -3,7 +3,7 @@
   // copies the subarray arr[left..right] into a new array;
   // needed for mergeSort and is given on the exam
 int *copySubArray(int *arr, int left, int right) {
-  CREATE_ARRAY(copy, int, right - left);
+  CREATE_ARRAY(int, copy, right - left);
   for (int i = left; i < right; i++) 
     copy[i - left] = arr[i];
   return copy;
@@ -104,7 +104,7 @@ void countingSort(int *arr, int length) {
     max = MAX (arr[i], max);
   }
   range = max - min + 1;
-  CREATE_ARRAY(count, int, range);
+  CREATE_ARRAY(int, count, range);
   for (i = 0; i < length; i++) 
     count[arr[i] - min]++;
   for (i = 0; i < range; i++) 
