@@ -44,7 +44,7 @@ int rightRotate(int x) {
   // returns a pointer to the string bin, which must be
   // freed by the caller
 char *toBinary(int n) {
-  char *bin = safeMalloc(33 * sizeof(char));  // 32 bits + '\0'
+  CREATE_ARRAY(bin, char, 33);  // 32 bits + '\0'
   int len = 0;
   while (n > 0) {
     bin[len++] = n % 2 + '0';
@@ -64,7 +64,7 @@ int isLeapYear(int year) {
   // returns a string representation of the given integer
   // the caller is responsible for freeing the memory
 char *toString(int n) {
-  char *str = safeMalloc(11 * sizeof(char));  // 10 digits + '\0'
+  CREATE_ARRAY(str, char, 11);  // 10 digits + '\0'
   sprintf(str, "%d", n);
   return str;
 }

@@ -6,8 +6,6 @@
 #ifndef FUNCTIONS_H_INCLUDED    
 #define FUNCTIONS_H_INCLUDED
 
-#include <stddef.h>   // for size_t
-
 //::::::::::::::::::::::::: MACROS :::::::::::::::::::::::::::::://
 
   // macros for min, max, abs, and sign
@@ -39,23 +37,28 @@
   for (int i = 0; i < rows; ++i) { \
     for (int j = 0; j < cols; ++j) \
       printf(format, matrix[i][j]), printf(j == cols-1 ? "\n" : " "); \
-  } \
-  printf("\n");
+  } 
 
   // macro for creating an array of a given type and length
   // usage: int *arr = CREATE_ARRAY(int, 10);
   //        double *arr = CREATE_ARRAY(double, 20);
   //        char *arr = CREATE_ARRAY(char, 15);
-#define CREATE_ARRAY(type, len) safeCalloc(len, sizeof(type))
+#define CREATE_ARRAY(arr, type, len) \
+  type *arr = safeCalloc(len, sizeof(type))
 
   // macro for creating a matrix of given type and dimensions
-  // usage: int **matrix = CREATE_MATRIX(int, 10, 10);
-  //        double **matrix = CREATE_MATRIX(double, 10, 15);
-  //        char **matrix = CREATE_MATRIX(char, 15, 10);
+  // usage: CREATE_MATRIX(matrix, int, 10, 10);
+  //        CREATE_MATRIX(matrix, double, 10, 15);
+  //        CREATE_MATRIX(matrix, char, 15, 10);
 #define CREATE_MATRIX(matrix, type, rows, cols) \
   type **matrix = safeCalloc(rows, sizeof(type *)); \
   for (int i = 0; i < rows; ++i) \
-    matrix[i] = safeCalloc(cols, sizeof(type)); 
+    matrix[i] = safeCalloc(cols, sizeof(type));
+
+  // macro for freeing the memory of a matrix 
+#define FREE_MATRIX(matrix, rows) \
+  for (int i = 0; i < rows; ++i) \
+    free(matrix[i]); \
 
   // macro for reading input into an array of given length
   // usage: int *arr; READ_ARRAY(arr, "%d", size);
@@ -63,7 +66,7 @@
   //        char *arr; READ_ARRAY(arr, "%c", size);
 #define READ_ARRAY(arr, format, len) \
   for (int i = 0; i < len; ++i) \
-    scanf(format, &arr[i]);
+    (void)! scanf(format, &arr[i]);
 
   // macro for reading input into a matrix of given dimensions
   // usage: int **matrix; READ_MATRIX(matrix, "%d", rows, cols);
@@ -72,21 +75,22 @@
 #define READ_MATRIX(matrix, format, rows, cols) \
   for (int i = 0; i < rows; ++i) \
     for (int j = 0; j < cols; ++j) \
-      scanf(format, &matrix[i][j]);
+      (void)! scanf(format, &matrix[i][j]);
 
   // macro for reading input from stdin as long as it lasts
+  // sets the size to the number of elements read
   // usage: READ(int, "%d", arr, size);
   //        READ(double, "%lf", arr, size);
   //        READ(char, "%c", arr, size);
-#define READ(type, format, arr, size) \
-  arr = CREATE_ARRAY(type, 100); \
-  int len = 0; type var; \
-  while (scanf(format, &var) == 1) { \
-    arr[len++] = var; \
-    if (len % 100 == 0) \
-      arr = safeRealloc(arr, (len + 100) * sizeof(type)); \
+#define READ(arr, type, format, size) \
+  type *arr = safeCalloc(100, sizeof(type)); \
+  int arr##Len = 0; type arr##var; \
+  while (scanf(format, &arr##var) == 1) { \
+    arr[arr##Len++] = arr##var; \
+    if (arr##Len % 100 == 0) \
+      arr = safeRealloc(arr, (arr##Len + 100) * sizeof(type)); \
   } \
-  size = len;
+  size = arr##Len;
 
 //::::::::::::::::::::::::: INTEGERS.C :::::::::::::::::::::::::://
 
@@ -106,7 +110,7 @@ int leftRotate(int a);
 int rightRotate(int a);
     
   // returns a string with the binary representation of a,
-  // to be freed by the caller
+  // to be freed by the caller; assumes a is non-negative
 char *toBinary(int a);
     
   // returns 1 if the year is a leap year, 0 otherwise
@@ -141,6 +145,7 @@ int LCM(int a, int b);
 
   // returns 1 if the integers are coprime (i.e. if they 
   // have no common divisors), 0 otherwise
+  // input is assumed to be non-negative
 int areCoprime(int a, int b);
   
   // returns a raised to the power of exp, 
@@ -163,14 +168,12 @@ void *safeCalloc(int n, int size);
     
   // reallocates memory and checks if it succeeded
 void *safeRealloc(void *ptr, int newSize);
-
-  // frees a matrix (2D array) of given dimensions
-void freeMatrix(void **matrix, int rows);
     
 //::::::::::::::::::::::::::: IO.C ::::::::::::::::::::::::::::::://
 
   // reads chars until delim is encountered, 
-  // returns a string containing the chars read
+  // returns a string containing all chars read
+  // and sets size to the number of chars read
 char *readUntil(char delim, int *size);
     
 //:::::::::::::::::::::::: SEARCHING.C ::::::::::::::::::::::::::://
@@ -185,11 +188,12 @@ int binSearch(int *sorted, int size, int key);
 
 //::::::::::::::::::::::::: STRINGS.C :::::::::::::::::::::::::::://
 
-  // case insensitive comparison of two strings;
+  // case insensitive comparison of two strings str1 and str2
   // returns 0 if equal, -1 if str1 < str2, 1 if str1 > str2
 int compareStrings(char *str1, char *str2);
     
-  // returns a copy of the string
+  // returns a copy of the string;
+  // to be freed by the caller
 char *copyString(char *str);
   
   // reverses the string in place
@@ -201,8 +205,8 @@ int isStrPalindrome(char *start, char *end);
 
 //::::::::::::::::::::::::: SORTING.C :::::::::::::::::::::::::::://
 
-  // returns a copy of the subarray from start to end
-  // needed for mergeSort
+  // returns a copy of the subarray from start to end;
+  // this function is needed for mergeSort
 int *copySubArray(int *array, int start, int end);
     
   // sorts an array of size integers using merge sort in O(n log n)
@@ -222,7 +226,7 @@ void selectionSort(int *array, int size);
 void quickSort(int *array, int size);
     
   // sorts an array of size integers using counting sort in O(n);
-  // assumes the range is not too large
+  // assumes the range between min and max value is not too large
 void countingSort(int *array, int size);
     
 #endif // FUNCTIONS_H_INCLUDED

@@ -1,14 +1,16 @@
 /* 
-  file: libtest.c
+  file: libex1.c
   author: David De Potter
   description: example program using functions from Functions library
     Program asks for a pos. integer and prints some of its properties
+  compilation: ../ctest.sh libex1.c
+  usage: ./libex1.out
 */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "Functions/functions.h"
+#include "lib/functions.h"
 
 int isValidInt(char *str, int *n) {
   // check if the input is a valid positive integer

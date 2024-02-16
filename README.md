@@ -106,10 +106,10 @@ The folder [functions](Functions) contains some useful function implementations 
 You can choose to include these functions in your own code, or use them as a reference to write your own implementation. If you want to work with these functions, just add the include directive with the appropriate path. For example:
 
 ```c
-#include "../../../Functions/functions.h"
+#include "../../../Functions/lib/functions.h"
 ```
 
-Including the header file in this way will also make the test script compile your own code along with the functions from the library. Since the library is small, it is not necessary to work with a static or dynamic library. Here is an example of a program using the library: [example](libtest.c).
+Including the header file in this way will also make the test script compile your own code along with the functions from the library. Since the library is small, it is not necessary to work with a static or dynamic library. Some examples of function usage are given in the [Functions](Functions) folder.
 
 ## ${\color{cadetblue}\text{Notes}}$
 
