@@ -40,9 +40,9 @@
   } 
 
   // macro for creating an array of a given type and length
-  // usage: int *arr = CREATE_ARRAY(int, 10);
-  //        double *arr = CREATE_ARRAY(double, 20);
-  //        char *arr = CREATE_ARRAY(char, 15);
+  // usage: CREATE_ARRAY(int, 10);
+  //        CREATE_ARRAY(double, 20);
+  //        CREATE_ARRAY(char, 15);
 #define CREATE_ARRAY(arr, type, len) \
   type *arr = safeCalloc(len, sizeof(type))
 
@@ -61,17 +61,17 @@
     free(matrix[i]); \
 
   // macro for reading input into an array of given length
-  // usage: int *arr; READ_ARRAY(arr, "%d", size);
-  //        double *arr; READ_ARRAY(arr, "%lf", size);
-  //        char *arr; READ_ARRAY(arr, "%c", size);
+  // usage: READ_ARRAY(arr, "%d", size);
+  //        READ_ARRAY(arr, "%lf", size);
+  //        READ_ARRAY(arr, "%c", size);
 #define READ_ARRAY(arr, format, len) \
   for (int i = 0; i < len; ++i) \
     (void)! scanf(format, &arr[i]);
 
   // macro for reading input into a matrix of given dimensions
-  // usage: int **matrix; READ_MATRIX(matrix, "%d", rows, cols);
-  //        double **matrix; READ_MATRIX(matrix, "%lf", rows, cols);
-  //        char **matrix; READ_MATRIX(matrix, "%c", rows, cols);
+  // usage: READ_MATRIX(matrix, "%d", rows, cols);
+  //        READ_MATRIX(matrix, "%lf", rows, cols);
+  //        READ_MATRIX(matrix, "%c", rows, cols);
 #define READ_MATRIX(matrix, format, rows, cols) \
   for (int i = 0; i < rows; ++i) \
     for (int j = 0; j < cols; ++j) \
