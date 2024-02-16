@@ -29,7 +29,7 @@ int main() {
   PRINT_MATRIX(matrix, "%02d", rows, cols);
   FREE_MATRIX(matrix, rows);
 
-    // read an array of integers (size is given)
+  // read an array of integers (size is given)
   (void)! scanf("%d", &size);
   CREATE_ARRAY(ints, int, size);
   READ_ARRAY(ints, "%d", size);

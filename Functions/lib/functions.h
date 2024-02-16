@@ -21,18 +21,17 @@
 #define SWAP(a, b) swap(&a, &b, sizeof(a))
 
   // macro for printing an array of a given type and length
-  // Examples:  PRINT_ARRAY(arr, "%d", size);
-  //            PRINT_ARRAY(arr, "%.2lf", size);
-  //            PRINT_ARRAY(arr, "%c", size);
+  // Examples:  PRINT_ARRAY(myInts, "%d", 10);
+  //            PRINT_ARRAY(myDbls, "%.2lf", 20);
 #define PRINT_ARRAY(arr, format, len) \
   for (int i = 0; i < len; ++i) \
     printf(format, arr[i]), printf(i == len-1 ? "\n" : ", "); \
   printf("\n");
 
   // macro for printing a matrix of a given type and dimensions
-  // Examples:  PRINT_MATRIX(matrix, "%d", rows, cols);
-  //            PRINT_MATRIX(matrix, "%.2lf", rows, cols);
-  //            PRINT_MATRIX(matrix, "%c", rows, cols);
+  // Examples:  PRINT_MATRIX(myInts, "%d", rows, cols);
+  //            PRINT_MATRIX(myDbls, "%.2lf", rows, cols);
+  //            PRINT_MATRIX(myChrs, "%c", rows, cols);
 #define PRINT_MATRIX(matrix, format, rows, cols) \
   for (int i = 0; i < rows; ++i) { \
     for (int j = 0; j < cols; ++j) \
@@ -40,16 +39,16 @@
   } 
 
   // macro for creating an array of a given type and length
-  // Examples:  CREATE_ARRAY(int, 10);
-  //            CREATE_ARRAY(double, 20);
-  //            CREATE_ARRAY(char, 15);
+  // Examples:  CREATE_ARRAY(myInts, int, 10);
+  //            CREATE_ARRAY(myDbls, double, 20);
+  //            CREATE_ARRAY(myString, 15);
 #define CREATE_ARRAY(arr, type, len) \
   type *arr = safeCalloc(len, sizeof(type))
 
   // macro for creating a matrix of given type and dimensions
-  // Examples:  CREATE_MATRIX(matrix, int, 10, 10);
-  //            CREATE_MATRIX(matrix, double, 10, 15);
-  //            CREATE_MATRIX(matrix, char, 15, 10);
+  // Examples:  CREATE_MATRIX(myInts, int, 10, 10);
+  //            CREATE_MATRIX(myDbls, double, 10, 15);
+  //            CREATE_MATRIX(myChrs, char, 15, 10);
 #define CREATE_MATRIX(matrix, type, rows, cols) \
   type **matrix = safeCalloc(rows, sizeof(type *)); \
   for (int i = 0; i < rows; ++i) \
@@ -62,27 +61,27 @@
   free(matrix);
 
   // macro for reading input into an array of given length
-  // Examples:  READ_ARRAY(arr, "%d", size);
-  //            READ_ARRAY(arr, "%lf", size);
-  //            READ_ARRAY(arr, "%c", size);
+  // Examples:  READ_ARRAY(myInts, "%d", 20);
+  //            READ_ARRAY(myDbls, "%lf", 15);
+  //            READ_ARRAY(myString, "%c", 10);
 #define READ_ARRAY(arr, format, len) \
   for (int i = 0; i < len; ++i) \
     (void)! scanf(format, &arr[i]);
 
   // macro for reading input into a matrix of given dimensions
-  // Examples:  READ_MATRIX(matrix, "%d", rows, cols);
-  //            READ_MATRIX(matrix, "%lf", rows, cols);
-  //            READ_MATRIX(matrix, "%c", rows, cols);
+  // Examples:  READ_MATRIX(myInts, "%d", 10, 5);
+  //            READ_MATRIX(myDbls, "%lf", 8, 8);
+  //            READ_MATRIX(myChrs, "%c", 5, 10);
 #define READ_MATRIX(matrix, format, rows, cols) \
   for (int i = 0; i < rows; ++i) \
     for (int j = 0; j < cols; ++j) \
       (void)! scanf(format, &matrix[i][j]);
 
   // macro for reading input from stdin as long as it lasts
-  // sets the size to the number of elements read
-  // Examples:  READ(int, "%d", arr, size);
-  //            READ(double, "%lf", arr, size);
-  //            READ(char, "%c", arr, size);
+  // sets the parameter size to the number of elements read
+  // Examples:  READ(int, "%d", myInts, size);
+  //            READ(double, "%lf", myDbls, size);
+  //            READ(char, "%c", myChrs, size);
 #define READ(arr, type, format, size) \
   type *arr = safeCalloc(100, sizeof(type)); \
   int arr##Len = 0; type arr##var; \
