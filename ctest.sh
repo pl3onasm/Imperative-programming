@@ -42,20 +42,17 @@ if ! [ -x "$(command -v gcc)" ]; then
   exit 1
 fi
 
-# Check if the functions library is included in the program to test
-# and is not commented out with // or /* */ on the same line
-if grep -q '^[ ]*#include[ ./\"]*Functions/functions.h' "$1"; then
-  # Verify if the library is in one of the possible parent directories
-  PATHS=("." ".." "../.." "../../..")
-  LIBPATH=""
-  for P in "${PATHS[@]}"; do
-    if [ -f "$P/Functions/functions.h" ]; then
-      LIBPATH="$P/Functions"
-      break
-    fi
-  done
-  if [ -z "$LIBPATH" ]; then
-    echo -e "\nFunctions library not found."
+# Extract the include line from the program if it exists
+# it should not be commented out
+INCLUDE=$(grep -E "^#include[ /.\"a-zA-Z0-9]*functions.h" "$1")
+if [ -n "$INCLUDE" ]; then
+  # extract the path to the functions library and remove 'functions.h' at the end
+  LIBPATH=$(echo "$INCLUDE" | cut -d '"' -f 2 | rev | cut -d '/' -f 2- | rev)
+  # Check if the library path is valid
+  if [ -d "$LIBPATH" ]; then
+    echo -e "\nFunctions library found in $LIBPATH"
+  else
+    echo -e "\nFunctions library not found in $LIBPATH"
     exit 1
   fi
   # Compile the program with the library included
@@ -78,7 +75,7 @@ DIR=./tests   # default test folder
 # If ./tests does not exist, ask for a test folder or exit
 while [ ! -d "$DIR" ]; do
   echo -e "\nCould not find $DIR"
-  echo "Please provide a test folder or press Enter to quit:"
+  echo "Please provide a test folder (Enter to quit):"
   read -r DIR
   if [ -z "$DIR" ]; then
     echo "Compiled program not tested."
