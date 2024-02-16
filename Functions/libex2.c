@@ -13,15 +13,15 @@
 #include "lib/functions.h"
 
 int main() {
-  // read from stdin
   int rows, cols, size;
 
+  // read the dimensions of the matrix
   (void)! scanf("%d %d", &rows, &cols);
 
   // allocate memory for the 2D array
   CREATE_MATRIX(matrix, int, rows, cols);
 
-  // read input from stdin
+  // read input from stdin into the matrix
   READ_MATRIX(matrix, "%d", rows, cols);
 
   // print the matrix
@@ -29,12 +29,12 @@ int main() {
   PRINT_MATRIX(matrix, "%02d", rows, cols);
   FREE_MATRIX(matrix, rows);
 
-  // read an array of integers (size is given)
+    // read an array of integers (size is given)
   (void)! scanf("%d", &size);
   CREATE_ARRAY(ints, int, size);
   READ_ARRAY(ints, "%d", size);
 
-  // print the array
+  // print the integer array
   printf("\nThe integer input has %d elements:\n", size);
   PRINT_ARRAY(ints, "%d", size);
   

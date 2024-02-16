@@ -21,18 +21,18 @@
 #define SWAP(a, b) swap(&a, &b, sizeof(a))
 
   // macro for printing an array of a given type and length
-  // usage: PRINT_ARRAY(arr, "%d", size);
-  //        PRINT_ARRAY(arr, "%.2lf", size);
-  //        PRINT_ARRAY(arr, "%c", size);
+  // Examples:  PRINT_ARRAY(arr, "%d", size);
+  //            PRINT_ARRAY(arr, "%.2lf", size);
+  //            PRINT_ARRAY(arr, "%c", size);
 #define PRINT_ARRAY(arr, format, len) \
   for (int i = 0; i < len; ++i) \
     printf(format, arr[i]), printf(i == len-1 ? "\n" : ", "); \
   printf("\n");
 
   // macro for printing a matrix of a given type and dimensions
-  // usage: PRINT_MATRIX(matrix, "%d", rows, cols);
-  //        PRINT_MATRIX(matrix, "%.2lf", rows, cols);
-  //        PRINT_MATRIX(matrix, "%c", rows, cols);
+  // Examples:  PRINT_MATRIX(matrix, "%d", rows, cols);
+  //            PRINT_MATRIX(matrix, "%.2lf", rows, cols);
+  //            PRINT_MATRIX(matrix, "%c", rows, cols);
 #define PRINT_MATRIX(matrix, format, rows, cols) \
   for (int i = 0; i < rows; ++i) { \
     for (int j = 0; j < cols; ++j) \
@@ -40,16 +40,16 @@
   } 
 
   // macro for creating an array of a given type and length
-  // usage: CREATE_ARRAY(int, 10);
-  //        CREATE_ARRAY(double, 20);
-  //        CREATE_ARRAY(char, 15);
+  // Examples:  CREATE_ARRAY(int, 10);
+  //            CREATE_ARRAY(double, 20);
+  //            CREATE_ARRAY(char, 15);
 #define CREATE_ARRAY(arr, type, len) \
   type *arr = safeCalloc(len, sizeof(type))
 
   // macro for creating a matrix of given type and dimensions
-  // usage: CREATE_MATRIX(matrix, int, 10, 10);
-  //        CREATE_MATRIX(matrix, double, 10, 15);
-  //        CREATE_MATRIX(matrix, char, 15, 10);
+  // Examples:  CREATE_MATRIX(matrix, int, 10, 10);
+  //            CREATE_MATRIX(matrix, double, 10, 15);
+  //            CREATE_MATRIX(matrix, char, 15, 10);
 #define CREATE_MATRIX(matrix, type, rows, cols) \
   type **matrix = safeCalloc(rows, sizeof(type *)); \
   for (int i = 0; i < rows; ++i) \
@@ -59,19 +59,20 @@
 #define FREE_MATRIX(matrix, rows) \
   for (int i = 0; i < rows; ++i) \
     free(matrix[i]); \
+  free(matrix);
 
   // macro for reading input into an array of given length
-  // usage: READ_ARRAY(arr, "%d", size);
-  //        READ_ARRAY(arr, "%lf", size);
-  //        READ_ARRAY(arr, "%c", size);
+  // Examples:  READ_ARRAY(arr, "%d", size);
+  //            READ_ARRAY(arr, "%lf", size);
+  //            READ_ARRAY(arr, "%c", size);
 #define READ_ARRAY(arr, format, len) \
   for (int i = 0; i < len; ++i) \
     (void)! scanf(format, &arr[i]);
 
   // macro for reading input into a matrix of given dimensions
-  // usage: READ_MATRIX(matrix, "%d", rows, cols);
-  //        READ_MATRIX(matrix, "%lf", rows, cols);
-  //        READ_MATRIX(matrix, "%c", rows, cols);
+  // Examples:  READ_MATRIX(matrix, "%d", rows, cols);
+  //            READ_MATRIX(matrix, "%lf", rows, cols);
+  //            READ_MATRIX(matrix, "%c", rows, cols);
 #define READ_MATRIX(matrix, format, rows, cols) \
   for (int i = 0; i < rows; ++i) \
     for (int j = 0; j < cols; ++j) \
@@ -79,9 +80,9 @@
 
   // macro for reading input from stdin as long as it lasts
   // sets the size to the number of elements read
-  // usage: READ(int, "%d", arr, size);
-  //        READ(double, "%lf", arr, size);
-  //        READ(char, "%c", arr, size);
+  // Examples:  READ(int, "%d", arr, size);
+  //            READ(double, "%lf", arr, size);
+  //            READ(char, "%c", arr, size);
 #define READ(arr, type, format, size) \
   type *arr = safeCalloc(100, sizeof(type)); \
   int arr##Len = 0; type arr##var; \
@@ -90,7 +91,8 @@
     if (arr##Len % 100 == 0) \
       arr = safeRealloc(arr, (arr##Len + 100) * sizeof(type)); \
   } \
-  size = arr##Len;
+  size = arr##Len;\
+  arr[arr##Len] = '\0';
 
 //::::::::::::::::::::::::: INTEGERS.C :::::::::::::::::::::::::://
 
@@ -132,7 +134,7 @@ int isPrime(int a);
   // input is assumed to be non-negative
 int isPerfSquare(int a);
   
-  // returns 1 if a evenly divides b, 0 otherwise
+  // returns 1 if b evenly divides a, 0 otherwise
 int isDivisor(int a, int b);
     
   // returns the greatest common divisor of the two integers
