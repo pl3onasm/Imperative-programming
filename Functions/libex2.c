@@ -37,6 +37,11 @@ int main() {
   // print the array
   printf("\nThe integer input has %d elements:\n", size);
   PRINT_ARRAY(ints, "%d", size);
+  
+  // sort the integer array
+  mergeSort(ints, size);
+  printf("The sorted integer array is:\n");
+  PRINT_ARRAY(ints, "%d", size);
   free(ints);
   
   // read the array of doubles (size is not given)
@@ -49,7 +54,7 @@ int main() {
 
   // read one line of input 
   char *str = readUntil('\n', &size);
-  printf("The given string is:\n%s\n", str);
+  printf("The input string is:\n%s\n", str);
   free(str);
 
   // read all text until the end of the file 

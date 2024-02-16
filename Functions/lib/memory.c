@@ -42,10 +42,3 @@ void *safeRealloc(void *ptr, int newSize) {
   }
   return ptr;
 }
-
-  // frees a matrix (2D array) of given dimensions
-void freeMatrix(void **matrix, int rows) {
-  for (int i = 0; i < rows; i++)
-    free(matrix[i]);
-  free(matrix);
-}
