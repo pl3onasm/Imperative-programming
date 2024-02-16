@@ -45,6 +45,7 @@ fi
 # Extract the include line from the program if it exists
 # it should not be commented out
 INCLUDE=$(grep -E "^#include[ /.\"a-zA-Z0-9]*functions.h" "$1")
+
 if [ -n "$INCLUDE" ]; then
   # extract the path to the functions library and remove 'functions.h' at the end
   LIBPATH=$(echo "$INCLUDE" | cut -d '"' -f 2 | rev | cut -d '/' -f 2- | rev)
@@ -104,7 +105,7 @@ else
   echo -e "└──────────────────────────┘"
 fi
 
-echo
+echo    "-${line##*-}"
 
 # Compare the output of the program with the expected output
 for INFILE in "${INFILES[@]}"; do
