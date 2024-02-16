@@ -1,9 +1,10 @@
 /* 
-  file: libtest.c
+  file: libex2.c
   author: David De Potter
   description: example program for using the functions library
   Compile with the test script and feed it the input file:
-    ../ctest.sh libtest.c <input.txt
+    ../ctest.sh libex2.c 
+  Usage: ./a.out <input.txt
 */
 
 #include <stdio.h>

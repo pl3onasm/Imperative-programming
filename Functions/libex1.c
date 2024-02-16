@@ -4,7 +4,7 @@
   description: example program using functions from Functions library
     Program asks for a pos. integer and prints some of its properties
   compilation: ../ctest.sh libex1.c
-  usage: ./libex1.out
+  usage: ./a.out
 */
 
 #include <stdio.h>
