@@ -1,22 +1,7 @@
 #include "functions.ih"
 
-int minimum(int x, int y) {
-  // returns the minimum of x and y
-  return x < y ? x : y;
-}
-
-int maximum(int x, int y) {
-  // returns the maximum of x and y
-  return x > y ? x : y;
-}
-
-int abs(int x) {
-  // returns the absolute value of x
-  return x < 0 ? -x : x;
-} 
-
-int isPrime(int x) {
   // returns 1 if x is prime, 0 otherwise
+int isPrime(int x) {
   if (x == 2) return 1;
   if (x % 2 == 0 || x == 1) return 0;
   for (int i = 3; i*i <= x; i += 2) 
@@ -24,14 +9,14 @@ int isPrime(int x) {
   return 1;
 }
 
+  // returns 1 if n is a perfect square, 0 otherwise
 int isPerfSquare(int n) {
-  // returns 1 if n is a perfect square, 0 otherwise 
   int root = sqrt(n);
   return root * root == n;
 }
 
-int isDivisor(int x, int y) {
   // checks whether y evenly divides x
+int isDivisor(int x, int y) {
   return x % y == 0;
 }
 
@@ -46,15 +31,15 @@ int LCM(int a, int b) {
   return a / GCD(a, b) * b;
 }
 
+  // returns 1 if a and b are coprime, 0 otherwise
+  // a and b are coprime if they have no common factors
 int areCoprime(int a, int b) {
-  /* checks if a and b have no common divisors,
-     i.e. if they are coprime */
   return GCD(a, b) == 1;
 }
 
+  // returns n^exp using binary exponentiation 
+  // also known as exponentiation by squaring
 int power(int n, int exp) {
-  /* returns n^exp using binary exponentiation 
-     also known as exponentiation by squaring */
   int pow = 1;
   while (exp) {
     if (exp & 1) pow *= n; 
@@ -64,8 +49,8 @@ int power(int n, int exp) {
   return pow;
 }
 
+  // computes n^exp mod m using modular exponentiation 
 int modExp(int n, int exp, int m) {
-  /* computes n^exp mod m using modular exponentiation */
   int pow = 1; n %= m;
   while (exp) {
     if (exp & 1) pow = (pow * n) % m;

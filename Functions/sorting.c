@@ -1,17 +1,17 @@
 #include "functions.ih"
 
+  // copies the subarray arr[left..right] into a new array;
+  // needed for mergeSort and is given on the exam
 int *copySubArray(int *arr, int left, int right) {
-  /* copies the subarray arr[left..right] into a new array;
-     this function is needed for mergeSort and is given on the exam */
   int *copy = safeMalloc((right - left) * sizeof(int));
   for (int i = left; i < right; i++) 
     copy[i - left] = arr[i];
   return copy;
 }
 
+  // sorts an array of integers in O(n log n) time;
+  // this function is given on the exam
 void mergeSort(int *arr, int length) {
-  /* sorts an array of integers in O(n log n) time;
-     this function is given on the exam */
   int l = 0, r = 0, idx = 0, mid = length/2;
   if (length <= 1) return;
   
@@ -38,14 +38,14 @@ void mergeSort(int *arr, int length) {
   free(right);
 }
 
+  // sorts an array of integers in O(n²) time
 void bubbleSort(int *arr, int len) {
-  /* sorts an array of integers in O(n²) */
   int i, j, change;
   for (i = 0; i < len; ++i) {
     change = 0;
     for (j = 0; j+1 < len - i; ++j) {
       if (arr[j] > arr[j+1]) {
-        swap(&arr[j], &arr[j+1], sizeof(int));
+        SWAP(arr[j], arr[j+1]);
         change = 1;
       }
     }
@@ -53,8 +53,8 @@ void bubbleSort(int *arr, int len) {
   }
 }
 
+  // sorts an array of integers in O(n²) time
 void insertionSort(int *arr, int len) {
-  /* sorts an array of integers in O(n²) */
   int i, j, key;
   for (i = 1; i < len; ++i) {
     key = arr[i];
@@ -67,20 +67,20 @@ void insertionSort(int *arr, int len) {
   }
 }
 
+  // sorts an array of integers in O(n²) time
 void selectionSort(int *arr, int len) {
-  /* sorts an array of integers in O(n²) */
   int i, j, min;
   for (i = 0; i < len-1; ++i) {
     min = i;
     for (j = i+1; j < len; ++j) 
       if (arr[j] < arr[min]) min = j;
-    swap(&arr[i], &arr[min], sizeof(int));
+    SWAP(arr[i], arr[min]);
   }
 }
 
+  // sorts an array of integers in expected ϴ(n log n);
+  // worst-case performance, however, is in ϴ(n²) 
 void quickSort(int *arr, int len) {
-  /* sorts an array of integers in expected ϴ(n log n) time,
-     worst-case performance, however, is in ϴ(n²) */
   int i, j, pivot;
   if (len <= 1) return;
   pivot = arr[len/2];
@@ -88,19 +88,20 @@ void quickSort(int *arr, int len) {
     while (arr[i] < pivot) ++i;
     while (arr[j] > pivot) --j;
     if (i >= j) break;
-    swap(&arr[i], &arr[j], sizeof(int));
+    SWAP(arr[i], arr[j]);
   }
   quickSort(arr, i);
   quickSort(arr+i, len-i);
 }
 
+  // sorts an array of integers in O(n) time;
+  // assumes the range is not too large
 void countingSort(int *arr, int length) {
-  /* sorts an array of integers in O(n) time */
   int min, max, range, i, j, idx = 0;
   min = max = arr[0];
   for (i = 1; i < length; i++) {
-    min = minimum (arr[i], min);
-    max = maximum (arr[i], max);
+    min = MIN (arr[i], min);
+    max = MAX (arr[i], max);
   }
   range = max - min + 1;
   int *count = safeCalloc(range, sizeof(int));
