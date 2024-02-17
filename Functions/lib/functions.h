@@ -63,7 +63,7 @@
     free(matrix[matrix##i]); \
   free(matrix);
 
-  // macro for reading input into an array of given length
+  // macro for reading input into an array of known length
   // Examples:  READ_ARRAY(myInts, "%d", 20);
   //            READ_ARRAY(myDbls, "%lf", 15);
   //            READ_ARRAY(myString, "%c", 10);

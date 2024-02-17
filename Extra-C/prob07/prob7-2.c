@@ -1,28 +1,13 @@
-/* file: prob7.c
-* author: David De Potter
-* description: extra, problem 7,
-*   matching bitstrings
+/* 
+  file: prob7-2.c
+  author: David De Potter
+  description: extra, problem 7, matching bitstrings
+  version: 7.2, using the functions library
 */
 
 #include <stdio.h>
 #include <stdlib.h>
-
-void *safeMalloc (int n) {
-  // checks if memory has been allocated successfully
-  void *p = malloc(n);
-  if (p == NULL) {
-    printf("Error: malloc(%d) failed. Out of memory?\n", n);
-    exit(EXIT_FAILURE);
-  }
-  return p;
-}
-
-char *readString (int n) {
-  // reads a string of n bits
-  char *bits = safeMalloc((n+1)*sizeof(char));
-  (void)! scanf("%s", bits);
-  return bits;
-}
+#include "../../Functions/lib/functions.h"
 
 void getBitstrings (char *bits, int idx, int n, int count0, int count1) {
   // prints, in lexicographical order, all bitstrings of length n 
@@ -55,9 +40,11 @@ void getBitstrings (char *bits, int idx, int n, int count0, int count1) {
 int main (int argc, char *argv[]) {
   int n;
 
-  (void)! scanf("%d", &n);
+  (void)! scanf("%d ", &n);
 
-  char *bits = readString(n);
+  CREATE_ARRAY(char, bits, n + 1);
+
+  READ_ARRAY(bits, "%c", n);
 
   getBitstrings(bits, 0, n, 0, 0);
 

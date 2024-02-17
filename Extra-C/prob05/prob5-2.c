@@ -1,18 +1,13 @@
-/* file: prob5.c
+/* file: prob5-2.c
    author: David De Potter
    description: extra, problem 5, next smaller number
+   version: 5.2, using the functions library
 */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-void swap(char *a, char *b) {
-  // swap the values of a and b
-  char tmp = *a;
-  *a = *b;
-  *b = tmp; 
-}
+#include "../../Functions/lib/functions.h"
 
 int main() {
   char arr[20];
@@ -34,13 +29,13 @@ int main() {
   int j = len - 1;
   while (arr[j] >= arr[i]) j--;
 
-  swap(&arr[i], &arr[j]);
+  SWAP(arr[i], arr[j]);
 
   // sort the rest of the string in descending order
   j = len - 1;
   i++;
   while (i < j) 
-    swap(&arr[i++], &arr[j--]);
+    SWAP(arr[i++], arr[j--]);
 
   // print if there are no leading zeros
   printf(arr[0] == '0' ? "-1\n" : "%s\n", arr);

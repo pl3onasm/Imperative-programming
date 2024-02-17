@@ -1,4 +1,4 @@
-/* file: prob6.c
+/* file: prob6-1.c
 * author: David De Potter
 * description: extra, problem 6, balanced brackets
 */

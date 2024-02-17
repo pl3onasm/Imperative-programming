@@ -20,14 +20,16 @@ int isDivisor(int x, int y) {
   return x % y == 0;
 }
 
-int GCD(int a, int b) {
   // returns the greatest common divisor of a and b
+int GCD(int a, int b) {
+  
   if (b == 0) return a;
   return GCD(b, a % b);
 }
 
-int LCM(int a, int b) {
   // returns the least common multiple of a and b
+int LCM(int a, int b) {
+  
   return a / GCD(a, b) * b;
 }
 

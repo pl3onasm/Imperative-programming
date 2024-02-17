@@ -1,4 +1,5 @@
-/* file: prob8.c
+/* 
+  file: prob8-1.c
   author: David De Potter
   description: extra, problem 8, segments
 */
