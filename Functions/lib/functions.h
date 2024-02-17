@@ -98,6 +98,23 @@
   size = arr##Len;\
   arr[arr##Len] = '\0';
 
+  // macro for reading input from stdin until a given 
+  // delimiter is encountered 
+  // returns a string containing all chars read
+  // and sets size to the number of chars read
+  // Examples:  READ_UNTIL(char, myString, "%c", '\n', size);
+  //            READ_UNTIL(int, myInts, "%d", 0, size);
+#define READ_UNTIL(type, arr, format, delim, size) \
+  type *arr = safeCalloc(100, sizeof(type)); \
+  size_t arr##Len = 0; type arr##var; \
+  while (scanf(format, &arr##var) == 1 && arr##var != delim) { \
+    arr[arr##Len++] = arr##var; \
+    if (arr##Len % 100 == 0) \
+      arr = safeRealloc(arr, (arr##Len + 100) * sizeof(type)); \
+  } \
+  size = arr##Len;\
+  arr[arr##Len] = '\0';
+
 //::::::::::::::::::::::::: INTEGERS.C :::::::::::::::::::::::::://
 
   // returns the number of digits in the given integer
@@ -174,13 +191,6 @@ void *safeCalloc(int n, int size);
     
   // reallocates memory and checks if it succeeded
 void *safeRealloc(void *ptr, int newSize);
-    
-//::::::::::::::::::::::::::: IO.C ::::::::::::::::::::::::::::::://
-
-  // reads chars until delim is encountered, 
-  // returns a string containing all chars read
-  // and sets size to the number of chars read
-char *readUntil(char delim, int *size);
     
 //:::::::::::::::::::::::: SEARCHING.C ::::::::::::::::::::::::::://
 

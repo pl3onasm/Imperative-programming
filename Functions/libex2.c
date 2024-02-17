@@ -53,7 +53,7 @@ int main() {
   free(dbls);
 
   // read one line of input 
-  char *str = readUntil('\n', &size);
+  READ_UNTIL(char, str, "%c", '\n', size);
   printf("\nThe input string is:\n%s\n", str);
   free(str);
 

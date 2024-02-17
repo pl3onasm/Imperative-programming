@@ -34,7 +34,7 @@ int isBalanced(char *s, int len) {
 
 int main (int argc, char *argv[]) {
   int len;
-  char *str = readUntil('\n', &len);
+  READ_UNTIL(char, str, "%c", '\n', len);
   
   printf(isBalanced(str, len) ? "YES\n" : "NO\n");
 
