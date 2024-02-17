@@ -92,7 +92,7 @@ if [ $LEN -eq 0 ]; then
   exit 1
 fi
 
-echo 
+echo
 
 # Print header for test results
 if [ -t 1 ]; then
@@ -105,7 +105,7 @@ else
   echo -e "└──────────────────────────┘"
 fi
 
-echo    "-${line##*-}"
+echo
 
 # Compare the output of the program with the expected output
 for INFILE in "${INFILES[@]}"; do
