@@ -1,4 +1,4 @@
-#include "functions.ih"
+#include "clib.ih"
 
   // linear search: searches for key in arr and 
   // returns its index if found, otherwise returns -1

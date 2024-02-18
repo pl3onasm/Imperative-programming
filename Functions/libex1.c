@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "lib/functions.h"
+#include "clib/clib.h"
 
 int isValidInt(char *str, int *n) {
   // check if the input is a valid positive integer

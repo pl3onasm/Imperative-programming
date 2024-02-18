@@ -9,7 +9,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "../../Functions/lib/functions.h"
+#include "../../Functions/clib/clib.h"
 
 int maxPath (int *row1, int *row2, int n) {
   /* computes the maximum path cost */

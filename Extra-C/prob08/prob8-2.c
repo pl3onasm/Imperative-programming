@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "../../Functions/lib/functions.h"
+#include "../../Functions/clib/clib.h"
 
 typedef struct {
   int start, end;

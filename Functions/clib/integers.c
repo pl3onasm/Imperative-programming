@@ -1,4 +1,4 @@
-#include "functions.ih"
+#include "clib.ih"
 
   // returns the number of digits in n
 int countDigits(int n) {

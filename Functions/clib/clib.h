@@ -27,7 +27,7 @@
   for (int arr##i = 0; arr##i < len; ++arr##i){ \
     printf(format, arr[arr##i]);\
     printf(arr##i == len-1 ? "\n" : ", "); \
-  } \
+  } 
 
   // macro for printing a matrix of a given type and dimensions
   // Examples:  PRINT_MATRIX(myInts, "%d", rows, cols);
@@ -39,7 +39,7 @@
       printf(format, matrix[matrix##i][matrix##j]); \
       printf(matrix##j == cols-1 ? "\n" : " "); \
     } \
-  } \
+  } 
 
   // macro for creating an array of a given type and length
   // Examples:  CREATE_ARRAY(myInts, int, 10);

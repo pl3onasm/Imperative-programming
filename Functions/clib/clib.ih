@@ -1,4 +1,4 @@
-#include "functions.h"
+#include "clib.h"
 
 #include <stdio.h>    // for printf, scanf
 #include <stdlib.h>   // for malloc, calloc, realloc, free

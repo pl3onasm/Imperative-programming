@@ -1,4 +1,4 @@
-#include "functions.ih"
+#include "clib.ih"
 
   // copies the subarray arr[left..right] into a new array;
   // needed for mergeSort and is given on the exam

@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "../../Functions/lib/functions.h"
+#include "../../Functions/clib/clib.h"
 
 int main() {
   char arr[20];

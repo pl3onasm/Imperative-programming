@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "../../Functions/lib/functions.h"
+#include "../../Functions/clib/clib.h"
 
 void getBitstrings (char *bits, int idx, int n, int count0, int count1) {
   // prints, in lexicographical order, all bitstrings of length n 

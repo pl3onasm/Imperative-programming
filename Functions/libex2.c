@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "lib/functions.h"
+#include "clib/clib.h"
 
 int main() {
   int rows, cols, size;

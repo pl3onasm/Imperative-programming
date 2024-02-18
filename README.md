@@ -101,12 +101,12 @@ ctest.sh myprogram.c > results.txt
 
 ## ${\color{cadetblue}\text{Functions library}}$
 
-The folder [functions](Functions) contains some useful function implementations in C. Have a look at the [header file](Functions/lib/functions.h) to see which functions are available and how to use them.  
+The folder [functions](Functions) contains some useful function implementations in C. Have a look at the [header file](Functions/clib/clib.h) to see which functions are available and how to use them.  
 
 You can choose to include these functions in your own code, or use them as a reference to write your own implementation. If you want to work with these functions, just add the include directive with the appropriate path. For example:
 
 ```c
-#include "../../../Functions/lib/functions.h"
+#include "../../../Functions/clib/clib.h"
 ```
 
 Including the header file in this way will also make the test script compile your own code along with the functions from the library. Since the library is small, it is not necessary to work with a static or dynamic library. Some concrete examples of how to use the functions can be found in the [Functions](Functions) and [Extra-C](Extra-C) folders.

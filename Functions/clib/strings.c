@@ -1,4 +1,4 @@
-#include "functions.ih"
+#include "clib.ih"
 
   // checks whether a string is a palindrome;
   // start and end are pointers to the first and last
