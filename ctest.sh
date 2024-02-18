@@ -42,22 +42,22 @@ if ! [ -x "$(command -v gcc)" ]; then
   exit 1
 fi
 
-# Extract the include line from the program if it exists
+# Extract the include line for clib.h from the program if it exists
 # it should not be commented out
-INCLUDE=$(grep -E "^#include[ /.\"a-zA-Z0-9]*functions.h" "$1")
+INCLUDE=$(grep -E "^#include[ /.\"a-zA-Z0-9]*clib.h" "$1")
 
 if [ -n "$INCLUDE" ]; then
   # extract the path to the functions library and remove 'functions.h' at the end
   LIBPATH=$(echo "$INCLUDE" | cut -d '"' -f 2 | rev | cut -d '/' -f 2- | rev)
-  # Check if the library path is valid
-  if [ -d "$LIBPATH" ]; then
-    echo -e "\nFunctions library found in $LIBPATH"
+  # Check if the library path is valid and contains clib.h
+  if [ -d "$LIBPATH" ] && [ -f "$LIBPATH/clib.h" ]; then
+    echo -e "\nClib library found in $LIBPATH"
   else
-    echo -e "\nFunctions library not found in $LIBPATH"
+    echo -e "\nClib library not found in $LIBPATH"
     exit 1
   fi
   # Compile the program with the library included
-  echo -e "\nCompiling the program with the functions library..."
+  echo -e "\nCompiling the program with library clib..."
   gcc -O2 -std=c99 -pedantic -Wall -o a.out "$1" "$LIBPATH"/*.c -lm
 else
   # Compile the program without the library
@@ -203,14 +203,14 @@ LEN=$((LEN + 1))  # Add 1 for valgrind test
 
 # Print final result
 if [ $PASSED -eq $LEN ]; then
-  if [ -t 1 ]; then echo -e $(green "You have passed all tests! \(ᵔᵕᵔ)/")
+  if [ -t 1 ]; then echo -e $(green "Passed all tests! \(ᵔᵕᵔ)/")
   else echo "All tests passed!"; fi
 elif [ $PASSED -eq $(($LEN-1)) ]; then 
-  if [ -t 1 ]; then echo -e $(magenta "You have passed $PASSED out of $LEN tests.")
+  if [ -t 1 ]; then echo -e $(magenta "Passed $PASSED out of $LEN tests.")
   echo -e $(magenta "Almost there...! (◎_◎)")
   else echo -e "Passed $PASSED out of $LEN tests."; fi
 else    
-  if [ -t 1 ]; then echo -e $(magenta "You have passed $PASSED out of $LEN tests. 
+  if [ -t 1 ]; then echo -e $(magenta "Passed $PASSED out of $LEN tests. 
   (._.)")
   else echo "Passed $PASSED out of $LEN tests."; fi
 fi
