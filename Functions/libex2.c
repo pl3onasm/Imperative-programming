@@ -1,7 +1,7 @@
 /* 
   file: libex2.c
   author: David De Potter
-  description: example program for using the functions library
+  description: example program for using the clib library
   Compile with the test script and feed it the input file:
     ../ctest.sh libex2.c 
   Usage: ./a.out <input.txt

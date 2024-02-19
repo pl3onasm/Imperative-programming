@@ -60,13 +60,13 @@ If you want to use the script, you basically have two options:
 Opening a terminal from the working directory containing your program, the solution, and the folder with the tests, run the below commands.  
 First, make the script executable:
 
-```linux
+```shell
 chmod +x ../../../ctest.sh
 ```
 
 Then run the script by using the following command:
 
-```linux
+```shell
 ../../../ctest.sh myprogram.c
 ```
 
@@ -75,19 +75,19 @@ Then run the script by using the following command:
 Alternatively, you can add the script to your PATH variable and run it from anywhere.  
 To display the current $PATH, run the following command:
 
-```linux
+```shell
 echo $PATH
 ```
 
 Then, copy the script to one of the folders in $PATH. If you have copied the script to the folder before, the command will simply overwrite the previous version. For example:
 
-```linux
+```shell
 sudo cp ctest.sh /usr/bin/
 ```
 
 Now you can run the script from the directory containing your program and the folder with test cases by using the following command:
 
-```linux
+```shell
 ctest.sh myprogram.c
 ```  
 
@@ -95,7 +95,7 @@ ctest.sh myprogram.c
 
 You may also choose to redirect the output to a file, in which case the color codes will be removed automatically to render a plain text file:
 
-```linux
+```shell
 ctest.sh myprogram.c > results.txt
 ```
 
@@ -119,10 +119,14 @@ The script was tested on Ubuntu 22.04 LTS, using GCC 13.1.0, Valgrind 3.18.1, an
 
 If you want to compile and test your code manually, you can use the following commands:
 
-```linux
+```shell
 gcc -O2 -std=c99 -pedantic -Wall -o a.out myprogram.c -lm
-valgrind --leak-check=full ./a.out < tests/input.in
+```  
+
+```shell
+valgrind --leak-check=full ./a.out < tests/1.in
 ```
+
 
 &nbsp;&nbsp;&nbsp;
 

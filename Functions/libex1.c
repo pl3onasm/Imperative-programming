@@ -1,7 +1,7 @@
 /* 
   file: libex1.c
   author: David De Potter
-  description: example program using functions from Functions library
+  description: example program using functions from clib library
     Program asks for a pos. integer and prints some of its properties
   compilation: ../ctest.sh libex1.c
   usage: ./a.out

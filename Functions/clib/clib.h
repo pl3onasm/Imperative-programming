@@ -1,6 +1,6 @@
-/* file: functions.h
+/* file: clib.h
    author: David De Potter
-   description: header file for the functions library
+   description: header file for the clib library
 */
 
 #ifndef FUNCTIONS_H_INCLUDED    
