@@ -4,7 +4,9 @@
   description: extra, problem 3, maximum path
   version: 3.2, using functions library and
     while the time complexity is still in O(n²), the
-    space complexity is now in O(n) instead of O(n²)
+    space complexity is now in O(n) instead of O(n²),
+    by using only two rows of size n instead of a
+    2D array of size n²
 */
 
 #include <stdio.h>

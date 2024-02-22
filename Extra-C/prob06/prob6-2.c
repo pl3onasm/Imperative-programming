@@ -2,7 +2,7 @@
   file: prob6-2.c
   author: David De Potter
   description: extra, problem 6, balanced brackets
-  version: 6.2, using the functions library
+  version: 6.2, using the clib library
 */
 
 #include <stdio.h>

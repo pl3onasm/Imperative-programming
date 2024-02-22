@@ -2,7 +2,7 @@
   file: prob8-2.c
   author: David De Potter
   description: extra, problem 8, segments
-  version: 8.2, using the functions library and qsort
+  version: 8.2, using the clib library and qsort
 */
 
 #include <stdio.h>

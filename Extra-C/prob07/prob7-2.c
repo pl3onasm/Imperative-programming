@@ -2,7 +2,7 @@
   file: prob7-2.c
   author: David De Potter
   description: extra, problem 7, matching bitstrings
-  version: 7.2, using the functions library
+  version: 7.2, using the clib library
 */
 
 #include <stdio.h>

@@ -1,7 +1,7 @@
 /* file: prob5-2.c
    author: David De Potter
    description: extra, problem 5, next smaller number
-   version: 5.2, using the functions library
+   version: 5.2, using the clib library
 */
 
 #include <stdio.h>

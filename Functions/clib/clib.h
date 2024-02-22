@@ -3,8 +3,8 @@
    description: header file for the clib library
 */
 
-#ifndef FUNCTIONS_H_INCLUDED    
-#define FUNCTIONS_H_INCLUDED
+#ifndef CLIB_H_INCLUDED    
+#define CLIB_H_INCLUDED
 
 //::::::::::::::::::::::::: MACROS :::::::::::::::::::::::::::::://
 
@@ -245,4 +245,4 @@ void quickSort(int *array, int size);
   // assumes the range between min and max value is not too large
 void countingSort(int *array, int size);
     
-#endif // FUNCTIONS_H_INCLUDED
+#endif // CLIB_H_INCLUDED
