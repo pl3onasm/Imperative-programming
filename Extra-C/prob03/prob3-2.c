@@ -2,11 +2,12 @@
   file: prob3-2.c
   author: David De Potter
   description: extra, problem 3, maximum path
-  version: 3.2, using functions library and
-    while the time complexity is still in O(n²), the
-    space complexity is now in O(n) instead of O(n²),
-    by using only two rows of size n instead of a
-    2D array of size n²
+  version: 3.2, using clib library 
+    also changed the implementation to use only two
+    rows of size n instead of a 2D array of size n²
+    Time complexity is still O(n²)
+    Space complexity is now O(n) instead of O(n²) of
+    the previous implementation
 */
 
 #include <stdio.h>

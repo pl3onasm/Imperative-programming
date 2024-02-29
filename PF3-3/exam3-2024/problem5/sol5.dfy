@@ -1,7 +1,7 @@
 /* 
   file: sol5.dfy
   author: David De Potter
-  description: 3-3rd exam 2023, solution to problem 5
+  description: 3-3rd exam 2024, solution to problem 5
 */
 
 method problem5(a: array<int>) returns (k: nat)

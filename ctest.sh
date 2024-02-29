@@ -47,7 +47,7 @@ fi
 INCLUDE=$(grep -E "^#include[ /.\"a-zA-Z0-9]*clib.h" "$1")
 
 if [ -n "$INCLUDE" ]; then
-  # extract the path to the functions library and remove 'functions.h' at the end
+  # Extract the path to the clib library and remove 'clib.h' at the end
   LIBPATH=$(echo "$INCLUDE" | cut -d '"' -f 2 | rev | cut -d '/' -f 2- | rev)
   # Check if the library path is valid and contains clib.h
   if [ -d "$LIBPATH" ] && [ -f "$LIBPATH/clib.h" ]; then
