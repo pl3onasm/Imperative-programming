@@ -46,7 +46,7 @@ Found this repository useful? Help out your (future) fellow students by mailing 
 
 |||
 |:---:|:---:|
-|**[2024](PF3-3/exam3-2024)**| **[2024](PF3-3/resit3-2024)** |
+|**[2024](PF3-3/exam3-2024)**| **[2024 resit](PF3-3/resit3-2024)** |
 |||
 
 ## ${\color{cadetblue}\text{Testing}}$
