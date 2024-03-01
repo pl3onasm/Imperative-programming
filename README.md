@@ -132,8 +132,11 @@ valgrind --leak-check=full ./a.out < tests/1.in
 
 ## ${\color{cadetblue}\text{Output example of the script}}$
 
-<p align="center" width="50%">
-<img src="example.jpg"
+&nbsp;
+
+<IMG src="example.jpg"
      alt="Example output"
-     style="float: left; padding-top:25px; padding-left:20px; padding-right:20px;" />  
-</p>
+     title="Example output"
+     hspace=5%
+     width=90%
+     style="float: left" />

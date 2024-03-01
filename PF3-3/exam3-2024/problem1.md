@@ -10,7 +10,17 @@ while (s < N) {
 }
 ```
 
-At the end of each iteration, we have $s = i^2 + 2i$. The fragment is based on Gauss' formula for the sum of the first $n$ integers. The loop will terminate when:
+At the end of each iteration, $s$ is incremented by $2i + 1$. Using Gauss' formula for the sum of the first $n$ integers, we have at the end of the $i$-th iteration:
+
+$$
+\begin{align*}
+s &= 2 \sum_{k=1}^{i} k + i \\
+&= i(i+1) + i \\
+&= i^2 + 2i
+\end{align*}
+$$
+
+The loop will terminate when:
 
 $$
 \begin{align*}

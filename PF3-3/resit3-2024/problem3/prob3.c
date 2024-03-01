@@ -56,19 +56,14 @@ int countPairs(int *arr, int n, int k) {
   // counts the number of pairs in arr 
   // with difference <= k
   int count = 0;
-  for (int i = 0; i < n; i++) {
-    for (int j = i + 1; j < n; j++) {
-      if (arr[j] - arr[i] <= k) 
-        ++count;
-      if (arr[j] - arr[i] > k) 
-        break;
-    }
-  }
+  for (int i = 0; i < n; i++) 
+    for (int j = i + 1; j < n && arr[j] - arr[i] <= k; j++) 
+      ++count;
   return count;
 }
 
 int main(){
-  int n, k, count = 0;
+  int n, k;
   (void)! scanf("%d %d:", &k, &n);
 
   int *arr = readArray(n);
