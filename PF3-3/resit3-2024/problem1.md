@@ -100,7 +100,7 @@ while (n > 0) {
 
 In the best case, $N$ is a power of $2$, so that $n$ is halved at each iteration, and the loop runs $\log(N)$ times. In the worst case, $n$ is halved half of the time and decremented by $1$ the other half of the time, so that the loop runs $2\log(N)$ times. The fragment's complexity is therefore in $\mathcal{O}(\log(N))$.
 
-## Ex5: $\color{rosybrown}{{\mathcal{O}(N)}}$  
+## Ex5: $\color{rosybrown}{{\mathcal{O}(N^2)}}$  
 
 ```c
 int s = 0;
@@ -109,7 +109,7 @@ for (int i = 0; i < N*N; i += 2) {
 }
 ```
 
-The loop index $i$ is incremented by $2$ at each iteration, so that the loop runs $\frac{N^2}{2}$ times. The fragment's complexity is therefore in $\mathcal{O}(N)$.
+The loop index $i$ is incremented by $2$ at each iteration, so that the loop runs $\frac{N^2}{2}$ times. The fragment's complexity is therefore in $\mathcal{O}(N^2)$.
 
 ## Ex6: $\color{rosybrown}{{\mathcal{O}(\sqrt{N})}}$
 
