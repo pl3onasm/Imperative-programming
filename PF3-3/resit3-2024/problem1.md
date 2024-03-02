@@ -181,20 +181,9 @@ for (int i = 1; i < N; i++) {
 }
 ```
 
-The outer loop runs $N-1$ times, and the innermost loop runs $j\cdot (N-j+1)$ times for each value of $j$ in the range $[0, 9]$, so that the total number of iterations can be computed as follows:
+The outer loop runs $N-1$ times, and the innermost loop runs $10\cdot (N-j+1)$ times, where $j$ lies in the range $[0, 9]$. In fact, the only purpose of the middle loop is to make the middle loop run $10$ times, and the fact that $j$ is subtracted from the initial value of the loop index $k$ at each iteration is irrelevant for the complexity analysis. The middle loop can therefore be ignored, and the fragment's complexity is determined by the product of the number of iterations of the outer and innermost loops, which is $N^2$.
 
-$$
-\begin{align*}
-& \space \sum_{i=1}^{N-1} \sum_{j=0}^{9} j(N-j+1) \\
-=& \space\sum_{i=1}^{N-1} \sum_{j=0}^{9} (jN - j^2 + j) \\
-=& \space\sum_{i=1}^{N-1} N \sum_{j=0}^{9} j - \sum_{i=1}^{N-1} \sum_{j=0}^{9} j^2 + \sum_{i=1}^{N-1} \sum_{j=0}^{9} j \\
-=& \space 45N(N-1) - 285 (N-1) \\
-& \quad + 45(N-1) \\
-=& \space\mathcal{O}(N^2)
-\end{align*}
-$$
-
-The fragment's complexity is therefore in $\mathcal{O}(N^2)$.
+The fragment's overall complexity is therefore in $\mathcal{O}(N^2)$.
 
 ## Ex11: $\color{rosybrown}{{\mathcal{O}(\sqrt{N})}}$
 
