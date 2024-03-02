@@ -76,13 +76,13 @@ while (s < N) {
 }
 ```
 
-Let $k \in \mathbb{N}$ be the number of iterations of the outer loop. At each iteration of the inner loop, $s$ is then incremented by $10(k-1) + 45$, where $45$ is the sum of the integers from $0$ to $9$, computed using Gauss' formula. The outer loop will terminate when:
+Let $k \in \lbrace 1, 2, 3, \dots \rbrace$ be the number of iterations of the outer loop. At each iteration of the inner loop, $s$ is then incremented by $100(k-1) + 45$, where $45$ is the sum of the integers from $0$ to $9$, computed using Gauss' formula. The outer loop will terminate when:
 
 $$
 \begin{align*}
 & s \geq N \\
-\Leftrightarrow \quad &10(k-1) + 45 \geq N \\
-\Leftrightarrow \quad &k \geq \frac{N}{10} - 3.5 \\
+\Leftrightarrow \quad &100(k-1) + 45 \geq N \\
+\Leftrightarrow \quad &k \geq \frac{N}{100} + 0.55 \\
 \end{align*}
 $$
 
@@ -120,7 +120,7 @@ for (int i = 0; i * i < N; i += 2) {
 }
 ```
 
-The loop's termination condition can be rewritten as $i^2 \leq N$, which is equivalent to $i \leq \sqrt{N}$. Since $i$ is incremented by $2$ at each iteration, the loop runs $\frac{\sqrt{N}}{2}$ times. The fragment's complexity is therefore in $\mathcal{O}(\sqrt{N})$.
+The loop's termination condition can be rewritten as $i^2 < N$, which is equivalent to $i < \sqrt{N}$. Since $i$ is incremented by $2$ at each iteration, the loop runs $\frac{\sqrt{N}}{2}$ times. The fragment's complexity is therefore in $\mathcal{O}(\sqrt{N})$.
 
 ## Ex7: $\color{rosybrown}{{\mathcal{O}(N)}}$
 

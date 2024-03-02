@@ -7,7 +7,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include "../../Functions/clib/clib.h"
 
 int isBalanced(char *s, int len) {
@@ -29,7 +28,7 @@ int isBalanced(char *s, int len) {
   }
   free(stack);
   return top == 0;  
-  }
+}
 
 
 int main (int argc, char *argv[]) {
