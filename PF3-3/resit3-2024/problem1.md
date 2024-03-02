@@ -181,7 +181,7 @@ for (int i = 1; i < N; i++) {
 }
 ```
 
-The outer loop runs $N-1$ times, and the innermost loop runs $10\cdot (N-j+1)$ times, where $j$ lies in the range $[0, 9]$. In fact, the only purpose of the middle loop is to make the middle loop run $10$ times, and the fact that $j$ is subtracted from the initial value of the loop index $k$ at each iteration is irrelevant for the complexity analysis. The middle loop can therefore be ignored, and the fragment's complexity is determined by the product of the number of iterations of the outer and innermost loops, which is $N^2$.
+The outer loop runs $N-1$ times, and the innermost loop runs $10\cdot (N-j+1)$ times, where $j$ lies in the range $[0, 9]$. In fact, the only purpose of the middle loop is to make the innermost loop run $10$ times, and the fact that $j$ is subtracted from the initial value of the loop index $k$ at each iteration is irrelevant for the complexity analysis. The middle loop can therefore be ignored, and the fragment's complexity is determined by the product of the number of iterations of the outer and innermost loops, which is $N^2$.
 
 The fragment's overall complexity is therefore in $\mathcal{O}(N^2)$.
 
