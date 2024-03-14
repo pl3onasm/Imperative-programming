@@ -5,9 +5,8 @@
   version: 3.2, using clib library 
     also changed the implementation to use only two
     rows of size n instead of a 2D array of size n²
-    Time complexity is still O(n²)
-    Space complexity is now O(n) instead of O(n²) of
-    the previous implementation
+    Time complexity is still O(n²), but the space 
+    complexity is now O(n) instead of O(n²) 
 */
 
 #include <stdio.h>
@@ -16,15 +15,15 @@
 
 int maxPath (int *row1, int *row2, int n) {
   /* computes the maximum path cost */
+  
   // read the first row
   READ_ARRAY(row1, "%d ", 1);
   
-  // calculate the maximum path cost for each cell
   for (int i = 2; i <= n; ++i) {
     // read the next row
     READ_ARRAY(row2, "%d ", i);
 
-    // calculate the maximum path cost for each cell
+    // compute the maximum path cost for each cell
     for (int j = 0; j < i; ++j) {
       if (j == 0)
         row2[j] += row1[j];
