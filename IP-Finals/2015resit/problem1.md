@@ -2,7 +2,7 @@ $\color{cadetblue}{\text{\huge Problem 1}}$
 
 ---------------
 
-${\color{darkkhaki}\text{\Large Prob 1.1: }}{\color{olive}\text{\Large \space b}}$
+${\color{darkkhaki}\text{\Large Prob 1.1: }}\space{\color{olive}\text{\Large b}}$
 
 ```java
 // x = A ∧ y = B
@@ -24,7 +24,7 @@ $\quad \lbrace \space x = A - B \space \land \space y = 2 * B - A \space \rbrace
 
 ---------------
 
-${\color{darkkhaki}\text{\Large Prob 1.2: }}{\color{olive}\text{\Large \space a}}$
+${\color{darkkhaki}\text{\Large Prob 1.2: }}\space{\color{olive}\text{\Large a}}$
 
 ```java
 // 4 * x + 5 * y = A
@@ -42,7 +42,7 @@ $\quad \lbrace \space x + y = A \space \rbrace$
 
 ---------------
 
-${\color{darkkhaki}\text{\Large Prob 1.3: }}{\color{olive}\text{\Large \space b}}$
+${\color{darkkhaki}\text{\Large Prob 1.3: }}\space{\color{olive}\text{\Large b}}$
 
 ```java
 // x = A * A * A ∧ y = A * A ∧ z = A
@@ -70,7 +70,7 @@ $\quad \lbrace \space x = (A + 1) * (A + 1) * (A + 1)\space \rbrace$
 
 ---------------
 
-${\color{darkkhaki}\text{\Large Prob 1.4: }}{\color{olive}\text{\Large \space b}}$
+${\color{darkkhaki}\text{\Large Prob 1.4: }}\space{\color{olive}\text{\Large b}}$
 
 ```java
 // x = B ∧ y = A
@@ -89,7 +89,7 @@ $\quad \lbrace \space x = A \space \land \space y = A \space \rbrace$
 
 ---------------
 
-${\color{darkkhaki}\text{\Large Prob 1.5: }}{\color{olive}\text{\Large \space c}}$
+${\color{darkkhaki}\text{\Large Prob 1.5: }}\space{\color{olive}\text{\Large c}}$
 
 ```java
 // x = A + 2 ∧ y = 2 * A
@@ -113,7 +113,7 @@ $\quad \lbrace \space x = 3 * A + 2 \space \land \space y = A + 2 \space \rbrace
 
 ---------------
 
-${\color{darkkhaki}\text{\Large Prob 1.6: }}{\color{olive}\text{\Large \space a}}$
+${\color{darkkhaki}\text{\Large Prob 1.6: }}\space{\color{olive}\text{\Large a}}$
 
 ```java
 // y = A ∧ z = A + B ∧ x = A + B + C

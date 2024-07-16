@@ -2,7 +2,7 @@ $\color{cadetblue}{\text{\huge Problem 1}}$
 
 ---------------
 
-${\color{darkkhaki}\text{\Large Prob 1.1: }}{\color{olive}\text{\Large \space c}}$
+${\color{darkkhaki}\text{\Large Prob 1.1: }}\space{\color{olive}\text{\Large c}}$
 
 ```java
 // 2 * y + x > 12
@@ -20,7 +20,7 @@ $\quad \lbrace \space x \space > \space 11 \space \rbrace \space$
 
 ---------------
 
-${\color{darkkhaki}\text{\Large Prob 1.2: }}{\color{olive}\text{\Large \space a}}$
+${\color{darkkhaki}\text{\Large Prob 1.2: }}\space{\color{olive}\text{\Large a}}$
 
 ```java
 // 6 * x + 3 * y + z = 3 * X - 2 * z
@@ -44,7 +44,7 @@ $\quad \lbrace \space z = X \space \rbrace \space$
 
 ---------------
 
-${\color{darkkhaki}\text{\Large Prob 1.3: }}{\color{olive}\text{\Large \space b}}$
+${\color{darkkhaki}\text{\Large Prob 1.3: }}\space{\color{olive}\text{\Large b}}$
 
 ```java
 // 7 * X - 3 ≤ x < 7 * X + 4
@@ -67,7 +67,7 @@ $\quad \lbrace \space x = X \space \rbrace \space$
 
 ---------------
 
-${\color{darkkhaki}\text{\Large Prob 1.4: }}{\color{olive}\text{\Large \space c}}$
+${\color{darkkhaki}\text{\Large Prob 1.4: }}\space{\color{olive}\text{\Large c}}$
 
 ```java
 // z + y > 4
@@ -88,7 +88,7 @@ $\quad \lbrace \space y \space > \space 5  \space \rbrace \space$
 
 ---------------
 
-${\color{darkkhaki}\text{\Large Prob 1.5: }}{\color{olive}\text{\Large \space b}}$
+${\color{darkkhaki}\text{\Large Prob 1.5: }}\space{\color{olive}\text{\Large b}}$
 
 ```java
 // x = X ∧ y = Y ∧ z = Z
@@ -119,7 +119,7 @@ $\quad \lbrace \space x = Z \space \land \space y = X + Y \space \land \space z 
 
 ---------------
 
-${\color{darkkhaki}\text{\Large Prob 1.6: }}{\color{olive}\text{\Large \space a}}$
+${\color{darkkhaki}\text{\Large Prob 1.6: }}\space{\color{olive}\text{\Large a}}$
 
 ```java
 // x = 3 * X - 2 * Y + 1 ∧ y = X

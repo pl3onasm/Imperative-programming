@@ -2,7 +2,7 @@ $\color{cadetblue}{\text{\huge Problem 1}}$
 
 ---------------
 
-${\color{darkkhaki}\text{\Large Prob 1.1: }}{\color{olive}\text{\Large \space b}}$
+${\color{darkkhaki}\text{\Large Prob 1.1: }}\space{\color{olive}\text{\Large b}}$
 
 ```java
 // x = 2 * X
@@ -23,7 +23,7 @@ $\quad \lbrace \space x = 42 * X + 21 \space \rbrace$
 
 ---------------
 
-${\color{darkkhaki}\text{\Large Prob 1.2: }}{\color{olive}\text{\Large \space c}}$
+${\color{darkkhaki}\text{\Large Prob 1.2: }}\space{\color{olive}\text{\Large c}}$
 
 ```java
 // x = 42 * X + 21
@@ -44,7 +44,7 @@ $\quad \lbrace \space x = 2 * X \space \rbrace$
 
 ---------------
 
-${\color{darkkhaki}\text{\Large Prob 1.3: }}{\color{olive}\text{\Large \space b}}$
+${\color{darkkhaki}\text{\Large Prob 1.3: }}\space{\color{olive}\text{\Large b}}$
 
 ```java
 // x = X * X * X, y = X * X, z = X
@@ -72,7 +72,7 @@ $\quad \lbrace \space x = (X + 1) * (X + 1) * (X + 1)\space \rbrace$
 
 ---------------
 
-${\color{darkkhaki}\text{\Large Prob 1.4: }}{\color{olive}\text{\Large \space a}}$
+${\color{darkkhaki}\text{\Large Prob 1.4: }}\space{\color{olive}\text{\Large a}}$
 
 ```java
 // x = X + Y ∧ y = 2 * X - 7
@@ -99,7 +99,7 @@ $\quad \lbrace \space y = Y \space \rbrace$
 
 ---------------
 
-${\color{darkkhaki}\text{\Large Prob 1.5: }}{\color{olive}\text{\Large \space b}}$
+${\color{darkkhaki}\text{\Large Prob 1.5: }}\space{\color{olive}\text{\Large b}}$
 
 ```java
 // x = X ∧ y = Y 
@@ -133,7 +133,7 @@ $\quad \lbrace \space x = Y \space \land \space y = 2 * X \space \rbrace$
 
 ---------------
 
-${\color{darkkhaki}\text{\Large Prob 1.6: }}{\color{olive}\text{\Large \space a}}$
+${\color{darkkhaki}\text{\Large Prob 1.6: }}\space{\color{olive}\text{\Large a}}$
 
 ```java
 // y = X ∧ z = X + Y ∧ x = X + Y + Z

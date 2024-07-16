@@ -2,7 +2,7 @@ $\color{cadetblue}{\text{\huge Problem 1}}$
 
 ---------------
 
-${\color{darkkhaki}\text{\Large Prob 1.1: }}{\color{olive}\text{\Large \space c}}$
+${\color{darkkhaki}\text{\Large Prob 1.1: }}\space{\color{olive}\text{\Large c}}$
 
 ```java
 // 6 < x + 2 * y < 11
@@ -21,7 +21,7 @@ $\quad \lbrace \space 5 \space < \space x \space < \space 10 \space \rbrace$
 
 ---------------
 
-${\color{darkkhaki}\text{\Large Prob 1.2: }}{\color{olive}\text{\Large \space b}}$
+${\color{darkkhaki}\text{\Large Prob 1.2: }}\space{\color{olive}\text{\Large b}}$
 
 ```java
 // 2 * x + 3 * y = X ∧ 2 * y = Y
@@ -40,7 +40,7 @@ $\quad \lbrace \space z = X + Y \space \rbrace$
 
 ---------------
 
-${\color{darkkhaki}\text{\Large Prob 1.3: }}{\color{olive}\text{\Large \space a}}$
+${\color{darkkhaki}\text{\Large Prob 1.3: }}\space{\color{olive}\text{\Large a}}$
 
 ```java
 // x = X + Y ∧ y = 2 * X - 7
@@ -62,7 +62,7 @@ $\quad \lbrace \space x = X + Y \space \land \space y = Y \space \rbrace$
 
 ---------------
 
-${\color{darkkhaki}\text{\Large Prob 1.4: }}{\color{olive}\text{\Large \space a}}$
+${\color{darkkhaki}\text{\Large Prob 1.4: }}\space{\color{olive}\text{\Large a}}$
 
 ```java
 // x = X ∧ y = Y
@@ -85,7 +85,7 @@ $\quad \lbrace \space x = X * Y \space \land \space y = X + Y \space \rbrace$
 
 ---------------
 
-${\color{darkkhaki}\text{\Large Prob 1.5: }}{\color{olive}\text{\Large \space b}}$
+${\color{darkkhaki}\text{\Large Prob 1.5: }}\space{\color{olive}\text{\Large b}}$
 
 ```java
 // x = X ∧ y = Y
@@ -104,7 +104,7 @@ $\quad \lbrace \space x = Y \space \land \space y = Y \space \rbrace \space$
 
 ---------------
 
-${\color{darkkhaki}\text{\Large Prob 1.6: }}{\color{olive}\text{\Large \space c}}$
+${\color{darkkhaki}\text{\Large Prob 1.6: }}\space{\color{olive}\text{\Large c}}$
 
 ```java
 // x = X ∧ y = Y

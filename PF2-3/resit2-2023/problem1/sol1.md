@@ -2,7 +2,7 @@ $\color{cadetblue}{\text{\huge Problem 1}}$
 
 ---------------
 
-${\color{darkkhaki}\text{\Large Prob 1.1: }}{\color{olive}\text{\Large \space a}}$
+${\color{darkkhaki}\text{\Large Prob 1.1: }}\space{\color{olive}\text{\Large a}}$
 
 ```java
 // x = 11 
@@ -19,7 +19,7 @@ $\quad \lbrace \space x = y + 7 \space \rbrace$
 
 ---------------
 
-${\color{darkkhaki}\text{\Large Prob 1.2: }}{\color{olive}\text{\Large \space c}}$
+${\color{darkkhaki}\text{\Large Prob 1.2: }}{\color{olive}\text{\Large c}}$
 
 ```java
 // x = B - A ∧ y = A + B 
@@ -42,7 +42,7 @@ $\quad \lbrace \space ( \space x + y \space) / 2 = A + B \space \rbrace$
 
 ---------------
 
-${\color{darkkhaki}\text{\Large Prob 1.3: }}{\color{olive}\text{\Large \space b}}$
+${\color{darkkhaki}\text{\Large Prob 1.3: }}{\color{olive}\text{\Large b}}$
 
 ```java
 // x - y = A - B ∧ x + y = A + B 
@@ -68,7 +68,7 @@ $\quad \lbrace \space x + y = A + B \space \rbrace$
 
 ---------------
 
-${\color{darkkhaki}\text{\Large Prob 1.4: }}{\color{olive}\text{\Large \space a}}$
+${\color{darkkhaki}\text{\Large Prob 1.4: }}{\color{olive}\text{\Large a}}$
 
 ```java
 // .....
@@ -91,7 +91,7 @@ $\quad \lbrace \space x + y = A \space \land \space y = B \space \rbrace$
 
 ---------------
 
-${\color{darkkhaki}\text{\Large Prob 1.5: }}{\color{olive}\text{\Large \space b}}$
+${\color{darkkhaki}\text{\Large Prob 1.5: }}{\color{olive}\text{\Large b}}$
 
 ```java
 // x = A ∧ y = B 
@@ -118,7 +118,7 @@ $\quad \lbrace \space x = 3 * A + B \space \land \space y = B + A \space \land \
 
 ---------------
 
-${\color{darkkhaki}\text{\Large Prob 1.6: }}{\color{olive}\text{\Large \space a}}$
+${\color{darkkhaki}\text{\Large Prob 1.6: }}{\color{olive}\text{\Large a}}$
 
 ```java
 // x = A + B ∧ y = A - B 
