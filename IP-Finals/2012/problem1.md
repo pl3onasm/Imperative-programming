@@ -10,7 +10,7 @@ ${\color{darkkhaki}\text{\Large Prob 1.1: }}\space{\color{olive}\text{\Large b}}
 // x = 3 * X + 1
 ```
 
-$\quad \lbrace \space x = X \space \rbrace$  
+$\quad \lbrace \space x = X \space \rbrace \space$  
 $\qquad \color{darkseagreen} (\space \text{prepare } x := 3 * x + 1 \space)$  
 $\qquad \color{darkseagreen} (\space \text{multiply both sides by 3 and add 1} \space)$  
 $\quad \lbrace \space 3 * x + 1 = 3 * X + 1 \space \rbrace$  
@@ -36,7 +36,7 @@ $\quad \lbrace \space x - 1 = 3 * X \space \rbrace$
 $\qquad \color{darkseagreen} (\space \text{divide both sides by 3} \space)$  
 $\quad \lbrace \space (x - 1)/3 = X \space \rbrace$  
 $\space \color{cornflowerblue} x := (x - 1)/3;$  
-$\quad \lbrace \space x = X \space \rbrace$  
+$\quad \lbrace \space x = X \space \rbrace \space$  
 
 <br/>
 
