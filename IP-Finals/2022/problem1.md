@@ -1,6 +1,8 @@
-# $\color{cadetblue}{\text{Problem 1}}$
+$\color{cadetblue}{\text{\huge Problem 1}}$
 
-## ${\color{darkkhaki}\text{Prob 1.1: }}{\color{olive}\text{ c}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.1: }}{\color{olive}\text{\Large \space c}}$
 
 ```java
 // x = A + 2
@@ -19,9 +21,11 @@ $\quad \lbrace \space 3 * (x - 2) + 1 = 3 * A + 1 \space \rbrace$
 $\space \color{cornflowerblue} x := 3 * (x - 2) + 1;$  
 $\quad \lbrace \space x = 3 * A + 1 \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.2: }}{\color{olive}\text{ a}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.2: }}{\color{olive}\text{\Large \space a}}$
 
 ```java
 // 3 * x + 8 * y = A
@@ -37,9 +41,11 @@ $\quad \lbrace \space 3 * (x + y) + 5 * y = A \space \rbrace$
 $\space \color{cornflowerblue} x := x + y;$  
 $\quad \lbrace \space 3 * x + 5 * y = A \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.3: }}{\color{olive}\text{ b}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.3: }}{\color{olive}\text{\Large \space b}}$
 
 ```java
 // x + y = A ∧ x + z = B
@@ -60,9 +66,11 @@ $\quad \lbrace \space x = A \space \land \space y - z = A - B \rbrace$
 $\space \color{cornflowerblue} y := y - z;$  
 $\quad \lbrace \space x = A \space \land \space y = A - B \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.4: }}{\color{olive}\text{ a}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.4: }}{\color{olive}\text{\Large \space a}}$
 
 ```java
 // x = A ∧ y = B
@@ -84,9 +92,11 @@ $\quad \lbrace \space x = A - B \space \land \space  y - x = 2 * B - A \space \r
 $\space \color{cornflowerblue} y := y - x;$  
 $\quad \lbrace \space x = A - B \space \land \space  y = 2 * B - A \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.5: }}{\color{olive}\text{ b}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.5: }}{\color{olive}\text{\Large \space b}}$
 
 ```java
 // x = B ∧ y = A 
@@ -115,9 +125,11 @@ $\quad \lbrace \space y-x = A \space \land \space y = B \space \rbrace$
 $\space \color{cornflowerblue} x := y - x;$  
 $\quad \lbrace \space x = A \space \land \space y = B \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.6: }}{\color{olive}\text{ c}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.6: }}{\color{olive}\text{\Large \space a}}$
 
 ```java
 // x = A ∧ y = B
@@ -144,4 +156,4 @@ $\quad \lbrace \space x = 2 * A - B \space \land \space x + y = 3 * A - 2 * B \s
 $\space \color{cornflowerblue} y := x + y;$  
 $\quad \lbrace \space x = 2 * A - B \space \land \space y = 3 * A - 2 * B \space \rbrace$  
 
-&nbsp;
+<br/>

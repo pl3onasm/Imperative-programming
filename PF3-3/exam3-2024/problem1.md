@@ -1,6 +1,10 @@
-# $\color{cadetblue}{\text{Problem 1}}$
+$\color{cadetblue}{\text{\huge Problem 1}}$
 
-## Ex1: $\color{rosybrown}{{\mathcal{O}(\sqrt{N})}}$  
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 1.1: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(\sqrt{N})}}}$  
+
+<br/>
 
 ```c
 int i = 0, s = 0;
@@ -33,9 +37,15 @@ $$
 \end{align*}
 $$
 
-Thus, the number of iterations is $\sqrt{N + 1} - 1$, and the fragment's complexity is in $\mathcal{O}(\sqrt{N})$.
+Thus, the number of iterations is $\sqrt{N + 1} - 1$, and the fragment's complexity is in $\mathcal{O}(\sqrt{N})\space$.  
 
-## Ex2: $\color{rosybrown}{{\mathcal{O}(N^2)}}$  
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 1.2: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N^2)}}}$  
+
+<br/>
 
 ```c
 int s = 0;
@@ -60,7 +70,13 @@ Hence, the fragment's complexity is in $\mathcal{O}(N^2)$.
 
 Another, more intuitive way to reach the same conclusion is to note that the outer loop is executed $N$ times, whereas the inner loop is executed $\color{orchid}{\text{at most}}$ $N$ times, so that the nested loop's complexity becomes quadratic in $N$. However, these types of arguments do not always yield the tightest bound, and so it is better to stick to the more formal approach whenever the upper or lower bound of the inner loop depends on the outer loop's index. A case in point is [ex5 from 2013](https://github.com/pl3onasm/Imperative-programming/blob/main/IP-Finals/2013/problem3.md#ex5-colorrosybrownmathcalon), where you would expect from an intuitive argument that the complexity is in $\mathcal{O}(N \log(N))$, which is not wrong, but not tight either, as the tightest bound is actually $\mathcal{O}(N)$.
 
-## Ex3: $\color{rosybrown}{{\mathcal{O}(N)}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 1.3: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N)}}}$  
+
+<br/>
 
 ```c
 int s = 1, t = 0;
@@ -76,7 +92,13 @@ for (int i = 0; i < s; i++) {
 
 The first loop computes $s \approx \sqrt{N}$ in $\log(\sqrt{N}) = \frac{1}{2} \log(N)$ steps. The second loop, on the other hand, runs a total number of $s^2 \approx N$ times. Thus, the nested loop dominates the fragment's total complexity, which is in $\mathcal{O}(N)$.
 
-## Ex4: $\color{rosybrown}{{\mathcal{O}(N \log(N))}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 1.4: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N \log(N))}}}$  
+
+<br/>
 
 ```c
 int s = 0;
@@ -99,7 +121,13 @@ $$
 
 The loops are nested, and so the fragment's total time complexity is in $\mathcal{O}(N \log(N))$.
 
-## Ex5: $\color{rosybrown}{{\mathcal{O}(N)}}$  
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 1.5: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N)}}}$  
+
+<br/>
 
 ```c
 int s = 0, i = N*N, j = 0;
@@ -126,7 +154,13 @@ $$
 
 The fragment's time complexity is therefore in $\mathcal{O}(N)$.
 
-## Ex6: $\color{rosybrown}{{\mathcal{O}(\log(N))}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 1.6: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(\log(N))}}}$  
+
+<br/>
 
 ```c
 int s = 0;
@@ -137,7 +171,13 @@ for (int i = N*N; i > 0; i /= 2) {
 
 The loop index $i$ is divided by $2$ at each iteration, so that the loop runs $\log(N^2) = 2 \log(N)$ times. The fragment's complexity is therefore in $\mathcal{O}(\log(N))$.
 
-## Ex7: $\color{rosybrown}{{\mathcal{O}(N^2)}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 1.7: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N^2)}}}$  
+
+<br/>
 
 ```c
 int s = 0, j = 0;
@@ -152,7 +192,13 @@ while (j > 0) {
 
 The first loop runs $N$ times, computing the sum of the integers from $0$ to $N-1$, so that at termination $j = \frac{N(N-1)}{2}$. The second loop subtracts $2$ from $j$ at each iteration, so that the loop runs $\frac{N(N-1)}{4}$ times. The loops are not nested, and so the fragment's complexity is in $\mathcal{O}(N^2)$.
 
-## Ex8: $\color{rosybrown}{{\mathcal{O}(N)}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 1.8: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N)}}}$  
+
+<br/>
 
 ```c
 int s = 0, j = 0;
@@ -168,7 +214,13 @@ while (j > 0) {
 The first loop runs $N$ times, computing the sum of the integers from $0$ to $N-1$, so that at termination $j = \frac{N(N-1)}{2}$. The second loop divides $j$ by $2$ at each iteration, so that the loop runs $\log(\frac{N(N-1)}{2}) = \log(N(N-1)) - \log(2)$ $= \log(N) + \log(N-1) - 1$ times.  
 The loops are not nested, and so the most expensive one, the for loop in this case, determines the fragment's overall time complexity, which is thus in $\mathcal{O}(N)$.
 
-## Ex9: $\color{rosybrown}{{\mathcal{O}(\sqrt{N})}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 1.9: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(\sqrt N)}}}$  
+
+<br/>
 
 ```c
 int s = 0, i = 1;
@@ -178,9 +230,15 @@ while (i <= N/i) {
 }
 ```
 
-The variable $i$ is incremented by $1$ at each iteration, and the termination condition can be rewritten as $i^2 \leq N$, which is equivalent to $i \leq \sqrt{N}$. Therefore, the fragment's complexity is in $\mathcal{O}(\sqrt{N})$.
+The variable $i$ is incremented by $1$ at each iteration, and the termination condition can be rewritten as $i^2 \leq N$, which is equivalent to $i \leq \sqrt{N}$. Therefore, the fragment's complexity is in $\mathcal{O}(\sqrt{N})\space$.  
 
-## Ex10: $\color{rosybrown}{{\mathcal{O}(\log(N))}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 1.10: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(\log(N))}}}$  
+
+<br/>
 
 ```c
 int s = 0, i = N;
@@ -193,7 +251,14 @@ while (i > 0) {
 The variable $i$ starts at $N$. In the worst case, we are then halving it half of the time and decrementing it by $1$ the other half of the time. In this case, the loop needs less than $2\log(N)$ iterations to terminate.
 The fragment's complexity is therefore in $\mathcal{O}(\log(N))$.
 
-## Ex11: $\color{rosybrown}{{\mathcal{O}(N \log(N))}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 1.11: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N \log(N))}}}$  
+
+<br/>
+
 
 ```c
 int s = 0, i = N;
@@ -207,7 +272,14 @@ while (i > 0) {
 
 The first loop will behave just like the previous exercise, taking less than $2 \log(N)$ iterations to reach $0$. The second loop runs $N$ times, and is nested inside the first loop, so that the fragment's total complexity is in $\mathcal{O}(N \log(N))$.
 
-## Ex12: $\color{rosybrown}{{\mathcal{O}(N^2)}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 1.12: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N^2)}}}$  
+
+<br/>
+
 
 ```c
 int s = 0;
@@ -223,3 +295,5 @@ for (int i = 1; i < 10; i++) {
 The innermost loop runs $N-j$ times, the middle loop runs $N-i$ times, where $i$ is at most $9$, and the outer loop runs $9$ times. The outer loop merely adds a constant factor to the complexity, and so we can completely ignore it, and set $i$ to $0$ for convenience. With $i$ set to $0$, the middle loop then runs $N$ times, and the innermost loop runs $N-j$ times for each value of $j$, so that we get the exact same number of iterations as in [ex2](https://github.com/pl3onasm/Imperative-programming/blob/main/PF3-3/exam3-2024/problem1.md#ex2-colorrosybrownmathcalon2), which is $\frac{N(N+1)}{2}$.
 
 Therefore, the fragment's complexity is in $\mathcal{O}(N^2)$.
+
+<br/>

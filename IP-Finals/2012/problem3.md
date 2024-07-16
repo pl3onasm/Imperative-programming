@@ -1,6 +1,10 @@
-# $\color{cadetblue}{\text{Problem 2}}$
+$\color{cadetblue}{\text{\huge Problem 3}}$
 
-## Ex1: $\color{rosybrown}{{\mathcal{O}(N)}}$
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 3.1: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N)}}}$  
+
+<br/>
 
 ```c
 int i = 0, j = N;
@@ -12,7 +16,13 @@ while (i < j) {
 
 Both variables run through their consecutive values, until they meet in the middle at which point the loop terminates. The total number of iterations is $\frac{N}{2}$, and the fragment's complexity is therefore in $\mathcal{O}(N)$.
 
-## Ex2: $\color{rosybrown}{{\mathcal{O}(\log N)}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 3.2: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(\log (N))}}}$  
+
+<br/>
 
 ```c
 int i = 0, j = N;
@@ -27,7 +37,13 @@ while (j - i > 1) {
 
 This is a binary search algorithm. At each iteration, the size of the interval is halved, and the loop terminates when the interval is of size $1$ or less. The number of iterations is therefore the number of times $N$, the size of the search interval, can be halved before reaching $1$, which is $\log(N)$. Thus, the fragment's complexity is in $\mathcal{O}(\log N)$.
 
-## Ex3: $\color{rosybrown}{{\mathcal{O}(\sqrt{N})}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 3.3: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(\sqrt N)}}}$  
+
+<br/>
 
 ```c
 int i = 0;
@@ -36,9 +52,15 @@ while (i*i < N) {
 }
 ```
 
-The loop terminates when $i^2 \geq N$, which is equivalent to $i \geq \sqrt{N}$. Thus, the number of iterations is $\sqrt{N}$, and the fragment's complexity is in $\mathcal{O}(\sqrt{N})$.
+The loop terminates when $i^2 \geq N$, which is equivalent to $i \geq \sqrt{N}$. Thus, the number of iterations is $\sqrt{N}$, and the fragment's complexity is in $\mathcal{O}(\sqrt{N})\space$.  
 
-## Ex4: $\color{rosybrown}{{\mathcal{O}(N^2)}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 3.4: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N^2)}}}$  
+
+<br/>
 
 ```c
 int i, j = 0, s = 0;
@@ -52,7 +74,13 @@ for (i = 0; i < s; i++) {
 
 The first loop computes the sum of the first $N - 1$ integers in $N$ steps, so that in the end, we have $s = \frac{N(N-1)}{2}$. The second loop then runs $s$ times, which is quadratic in $N$. The loops are not nested, and so the overall complexity is determined by the most expensive loop, which is the second one. Thus, the fragment's complexity is in $\mathcal{O}(N^2)$.
 
-## Ex5: $\color{rosybrown}{{\mathcal{O}(N \log N)}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 3.5: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N \log (N))}}}$  
+
+<br/>
 
 ```c
 int i, j, s = 0;
@@ -75,7 +103,13 @@ $$
 
 Thus, the fragment's complexity is in $\mathcal{O}(N \log N)$.
 
-## Ex6: $\color{rosybrown}{{\mathcal{O}(N)}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 3.6: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N)}}}$  
+
+<br/>
 
 ```c
 int i, j, s = 0, a[5] = {0, 0, 0, 0, 0};
@@ -91,3 +125,5 @@ for (i = 0; i < 5; i++) {
 
 The first loop runs $N$ times: it sets the values of the items in the array $a$ to their respective values. The second loop is nested: the outer loop runs $5$ times, whereas the inner loop runs $a[i]$ times, which is at most $\lfloor\frac{N}{5}\rfloor + 1$, given the fact that $a[i]$ is incremented at most $\lfloor\frac{N}{5}\rfloor + 1$ times in the first loop.
 This means that both the first and the second, nested loop are linear in $N$, and so the fragment's total complexity is in $\mathcal{O}(N)$.
+
+<br/>

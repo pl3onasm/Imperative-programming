@@ -1,4 +1,6 @@
-# Sum of multiples
+$\color{cadetblue}{\text{\huge Sum of multiples}}$
+
+<br/>
 
 Given are two positive integers $a$ and $b$. The output of your program should be the sum of all the multiples of $a$ and $b$ below a given positive integer $n \leq 10^{11}$.
 

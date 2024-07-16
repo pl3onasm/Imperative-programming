@@ -1,6 +1,8 @@
-# $\color{cadetblue}{\text{Problem 1}}$
+$\color{cadetblue}{\text{\huge Problem 1}}$
 
-## ${\color{darkkhaki}\text{Prob 1.1: }}{\color{olive}\text{ b}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.1: }}{\color{olive}\text{\Large \space b}}$
 
 ```java
 // x = y + 7
@@ -16,9 +18,11 @@ $\quad \lbrace \space x - y + 4 = 11 \space \rbrace$
 $\space \color{cornflowerblue} x := x - y + 4;$  
 $\quad \lbrace \space x = 11 \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.2: }}{\color{olive}\text{ c}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.2: }}{\color{olive}\text{\Large \space c}}$
 
 ```java
 // x = A ∧ y = B
@@ -41,9 +45,11 @@ $\quad \lbrace \space x = A - B \space \land \space y = A + B \space \rbrace$
 
 [^1]: Note that the exam has a mistake here. It should be x := 2 * x - y instead of x := y - 2 * x.
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.3: }}{\color{olive}\text{ b}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.3: }}{\color{olive}\text{\Large \space b}}$
 
 ```java
 // x = A ∧ y = B
@@ -62,9 +68,11 @@ $\space \color{cornflowerblue} y := y + 1;$
 $\quad \lbrace \space x - 1 = A \space \land \space y - 1 = B \space \rbrace$  
 $\quad \lbrace \space x - y = A - B \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.4: }}{\color{olive}\text{ a}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.4: }}{\color{olive}\text{\Large \space a}}$
 
 ```java
 // x = A ∧ y = B
@@ -85,9 +93,11 @@ $\quad \lbrace \space x - y = B \space \land \space y = A - B \space \rbrace$
 $\space \color{cornflowerblue} x := x - y;$  
 $\quad \lbrace \space x = B \space \land \space y = A - B \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.5: }}{\color{olive}\text{ a}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.5: }}{\color{olive}\text{\Large \space a}}$
 
 ```java
 // x = A ∧ y = B
@@ -110,9 +120,11 @@ $\qquad \land \space y = A + B \space \land \space z = A \space \rbrace$
 $\space \color{cornflowerblue} x := x + y + z;$  
 $\quad \lbrace \space x = 3 * A + B \space \land \space y = A + B \space \land \space z = A \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.6: }}{\color{olive}\text{ c}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.6: }}{\color{olive}\text{\Large \space c}}$
 
 ```java
 // x = A + B ∧ y = A - B
@@ -143,4 +155,4 @@ $\qquad \land \space z = 2 * B \space \rbrace$
 $\space \color{cornflowerblue} y := z - y;$  
 $\quad \lbrace \space x = 2 * A + 2 * B \space \land \space y = 3 * B - A \space \rbrace$  
 
-&nbsp;
+<br/>

@@ -1,6 +1,8 @@
-# $\color{cadetblue}{\text{Problem 1}}$
+$\color{cadetblue}{\text{\huge Problem 1}}$
 
-## ${\color{darkkhaki}\text{Prob 1.1: }}{\color{olive}\text{ c}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.1: }}{\color{olive}\text{\Large \space c}}$
 
 ```java
 // 10 < 2 * x + 6 * y < 20
@@ -17,9 +19,11 @@ $\quad \lbrace \space 10 \space < \space x + 3 * y + 5 \space < \space 15 \space
 $\space \color{cornflowerblue} x := x + 3 * y + 5;$  
 $\quad \lbrace \space 10 \space < x \space < 15 \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.2: }}{\color{olive}\text{ b}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.2: }}{\color{olive}\text{\Large \space b}}$
 
 ```java
 // x = A + B ∧ y = A - B
@@ -29,7 +33,7 @@ $\quad \lbrace \space 10 \space < x \space < 15 \space \rbrace$
 
 $\quad \lbrace \space x = A + B \space \land \space y = A - B \space \rbrace$  
 $\qquad \color{darkseagreen} (\space \text{prepare } y := (x - y)/2 \space)$  
-$\quad \lbrace \space x = A + B \space \land \space -y = B - A \space \rbrace$  
+$\quad \lbrace \space x = A + B \space \land \space -y = B - A \space \rbrace \space$  
 $\qquad \color{darkseagreen} (\space \text{add equal terms to both sides} \space)$  
 $\quad \lbrace \space x = A + B \space \land \space x - y = 2 * B \space \rbrace$  
 $\qquad \color{darkseagreen} (\space \text{divide both sides by 2} \space)$  
@@ -41,9 +45,11 @@ $\quad \lbrace \space x - y = A \space \land \space y = B \space \rbrace$
 $\space \color{cornflowerblue} x := x - y;$  
 $\quad \lbrace \space x = A \space \land \space y = B \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.3: }}{\color{olive}\text{ c}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.3: }}{\color{olive}\text{\Large \space c}}$
 
 ```java
 // x = A ∧ y = B
@@ -63,9 +69,11 @@ $\quad \lbrace \space x = A + 2 * B \space \land \space y = B \space \rbrace$
 $\qquad \color{darkseagreen} (\space \text{move 2 * B to the lhs} \space)$  
 $\quad \lbrace \space x - 2 * B = A \space \land \space y = B \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.4: }}{\color{olive}\text{ b}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.4: }}{\color{olive}\text{\Large \space b}}$
 
 ```java
 // x = A ∧ y = B
@@ -92,9 +100,11 @@ $\qquad \land \space y = 2 * A + 2 * B \space \rbrace$
 $\space \color{cornflowerblue} x := 2 * (x + y);$  
 $\quad \lbrace \space x = 6 * A + 4 * B \space \land \space y = 2 * A + 2 * B \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.5: }}{\color{olive}\text{ a}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.5: }}{\color{olive}\text{\Large \space a}}$
 
 ```java
 // x = A ∧ y = B
@@ -112,9 +122,11 @@ $\quad \lbrace \space x = B \space \land \space y = B \space \land \space z = A 
 $\space \color{cornflowerblue} y := z;$  
 $\quad \lbrace \space x = B \space \land \space y = A \space \land \space z = A \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.6: }}{\color{olive}\text{ b}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.6: }}{\color{olive}\text{\Large \space b}}$
 
 ```java
 // y = A ∧ x = z = B
@@ -143,4 +155,4 @@ $\qquad \land \space z = B - A  \space \rbrace$
 $\space \color{cornflowerblue} y := z - y;$  
 $\quad \lbrace \space x = 2 * B \space \land \space y = B - 2 * A \space \land \space z = B - A  \space \rbrace$  
 
-&nbsp;
+<br/>

@@ -1,6 +1,10 @@
-# $\color{cadetblue}{\text{Problem 1}}$
+$\color{cadetblue}{\text{\huge Problem 1}}$
 
-## Ex1: $\color{rosybrown}{{\mathcal{O}(N)}}$  
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 1.1: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N)}}}$  
+
+<br/>
 
 ```c
 int i = 0, s = 0;
@@ -35,7 +39,13 @@ $$
 
 Thus, the number of iterations is about $N$, and the fragment's complexity is in $\mathcal{O}(N)$.
 
-## Ex2: $\color{rosybrown}{{\mathcal{O}(N \log(N))}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 1.2: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N \log(N))}}}$  
+
+<br/>
 
 ```c
 int s = 1, t = 0;
@@ -64,7 +74,13 @@ $$
 
 The fragment's complexity is therefore in $\mathcal{O}(N \log(N))$.
 
-## Ex3: $\color{rosybrown}{{\mathcal{O}(N)}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 1.3: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N)}}}$  
+
+<br/>
 
 ```c
 int s = 0, i = 0;
@@ -88,7 +104,13 @@ $$
 
 We therefore conclude that the fragment's complexity is in $\mathcal{O}(N)$.
 
-## Ex4: $\color{rosybrown}{{\mathcal{O}(\log(N))}}$  
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 1.4: }}{\color{darkseagreen}{{\Large \space \mathcal{O}( \log(N))}}}$  
+
+<br/>
 
 ```c
 int s = 0, n = N;
@@ -100,7 +122,13 @@ while (n > 0) {
 
 In the best case, $N$ is a power of $2$, so that $n$ is halved at each iteration, and the loop runs $\log(N)$ times. In the worst case, $n$ is halved half of the time and decremented by $1$ the other half of the time, so that the loop runs $2\log(N)$ times. The fragment's complexity is therefore in $\mathcal{O}(\log(N))$.
 
-## Ex5: $\color{rosybrown}{{\mathcal{O}(N^2)}}$  
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 1.5: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N^2)}}}$  
+
+<br/>
 
 ```c
 int s = 0;
@@ -111,7 +139,13 @@ for (int i = 0; i < N*N; i += 2) {
 
 The loop index $i$ is incremented by $2$ at each iteration, so that the loop runs $\frac{N^2}{2}$ times. The fragment's complexity is therefore in $\mathcal{O}(N^2)$.
 
-## Ex6: $\color{rosybrown}{{\mathcal{O}(\sqrt{N})}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 1.6: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(\sqrt N)}}}$  
+
+<br/>
 
 ```c
 int s = 0;
@@ -120,9 +154,15 @@ for (int i = 0; i * i < N; i += 2) {
 }
 ```
 
-The loop's termination condition can be rewritten as $i^2 < N$, which is equivalent to $i < \sqrt{N}$. Since $i$ is incremented by $2$ at each iteration, the loop runs $\frac{\sqrt{N}}{2}$ times. The fragment's complexity is therefore in $\mathcal{O}(\sqrt{N})$.
+The loop's termination condition can be rewritten as $i^2 < N$, which is equivalent to $i < \sqrt{N}$. Since $i$ is incremented by $2$ at each iteration, the loop runs $\frac{\sqrt{N}}{2}$ times. The fragment's complexity is therefore in $\mathcal{O}(\sqrt{N})\space$.  
 
-## Ex7: $\color{rosybrown}{{\mathcal{O}(N)}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 1.7: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N)}}}$  
+
+<br/>
 
 ```c
 int s = 0, t = 0;
@@ -139,7 +179,13 @@ The first loop runs $N$ times, computing the sum of the integers from $0$ to $N-
 
 The loops are not nested, and so the most expensive one, the for loop in this case, determines the fragment's overall time complexity, which is thus in $\mathcal{O}(N)$.
 
-## Ex8: $\color{rosybrown}{{\mathcal{O}(\log{N})}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 1.8: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(\log (N))}}}$  
+
+<br/>
 
 ```c
 int i = 0, j = N;
@@ -152,7 +198,13 @@ while (j - i > 1) {
 
 In each loop iteration $m$ is set to the average of $i$ and $j$, and then either $i$ or $j$ is updated to $m$ depending on whether $m^2$ is less than or greater than $N$. In other words, the interval $[i, j]$ is halved at each and every iteration, and the loop terminates when $i$ and $j$ have become adjacent integers. The fragment's complexity is therefore in $\mathcal{O}(\log(N))$.
 
-## Ex9: $\color{rosybrown}{{\mathcal{O}(N \log(N))}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 1.9: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N \log (N))}}}$  
+
+<br/>
 
 ```c
 int s = 0;
@@ -168,7 +220,13 @@ The outer loop is linear in $N$: it runs $N$ times. The inner loop runs $\log_k(
 
 Since the loops are nested, the fragment's complexity is in $\mathcal{O}(N \log(N))$.
 
-## Ex10: $\color{rosybrown}{{\mathcal{O}(N^2)}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 1.10: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N^2)}}}$  
+
+<br/>
 
 ```c
 int s = 0;
@@ -185,7 +243,13 @@ The outer loop runs $N-1$ times, and the innermost loop runs $10\cdot (N-j+1)$ t
 
 The fragment's overall complexity is therefore in $\mathcal{O}(N^2)$.
 
-## Ex11: $\color{rosybrown}{{\mathcal{O}(\sqrt{N})}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 1.11: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(\sqrt N)}}}$  
+
+<br/>
 
 ```c
 int i = 0, j = 0, s = 0;
@@ -196,9 +260,15 @@ while (i * j < 2 * N) {
 }
 ```
 
-The loop will terminate when $i \cdot j \geq 2N$, which is equivalent to $i \cdot (2i) \geq 2N$, or $i^2 \geq N$. The loop will therefore run $\sqrt{N}$ times, and the fragment's complexity is in $\mathcal{O}(\sqrt{N})$.
+The loop will terminate when $i \cdot j \geq 2N$, which is equivalent to $i \cdot (2i) \geq 2N$, or $i^2 \geq N$. The loop will therefore run $\sqrt{N}$ times, and the fragment's complexity is in $\mathcal{O}(\sqrt{N})\space$.  
 
-## Ex12: $\color{rosybrown}{{\mathcal{O}(N)}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 1.12: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N)}}}$  
+
+<br/>
 
 ```c
 int i = 1, s = 0;
@@ -228,5 +298,9 @@ $$
 
 Since the two while loops are not nested, the most expensive one, the second one in this case, determines the fragment's overall time complexity, which is thus in $\mathcal{O}(N)$.
 
+<br/>
+
 --------
  <sub><sup>Kindly note that, here and elsewhere, I left out ceilings and/or floors as they are not relevant for the complexity analysis, and only serve to complicate the expressions.</sup></sub>
+
+<br/>

@@ -1,4 +1,6 @@
-# Maximum path
+$\color{cadetblue}{\text{\huge Maximum Path}}$
+
+<br/>
 
 Given is a triangle of numbers. A path through the triangle is a sequence of adjacent numbers, one from each row, starting from the top. For example, $1 \to 3 \to 3 \to 4 \to 1 \to 0$ is a path in the following triangle of numbers:  
 
@@ -28,7 +30,9 @@ $$
 
 Write a program that reads a triangle of numbers and outputs the maximum path cost. The first line of the input contains the number of rows. Each subsequent line represents a row of the triangle, starting with the top row. Within each row, the numbers are separated by a space. The triangle has at most 1000 rows. All numbers are positive integers between 0 and 100.
 
-## Example
+<br/>
+
+$\color{darkseagreen}{\text{\Large Example}}$
 
 Input:
 

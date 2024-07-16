@@ -1,4 +1,6 @@
-# Matching bitstrings
+$\color{cadetblue}{\text{\huge Matching Bitstrings}}$
+
+<br/>
 
 A binary string is a sequence of 0s and 1s. In this problem you are asked to generate all bitstrings under the following constraints:
 
@@ -11,7 +13,9 @@ Now consider the bitstring `0??010`. There are three different options to fill t
 
 Write a program that accepts on the input two lines. The first line is a single integer $n$ indicating the length of the constrained bitstring. The second line provides the bitstring itself. Your program should compute all the possible combinations under the provided constraints and output them in lexicographical ordering (i.e. in increasing binary order).
 
-## Example
+<br/>
+
+$\color{darkseagreen}{\text{\Large Example}}$
 
 Input:
 

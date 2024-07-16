@@ -1,6 +1,8 @@
-# $\color{cadetblue}{\text{Problem 1}}$
+$\color{cadetblue}{\text{\huge Problem 1}}$
 
-## ${\color{darkkhaki}\text{Prob 1.1: }}{\color{olive}\text{ c}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.1: }}{\color{olive}\text{\Large \space c}}$
 
 ```java
 // x + 2 * y = A ∧ x + y = 2 * A
@@ -19,9 +21,11 @@ $\quad \lbrace \space x / 3 = -y \space \rbrace$
 $\space \color{cornflowerblue} x := x/3;$  
 $\quad \lbrace \space x = -y \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.2: }}{\color{olive}\text{ b}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.2: }}{\color{olive}\text{\Large \space b}}$
 
 ```java
 // 2 * x + 3 * y = A ∧ x + y = B
@@ -37,9 +41,11 @@ $\quad \lbrace \space 2 * x + y = A \space \land \space  x = B \space \rbrace$
 $\space \color{cornflowerblue} y := y + 2 * x;$  
 $\quad \lbrace \space y = A \space \land \space  x = B \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.3: }}{\color{olive}\text{ a}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.3: }}{\color{olive}\text{\Large \space a}}$
 
 ```java
 // x + A = B ∧ y + B = 2 * A
@@ -61,9 +67,11 @@ $\quad \lbrace \space x + y = B \space \land \space y = A \space \rbrace$
 $\space \color{cornflowerblue} x := x + y;$  
 $\quad \lbrace \space x = B \space \land \space y = A \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.4: }}{\color{olive}\text{ a}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.4: }}{\color{olive}\text{\Large \space a}}$
 
 ```java
 // x = A + B ∧ y = B
@@ -84,9 +92,11 @@ $\quad \lbrace \space x - y = B \space \land \space y = A \space \rbrace$
 $\space \color{cornflowerblue} x := x - y;$  
 $\quad \lbrace \space x = B \space \land \space y = A \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.5: }}{\color{olive}\text{ b}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.5: }}{\color{olive}\text{\Large \space b}}$
 
 ```java
 // x = A ∧ y = 2 * B
@@ -104,9 +114,11 @@ $\quad \lbrace \space x = A \space \land \space y = A \space \land \space z = A 
 $\space \color{cornflowerblue} x := y;$  
 $\quad \lbrace \space x = A \space \land \space y = A \space \land \space z = A \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.6: }}{\color{olive}\text{ c}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.6: }}{\color{olive}\text{\Large \space c}}$
 
 ```java
 // x = A ∧ y = B
@@ -131,4 +143,4 @@ $\quad \lbrace \space x = A - B \space \land \space z - y = A - 3 * B \space \rb
 $\space \color{cornflowerblue} y := z - y;$  
 $\quad \lbrace \space x = A - B \space \land \space y = A - 3 * B \space \rbrace$  
 
-&nbsp;
+<br/>

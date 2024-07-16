@@ -1,6 +1,10 @@
-# $\color{cadetblue}{\text{Problem 2}}$
+$\color{cadetblue}{\text{\huge Problem 2}}$
 
-## Ex1: $\color{rosybrown}{{\mathcal{O}(N\log(N))}}$
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 2.1: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N \log (N))}}}$  
+
+<br/>
 
 ```c
 int s = 0;
@@ -13,7 +17,13 @@ for (int i = 0; i < N; i += 3) {
 
 The outer loop runs $\frac{N}{3}$ times, and the inner loop runs $\log(3N) = \log(3) + \log(N)$ times. Since the loops are nested, we obtain the total number of iterations by multiplying the number of iterations of the outer loop by the ones of the inner loop, and come to an overall time complexity of $\mathcal{O}(N\log(N))$.
 
-## Ex2: $\color{rosybrown}{{\mathcal{O}(\log(N))}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 2.2: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(\log (N))}}}$  
+
+<br/>
 
 ```c
 int s = 0;
@@ -32,9 +42,15 @@ $$
 \end{align*}
 $$
 
-Thus, the overall time complexity is in $\mathcal{O}(\log(N))$.
+Thus, the overall time complexity is in $\mathcal{O}(\log(N))\space$.  
 
-## Ex3: $\color{rosybrown}{{\mathcal{O}(\sqrt{N})}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 2.3: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(\sqrt N)}}}$  
+
+<br/>
 
 ```c
 int i = 0, s = 0;
@@ -61,9 +77,15 @@ $$
 \end{align*}
 $$
 
-The second loop decrements $i$ until it reaches 0 in a total of about $\sqrt{2N}$ steps. The loops are not nested, so we obtain an overall time complexity of $\mathcal{O}(\sqrt{N})$.
+The second loop decrements $i$ until it reaches 0 in a total of about $\sqrt{2N}$ steps. The loops are not nested, so we obtain an overall time complexity of $\mathcal{O}(\sqrt{N})\space$.  
 
-## Ex4: $\color{rosybrown}{{\mathcal{O}(N^2)}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 2.4: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N^2)}}}$  
+
+<br/>
 
 ```c
 int i, j = 0, s = 0;
@@ -86,7 +108,13 @@ $$
 
 In $\color{peru}{(1)}$, we used Gauss' formula to compute the sum of the first $N - 1$ positive integers. From the above, we conclude that the overall time complexity is in $\mathcal{O}(N^2)$.
 
-## Ex5: $\color{rosybrown}{{\mathcal{O}(N\log(N))}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 2.5: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N \log (N))}}}$  
+
+<br/>
 
 ```c
 int s = 0;
@@ -100,7 +128,13 @@ for (int i = N; i > 0; i--) {
 
 The outer loop runs $N$ times. The inner loop runs $\log_d(N) = \frac{\log(N)}{\log(d)}$ times, where $d \in \left[2, 7\right)$, which is in $\mathcal{O}(\log(N))$. Since the loops are nested, we obtain an overall time complexity of $\mathcal{O}(N\log(N))$.
 
-## Ex6: $\color{rosybrown}{{\mathcal{O}(N)}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 2.6: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N)}}}$  
+
+<br/>
 
 ```c
 int i = 0, s = 0;
@@ -111,3 +145,5 @@ while (s < N*N) {
 ```
 
 This loop is the same as the first one in [ex3](https://github.com/pl3onasm/Imperative-programming/blob/main/IP-Finals/2017/problem2.md#ex3-colorrosybrownmathcalosqrtn), except that the loop condition here is $s < N^2$ instead of $s < N$. Following the same reasoning, we obtain that the loop terminates when $i \geq \sqrt{2 N^2 + \frac{1}{4}} + \frac{1}{2} \approx \sqrt{2} N$. Thus, the overall time complexity is in $\mathcal{O}(N)$.
+
+<br/>

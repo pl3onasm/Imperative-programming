@@ -1,6 +1,10 @@
-# $\color{cadetblue}{\text{Problem 2}}$
+$\color{cadetblue}{\text{\huge Problem 2}}$
 
-## Ex1: $\color{rosybrown}{{\mathcal{O}(N)}}$
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 2.1: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N)}}}$  
+
+<br/>
 
 ```c
 int s = 0;
@@ -33,7 +37,13 @@ From the above, we therefore have that the fragment's time complexity is in $\ma
 
 Note that we could have run an argument for a complexity in $\mathcal{O}(N \log(N))$ by stating that the outer loop runs in logarithmic time and the inner loop runs $\color{orchid}{\text{at most}}$ $N$ times (or $N$ times in the worst case), so that the nested loop's total complexity becomes linearithmic in $N$. This is not wrong, but an overestimate, as the tight bound is $\mathcal{O}(N)$. It is testomony to the fact that rough reasoning does not always yield the tightest bound. The same situation arises in [Ex5 2013](https://github.com/pl3onasm/Imperative-programming/blob/main/IP-Finals/2013/problem3.md#ex5-colorrosybrownmathcalon), and [Ex5 2018 resit](https://github.com/pl3onasm/Imperative-programming/blob/main/IP-Finals/2018resit/problem2.md#ex5-colorrosybrownmathcalon).
 
-## Ex2: $\color{rosybrown}{{\mathcal{O}(N\log(N))}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 2.2: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N \log (N))}}}$  
+
+<br/>
 
 ```c
 int s = 0;
@@ -58,7 +68,13 @@ $$
 
 Therefore, the fragment's time complexity is in $\mathcal{O}(N\log(N))$.
 
-## Ex3: $\color{rosybrown}{{\mathcal{O}(N^2)}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 2.3: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N^2)}}}$  
+
+<br/>
 
 ```c
 int s = 0;
@@ -82,7 +98,13 @@ $$
 
 Therefore, the fragment's time complexity is in $\mathcal{O}(N^2)$.
 
-## Ex4: $\color{rosybrown}{{\mathcal{O}(\sqrt{N})}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 2.4: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(\sqrt N)}}}$  
+
+<br/>
 
 ```c
 int s = 0;
@@ -91,10 +113,16 @@ for (int i = 0; i < N/i; i++) {
 }
 ```
 
-The loop condition is $i < N/i$, which is equivalent to $i^2 < N \Leftrightarrow i < \lfloor \sqrt{N} \rfloor$. Therefore, the loop runs about $\sqrt{N}$ times, and the fragment's time complexity is in $\mathcal{O}(\sqrt{N})$.  
+The loop condition is $i < N/i$, which is equivalent to $i^2 < N \Leftrightarrow i < \lfloor \sqrt{N} \rfloor$. Therefore, the loop runs about $\sqrt{N}$ times, and the fragment's time complexity is in $\mathcal{O}(\sqrt{N})\space$.  
 To be fair, though, the program fragment will actually result in undefined behavior as the initial value of the loop condition is undefined, with $i$ being initialized to 0.
 
-## Ex5: $\color{rosybrown}{{\mathcal{O}(\log(N))}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 2.5: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(\log (N))}}}$  
+
+<br/>
 
 ```c
 int s = 0, i = N;
@@ -107,7 +135,13 @@ while (i >= 0) {
 
 The variable $i$ is initialized to $N$, and is either decremented by $1$ or divided by $d$ in each iteration. The value of $d$ is always between $1$ and $5$. Only when $i$ is evenly divisible by $d$ is it decremented by $1$, otherwise it is integer divided by $d$. This means that each iteration has a one in five chance that $i$ is decremented by $1$, and a four in five chance that $i$ is divided by $d$. Clearly, the division is the dominant operation. The fragment's time complexity is therefore in $\mathcal{O}(\log(N))$.
 
-## Ex6: $\color{rosybrown}{{\mathcal{O}(N)}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 2.6: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N)}}}$  
+
+<br/>
 
 ```c
 int j = 0, s = 0;
@@ -140,3 +174,5 @@ $$
 $$
 
 From the above, we therefore have that the fragment's time complexity is in $\mathcal{O}(N)$.
+
+<br/>

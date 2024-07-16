@@ -1,6 +1,8 @@
-# $\color{cadetblue}{\text{Problem 1}}$
+$\color{cadetblue}{\text{\huge Problem 1}}$
 
-## ${\color{darkkhaki}\text{Prob 1.1: }}{\color{olive}\text{ b}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.1: }}{\color{olive}\text{\Large \space b}}$
 
 ```java
 // x = 2 * X
@@ -17,9 +19,11 @@ $\quad \lbrace \space 21 * x + 21 = 42 * X + 21 \space \rbrace$
 $\space \color{cornflowerblue} x := 21 * x + 21;$  
 $\quad \lbrace \space x = 42 * X + 21 \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.2: }}{\color{olive}\text{ c}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.2: }}{\color{olive}\text{\Large \space c}}$
 
 ```java
 // x = 42 * X + 21
@@ -36,9 +40,11 @@ $\quad \lbrace \space (x - 21)/21 = 2 * X \space \rbrace$
 $\space \color{cornflowerblue} x := (x - 21)/21;$  
 $\quad \lbrace \space x = 2 * X \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.3: }}{\color{olive}\text{ b}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.3: }}{\color{olive}\text{\Large \space b}}$
 
 ```java
 // x = X * X * X, y = X * X, z = X
@@ -62,9 +68,11 @@ $\quad \lbrace \space x = (X + 1) * (X + 1) * (X + 1)$
 $\qquad \land \space y = X * X \space \land \space z = X\space \rbrace$  
 $\quad \lbrace \space x = (X + 1) * (X + 1) * (X + 1)\space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.4: }}{\color{olive}\text{ a}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.4: }}{\color{olive}\text{\Large \space a}}$
 
 ```java
 // x = X + Y ∧ y = 2 * X - 7
@@ -87,9 +95,11 @@ $\quad \lbrace \space (x - 7)/2 = Y \space \land \space y = 2 * X - 7 \space \rb
 $\space \color{cornflowerblue} y := (x - 7)/2;$  
 $\quad \lbrace \space y = Y \space \rbrace$
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.5: }}{\color{olive}\text{ b}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.5: }}{\color{olive}\text{\Large \space b}}$
 
 ```java
 // x = X ∧ y = Y 
@@ -119,9 +129,11 @@ $\quad \lbrace \space (2 * x - y)/2 = Y \space \land \space y = 2 * X \space \rb
 $\space \color{cornflowerblue} x := (2 * x - y)/2;$  
 $\quad \lbrace \space x = Y \space \land \space y = 2 * X \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.6: }}{\color{olive}\text{ a}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.6: }}{\color{olive}\text{\Large \space a}}$
 
 ```java
 // y = X ∧ z = X + Y ∧ x = X + Y + Z
@@ -148,4 +160,4 @@ $\quad \lbrace \space y = Y + Z \space \land \space z = Y \space \land \space x 
 $\space \color{cornflowerblue} x := x - z;$  
 $\quad \lbrace \space y = Y + Z \space \land \space z = Y \space \land \space x = X + Z \space \rbrace$  
 
-&nbsp;
+<br/>

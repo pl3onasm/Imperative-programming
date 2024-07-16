@@ -1,6 +1,10 @@
-# $\color{cadetblue}{\text{Problem 2}}$
+$\color{cadetblue}{\text{\huge Problem 2}}$
 
-## Ex1: $\color{rosybrown}{{\mathcal{O}(N^2)}}$
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 2.1: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N^2)}}}$  
+
+<br/>
 
 ```c
 int s = 0;
@@ -23,7 +27,13 @@ $$
 
 In $\color{peru}{(1)}$, we used Gauss' formula to compute the sum of the first $N - 1$ positive integers. From the above, we conclude that the overall time complexity is in $\mathcal{O}(N^2)$.
 
-## Ex2: $\color{rosybrown}{{\mathcal{O}(\sqrt{N})}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 2.2: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(\sqrt N)}}}$  
+
+<br/>
 
 ```c
 int i = 0, s = 0;
@@ -33,9 +43,15 @@ while (s < N) {
 }
 ```
 
-The loop runs until $s = i^2 \geq N$. As $i$ keeps track of the number of iterations, the loop runs a total of approximately $\sqrt{N}$ times. Thus, the overall time complexity is in $\mathcal{O}(\sqrt{N})$.
+The loop runs until $s = i^2 \geq N$. As $i$ keeps track of the number of iterations, the loop runs a total of approximately $\sqrt{N}$ times. Thus, the overall time complexity is in $\mathcal{O}(\sqrt{N})\space$.  
 
-## Ex3: $\color{rosybrown}{{\mathcal{O}(\log N)}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 2.3: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(\log (N))}}}$  
+
+<br/>
 
 ```c
 int n = N, a = 2, p = 1;
@@ -52,7 +68,13 @@ while (n > 0) {
 
 This fragment computes $2^N$ by repeated squaring. The loop runs until $n = 0$. In the worst case, $n$ is halved only half of the time, and decremented by $1$ the other half of the time. In this case, the loop still needs less than $2\log(N)$ iterations to terminate. Thus, the overall time complexity is in $\mathcal{O}(\log (N))$.
 
-## Ex4: $\color{rosybrown}{{\mathcal{O}(N^2)}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 2.4: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N^2)}}}$  
+
+<br/>
 
 ```c
 int i, j = 0, s = 0;
@@ -66,7 +88,13 @@ for (i = 0; i < s; i += 2) {
 
 The first loop runs $N$ times and computes $s = \frac{N(N - 1)}{2}$ (by Gauss' formula). The second loop runs a total of $\frac{s}{2}$ $=\frac{N(N - 1)}{4}$ times. The loops are not nested and thus the second loop clearly dominates the time complexity as it is quadratic in $N$. Thus, the overall time complexity is in $\mathcal{O}(N^2)$.
 
-## Ex5: $\color{rosybrown}{{\mathcal{O}(N)}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 2.5: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N)}}}$  
+
+<br/>
 
 ```c
 int i = 0, s = 1;
@@ -77,7 +105,13 @@ for (i = 0; i < 4*N; i += 2) {
 
 The loop runs $\frac{4N}{2} = 2N$ times. The overall time complexity is therefore in $\mathcal{O}(N)$.
 
-## Ex6: $\color{rosybrown}{{\mathcal{O}(N\log(N))}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 2.6: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N \log (N))}}}$  
+
+<br/>
 
 ```c
 int i, j, s = 0;
@@ -100,3 +134,5 @@ $$
 $$
 
 Thus, the overall time complexity is in $\mathcal{O}(N\log(N))$.
+
+<br/>

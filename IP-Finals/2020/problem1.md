@@ -1,6 +1,8 @@
-# $\color{cadetblue}{\text{Problem 1}}$
+$\color{cadetblue}{\text{\huge Problem 1}}$
 
-## ${\color{darkkhaki}\text{Prob 1.1: }}{\color{olive}\text{ a}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.1: }}{\color{olive}\text{\Large \space a}}$
 
 ```java
 // x = A
@@ -16,9 +18,11 @@ $\quad \lbrace \space 3 * x + 18 = 3 * A + 18 \space \rbrace$
 $\space \color{cornflowerblue} x := 3 * x + 18;$  
 $\quad \lbrace \space x = 3 * A + 18 \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.2: }}{\color{olive}\text{ b}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.2: }}{\color{olive}\text{\Large \space b}}$
 
 ```java
 // 4 * x + 2 * y + 2 * z = 2 * A
@@ -37,9 +41,11 @@ $\quad \lbrace \space x + 2 * y + z = A \space \rbrace$
 $\space \color{cornflowerblue} x := x + 2 * y + z;$  
 $\quad \lbrace \space x = A \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.3: }}{\color{olive}\text{ a}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.3: }}{\color{olive}\text{\Large \space a}}$
 
 ```java
 // 3 ≤ x + y * y < 12
@@ -54,9 +60,11 @@ $\quad \lbrace \space 5 \space \leq \space x + y * y + 2 \space <\space  14 \spa
 $\space \color{cornflowerblue} x := x + y * y + 2;$  
 $\quad \lbrace \space 5 \space \leq \space y \space < \space 14 \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.4: }}{\color{olive}\text{ a}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.4: }}{\color{olive}\text{\Large \space a}}$
 
 ```java
 // x = A ∧ y = B
@@ -83,9 +91,11 @@ $\quad \lbrace \space x - y = - B \space \land \space y = 2 * A \space \rbrace$
 $\space \color{cornflowerblue} x := x - y;$  
 $\quad \lbrace \space x = - B \space \land \space y = 2 * A \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.5: }}{\color{olive}\text{ b}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.5: }}{\color{olive}\text{\Large \space b}}$
 
 ```java
 // 4 * x + 2 * y + 2 * z < 12 
@@ -107,9 +117,11 @@ $\space \color{cornflowerblue} x := 2 * x + y;$
 $\quad \lbrace \space 2 * x \space < \space 12 \space \rbrace$  
 $\quad \lbrace \space x \space < \space 6 \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.6: }}{\color{olive}\text{ c}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.6: }}{\color{olive}\text{\Large \space c}}$
 
 ```java
 // x = A ∧ y = B
@@ -140,4 +152,4 @@ $\quad \lbrace \space (x - y)/2 = B\space \land \space y = 2 * A \space \rbrace$
 $\space \color{cornflowerblue} x := (x - y)/2;$  
 $\quad \lbrace \space x = B\space \land \space y = 2 * A \space \rbrace$  
 
-&nbsp;
+<br/>

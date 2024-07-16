@@ -1,8 +1,12 @@
-# Extra practice in C
+$\color{cadetblue}{\text{\huge Extra practice in C}}$
+
+<br/>
 
 This folder contains some extra problems. If you are looking for more practice in C, you can try them.  
 
-## Problems
+<br/>
+
+${\color{rosybrown}\text{\Large Problems}}$
 
 |||
 |:---:|:---|

@@ -1,6 +1,8 @@
-# $\color{cadetblue}{\text{Problem 1}}$
+$\color{cadetblue}{\text{\huge Problem 1}}$
 
-## ${\color{darkkhaki}\text{Prob 1.1: }}{\color{olive}\text{ c}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.1: }}{\color{olive}\text{\Large \space c}}$
 
 ```java
 // x = A ∧ x + y = B
@@ -21,9 +23,11 @@ $\quad \lbrace \space x = B \space \land \space y = x - A \space \rbrace$
 $\qquad \color{darkseagreen} (\space \text{multiply both sides by -1} \space)$  
 $\quad \lbrace \space x = B \space \land \space x - y = A \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.2: }}{\color{olive}\text{ b}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.2: }}{\color{olive}\text{\Large \space b}}$
 
 ```java
 // x - y = A ∧ x = B
@@ -40,9 +44,11 @@ $\quad \lbrace \space x = A \space \land \space y = B - A \space \rbrace$
 $\qquad \color{darkseagreen} (\space \text{substitute A for x} \space)$  
 $\quad \lbrace \space x = A \space \land \space x + y = B \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.3: }}{\color{olive}\text{ c}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.3: }}{\color{olive}\text{\Large \space c}}$
 
 ```java
 // x = A + B ∧ y = A - B
@@ -68,9 +74,11 @@ $\quad \lbrace \space x = 4 * A \space \land \space x + y = 5 * A - 3 * B \space
 $\space \color{cornflowerblue} y := x + y;$  
 $\quad \lbrace \space x = 4 * A \space \land \space y = 5 * A - 3 * B \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.4: }}{\color{olive}\text{ b}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.4: }}{\color{olive}\text{\Large \space b}}$
 
 ```java
 // x = A ∧ y = B
@@ -92,9 +100,11 @@ $\qquad \land \space 2 * x + y = 4 * A + 3 * B \space \rbrace$
 $\space \color{cornflowerblue} y := 2 * x + y;$  
 $\quad \lbrace \space x = 2 * A + B \space \land \space y = 4 * A + 3 * B \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.5: }}{\color{olive}\text{ a}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.5: }}{\color{olive}\text{\Large \space a}}$
 
 ```java
 // x = A ∧ y = B
@@ -118,9 +128,11 @@ $\quad \lbrace \space x = 2 * A + 2 * B \space \land \space x - 2 * y = 2 * A \s
 $\space \color{cornflowerblue} y := x - 2 * y;$  
 $\quad \lbrace \space x = 2 * A + 2 * B \space \land \space y = 2 * A \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.6: }}{\color{olive}\text{ b}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.6: }}{\color{olive}\text{\Large \space b}}$
 
 ```java
 // x + y = A ∧ 2 * x + y = B
@@ -141,4 +153,4 @@ $\qquad \land \space 2 * x + (y-1) - 1 = B \space \rbrace$
 $\space \color{cornflowerblue} y := y - 1;$  
 $\quad \lbrace \space x + y = A \space \land \space 2 * x + y - 1 = B \space \rbrace$  
 
-&nbsp;
+<br/>

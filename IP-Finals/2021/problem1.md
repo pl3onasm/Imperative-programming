@@ -1,6 +1,8 @@
-# $\color{cadetblue}{\text{Problem 1}}$
+$\color{cadetblue}{\text{\huge Problem 1}}$
 
-## ${\color{darkkhaki}\text{Prob 1.1: }}{\color{olive}\text{ a}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.1: }}{\color{olive}\text{\Large \space a}}$
 
 ```java
 // x = y * z
@@ -19,9 +21,11 @@ $\quad \lbrace \space x - z = z * y \space \rbrace$
 $\space \color{cornflowerblue} x := x - z;$  
 $\quad \lbrace \space x = z * y \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.2: }}{\color{olive}\text{ b}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.2: }}{\color{olive}\text{\Large \space b}}$
 
 ```java
 // 3 * x + 5 * y = A
@@ -38,9 +42,11 @@ $\quad \lbrace \space 3 * x + 2 * y = A \space \rbrace$
 $\space \color{cornflowerblue} y := 3 * x + 2 * y;$  
 $\quad \lbrace \space y = A \space \rbrace$
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.3: }}{\color{olive}\text{ a}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.3: }}{\color{olive}\text{\Large \space a}}$
 
 ```java
 // x * x ≤ A < (x + 1) * (x + 1)
@@ -53,13 +59,15 @@ $\qquad \color{darkseagreen} (\space \text{prepare } y := 2 * x + 1 \space)$
 $\qquad \color{darkseagreen} (\space \text{expand product} \space)$  
 $\quad \lbrace \space x * x \space \leq \space A \space < \space x * x + 2 * x + 1 \space \rbrace$  
 $\space \color{cornflowerblue} y := 2 * x + 1;$  
-$\quad \lbrace \space x * x \space \leq \space A \space < \space x * x + y \space \rbrace$  
+$\quad \lbrace \space x * x \space \leq \space A \space < \space x * x + y \space \rbrace \space$  
 $\space \color{cornflowerblue} x := x * x;$  
 $\quad \lbrace \space x \space \leq \space A \space < \space x + y \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.4: }}{\color{olive}\text{ a}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.4: }}{\color{olive}\text{\Large \space a}}$
 
 ```java
 // x = A ∧ y = B
@@ -86,9 +94,11 @@ $\quad \lbrace \space 2 * x - y = A - 2 * B \space \land \space y = A \space \rb
 $\space \color{cornflowerblue} x := 2 * x - y;$  
 $\quad \lbrace \space A - 2 * B \space \land \space y = A \space \rbrace$
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.5: }}{\color{olive}\text{ b}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.5: }}{\color{olive}\text{\Large \space b}}$
 
 ```java
 // x = A ∧ y = B 
@@ -117,9 +127,11 @@ $\quad \lbrace \space x - y = B \space \land \space y = 3 * A \space \rbrace$
 $\space \color{cornflowerblue} x := x - y;$  
 $\quad \lbrace \space x = B \space \land \space y = 3 * A \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.6: }}{\color{olive}\text{ c}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.6: }}{\color{olive}\text{\Large \space c}}$
 
 ```java
 // x = A ∧ y = B
@@ -151,4 +163,4 @@ $\quad \lbrace \space y-x = 2 * A + B\space \land \space y = 4 * A + 3 * B \spac
 $\space \color{cornflowerblue} x := y - x;$  
 $\quad \lbrace \space x = 2 * A + B\space \land \space y = 4 * A + 3 * B \space \rbrace$  
 
-&nbsp;
+<br/>

@@ -1,6 +1,8 @@
-# $\color{cadetblue}{\text{Problem 1}}$
+$\color{cadetblue}{\text{\huge Problem 1}}$
 
-## ${\color{darkkhaki}\text{Prob 1.1: }}{\color{olive}\text{ b}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.1: }}{\color{olive}\text{\Large \space b}}$
 
 ```java
 // x = X
@@ -15,9 +17,11 @@ $\quad \lbrace \space 3 * x + 1 = 3 * X + 1 \space \rbrace$
 $\space \color{cornflowerblue} x := 3 * x + 1;$  
 $\quad \lbrace \space x = 3 * X + 1 \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.2: }}{\color{olive}\text{ c}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.2: }}{\color{olive}\text{\Large \space c}}$
 
 ```java
 // x = 3 * X + 1
@@ -34,9 +38,11 @@ $\quad \lbrace \space (x - 1)/3 = X \space \rbrace$
 $\space \color{cornflowerblue} x := (x - 1)/3;$  
 $\quad \lbrace \space x = X \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.3: }}{\color{olive}\text{ b}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.3: }}{\color{olive}\text{\Large \space b}}$
 
 ```java
 // x = y * y + X ∧ y + 1 = Y
@@ -56,9 +62,11 @@ $\quad \lbrace \space x + 2 * y - 1 = y * y + X \space \land \space y = Y \space
 $\space \color{cornflowerblue} x := x + 2 * y - 1;$  
 $\quad \lbrace \space x = y * y + X \space \land \space y = Y \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.4: }}{\color{olive}\text{ c}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.4: }}{\color{olive}\text{\Large \space c}}$
 
 ```java
 // x = X ∧ y = Y
@@ -84,9 +92,11 @@ $\quad \lbrace \space x - y = 2 * Y \space \land \space y = X \space \rbrace$
 $\space \color{cornflowerblue} x := x - y;$  
 $\quad \lbrace \space x = 2 * Y \space \land \space y = X \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.5: }}{\color{olive}\text{ c}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.5: }}{\color{olive}\text{\Large \space c}}$
 
 ```java
 // x = X + Y ∧ y = X + Z ∧ z = Y + Z
@@ -119,9 +129,11 @@ $\quad \lbrace \space x - z = Y \space \land \space y = Z \space \land \space z 
 $\space \color{cornflowerblue} x := x - z;$  
 $\quad \lbrace \space x = Y \space \land \space y = Z \space \land \space z = X \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.6: }}{\color{olive}\text{ b}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.6: }}{\color{olive}\text{\Large \space b}}$
 
 ```java
 // x = X + Y + Z ∧ y = Y ∧ z = Z
@@ -147,4 +159,4 @@ $\quad \lbrace \space x - y - z = Z \space \land \space y = X \space \land \spac
 $\space \color{cornflowerblue} x := x - y - z;$  
 $\quad \lbrace \space x = Z \space \land \space y = X \space \land \space z = Y \space \rbrace$  
 
-&nbsp;
+<br/>

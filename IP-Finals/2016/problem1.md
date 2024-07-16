@@ -1,6 +1,8 @@
-# $\color{cadetblue}{\text{Problem 1}}$
+$\color{cadetblue}{\text{\huge Problem 1}}$
 
-## ${\color{darkkhaki}\text{Prob 1.1: }}{\color{olive}\text{ c}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.1: }}{\color{olive}\text{\Large \space c}}$
 
 ```java
 // 6 < x + 2 * y < 11
@@ -15,9 +17,11 @@ $\quad \lbrace \space 5 \space < \space x + 2 * y - 1 \space < \space 10 \space 
 $\space \color{cornflowerblue} x := x + 2 * y - 1;$  
 $\quad \lbrace \space 5 \space < \space x \space < \space 10 \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.2: }}{\color{olive}\text{ b}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.2: }}{\color{olive}\text{\Large \space b}}$
 
 ```java
 // 2 * x + 3 * y = X ∧ 2 * y = Y
@@ -32,9 +36,11 @@ $\quad \lbrace \space 2 * x + 5 * y = X + Y \space \rbrace$
 $\space \color{cornflowerblue} z := 2 * x + 5 * y;$  
 $\quad \lbrace \space z = X + Y \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.3: }}{\color{olive}\text{ a}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.3: }}{\color{olive}\text{\Large \space a}}$
 
 ```java
 // x = X + Y ∧ y = 2 * X - 7
@@ -52,9 +58,11 @@ $\quad \lbrace \space x = X + Y \space \land \space (2 * x - y -7) / 2 = Y \spac
 $\space \color{cornflowerblue} y := (2 * x - y - 7)/2;$  
 $\quad \lbrace \space x = X + Y \space \land \space y = Y \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.4: }}{\color{olive}\text{ a}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.4: }}{\color{olive}\text{\Large \space a}}$
 
 ```java
 // x = X ∧ y = Y
@@ -70,12 +78,14 @@ $\space \color{cornflowerblue} y := x + y;$
 $\quad \lbrace \space x = X \space \land \space y = X + Y \space \rbrace$  
 $\qquad \color{darkseagreen} (\space \text{prepare } x := x * (y - x) \space)$  
 $\quad \lbrace \space x * (y - x) = X * Y \space \land \space y = X + Y \space \rbrace$  
-$\space \color{cornflowerblue} x := x * (y - x);$  
+$\space \color{cornflowerblue} x := x * (y - x); \space$  
 $\quad \lbrace \space x = X * Y \space \land \space y = X + Y \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.5: }}{\color{olive}\text{ b}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.5: }}{\color{olive}\text{\Large \space b}}$
 
 ```java
 // x = X ∧ y = Y
@@ -84,15 +94,17 @@ y := x;
 // .....
 ```
 
-$\quad \lbrace \space x = X \space \land \space y = Y \space \rbrace$  
+$\quad \lbrace \space x = X \space \land \space y = Y \space \rbrace \space$  
 $\space \color{cornflowerblue} x := y;$  
-$\quad \lbrace \space x = Y \space \land \space y = Y \space \rbrace$  
+$\quad \lbrace \space x = Y \space \land \space y = Y \space \rbrace \space$  
 $\space \color{cornflowerblue} y := x;$  
-$\quad \lbrace \space x = Y \space \land \space y = Y \space \rbrace$  
+$\quad \lbrace \space x = Y \space \land \space y = Y \space \rbrace \space$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.6: }}{\color{olive}\text{ c}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.6: }}{\color{olive}\text{\Large \space c}}$
 
 ```java
 // x = X ∧ y = Y
@@ -111,4 +123,4 @@ $\quad \lbrace \space x = X + Y \space \land \space x - y = X \space \rbrace$
 $\space \color{cornflowerblue} y := x - y;$  
 $\quad \lbrace \space x = X + Y \space \land \space y = X \space \rbrace$  
 
-&nbsp;
+<br/>

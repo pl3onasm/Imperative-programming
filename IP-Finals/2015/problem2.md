@@ -1,6 +1,10 @@
-# $\color{cadetblue}{\text{Problem 2}}$
+$\color{cadetblue}{\text{\huge Problem 2}}$
 
-## Ex1: $\color{rosybrown}{{\mathcal{O}(\sqrt{N})}}$
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 2.1: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(\sqrt{N})}}}$  
+
+<br/>
 
 ```c
 int i = 0, s = 0;
@@ -24,9 +28,15 @@ $$
 \end{align*}
 $$
 
-Note that $i$ is incremented $\color{mediumorchid}{\text{after}}$ $s$ is updated, so that when the loop condition is checked, the value of $s$ is the sum of the first $i - 1$ integers. From the calculation above, we conclude that the fragment's time complexity is in $\mathcal{O}(\sqrt{N})$.
+Note that $i$ is incremented $\color{mediumorchid}{\text{after}}$ $s$ is updated, so that when the loop condition is checked, the value of $s$ is the sum of the first $i - 1$ integers. From the calculation above, we conclude that the fragment's time complexity is in $\mathcal{O}(\sqrt{N})\space$.  
 
-## Ex2: $\color{rosybrown}{{\mathcal{O}(N^2)}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 2.2: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N^2)}}}$  
+
+<br/>
 
 ```c
 int i, j, s = 0;
@@ -51,7 +61,13 @@ In $\color{peru}{(1)}$, we used Gauss' formula to compute the sum of the first $
 
 Another, more intuitive way to reach the same conclusion is to note that the outer loop is executed $N$ times, whereas the inner loop is executed $\color{orchid}{\text{at most}}$  $N$ times, so that the nested loop's complexity becomes quadratic in $N$. However, these types of arguments do not always yield the tightest bound, and so it is better to stick to the more formal approach whenever the upper or lower bound of the inner loop depends on the outer loop's index. A case in point is [ex5 from 2013](https://github.com/pl3onasm/Imperative-programming/blob/main/IP-Finals/2013/problem3.md#ex5-colorrosybrownmathcalon), where you would expect from an intuitive argument that the complexity is in $\mathcal{O}(N \log(N))$, which is not wrong, but not tight either, as the tight bound is $\mathcal{O}(N)$.
 
-## Ex3: $\color{rosybrown}{{\mathcal{O}(\log(N))}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 2.3: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(\log (N))}}}$  
+
+<br/>
 
 ```c
 int i = 0, j = N, s = 0;
@@ -68,7 +84,13 @@ while (j - i > 1) {
 
 The fragment is a binary search algorithm. The indices $i$ and $j$ indicate the range of the search, and each iteration of the loop reduces the size of the search range by half. The loop terminates when the two indices are adjacent, that is, when $j - i = 1$. The number of iterations is therefore given by the number of times $N$ can be divided by $2$ before reaching $1$, which is $\log(N)$. Thus, the fragment's time complexity is in $\mathcal{O}(\log(N))$.
 
-## Ex4: $\color{rosybrown}{{\mathcal{O}(N^2)}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 2.4: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N^2)}}}$  
+
+<br/>
 
 ```c
 int i, j = 0, s = 0;
@@ -83,7 +105,13 @@ while (j > 0) {
 
 The first loop computes $j = \frac{N(N-1)}{2}$ in $N$ steps. After that, the second loop is executed $j$ times. The loops are not nested, which means that the most expensive one, the second loop, determines the overall complexity. Thus, the fragment's time complexity is in $\mathcal{O}(N^2)$.
 
-## Ex5: $\color{rosybrown}{{\mathcal{O}(N)}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 2.5: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N)}}}$  
+
+<br/>
 
 ```c
 int i = 0, s = 1;
@@ -94,7 +122,13 @@ for (i = 0; i < N; i += 2) {
 
 The loop is executed $\frac{N}{2}$ times, so that the fragment's time complexity is in $\mathcal{O}(N)$.
 
-## Ex6: $\color{rosybrown}{{\mathcal{O}(N \log(N))}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 2.6: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N \log (N))}}}$  
+
+<br/>
 
 ```c
 int i, j, s = 0;
@@ -117,3 +151,5 @@ $$\begin{align*}
 $$
 
 Thus, the fragment's time complexity is in $\mathcal{O}(N \log(N))$.
+
+<br/>

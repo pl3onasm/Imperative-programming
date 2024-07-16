@@ -1,6 +1,8 @@
-# $\color{cadetblue}{\text{Problem 1}}$
+$\color{cadetblue}{\text{\huge Problem 1}}$
 
-## ${\color{darkkhaki}\text{Prob 1.1: }}{\color{olive}\text{ b}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.1: }}{\color{olive}\text{\Large \space b}}$
 
 ```java
 // x = X
@@ -8,7 +10,7 @@
 // x = 42 * X + 21
 ```
 
-$\quad \lbrace \space x = X \space \rbrace$  
+$\quad \lbrace \space x = X \space \rbrace \space$  
 $\qquad \color{darkseagreen} (\space \text{prepare } x := 42 * x + 21 \space)$  
 $\qquad \color{darkseagreen} (\space \text{multiply both sides by 42} \space)$  
 $\quad \lbrace \space 42 * x = 42 * X \space \rbrace$  
@@ -17,9 +19,11 @@ $\quad \lbrace \space 42 * x + 21 = 42 * X + 21 \space \rbrace$
 $\space \color{cornflowerblue} x := 42 * x + 21;$  
 $\quad \lbrace \space x = 42 * X + 21 \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.2: }}{\color{olive}\text{ c}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.2: }}{\color{olive}\text{\Large \space c}}$
 
 ```java
 // x = 42 * X + 21
@@ -34,11 +38,13 @@ $\quad \lbrace \space x - 21 = 42 * X \space \rbrace$
 $\qquad \color{darkseagreen} (\space \text{divide both sides by 42} \space)$  
 $\quad \lbrace \space (x - 21)/42 = X \space \rbrace$  
 $\space \color{cornflowerblue} x := (x - 21)/42;$  
-$\quad \lbrace \space x = X \space \rbrace$  
+$\quad \lbrace \space x = X \space \rbrace \space$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.3: }}{\color{olive}\text{ b}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.3: }}{\color{olive}\text{\Large \space b}}$
 
 ```java
 // x = y * y
@@ -59,9 +65,11 @@ $\quad \lbrace \space x + 2 * y - 1 = y * y \space \rbrace$
 $\space \color{cornflowerblue} x := x + 2 * y - 1;$  
 $\quad \lbrace \space x = y * y \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.4: }}{\color{olive}\text{ c}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.4: }}{\color{olive}\text{\Large \space c}}$
 
 ```java
 // y + z > 4
@@ -78,9 +86,11 @@ $\quad \lbrace \space x + y \space > \space 5 \space \rbrace$
 $\space \color{cornflowerblue} y := x + y;$  
 $\quad \lbrace \space y \space > \space 5 \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.5: }}{\color{olive}\text{ b}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.5: }}{\color{olive}\text{\Large \space b}}$
 
 ```java
 // x = X ∧ y = Y 
@@ -114,9 +124,11 @@ $\quad \lbrace \space x = - Y \space \land \space x + y = 2 * X \space \rbrace$
 $\space \color{cornflowerblue} y := x + y;$  
 $\quad \lbrace \space x = - Y \space \land \space y = 2 * X \space \rbrace$  
 
-&nbsp;
+<br/>
 
-## ${\color{darkkhaki}\text{Prob 1.6: }}{\color{olive}\text{ a}}$
+---------------
+
+${\color{darkkhaki}\text{\Large Prob 1.6: }}{\color{olive}\text{\Large \space a}}$
 
 ```java
 // x = X ∧ y = X + Y ∧ z = X + Y + Z
@@ -141,4 +153,5 @@ $\quad \lbrace \space x - z = X - Z \space \land \space y = Y \space \land \spac
 $\space \color{cornflowerblue} x := x - z;$  
 $\quad \lbrace \space x = X - Z \space \land \space y = Y \space \land \space z = Z \space \rbrace$  
 
-&nbsp;
+<br/>
+

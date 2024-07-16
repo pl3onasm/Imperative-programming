@@ -1,4 +1,6 @@
-# Segments
+$\color{cadetblue}{\text{\huge Segments}}$
+
+<br/>
 
 The input for this problem is a positive integer $n$ indicating a certain number of segments. This is followed by a colon and a series of $n$ half-open segments. For each $a < b$, the half open segment $[a, b)$ represents the set of numbers $\lbrace \space x \space \vert \space a \leq x < b \space \rbrace$.  
 
@@ -9,7 +11,9 @@ Clearly, some of these segments overlap, and can therefore be fused. For example
 
 You are asked to write a program that reads the segments from the input, and outputs an equivalent series of segments in which all overlapping and touching input segments have been fused. The segments must be printed on the output in ascending order of the lower bounds of the segments. For the above example, the output should thus be $[1,6),[7,10),[12,15)$.  
 
-## Examples
+<br/>
+
+$\color{darkseagreen}{\text{\Large Examples}}$
 
 ```text
 input:

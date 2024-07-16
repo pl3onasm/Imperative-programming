@@ -1,6 +1,10 @@
-# $\color{cadetblue}{\text{Problem 2}}$
+$\color{cadetblue}{\text{\huge Problem 2}}$
 
-## Ex1: $\color{rosybrown}{{\mathcal{O}(\sqrt{N})}}$
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 2.1: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(\sqrt{N})}}}$  
+
+<br/>
 
 ```c
 int i = 0, s = 0;
@@ -22,9 +26,15 @@ $$
 \end{align*}
 $$
 
-Therefore, the time complexity of the fragment is in $\mathcal{O}(\sqrt{N})$. 
+Therefore, the time complexity of the fragment is in $\mathcal{O}(\sqrt{N})\space$.  
 
-## Ex2: $\color{rosybrown}{{\mathcal{O}(N^2)}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 2.2: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N^2)}}}$  
+
+<br/>
 
 ```c
 int j = N * N, s = 0;
@@ -35,7 +45,13 @@ for (int i = 1; i < j; i += 2) {
 
 The loop iterates $\frac{N^2 - 1}{2}$ times, and so the time complexity of the fragment is in $\mathcal{O}(N^2)$.
 
-## Ex3: $\color{rosybrown}{{\mathcal{O}(N)}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 2.3: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N)}}}$  
+
+<br/>
 
 ```c
 int s = 0;
@@ -48,7 +64,13 @@ for (int i = 0; i < N; i++) {
 
 The outer loop iterates $N$ times, and the inner loop runs $5$ times. The loops are nested, so that the total number of iterations is $5N$. Therefore, the time complexity of the fragment is in $\mathcal{O}(N)$.
 
-## Ex4: $\color{rosybrown}{{\mathcal{O}(N\log(N))}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 2.4: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N \log(N))}}}$  
+
+<br/>
 
 ```c
 for (int i = 0; i < N; i++) {
@@ -73,7 +95,13 @@ Hence, the time complexity of the fragment is in $\mathcal{O}(N\log(N))$. [^1]
 
 [^1]: Note that we need to let i start from 1, not 0, otherwise the logarithm would be undefined for i = 0. This does not affect the time complexity, however, as the first iteration of the inner loop is skipped anyway.  
 
-## Ex5: $\color{rosybrown}{{\mathcal{O}(\log(N))}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 2.5: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(\log (N))}}}$  
+
+<br/>
 
 ```c
 int s = 0;
@@ -94,7 +122,13 @@ $$
 
 Hence, the time complexity of the fragment is in $\mathcal{O}(\log(N))$.
 
-## Ex6: $\color{rosybrown}{{\mathcal{O}(N)}}$
+<br/>
+
+----------------------
+
+${\color{rosybrown}\text{\Large Prob 2.6: }}{\color{darkseagreen}{{\Large \space \mathcal{O}(N)}}}$  
+
+<br/>
 
 ```c
 int s = 0;
@@ -105,3 +139,4 @@ for (int i = N; i > N / 2; i = i - 2) {
 
 The loop index is initialized to $N$, and decremented by $2$ at the end of each iteration until it reaches $\frac{N}{2}$. Therefore, the loop runs $\frac{N}{4}$ times, and so the time complexity of the fragment is in $\mathcal{O}(N)$.
 
+<br/>
