@@ -1,8 +1,9 @@
-${\color{cadetblue} \text{\huge Programming}}$ ${\color{cadetblue} \text{\huge Fundamentals}}$
+${\color{cadetblue} \text{\huge Programming}}$  
+${\color{cadetblue} \text{\huge Fundamentals}}$
 
 <br/>
 
-This repository contains old exams for the course ${\color{darkgoldenrod}\text{Imperative}}$ ${\color{darkgoldenrod}\text{Programming}}$ (IP) at the University of Groningen. In 2023, this course was merged with the course ${\color{darkgoldenrod}\text{Program}}$ ${\color{darkgoldenrod}\text{Correctness}}$ (PC) into the new course ${\color{darkgoldenrod}\text{Programming}}$ ${\color{darkgoldenrod}\text{Fundamentals}}$ (PF). This is why you will find exams for both courses in this repository. All exams were created by [dr. A. Meijster](https://www.rug.nl/staff/a.meijster/), and make for some good practice material.
+This repository contains old exams for the course ${\color{rosybrown}\text{Imperative}}$ ${\color{rosybrown}\text{Programming}}$ (IP) at the University of Groningen. In 2023, this course was merged with the course ${\color{rosybrown}\text{Program}}$ ${\color{rosybrown}\text{Correctness}}$ (PC) into the new course ${\color{rosybrown}\text{Programming}}$ ${\color{rosybrown}\text{Fundamentals}}$ (PF). This is why you will find exams for both courses in this repository. All exams were created by [dr. A. Meijster](https://www.rug.nl/staff/a.meijster/), and make for some good practice material.
 
 For the C questions, the subfolders each hold one or more example solutions, a folder with test cases, and a file called *myprogram.c* which you can use to write and test your own solution. For the proof questions, both exam questions and answers are given in [Dafny](https://github.com/dafny-lang/dafny).  
   
@@ -68,10 +69,9 @@ ${\color{darkseagreen}\text{\Large PF 3-3 exams}}$
 ----------------------------------
 
 ${\color{cadetblue}\text{\Large Testing}}$
-
 <br/>
 
-You can test your own C code with the [test script](ctest.sh). It will try to compile your code and run it on all the test cases. It will also compare your output with the expected output, and check for memory leaks by running a Valgrind test. If a test fails, the script will display the line numbers where a mismatch between the expected and the actual output was found, followed by the corresponding lines themselves, so you can easily spot the error. Lines in green and preceded by `<` represent the expected output, while lines in red and preceded by `>` are the actual (incorrect) output. In order to avoid too much clutter, the script will only display the first 5 lines where mismatches were found and will indicate how many more there are if applicable.
+You can test your own C code with the [test script](ctest.sh). It will try to compile your code and run it on all the test cases. It will also compare your output with the expected output, and check for memory leaks by running a Valgrind test. If a test fails, the script will display the line numbers where a mismatch between the expected and the actual output was found, followed by the corresponding lines themselves, so you can easily spot the error. Lines in green and preceded by `<` represent the expected output, while lines in red and preceded by `>` are the actual (incorrect) output. If you only see lines in red, it means that your program produced the expected output, but also some additional, unexpected output. The script will only display the first 5 lines where mismatches were found and will indicate how many more there are if applicable.
 
 If you want to use the script, you basically have two options:  
 
@@ -126,7 +126,6 @@ ctest.sh myprogram.c > results.txt
 ----------------------------------
 
 ${\color{cadetblue}\text{\Large Functions library}}$
-
 <br/>
 
 The folder [functions](Functions) contains some useful function implementations in C. Have a look at the [header file](Functions/clib/clib.h) to see which functions are available and how to use them.  
@@ -165,7 +164,6 @@ valgrind --leak-check=full ./a.out < tests/1.in
 ----------------------------------
 
 ${\color{cadetblue}\text{\Large Output example of the script}}$
-
 <br/>
 
 <IMG src="example.jpg"
